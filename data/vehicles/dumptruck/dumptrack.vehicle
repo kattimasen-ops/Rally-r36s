@@ -14,12 +14,13 @@
 
 	<genparams
 		mass="1458.3"
-		dimensions="2.136, 3.65, 1.5"
+		dimensions="2.136, 3.65, 2.13"
 		wheelmodel="dumptrack_wheel.obj"
 		wheelscale="1.0" />
 
 	<ctrlparams
-		drag="0.0, 0.0, 73.0"
+		drag="0.0, 0.0, 0.0"
+		angdrag="88.0, 0.0, 0.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"

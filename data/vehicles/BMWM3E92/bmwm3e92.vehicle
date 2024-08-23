@@ -14,12 +14,13 @@
 
 	<genparams
 		mass="2080.0"
-		dimensions="1.5, 3.0, 1.0"
+		dimensions="1.804, 4.615, 1.424"
 		wheelmodel="BMWM3E92_wheel.obj"
 		wheelscale="1.0" />
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
+		angdrag="85.0, 0.0, 0.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -67,10 +68,10 @@
 		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7695, -1.261, -0.15" radius="0.347" force="85000.0" dampening="10000.0" brake2="1000.0" friction="0.03"/>
 		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7695, -1.261, -0.15" radius="0.347" force="85000.0" dampening="10000.0" brake2="1000.0" friction="0.03"/>
 
-		<clip type="body" pos="1.0, 1.8, 0.3" force="300000.0" dampening="30000.0" />
-		<clip type="body" pos="-1.0, 1.8, 0.3" force="300000.0" dampening="30000.0" />
-		<clip type="body" pos="1.0, -1.8, 0.3" force="300000.0" dampening="30000.0" />
-		<clip type="body" pos="-1.0, -1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="1.0, 2.55, 1.424" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, 2.55, 1.424" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="1.0, -2.07, 1.424" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, -2.07, 1.424" force="300000.0" dampening="30000.0" />
 
 	</part>
 

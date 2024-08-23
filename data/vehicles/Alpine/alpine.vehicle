@@ -20,7 +20,8 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		lift="0"
+		angdrag="0.0, 0.0, 0.0"
+		lift="1"
 		fineffect="100"
 		speedrate="1.0"
 		turnspeedrate="0.0, 0.0, 16.0" />

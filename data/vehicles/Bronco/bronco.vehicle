@@ -14,12 +14,13 @@
 
 	<genparams
 		mass="2050.0"
-		dimensions="1.5, 3.0, 1.5"
+		dimensions="1.98, 4.112, 1.87"
 		wheelmodel="truck_wheel.obj"
 		wheelscale="1.0" />
 
 	<ctrlparams
-		drag="0.0, 0.0, 103.0"
+		drag="0.0, 0.0, 0.0"
+		angdrag="127.0, 0.0, 0.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -59,10 +60,10 @@
 		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="0.818, -1.72, -0.02" radius="0.38" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.025"/>
 		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="-0.818, -1.72, -0.02" radius="0.38" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.025"/>
 
-		<clip type="body" pos="1.1, 1.5, 0.8" force="300000.0" dampening="100000.0" />
-		<clip type="body" pos="-1.1, 1.5, 0.8" force="300000.0" dampening="100000.0" />
-		<clip type="body" pos="1.1, -2.3, 0.8" force="300000.0" dampening="100000.0" />
-		<clip type="body" pos="-1.1, -2.3, 0.8" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.99, 1.736, 1.8" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.99, 1.736, 1.8" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.99, -2.376, 1.8" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.99, -2.376, 1.8" force="300000.0" dampening="100000.0" />
 
 	</part>
 

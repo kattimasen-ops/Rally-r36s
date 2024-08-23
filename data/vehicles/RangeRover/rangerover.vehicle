@@ -19,7 +19,8 @@
 		wheelscale="1.0" />
 
 	<ctrlparams
-		drag="0.0, 0.0, 110.0"
+		drag="0.0, 0.0, 0.0"
+		angdrag="130.0, 0.0, .0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
