@@ -1,16 +1,15 @@
 <?xml version="1.0" ?>
 <event name="Bahrain adventure" author="Janusz Opila" locked="no">
 
-	<unlocks file="/events/02-alps/alps.event" />
 	<unlocks file="/vehicles/jeep/jeep.vehicle" />
 	<unlocks file="/vehicles/RangeRover/rangerover.vehicle" />
 
 
-	<level file="02-Bahrain/BahrainJump.level" />
-	<level file="02-Bahrain/BahrainOuterTrack.level" />
-	<level file="02-Bahrain/Bahrain_FP.level" />
-	<level file="02-Bahrain/BahrainQuali.level" />
-	<level file="02-Bahrain/BahrainRace.level" />
+	<level file="19-Bahrain/BahrainJump.level" />
+	<level file="19-Bahrain/BahrainOuterTrack.level" />
+	<level file="19-Bahrain/Bahrain_FP.level" />
+	<level file="19-Bahrain/BahrainQuali.level" />
+	<level file="19-Bahrain/BahrainRace.level" />
 
 
 </event>
