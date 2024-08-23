@@ -142,7 +142,7 @@
     fixedalpha="yes"
     />
 
-  <race coordscale="3.0, 3.0" targettime="20">
+  <race coordscale="3.0, 3.0" targettime="25">
 
     <startposition pos="129, 198, 2.0" oridegrees="270" />
     <checkpoint coords="500, 201" />
