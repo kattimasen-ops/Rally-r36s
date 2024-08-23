@@ -42,8 +42,8 @@
 	-->
 
 	<ctrlparams
-		angdrag="10.0, 0.0, 0.0"
-		drag="0.0, 0.0, 30.0"
+		angdrag="30.0, 0.0, 0.0"
+		drag="0.0, 0.0, 0.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
