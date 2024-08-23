@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Mondeo"
+	class="Police"
+	type="car"
+	locked="yes">
+
+	<genparams
+		mass="1581.0"
+		dimensions="1.886, 4.778, 1.5"
+		wheelmodel="fordpolice_wheel.obj"
+		wheelscale="1.0" />
+
+	<pstats
+		weightkg="2185"
+		enginebhp="220"
+		wheeldrive="FWD"
+		maxspeed="245"
+		handling="good" />
+	<!--
+		ATMOSPHERIC EFFECTS IN CTRLPARAMS
+		DRAG:
+			a linear force that push in the opposite direction the vehicle is moving.
+			it has different value respect the x, y and z axis relative the car.
+				x is the drag when moving sideways (left-right axis)
+				y is the drag when moving forward (front-back axis).
+					This is the main drag that will slow down the car
+				z is the drag when moving vertically (top-bottom axis).
+		ANG DRAG:
+			a torque that pushes in the opposite direction the vehicle is rolling
+			this drag will slow down the car from spinning unrealistically fast,
+			for exaxmple when it gets out of control
+		LIFT:
+			this force pushes the car up or down. Normally this is caused by spoilers
+			that push the car down at high speeds to get better grip on the groud.
+			Planes use this force to take off by going very fast
+		FIN EFFECT:
+			Like an arrow, when the car goes very fast it tends to naturally orient
+			itself towards the dirction it is going due to the drag.
+			This makes an external force change the orientation of the vehicle harder at higher speed
+	-->
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="182697">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.5" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="4000" power="0.9" />
+			<powerpoint rpm="5000" power="1.0" />
+			<powerpoint rpm="6000" power="0.0" />
+		</engine>
+	<!--main gear 4.0 1: 3.38 2: 1.9 3: 1.26 4: 0.95 5: 0.77 6: 0.65 back 3.23
+		<gearbox>
+			<gear absolute="0.019" />
+			<gear relative="3.607" />
+			<gear relative="2.326" />
+			<gear relative="1.64" />
+			<gear relative="1.22" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0616" />
+			<gear relative="1.779" />
+			<gear relative="1.508" />
+			<gear relative="1.326" />
+			<gear relative="1.234" />
+			<gear relative="1.185" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.3, 0.1"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="fordpolice.obj"
+		scale="1.0">
+
+		<wheel drive="1.0" steer="0.7" brake1="600.0" pos="0.794, 1.49, -0.11" radius="0.34" force="45000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="0.7" brake1="600.0" pos="-0.794, 1.49, -0.11" radius="0.34" force="45000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="0.0" steer="0.0" brake1="300.0" pos="0.8025, -1.37, -0.11" radius="0.34" force="60000.0" dampening="15000.0" brake2="1000.0" friction="0.025"/>
+		<wheel drive="0.0" steer="0.0" brake1="300.0" pos="-0.8025, -1.37, -0.11" radius="0.34" force="60000.0" dampening="15000.0" brake2="1000.0" friction="0.025"/>
+
+		<clip type="body" pos="0.943, 2.509, 1.5" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.943, 2.509, 1.5" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.943, -2.269, 1.5" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.943, -2.269, 1.5" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

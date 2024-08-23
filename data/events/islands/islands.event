@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<event
+	name="Islands Cup"
+	author="Eugene_MC"
+	>
+
+	<unlocks file="/vehicles/fordpolice/fordpolice.vehicle" />
+	<unlocks file="/vehicles/policecar/policecar.vehicle" />
+	<unlocks file="/vehicles/futuristic/futuristic.vehicle" />
+	<unlocks file="/vehicles/triwheelcar/3wheel.vehicle" />
+	<unlocks file="/vehicles/Alpine/alpine.vehicle" />
+
+
+	<level file="banana/banana.level" />
+	<level file="leaves/leaves.level" />
+	<level file="littleisland/littleisland.level" />
+	<level file="softbelt/softbelt.level" />
+	<level file="volcanic/volcanic.level" />
+	<level file="tobago/tobago.level" />
+
+</event>

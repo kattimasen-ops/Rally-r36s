@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="3 Wheeler"
+	class="Morgan"
+	type="hovercraft"
+	locked="yes">
+
+	<pstats
+		weightkg="550"
+		enginebhp="115"
+		maxspeed="185"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="550.0"
+		dimensions="1.0, 3.2, 1.0"
+		wheelmodel="3wheel_wheel.obj"
+		wheelscale="1.0" />
+
+	<!--
+		ATMOSPHERIC EFFECTS IN CTRLPARAMS
+		DRAG:
+			a linear force that push in the opposite direction the vehicle is moving.
+			it has different value respect the x, y and z axis relative the car.
+				x is the drag when moving sideways (left-right axis)
+				y is the drag when moving forward (front-back axis).
+					This is the main drag that will slow down the car
+				z is the drag when moving vertically (top-bottom axis).
+		ANG DRAG:
+			a torque that pushes in the opposite direction the vehicle is rolling
+			this drag will slow down the car from spinning unrealistically fast,
+			for exaxmple when it gets out of control
+		LIFT:
+			this force pushes the car up or down. Normally this is caused by spoilers
+			that push the car down at high speeds to get better grip on the groud.
+			Planes use this force to take off by going very fast
+		FIN EFFECT:
+			Like an arrow, when the car goes very fast it tends to naturally orient
+			itself towards the dirction it is going due to the drag.
+			This makes an external force change the orientation of the vehicle harder at higher speed
+	-->
+
+	<ctrlparams
+		angdrag="10.0, 0.0, 0.0"
+		drag="0.0, 0.0, 30.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="85756">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.4" />
+			<powerpoint rpm="2000" power="0.6" />
+			<powerpoint rpm="3000" power="0.8" />
+			<powerpoint rpm="4400" power="1.0" />
+			<powerpoint rpm="5000" power="0.0" />
+		</engine>
+	<!--"final": 4.39, "forward":[3.31, 1.84, 1.31, 0.97, 0.76],"reverse":3.17
+		<gearbox>
+			<gear absolute="0.024" />
+			<gear relative="3.55" />
+			<gear relative="2.08" />
+			<gear relative="1.55" />
+			<gear relative="1.21" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0755" />
+			<gear relative="1.799" />
+			<gear relative="1.405" />
+			<gear relative="1.35" />
+			<gear relative="1.276" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.35, 0.5"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="3wheelcar.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="900.0" pos="0.6, 0.88, -0.02" radius="0.3" force="25000.0" dampening="15000.0" friction="0.02"/>
+		<wheel drive="0.0" steer="0.7" brake1="900.0" pos="-0.6, 0.88, -0.02" radius="0.3" force="25000.0" dampening="15000.0" friction="0.02"/>
+		<wheel drive="1.0" steer="0.0" brake1="500.0" pos="0.0, -0.95, -0.09" radius="0.3" force="45000.0" dampening="10000.0" brake2="4000.0" friction="0.02"/>
+
+		<clip type="body" pos="0.65, 1.4, 1.0" force="300000.0" dampening="50000.0" />
+		<clip type="body" pos="-0.65, 1.4, 1.0" force="300000.0" dampening="50000.0" />
+		<clip type="body" pos="0.65, -1.25, 1.0" force="300000.0" dampening="50000.0" />
+		<clip type="body" pos="-0.65, -1.25, 1.0" force="300000.0" dampening="50000.0" />
+
+	</part>
+
+</vehicle>

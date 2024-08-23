@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Lancer"
+	class="EX Turbo"
+	type="car"
+	locked="yes">
+
+	<genparams
+		mass="1025.0"
+		dimensions="1.62, 4.23, 1.1385"
+		wheelmodel="lancero_wheel.obj"
+		wheelscale="1.0" />
+
+	<pstats
+		weightkg="1025"
+		enginebhp="133-158"
+		wheeldrive="RWD"
+		maxspeed="180"
+		handling="bad" />
+	<!--
+		ATMOSPHERIC EFFECTS IN CTRLPARAMS
+		DRAG:
+			a linear force that push in the opposite direction the vehicle is moving.
+			it has different value respect the x, y and z axis relative the car.
+				x is the drag when moving sideways (left-right axis)
+				y is the drag when moving forward (front-back axis).
+					This is the main drag that will slow down the car
+				z is the drag when moving vertically (top-bottom axis).
+		ANG DRAG:
+			a torque that pushes in the opposite direction the vehicle is rolling
+			this drag will slow down the car from spinning unrealistically fast,
+			for exaxmple when it gets out of control
+		LIFT:
+			this force pushes the car up or down. Normally this is caused by spoilers
+			that push the car down at high speeds to get better grip on the groud.
+			Planes use this force to take off by going very fast
+		FIN EFFECT:
+			Like an arrow, when the car goes very fast it tends to naturally orient
+			itself towards the dirction it is going due to the drag.
+			This makes an external force change the orientation of the vehicle harder at higher speed
+	-->
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="99180">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.5" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="3500" power="0.9" />
+			<powerpoint rpm="5800" power="1.0" />
+			<powerpoint rpm="6000" power="0.0" />
+		</engine>
+	<!--main gear 3.909 1: 3.74 2: 2.136 3: 1.36 4: 1.0 5: 0.856 back 3.578
+		<gearbox>
+			<gear absolute="0.0655" />
+			<gear relative="2.551" />
+			<gear relative="1.488" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.061" />
+			<gear relative="1.75" />
+			<gear relative="1.571" />
+			<gear relative="1.36" />
+			<gear relative="1.169" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.2, 0.4"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="lancero.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.68, 1.27, -0.25" radius="0.3" force="50000.0" dampening="15000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.68, 1.27, -0.25" radius="0.3" force="50000.0" dampening="15000.0" friction="0.018"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.67, -1.29, -0.23" radius="0.3" force="50000.0" dampening="15000.0" brake2="1000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.67, -1.29, -0.23" radius="0.3" force="50000.0" dampening="15000.0" brake2="1000.0" friction="0.022"/>
+
+		<clip type="body" pos="0.81, 2.095, 1.138" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.81, 2.095, 1.138" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.81, -2.135, 1.138" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.81, -2.135, 1.138" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

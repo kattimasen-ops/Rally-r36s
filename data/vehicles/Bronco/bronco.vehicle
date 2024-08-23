@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Bronco III"
+	class="Off-Road"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="2050"
+		enginebhp="210"
+		maxspeed="162"
+		wheeldrive="4WD"
+		handling="moderate" />
+
+	<genparams
+		mass="2050.0"
+		dimensions="1.5, 3.0, 1.5"
+		wheelmodel="truck_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 103.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="156597">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="2000" power="0.7" />
+			<powerpoint rpm="4000" power="1.0" />
+			<powerpoint rpm="6000" power="0.0" />
+		</engine>
+	<!--main gear ? 1: 2.46 2: 1.46 3: 1.0 back ?
+		<gearbox>
+			<gear absolute="0.053" />
+			<gear relative="2.46" />
+			<gear relative="1.46" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0772" />
+			<gear relative="1.685" />
+			<gear relative="1.46" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.3, 0.0"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="bronco.obj"
+		scale="1.0">
+
+		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="0.827, 0.9, -0.02" radius="0.38" force="65000.0" dampening="9300.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="-0.827, 0.9, -0.02" radius="0.38" force="65000.0" dampening="9300.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="0.818, -1.72, -0.02" radius="0.38" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="-0.818, -1.72, -0.02" radius="0.38" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.025"/>
+
+		<clip type="body" pos="1.1, 1.5, 0.8" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.1, 1.5, 0.8" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="1.1, -2.3, 0.8" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.1, -2.3, 0.8" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

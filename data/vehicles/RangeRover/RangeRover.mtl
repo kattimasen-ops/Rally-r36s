@@ -1,0 +1,445 @@
+# Blender MTL File: 'None'
+# Material Count: 37
+
+newmtl Handle1Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.066667 0.066667 0.066667
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Head1Mtl.001
+Ns 9.000004
+Ka 0.569444 0.569444 0.569444
+Kd 0.388235 0.372549 0.384314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Hinge1Mtl.002
+Ns 823.440452
+Ka 0.753623 0.753623 0.753623
+Kd 0.105882 0.164706 0.207843
+Ks 0.623188 0.623188 0.623188
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Hook1Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Lightpart1Mtl.002
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.972549 0.972549 0.972549
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.781074
+illum 6
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part134Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.066667 0.066667 0.066667
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.933333
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part13Mtl.001
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.105882 0.164706 0.207843
+Ks 0.644928 0.644928 0.644928
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part164Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.639216 0.635294 0.647059
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part169Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.782609
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part170Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part171Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.388235 0.372549 0.384314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part173Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.066667 0.066667 0.066667
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part177Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.826087
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part1Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.760444
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part251Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.000000
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part25Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.972549 0.972549 0.972549
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.563683
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part290Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.835294 0.450980 0.239216
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.803922
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part291Mtl.001
+Ns 900.000000
+Ka 0.333333 0.333333 0.333333
+Kd 0.972549 0.972549 0.972549
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.803922
+illum 6
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part295Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.855072
+illum 6
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part2Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.066667 0.066667 0.066667
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part2Mtl.002
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.066667 0.066667 0.066667
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part308Mtl.001
+Ns 900.000000
+Ka 0.750000 0.750000 0.750000
+Kd 0.639216 0.635294 0.647059
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part39Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.000000
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part40Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.869565
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part4Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.411765 0.250980 0.156863
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part54Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.066667 0.066667 0.066667
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.501961
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part55Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part67Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.840580
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part6Mtl.001
+Ns 728.999998
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 0.686275 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part70Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.388235 0.372549 0.384314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part7Mtl.001
+Ns 728.999998
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 0.686275 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd rangerover.png
+
+newmtl Part85Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.486275 0.360784 0.274510
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Part8Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.411765 0.250980 0.156863
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl SteerMesh1Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Wedge17Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.152941 0.274510 0.176471
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.847059
+illum 9
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Wedge71Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.066667 0.066667 0.066667
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png
+
+newmtl Wedge83Mtl.001
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.556863 0.411765
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rangerover.png
+map_Ke rangerover_emission.png

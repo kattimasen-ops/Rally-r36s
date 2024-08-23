@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<event name="05. Weird Dare" author="Onsemeliot" locked="yes">
+
+	<unlocks file="/events/06-picturesque/picturesque.event" />
+	<unlocks file="/vehicles/fox_wrc/fox_wrc.vehicle" />
+	<unlocks file="/vehicles/Nissan/nissan240sx.vehicle" />
+
+	<level file="china/china.level" />
+	<level file="frisky/frisky.level" />
+	<level file="liquid/liquid.level" />
+	<level file="slope/slope.level" />
+	<level file="mars/mars.level" />
+
+</event>

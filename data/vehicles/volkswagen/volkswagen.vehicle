@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="VW"
+	class="Kafer"
+	type="car"
+	locked="yes">
+
+	<genparams
+		mass="780.0"
+		dimensions="1.585, 4.14, 1.5"
+		wheelmodel="volkswagen_wheel.obj"
+		wheelscale="1.0" />
+
+	<pstats
+		weightkg="780"
+		enginebhp="50"
+		wheeldrive="RWD"
+		maxspeed="140"
+		handling="good" />
+	<!--
+		ATMOSPHERIC EFFECTS IN CTRLPARAMS
+		DRAG:
+			a linear force that push in the opposite direction the vehicle is moving.
+			it has different value respect the x, y and z axis relative the car.
+				x is the drag when moving sideways (left-right axis)
+				y is the drag when moving forward (front-back axis).
+					This is the main drag that will slow down the car
+				z is the drag when moving vertically (top-bottom axis).
+		ANG DRAG:
+			a torque that pushes in the opposite direction the vehicle is rolling
+			this drag will slow down the car from spinning unrealistically fast,
+			for exaxmple when it gets out of control
+		LIFT:
+			this force pushes the car up or down. Normally this is caused by spoilers
+			that push the car down at high speeds to get better grip on the groud.
+			Planes use this force to take off by going very fast
+		FIN EFFECT:
+			Like an arrow, when the car goes very fast it tends to naturally orient
+			itself towards the dirction it is going due to the drag.
+			This makes an external force change the orientation of the vehicle harder at higher speed
+	-->
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="37290">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.5" />
+			<powerpoint rpm="2000" power="0.7" />
+			<powerpoint rpm="2800" power="0.9" />
+			<powerpoint rpm="4000" power="1.0" />
+			<powerpoint rpm="4500" power="0.9" />
+			<powerpoint rpm="5000" power="0.0" />
+		</engine>
+
+	<!-- MainGear: ? 1: 3.6 2: 2.07 3: 1.25 4: 0.8 R: 6.6
+
+		<gearbox>
+			<gear absolute="0.0172" />
+			<gear relative="3.8" />
+			<gear relative="2.27" />
+			<gear relative="1.45" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0479" />
+			<gear relative="1.73" />
+			<gear relative="1.656" />
+			<gear relative="1.5625" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.5, 0.15"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="volkswagen.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.654, 1.3, -0.12" radius="0.35" force="45000.0" dampening="10000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.654, 1.3, -0.12" radius="0.35" force="45000.0" dampening="10000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.6745, -1.1, -0.12" radius="0.35" force="45000.0" dampening="10000.0" brake2="1000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.6745, -1.1, -0.12" radius="0.35" force="45000.0" dampening="10000.0" brake2="1000.0" />
+
+		<clip type="body" pos="0.793, 2.2, 1.5" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.793, 2.2, 1.5" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.793, -1.94, 1.5" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.793, -1.94, 1.5" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

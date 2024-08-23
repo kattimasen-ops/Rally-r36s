@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Plimouth"
+	class="Volare"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1425"
+		enginebhp="155"
+		maxspeed="177"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1425.0"
+		dimensions="1.862, 5.11, 1.405"
+		wheelmodel="plimouth_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="115584">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.4" />
+			<powerpoint rpm="2000" power="0.6" />
+			<powerpoint rpm="3000" power="0.8" />
+			<powerpoint rpm="3600" power="1.0" />
+			<powerpoint rpm="4000" power="0.0" />
+		</engine>
+	<!--Ratios 1 st 3.080, 2nd 1.700, 3rd 1, rev 2.90:1. Ratios for automatic models 1 st 1.990, 2nd 1.750, 3rd 1, rev 3.170:1
+		<gearbox>
+			<gear absolute="0.097" />
+			<gear relative="1.990" />
+			<gear relative="1.750" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.169" />
+			<gear relative="1.137" />
+			<gear relative="1.750" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.35, 0.3"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="Plimouth.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.762, 1.75, -0.22" radius="0.35" force="45000.0" dampening="20000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.762, 1.75, -0.22" radius="0.35" force="45000.0" dampening="20000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.747, -1.16, -0.24" radius="0.35" force="45000.0" dampening="20000.0" brake2="1000.0" friction="0.03"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.747, -1.16, -0.24" radius="0.35" force="45000.0" dampening="20000.0" brake2="1000.0" friction="0.03"/>
+
+		<clip type="body" pos="0.931, 2.5, 1.4" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-0.931, 2.5, 1.4" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="0.931, -1.96, 1.4" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.931, -1.96, 1.4" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

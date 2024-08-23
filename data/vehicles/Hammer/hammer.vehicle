@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Hammer"
+	class="Off-Road"
+	type="tank"
+	locked="yes">
+
+	<pstats
+		weightkg="3901"
+		enginebhp="300"
+		maxspeed="134.84"
+		wheeldrive="4WD"
+		handling="moderate" />
+
+	<genparams
+		mass="3901.0"
+		dimensions="2.197, 4.686, 1.956"
+		wheelmodel="hammer_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="223710">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.4" />
+			<powerpoint rpm="1500" power="0.6" />
+			<powerpoint rpm="2000" power="0.8" />
+			<powerpoint rpm="3000" power="1.0" />
+			<powerpoint rpm="4000" power="0.0" />
+		</engine>
+	<!--main gear 2.2 high 1.0 low 2.72 1: 2.48 2: 1.48 3: 1.0 4: 0.75 back 2.08
+		<gearbox>
+			<gear absolute="0.0132" />
+			<gear relative="3.39" />
+			<gear relative="2.1" />
+			<gear relative="1.7" />
+			<gear relative="1.29" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0575" />
+			<gear relative="1.676" />
+			<gear relative="1.48" />
+			<gear relative="1.333" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.2, 0.13"
+		orientation="0.0, 0.0, 0.0, 0.0"
+		model="hammer.obj"
+		scale="1.0">
+
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="0.915, 2.04, -0.2" radius="0.47" force="90000.0" dampening="9000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-0.915, 2.04, -0.2" radius="0.47" force="90000.0" dampening="9000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="0.915, -1.11, -0.25" radius="0.47" force="100000.0" dampening="8000.0" brake2="2000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="-0.915, -1.11, -0.25" radius="0.47" force="100000.0" dampening="8000.0" brake2="2000.0" friction="0.025"/>
+
+		<clip type="body" pos="1.099, 3.07, 1.96" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.099, 3.07, 1.96" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="1.099, -1.61, 1.96" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.099, -1.61, 1.96" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

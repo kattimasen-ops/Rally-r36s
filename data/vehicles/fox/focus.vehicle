@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Focus Mk2"
+	class="WRC04"
+	type="car"
+	locked="yes">
+
+	<genparams
+		mass="1230.0"
+		dimensions="1.7, 4.175, 1.44"
+		wheelmodel="fox_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="223710">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="2000" power="0.5" />
+			<powerpoint rpm="5000" power="0.7" />
+			<powerpoint rpm="8500" power="1.0" />
+			<powerpoint rpm="9000" power="0.9" />
+			<powerpoint rpm="10000" power="0.0" />
+		</engine>
+	<!--main gear 4.38 1: 3.45 2: 2.06 3: 1.39 4: 1.03 5: 0.837 6: 0.717 back 3.71
+		<gearbox>
+			<gear absolute="0.009" />
+			<gear relative="3.733" />
+			<gear relative="2.333" />
+			<gear relative="1.673" />
+			<gear relative="1.313" />
+			<gear relative="1.12" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.041" />
+			<gear relative="1.675" />
+			<gear relative="1.482" />
+			<gear relative="1.35" />
+			<gear relative="1.231" />
+			<gear relative="1.167" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.5, 0.4"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="fox.obj"
+		scale="1.0">
+
+		<wheel drive="0.8" steer="0.7" brake1="600.0" pos="0.775, 1.52, -0.22" radius="0.33" force="65000.0" dampening="14000.0" />
+		<wheel drive="0.8" steer="0.7" brake1="600.0" pos="-0.775, 1.52, -0.22" radius="0.33" force="65000.0" dampening="14000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.775, -1.1875, -0.22" radius="0.33" force="60000.0" dampening="14000.0" brake2="1000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.775, -1.1875, -0.22" radius="0.33" force="60000.0" dampening="14000.0" brake2="1000.0" />
+
+		<clip type="body" pos="0.85, 2.42, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.85, 2.42, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.85, -1.755, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.85, -1.755, 1.44" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

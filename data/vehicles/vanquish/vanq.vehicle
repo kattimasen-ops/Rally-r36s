@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Aston"
+	class="Vanquish"
+	type="car"
+	locked="yes">
+
+	<genparams
+		mass="1875.0"
+		dimensions="1.923, 4.665, 1.318"
+		wheelmodel="vanq_wheel.obj"
+		wheelscale="1.0" />
+
+	<pstats
+		weightkg="1875"
+		enginebhp="527"
+		wheeldrive="RWD"
+		maxspeed="322"
+		handling="good" />
+	<!--
+		ATMOSPHERIC EFFECTS IN CTRLPARAMS
+		DRAG:
+			a linear force that push in the opposite direction the vehicle is moving.
+			it has different value respect the x, y and z axis relative the car.
+				x is the drag when moving sideways (left-right axis)
+				y is the drag when moving forward (front-back axis).
+					This is the main drag that will slow down the car
+				z is the drag when moving vertically (top-bottom axis).
+		ANG DRAG:
+			a torque that pushes in the opposite direction the vehicle is rolling
+			this drag will slow down the car from spinning unrealistically fast,
+			for exaxmple when it gets out of control
+		LIFT:
+			this force pushes the car up or down. Normally this is caused by spoilers
+			that push the car down at high speeds to get better grip on the groud.
+			Planes use this force to take off by going very fast
+		FIN EFFECT:
+			Like an arrow, when the car goes very fast it tends to naturally orient
+			itself towards the dirction it is going due to the drag.
+			This makes an external force change the orientation of the vehicle harder at higher speed
+	-->
+	<ctrlparams
+		angdrag="0.0, 0.0, 0.0"
+		drag="0.0, 0.0, 94.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="392984">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="2000" power="0.5" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="5000" power="0.9" />
+			<powerpoint rpm="7000" power="1.0" />
+			<powerpoint rpm="8000" power="0.0" />
+		</engine>
+	<!--main gear 3.69 1: 2.66 2: 1.78 3: 1.3 4: 1.0 5: 0.85 6: 0.7 back 2.0
+		<gearbox>
+			<gear absolute="0.0216" />
+			<gear relative="2.96" />
+			<gear relative="2.08" />
+			<gear relative="1.6" />
+			<gear relative="1.3" />
+			<gear relative="1.15" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.083" />
+			<gear relative="1.494" />
+			<gear relative="1.369" />
+			<gear relative="1.3" />
+			<gear relative="1.177" />
+			<gear relative="1.214" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.5, 0.2"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="vanq.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.765, 1.37, -0.14" radius="0.34" force="50000.0" dampening="10000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.765, 1.37, -0.14" radius="0.34" force="50000.0" dampening="10000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7625, -1.3, -0.19" radius="0.34" force="75000.0" dampening="8000.0" brake2="2000.0" friction="0.030"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7625, -1.3, -0.19" radius="0.34" force="75000.0" dampening="8000.0" brake2="2000.0" friction="0.030"/>
+
+		<clip type="body" pos="0.96, 2.00, 1.3" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.96, 2.00, 1.3" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.96, -1.92, 1.3" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.96, -1.92, 1.3" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

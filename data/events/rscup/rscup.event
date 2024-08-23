@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<event
+	name="RS Cup"
+	author="M&aacute;rcio Bremm"
+	>
+
+	<unlocks file="/vehicles/Plimouth/plimouth.vehicle" />
+	<unlocks file="/vehicles/lancero/lancero.vehicle" />
+	<unlocks file="/vehicles/IZH/IZH2715.vehicle" />
+	<unlocks file="/vehicles/Quadri/quadri.vehicle" />
+	<unlocks file="/vehicles/Scooter/Scooter.vehicle" />
+	<unlocks file="/vehicles/GAZ24_Volga/volga.vehicle" />
+
+	<level file="8765/8765.level" />
+
+	<level file="roundhouse/roundhouse.level" />
+
+	<level file="labrally/labrally.level" />
+
+	<level file="labrally/labrally-bis.level" />
+
+	<level file="helicoil/helicoil.level" />
+
+	<level file="ancient/ancient.level" />
+
+	<level file="scorpio/scorpio.level" />
+
+</event>

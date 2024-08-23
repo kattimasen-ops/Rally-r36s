@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Seat TRI"
+	class="WRC04"
+	type="car"
+	locked="yes">
+
+	<genparams
+		mass="1230.0"
+		dimensions="1.64, 4.109 1.408"
+		wheelmodel="cordon_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="223710">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="2000" power="0.5" />
+			<powerpoint rpm="5000" power="0.7" />
+			<powerpoint rpm="8000" power="0.9" />
+			<powerpoint rpm="9000" power="1.0" />
+			<powerpoint rpm="10000" power="0.0" />
+		</engine>
+	<!--main gear 4.583 1: 2.923 2: 2.133 3: 1.667 4: 1.333 5: 1.083 6: 0.889 back 2.563
+		<gearbox>
+			<gear absolute="0.006" />
+			<gear relative="3.034" />
+			<gear relative="2.244" />
+			<gear relative="1.778" />
+			<gear relative="1.444" />
+			<gear relative="1.194" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.051" />
+			<gear relative="1.37" />
+			<gear relative="1.28" />
+			<gear relative="1.25" />
+			<gear relative="1.231" />
+			<gear relative="1.218" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.05, 0.4"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="cordon.obj"
+		scale="1.0">
+
+		<wheel drive="0.8" steer="0.7" brake1="600.0" pos="0.7145, 1.0, -0.26" radius="0.35" force="60000.0" dampening="15000.0" />
+		<wheel drive="0.8" steer="0.7" brake1="600.0" pos="-0.7145, 1.0, -0.26" radius="0.35" force="60000.0" dampening="15000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.697, -1.45, -0.26" radius="0.35" force="60000.0" dampening="15000.0" brake2="1000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.697, -1.45, -0.26" radius="0.35" force="60000.0" dampening="15000.0" brake2="1000.0" />
+
+		<clip type="body" pos="1.0, 1.9, 1.4" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.0, 1.9, 1.4" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="1.0, -2.2, 1.4" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.0, -2.2, 1.4" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

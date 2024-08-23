@@ -1,0 +1,60 @@
+# Blender MTL File: 'None'
+# Material Count: 5
+
+newmtl New_Material
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd fordpolice.png
+map_Ke fordpolice_emission.png
+
+newmtl Tex_0031_1_dds
+Ns 0.000000
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd fordpolice.png
+map_Ke fordpolice_emission.png
+
+newmtl Tex_0034_1_dds
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd fordpolice.png
+map_Ke fordpolice_emission.png
+
+newmtl Tex_0040_1_dds
+Ns 0.000000
+Ka 0.200000 0.200000 0.200000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd fordpolice.png
+map_Ke fordpolice_emission.png
+
+newmtl Tex_1162_1_dds
+Ns 0.000000
+Ka 0.576812 0.576812 0.576812
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.000000
+illum 6

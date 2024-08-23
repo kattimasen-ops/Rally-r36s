@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Gun Car"
+	class="Off-Road"
+	type="tank"
+	locked="no">
+
+	<pstats
+		weightkg="1300"
+		enginebhp="152"
+		maxspeed="130"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1300.0"
+		dimensions="1.83, 3.335, 1.585"
+		wheelmodel="guncar_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="113347">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.4" />
+			<powerpoint rpm="1500" power="0.6" />
+			<powerpoint rpm="2000" power="0.8" />
+			<powerpoint rpm="2700" power="1.0" />
+			<powerpoint rpm="3000" power="0.0" />
+		</engine>
+	<!--main gear 4.125 1: 3.8 2: 2.117 3: 1.409 4: 0.964 back 3.936
+		<gearbox>
+			<gear absolute="0.025" />
+			<gear relative="3.836" />
+			<gear relative="2.156" />
+			<gear relative="1.445" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0735" />
+			<gear relative="1.795" />
+			<gear relative="1.502" />
+			<gear relative="1.46" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.5, 0.1"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="guncar.obj"
+		scale="1.0">
+
+		<wheel drive="0.4" steer="0.7" brake1="600.0" pos="0.978, 0.7, -0.2" radius="0.4" force="45000.0" dampening="20000.0" friction="0.020"/>
+		<wheel drive="0.4" steer="0.7" brake1="600.0" pos="-0.978, 0.7, -0.2" radius="0.4" force="45000.0" dampening="20000.0" friction="0.020"/>
+		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="0.978, -1.3, -0.2" radius="0.4" force="45000.0" dampening="20000.0" brake2="1000.0" friction="0.020"/>
+		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="-0.978, -1.3, -0.2" radius="0.4" force="45000.0" dampening="20000.0" brake2="1000.0" friction="0.020"/>
+
+		<clip type="body" pos="0.92, 1.068, 1.83" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-0.92, 1.068, 1.83" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="0.92, -2.268, 1.83" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.92, -2.268, 1.83" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<level
+	name="Airport"
+	comment="Test da fuck-UP"
+	author="Xandr-Eugene"
+	description="Test Vehicles area"
+	screenshot="ss.png"
+	minimap="c.png">
+
+	<terrain
+		heightmap="h.png"
+		terrainmap="t.png"
+		colormap="c.png"
+		foliagemap="f.png"
+		roadmap="r.png"
+		hudmap="c.png"
+		tilesize="64"
+		horizontalscale="10"
+		verticalscale="5"
+		>
+		<blurfilter>
+			<row data="0.01000 0.01000 0.01001 0.01000 0.01000" />
+			<row data="0.01000 0.01001 0.01002 0.01001 0.01000" />
+			<row data="0.01001 0.01002 0.01003 0.01002 0.01001" />
+			<row data="0.01000 0.01001 0.01002 0.01001 0.01000" />
+			<row data="0.01000 0.01000 0.01001 0.01000 0.01000" />
+		</blurfilter>
+
+//VEGETATION
+
+		<foliageband
+			middle="0.38"
+			range="0.05"
+			density="0.001"
+			sprite="/textures/veg/herbs.png"
+			spritecount="1"
+			scale="1.0"
+			/>
+
+		<foliageband
+			middle="0.34"
+			range="0.05"
+			density="0.001"
+			sprite="/textures/veg/grass-sprite.png"
+			spritecount="1"
+			scale="0.9"
+			/>
+
+		<foliageband
+			middle="0.25"
+			range="0.05"
+			density="0.001"
+			sprite="/textures/veg/grain.png"
+			spritecount="1"
+			scale="0.7"
+			/>
+
+//ЗНАКЫ!
+		<roadsign sprite="/textures/roadsigns/10up.png" scale="10">
+			//ОТ ВЕРХНЕГО ВХОДА ВОБЪЕЗД
+			<location coords="423, 432" oridegrees="0" />
+			<location coords="423, 944" oridegrees="0" />
+		</roadsign>
+
+
+	</terrain>
+
+
+	<weather
+		cloudtexture="/textures/sky/sunrise.jpg"
+		cloudscrollrate="0.003"
+		fogcolor="5.0, 1.0, 0.0"
+		fogdensity="0.001"
+		fogdensitysky="0.4"
+		/>
+
+	<water
+		height="10"
+		watertexture="/textures/water/muddy-water.png"
+		alpha="0.5"
+		fixedalpha="no"
+		/>
+
+
+
+	<race coordscale="10, 10" targettime="360.0">
+
+	<startposition pos="417.5, 15" oridegrees="0" />
+		<checkpoint coords="417.5, 15" notes="easy long tarmac" />
+		<checkpoint coords="417.5, 420" notes="over jump" />
+		<checkpoint coords="417.5, 840" notes="over jump over finish" />
+		<checkpoint coords="417.5, 1200"/>
+
+	</race>
+</level>

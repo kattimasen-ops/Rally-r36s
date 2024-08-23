@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Camero"
+	class="Chevy"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1715"
+		enginebhp="405"
+		maxspeed="250"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1715.0"
+		dimensions="1.5, 3.0, 1.0"
+		wheelmodel="camero_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="302009">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="2000" power="0.5" />
+			<powerpoint rpm="4000" power="0.7" />
+			<powerpoint rpm="6400" power="1.0" />
+			<powerpoint rpm="8000" power="0.0" />
+		</engine>
+	<!--main gear: 3.06 1: 4.03 2: 2.36 3: 1.53 4: 1.15 5: 0.85 6: 0.67 back ?
+		<gearbox>
+			<gear absolute="0.0115" />
+			<gear relative="3.03" />
+			<gear relative="2.15" />
+			<gear relative="1.67" />
+			<gear relative="1.37" />
+			<gear relative="1.17" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0381" />
+			<gear relative="1.708" />
+			<gear relative="1.54" />
+			<gear relative="1.33" />
+			<gear relative="1.353" />
+			<gear relative="1.269" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.2, 0.3"
+		orientation="1.0, 0.0, 0.0"
+		model="camero.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.809, 1.69, -0.22" radius="0.364" force="50000.0" dampening="8500.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.809, 1.69, -0.22" radius="0.364" force="50000.0" dampening="8500.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.809, -1.202, -0.22" radius="0.364" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.809, -1.202, -0.22" radius="0.364" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
+
+		<clip type="body" pos="1.0, 1.77, 0.6" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, 1.77, 0.6" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="1.0, -1.28, 0.6" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.0, -1.28, 0.6" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

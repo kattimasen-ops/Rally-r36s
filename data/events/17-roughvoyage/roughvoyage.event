@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<event name="17. Rough Voyage" author="Onsemeliot" locked="yes">
+
+	<unlocks file="/events/18-infinite/infinite.event" />
+	<unlocks file="/vehicles/Bronco/bronco.vehicle" />
+	<unlocks file="/vehicles/subaru/subaru.vehicle" />
+
+	<level file="goodmorning.level" />
+	<level file="lakescape/lakescape.level" />
+	<level file="mosquito/mosquito.level" />
+	<level file="anxious/anxious.level" />
+	<level file="unchallenged.level" />
+	<level file="bark/bark.level" />
+
+</event>

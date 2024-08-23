@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Honda CRV"
+	class="Off-Road"
+	type="tank"
+	locked="yes">
+
+	<pstats
+		weightkg="1500"
+		enginebhp="150"
+		maxspeed="167"
+		wheeldrive="4WD"
+		handling="good" />
+
+	<genparams
+		mass="1500.0"
+		dimensions="1.6, 2.3, 1.2"
+		wheelmodel="SUV_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="111855">
+			<powerpoint rpm="1000" power="0.2" />
+			<powerpoint rpm="2000" power="0.4" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="5500" power="0.9" />
+			<powerpoint rpm="6500" power="1.0" />
+			<powerpoint rpm="7000" power="0.0" />
+		</engine>
+	<!--main gear 4.562 1: 2.684 2: 1.534 3: 1.081 4: 0.695 back 2.0
+		<gearbox>
+			<gear absolute="0.024" />
+			<gear relative="2.985" />
+			<gear relative="1.839" />
+			<gear relative="1.386" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0484" />
+			<gear relative="1.75" />
+			<gear relative="1.419" />
+			<gear relative="1.555" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.3, 0.25"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="SUV.obj"
+		scale="1.0">
+
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="0.77, 1.18, -0.22" radius="0.343" force="65000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-0.77, 1.18, -0.22" radius="0.343" force="65000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="400.0" pos="0.7775, -1.44, -0.19" radius="0.343" force="65000.0" dampening="15000.0" brake2="1000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="400.0" pos="-0.7775, -1.44, -0.19" radius="0.343" force="65000.0" dampening="15000.0" brake2="1000.0" friction="0.025"/>
+
+		<clip type="body" pos="1.0, 2.0, 1.0" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.0, 2.0, 1.0" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="1.0, -3.3, 1.0" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.0, -3.3, 1.0" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Cordoba"
+	class="S500"
+	type="car"
+	locked="yes">
+
+	<genparams
+		mass="1400.0"
+		dimensions="1.64, 4.109 1.408"
+		wheelmodel="cordo_super500_wheel.obj"
+		wheelscale="1.0" />
+
+	<!--
+		ATMOSPHERIC EFFECTS IN CTRLPARAMS
+		DRAG:
+			a linear force that push in the opposite direction the vehicle is moving.
+			it has different value respect the x, y and z axis relative the car.
+				x is the drag when moving sideways (left-right axis)
+				y is the drag when moving forward (front-back axis).
+					This is the main drag that will slow down the car
+				z is the drag when moving vertically (top-bottom axis).
+		ANG DRAG:
+			a torque that pushes in the opposite direction the vehicle is rolling
+			this drag will slow down the car from spinning unrealistically fast,
+			for exaxmple when it gets out of control
+		LIFT:
+			this force pushes the car up or down. Normally this is caused by spoilers
+			that push the car down at high speeds to get better grip on the groud.
+			Planes use this force to take off by going very fast
+		FIN EFFECT:
+			Like an arrow, when the car goes very fast it tends to naturally orient
+			itself towards the dirction it is going due to the drag.
+			This makes an external force change the orientation of the vehicle harder at higher speed
+	-->
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="372850">
+			<powerpoint rpm="2000" power="0.4" />
+			<powerpoint rpm="5000" power="0.7" />
+			<powerpoint rpm="8000" power="1.0" />
+			<powerpoint rpm="11000" power="0.6" />
+			<powerpoint rpm="12000" power="0.0" />
+		</engine>
+	<!--main gear 4.583 1: 2.923 2: 2.133 3: 1.667 4: 1.333 5: 1.083 6: 0.889 back 2.563
+		<gearbox>
+			<gear absolute="0.006" />
+			<gear relative="3.034" />
+			<gear relative="2.244" />
+			<gear relative="1.778" />
+			<gear relative="1.444" />
+			<gear relative="1.194" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0482" />
+			<gear relative="1.37" />
+			<gear relative="1.28" />
+			<gear relative="1.25" />
+			<gear relative="1.231" />
+			<gear relative="1.218" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.05, 0.4"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="cordo_super500.obj"
+		scale="1.0">
+
+		<wheel drive="0.6" steer="0.7" brake1="1400.0" pos="0.7145, 1.0, -0.24" radius="0.35" force="75000.0" dampening="20000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.7" brake1="1400.0" pos="-0.7145, 1.0, -0.24" radius="0.35" force="75000.0" dampening="20000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.0" brake1="800.0" pos="0.697, -1.45, -0.24" radius="0.35" force="75000.0" dampening="20000.0" brake2="2500.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.0" brake1="800.0" pos="-0.697, -1.45, -0.24" radius="0.35" force="75000.0" dampening="20000.0" brake2="2500.0" friction="0.025"/>
+
+		<clip type="body" pos="1.0, 1.9, 1.4" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, 1.9, 1.4" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="1.0, -2.2, 1.4" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.0, -2.2, 1.4" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

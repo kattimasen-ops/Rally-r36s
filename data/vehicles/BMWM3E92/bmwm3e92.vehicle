@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="BMW"
+	class="M3 E92"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1655-2080"
+		enginebhp="420"
+		maxspeed="250(280)"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="2080.0"
+		dimensions="1.5, 3.0, 1.0"
+		wheelmodel="BMWM3E92_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="313194">
+			<powerpoint rpm="2000" power="0.3" />
+			<powerpoint rpm="4000" power="0.5" />
+			<powerpoint rpm="6000" power="0.8" />
+			<powerpoint rpm="8300" power="1.0" />
+			<powerpoint rpm="9000" power="0.0" />
+		</engine>
+
+	<!--main gear 3.85 1: 4.055 2: 2.396 3: 1.582 4:1.192 5:1.0 6:0.872 back 3.678
+		<gearbox>
+			<gear absolute="0.0616" />
+			<gear absolute="0.0089" />
+			<gear relative="4.183" />
+			<gear relative="2.524" />
+			<gear relative="1.71" />
+			<gear relative="1.32" />
+			<gear relative="1.128" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0612" />
+			<gear relative="1.69" />
+			<gear relative="1.5145" />
+			<gear relative="1.327" />
+			<gear relative="1.147" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.4, 0.2"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="BMWM3E92.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.769, 1.5, -0.1" radius="0.343" force="65000.0" dampening="15000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.769, 1.5, -0.1" radius="0.343" force="65000.0" dampening="15000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7695, -1.261, -0.15" radius="0.347" force="85000.0" dampening="10000.0" brake2="1000.0" friction="0.03"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7695, -1.261, -0.15" radius="0.347" force="85000.0" dampening="10000.0" brake2="1000.0" friction="0.03"/>
+
+		<clip type="body" pos="1.0, 1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, 1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="1.0, -1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, -1.8, 0.3" force="300000.0" dampening="30000.0" />
+
+	</part>
+
+</vehicle>

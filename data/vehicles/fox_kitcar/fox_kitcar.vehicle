@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Focus"
+	class="Kit-Car"
+	type="car">
+
+	<genparams
+		mass="1318.0"
+		dimensions="1.7, 4.175, 1.44"
+		wheelmodel="fox_kitcar_wheel.obj"
+		wheelscale="1.0" />
+
+	<pstats
+		weightkg="1318"
+		enginebhp="125"
+		wheeldrive="FWD"
+		maxspeed="198"
+		handling="good" />
+	<!--
+		ATMOSPHERIC EFFECTS IN CTRLPARAMS
+		DRAG:
+			a linear force that push in the opposite direction the vehicle is moving.
+			it has different value respect the x, y and z axis relative the car.
+				x is the drag when moving sideways (left-right axis)
+				y is the drag when moving forward (front-back axis).
+					This is the main drag that will slow down the car
+				z is the drag when moving vertically (top-bottom axis).
+		ANG DRAG:
+			a torque that pushes in the opposite direction the vehicle is rolling
+			this drag will slow down the car from spinning unrealistically fast,
+			for exaxmple when it gets out of control
+		LIFT:
+			this force pushes the car up or down. Normally this is caused by spoilers
+			that push the car down at high speeds to get better grip on the groud.
+			Planes use this force to take off by going very fast
+		FIN EFFECT:
+			Like an arrow, when the car goes very fast it tends to naturally orient
+			itself towards the dirction it is going due to the drag.
+			This makes an external force change the orientation of the vehicle harder at higher speed
+	-->
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="93213">
+			<powerpoint rpm="500" power="0.1" />
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="2500" power="0.5" />
+			<powerpoint rpm="5500" power="1.0" />
+			<powerpoint rpm="7500" power="0.9" />
+			<powerpoint rpm="8000" power="0.0" />
+		</engine>
+	<!--main gear 4.06 1:3.42 2:2.14 3:1.45 4:1.03 5:0.805 back 3.71
+		<gearbox>
+			<gear absolute="0.012" />
+			<gear relative="3.615" />
+			<gear relative="2.335" />
+			<gear relative="1.645" />
+			<gear relative="1.225" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.047" />
+			<gear relative="1.598" />
+			<gear relative="1.476" />
+			<gear relative="1.408" />
+			<gear relative="1.28" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.5, 0.4"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="fox_kitcar.obj"
+		scale="1.0">
+
+		<wheel drive="1.0" steer="0.7" brake1="600.0" pos="0.7675, 1.52, -0.22" radius="0.33" force="50000.0" dampening="16000.0" friction="0.018"/>
+		<wheel drive="1.0" steer="0.7" brake1="600.0" pos="-0.7675, 1.52, -0.22" radius="0.33" force="50000.0" dampening="16000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.0" brake1="300.0" pos="0.7655, -1.1875, -0.22" radius="0.33" force="45000.0" dampening="16000.0" brake2="1000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.0" brake1="300.0" pos="-0.7655, -1.1875, -0.22" radius="0.33" force="45000.0" dampening="16000.0" brake2="1000.0" friction="0.018"/>
+
+		<clip type="body" pos="0.85, 2.42, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.85, 2.42, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.85, -1.755, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.85, -1.755, 1.44" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

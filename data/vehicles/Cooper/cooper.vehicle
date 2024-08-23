@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Mini"
+	class="Cooper"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1240"
+		enginebhp="210"
+		maxspeed="222"
+		wheeldrive="FWD"
+		handling="good" />
+
+	<genparams
+		mass="1240.0"
+		dimensions="1.6, 2.3, 1.2"
+		wheelmodel="cooper_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="156597">
+			<powerpoint rpm="1000" power="0.2" />
+			<powerpoint rpm="2000" power="0.4" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="5000" power="0.9" />
+			<powerpoint rpm="5650" power="1.0" />
+			<powerpoint rpm="6500" power="0.0" />
+		</engine>
+	<!--"final":3.65,"forward":[3.31,2.13,1.48,1.14,0.95,0.82],"reverse":3.394
+			<gear absolute="0.0154" />
+			<gear relative="3.49" />
+			<gear relative="2.31" />
+			<gear relative="1.66" />
+			<gear relative="1.32" />
+			<gear relative="1.13" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0752" />
+			<gear relative="1.554" />
+			<gear relative="1.439" />
+			<gear relative="1.298" />
+			<gear relative="1.2" />
+			<gear relative="1.159" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.2, 0.3"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="Cooper.obj"
+		scale="1.0">
+
+		<wheel drive="1.0" steer="0.7" brake1="800.0" pos="0.7265, 1.25, -0.18" radius="0.30" force="45000.0" dampening="15000.0" />
+		<wheel drive="1.0" steer="0.7" brake1="800.0" pos="-0.7265, 1.25, -0.18" radius="0.30" force="45000.0" dampening="15000.0" />
+		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="0.7305, -1.25, -0.2" radius="0.30" force="45000.0" dampening="15000.0" brake2="1000.0" />
+		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="-0.7305, -1.25, -0.2" radius="0.30" force="45000.0" dampening="15000.0" brake2="1000.0" />
+
+		<clip type="body" pos="1.0, 1.5, 1.0" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, 1.5, 1.0" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="1.0, -1.0, 1.0" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.0, -1.0, 1.0" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

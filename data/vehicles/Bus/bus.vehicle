@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Bus"
+	class="Off-Road"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="9500.0"
+		enginebhp="190"
+		maxspeed="100"
+		wheeldrive="RWD"
+		handling="moderate" />
+
+	<genparams
+		mass="9500.0"
+		dimensions="2.5, 12.0, 3.2"
+		wheelmodel="bus_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 475.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="141683">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.5" />
+			<powerpoint rpm="1500" power="0.7" />
+			<powerpoint rpm="2000" power="0.9" />
+			<powerpoint rpm="2800" power="1.0" />
+			<powerpoint rpm="4000" power="0.0" />
+		</engine>
+	<!--main gear ? 1: 6.17; 2: 2.99; 3: 1.59; 4: 1.00; 5: 0.78; rear.6.68
+		<gearbox>
+			<gear absolute="0.007" />
+			<gear relative="6.39" />
+			<gear relative="3.21" />
+			<gear relative="1.81" />
+			<gear relative="1.22" />
+			<gear relative="1.00" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0139" />
+			<gear relative="2.064" />
+			<gear relative="1.881" />
+			<gear relative="1.59" />
+			<gear relative="1.282" />
+			<gear relative="1.00" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -1.0, -0.1"
+		orientation="0.0, 0.0, 0.0, 0.0"
+		model="Bus.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.6" brake1="800.0" pos="1.15, 3.75, -0.2" radius="0.6" force="115000.0" dampening="15000.0" friction="0.03"/>
+		<wheel drive="0.0" steer="0.6" brake1="800.0" pos="-1.15, 3.75, -0.2" radius="0.6" force="115000.0" dampening="15000.0" friction="0.03"/>
+		<wheel drive="0.5" steer="0.0" brake1="400.0" pos="1.2, -2.5, -0.2" radius="0.6" force="55000.0" dampening="15000.0" brake2="2000.0" friction="0.03"/>
+		<wheel drive="0.5" steer="0.0" brake1="400.0" pos="-1.2, -2.5, -0.2" radius="0.6" force="55000.0" dampening="15000.0" brake2="2000.0" friction="0.03"/>
+		<wheel drive="0.5" steer="0.0" brake1="400.0" pos="0.9, -2.5, -0.2" radius="0.6" force="55000.0" dampening="15000.0" brake2="2000.0" friction="0.03"/>
+		<wheel drive="0.5" steer="0.0" brake1="400.0" pos="-0.9, -2.5, -0.2" radius="0.6" force="55000.0" dampening="15000.0" brake2="2000.0" friction="0.03"/>
+
+		<clip type="body" pos="1.25, 7.2, 3.2" force="100000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.25, 7.2, 3.2" force="100000.0" dampening="30000.0" />
+		<clip type="body" pos="1.25, -4.8, 3.2" force="100000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.25, -4.8, 3.2" force="100000.0" dampening="30000.0" />
+
+	</part>
+
+</vehicle>

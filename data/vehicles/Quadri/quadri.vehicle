@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Quadri"
+	class="Off-Road"
+	type="tank"
+	locked="yes">
+
+	<pstats
+		weightkg="48"
+		enginebhp="1.877"
+		maxspeed="17"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="108"
+		dimensions="1.5, 3.0, 1.5"
+		wheelmodel="quadri_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="1405">
+			<powerpoint rpm="150" power="0.4" />
+			<powerpoint rpm="200" power="0.6" />
+			<powerpoint rpm="250" power="0.8" />
+			<powerpoint rpm="300" power="1.0" />
+			<powerpoint rpm="500" power="0.0" />
+		</engine>
+	<!--main gear ? 1: 3.836 2: 2.156 3: 1.445 4: 1.0 back ?
+		<gearbox>
+			<gear absolute="0.12" />
+			<gear relative="3.836" />
+			<gear relative="2.156" />
+			<gear relative="1.445" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.147" />
+			<gear relative="1.779" />
+			<gear relative="1.492" />
+			<gear relative="1.445" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.25, 0.1"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="quadri.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="50.0" pos="0.24, 0.58, -0.09" radius="0.165" force="5000.0" dampening="5000.0" friction="0.015"/>
+		<wheel drive="0.0" steer="0.7" brake1="50.0" pos="-0.24, 0.58, -0.09" radius="0.165" force="5000.0" dampening="5000.0" friction="0.015"/>
+		<wheel drive="1.0" steer="0.0" brake1="25.0" pos="0.36, -0.59, -0.09" radius="0.165" force="10000.0" dampening="5000.0" brake2="100.0" friction="0.015"/>
+		<wheel drive="1.0" steer="0.0" brake1="25.0" pos="-0.36, -0.59, -0.09" radius="0.165" force="10000.0" dampening="5000.0" brake2="100.0" friction="0.015"/>
+
+		<clip type="body" pos="0.4, 0.8, 0.5" force="30000.0" dampening="20000.0" />
+		<clip type="body" pos="-0.4, 0.8, 0.5" force="30000.0" dampening="20000.0" />
+		<clip type="body" pos="0.4, -0.8, 0.5" force="30000.0" dampening="20000.0" />
+		<clip type="body" pos="-0.4, -0.8, 0.5" force="30000.0" dampening="20000.0" />
+
+	</part>
+
+</vehicle>

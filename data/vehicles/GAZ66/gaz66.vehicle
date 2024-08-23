@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="GAZ-66"
+	class="Off-Road"
+	type="tank"
+	locked="yes">
+
+	<pstats
+		weightkg="5940"
+		enginebhp="150"
+		maxspeed="90"
+		wheeldrive="4WD"
+		handling="moderate" />
+
+	<genparams
+		mass="5940.0"
+		dimensions="2.05, 5.806, 2.41"
+		wheelmodel="truck_wheel.obj"
+		wheelscale="0.034" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="111855">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.5" />
+			<powerpoint rpm="1500" power="0.7" />
+			<powerpoint rpm="2000" power="0.9" />
+			<powerpoint rpm="2800" power="1.0" />
+			<powerpoint rpm="4000" power="0.0" />
+		</engine>
+	<!--main gear 6.83 low1:1.982 low2:1.0 1:6.55 2:3.09 3:1.71 4:1.00 back 7.77
+		<gearbox>
+			<gear absolute="0.00285" />
+			<gear relative="6.55" />
+			<gear relative="3.09" />
+			<gear relative="1.71" />
+			<gear relative="1.00" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.015" />
+			<gear relative="2.12" />
+			<gear relative="1.81" />
+			<gear relative="1.71" />
+			<gear relative="1.00" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.6, -0.5"
+		orientation="0.0, 0.0, 0.0, 0.0"
+		model="gaz-66.obj"
+		scale="1.0">
+
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="0.95, 1.45, 0.4" radius="0.61" force="90000.0" dampening="20000.0" />
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-0.95, 1.45, 0.4" radius="0.61" force="90000.0" dampening="20000.0" />
+		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="0.925, -1.85, 0.2" radius="0.61" force="80000.0" dampening="20000.0" brake2="2000.0" />
+		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="-0.925, -1.85, 0.2" radius="0.61" force="80000.0" dampening="20000.0" brake2="2000.0" />
+
+		<clip type="body" pos="1.025, 2.503, 2.41" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.025, 2.503, 2.41" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="1.025, -3.303, 2.41" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.025, -3.303, 2.41" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

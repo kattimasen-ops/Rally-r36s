@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="BMW"
+	class="M3 GTR"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1120	1350"
+		enginebhp="350-493"
+		maxspeed="245(300)"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1350.0"
+		dimensions="1.5, 3.0, 1.0"
+		wheelmodel="BMWM3GTR_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="5"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="260995">
+			<powerpoint rpm="2000" power="0.3" />
+			<powerpoint rpm="4000" power="0.5" />
+			<powerpoint rpm="5500" power="0.8" />
+			<powerpoint rpm="7250" power="1.0" />
+			<powerpoint rpm="8500" power="0.0" />
+		</engine>
+
+	<!--main gear 3.87 1:2.5 2:2.07 3:1.69 4:1.38 5:1.18 6:1.04 back 3.678
+		<gearbox>
+			<gear absolute="0.114" />
+			<gear absolute="0.02185" />
+			<gear relative="2.46" />
+			<gear relative="2.03" />
+			<gear relative="1.65" />
+			<gear relative="1.34" />
+			<gear relative="1.14" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.092" />
+			<gear relative="1.2077" />
+			<gear relative="1.2249" />
+			<gear relative="1.2246" />
+			<gear relative="1.17" />
+			<gear relative="1.135" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.35, 0.35"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="BMWM3GTR.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.804, 1.59, -0.17" radius="0.343" force="45000.0" dampening="15000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.804, 1.59, -0.17" radius="0.343" force="45000.0" dampening="15000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.8015, -1.1, -0.22" radius="0.347" force="65000.0" dampening="10000.0" brake2="1000.0" friction="0.03"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.8015, -1.1, -0.22" radius="0.347" force="65000.0" dampening="10000.0" brake2="1000.0" friction="0.03"/>
+
+		<clip type="body" pos="1.0, 1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, 1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="1.0, -1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, -1.8, 0.3" force="300000.0" dampening="30000.0" />
+
+	</part>
+
+</vehicle>

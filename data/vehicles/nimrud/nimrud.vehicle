@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="3A3"
+	class="Nimrud"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1330"
+		enginebhp="300"
+		maxspeed="200"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1330.0"
+		dimensions="1.7, 4.175, 1.44"
+		wheelmodel="wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="223710">
+			<powerpoint rpm="2000" power="0.4" />
+			<powerpoint rpm="5000" power="0.7" />
+			<powerpoint rpm="8500" power="1.0" />
+			<powerpoint rpm="9500" power="0.6" />
+			<powerpoint rpm="10000" power="0.0" />
+		</engine>
+	<!--main gear 3.55 1:3.545 2:2.050 3:1.423 4:1.065 5:0.865 back 3.364
+		<gearbox>
+			<gear absolute="0.0122" />
+			<gear relative="3.68" />
+			<gear relative="2.185" />
+			<gear relative="1.558" />
+			<gear relative="1.2" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.04" />
+			<gear relative="1.73" />
+			<gear relative="1.441" />
+			<gear relative="1.336" />
+			<gear relative="1.231" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.5, 0.4"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="nimrud.obj"
+		scale="1.0">
+
+		<wheel drive="1.0" steer="0.7" brake1="600.0" pos="0.7675, 1.52, -0.22" radius="0.33" force="60000.0" dampening="14000.0" />
+		<wheel drive="1.0" steer="0.7" brake1="600.0" pos="-0.7675, 1.52, -0.22" radius="0.33" force="60000.0" dampening="14000.0" />
+		<wheel drive="0.0" steer="0.0" brake1="300.0" pos="0.7655, -1.1875, -0.22" radius="0.33" force="60000.0" dampening="14000.0" brake2="1000.0" />
+		<wheel drive="0.0" steer="0.0" brake1="300.0" pos="-0.7655, -1.1875, -0.22" radius="0.33" force="60000.0" dampening="14000.0" brake2="1000.0" />
+
+		<clip type="body" pos="0.85, 2.42, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.85, 2.42, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.85, -1.755, 1.44" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.85, -1.755, 1.44" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

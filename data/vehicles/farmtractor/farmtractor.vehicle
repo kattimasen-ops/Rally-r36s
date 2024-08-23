@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Fiat Agry"
+	class="Off-Road"
+	type="tank"
+	locked="yes">
+
+	<pstats
+		weightkg="3870"
+		enginebhp="90"
+		maxspeed="108"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="3870.0"
+		dimensions="2.47, 4.15, 2.6"
+		wheelmodel="farmtractor_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 200.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="67113">
+			<powerpoint rpm="500" power="0.2" />
+			<powerpoint rpm="750" power="0.3" />
+			<powerpoint rpm="1000" power="0.4" />
+			<powerpoint rpm="1250" power="0.5" />
+			<powerpoint rpm="1500" power="0.6" />
+			<powerpoint rpm="1750" power="0.7" />
+			<powerpoint rpm="2000" power="0.8" />
+			<powerpoint rpm="2250" power="0.9" />
+			<powerpoint rpm="2785" power="1.0" />
+			<powerpoint rpm="3000" power="0.0" />
+		</engine>
+	<!--main gear 52.45 1: 69.25 2: 51.87 3: 39.66 4: 31.58 5: 25.18 back ?
+		<gearbox>
+			<gear absolute="0.006" />
+			<gear relative="3.67" />
+			<gear relative="2.363" />
+			<gear relative="1.666" />
+			<gear relative="1.281" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.04" />
+			<gear relative="1.335" />
+			<gear relative="1.308" />
+			<gear relative="1.256" />
+			<gear relative="1.254" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.7, 0.2"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="farmtractor.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="0.85, 1.4, -0.15" radius="0.457" force="115000.0" dampening="20000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="-0.85, 1.4, -0.15" radius="0.457" force="115000.0" dampening="20000.0" friction="0.018"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.87, -1.071, 0.05" radius="0.7678" force="120000.0" dampening="20000.0" brake2="2000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.87, -1.071, 0.05" radius="0.7678" force="120000.0" dampening="20000.0" brake2="2000.0" friction="0.022"/>
+
+		<clip type="body" pos="1.235, 2.4, 2.6" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.235, 2.4, 2.6" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="1.235, -1.746, 2.6" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.235, -1.746, 2.6" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Evo VIII"
+	class="WRC04"
+	type="car"
+	locked="yes">
+
+	<genparams
+		mass="1230.0"
+		dimensions="1.77, 4.49, 1.45"
+		wheelmodel="eva_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="223710">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="2000" power="0.5" />
+			<powerpoint rpm="5000" power="0.7" />
+			<powerpoint rpm="8000" power="0.9" />
+			<powerpoint rpm="8500" power="1.0" />
+			<powerpoint rpm="9000" power="0.0" />
+		</engine>
+	<!--main gear 4.529 1: 2.785 2: 1.950 3: 1.444 4: 1.096 5: 0.825 back ?
+		<gearbox>
+			<gear absolute="0.0185" />
+			<gear relative="2.96" />
+			<gear relative="2.125" />
+			<gear relative="1.619" />
+			<gear relative="1.271" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0625" />
+			<gear relative="1.428" />
+			<gear relative="1.35" />
+			<gear relative="1.318" />
+			<gear relative="1.3285" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.2, 0.2"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="eva.obj"
+		scale="1.0">
+
+		<wheel drive="0.8" steer="0.7" brake1="600.0" pos="0.7575, 1.52, -0.21" radius="0.35" force="60000.0" dampening="20000.0" />
+		<wheel drive="0.8" steer="0.7" brake1="600.0" pos="-0.7575, 1.52, -0.21" radius="0.35" force="60000.0" dampening="20000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7575, -1.16, -0.22" radius="0.35" force="60000.0" dampening="16000.0" brake2="1000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7575, -1.16, -0.22" radius="0.35" force="60000.0" dampening="16000.0" brake2="1000.0" />
+
+		<clip type="body" pos="0.885, 2.6, 1.45" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.885, 2.6, 1.45" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.885, -1.89, 1.45" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.885, -1.89, 1.45" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

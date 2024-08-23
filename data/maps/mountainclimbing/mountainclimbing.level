@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<level
+	name="Mountain climbing"
+	comment="Beat 3:17:00. A la muntanya!"
+	author="Ivan"
+	description="dangerously uneven, very wide curves"
+	screenshot="ss.png"
+	minimap="mm.png">
+	
+	<terrain
+		heightmap="h.png"
+		terrainmap="t.png"
+		roadmap="r.png"
+		colormap="c.jpg"
+		foliagemap="f.png"
+		hudmap="c.jpg"
+		tilesize="16"
+		horizontalscale="3.0"
+		verticalscale="0.30"
+		>
+		
+		<foliageband
+			middle="0.7"
+			range="0.4"
+			density="0.00015"
+			sprite="/textures/veg/grass-sprite.png"
+			spritecount="1"
+			/>
+		
+		<foliageband
+			middle="1.0"
+			range="0.3"
+			density="0.00005"
+			sprite="/textures/veg/palmy.png"
+			spritecount="3"
+			/>
+		
+	</terrain>
+
+        <weather
+                cloudtexture="/textures/sky/blue.jpg"
+                cloudscrollrate="0.015"
+                fogcolor="0.7, 0.75, 0.8"
+                fogdensity="0.015"
+                fogdensitysky="0.65"
+                />	
+
+        <vehicleoption type="/vehicles/seat/seat.vehicle" />
+
+        <vehicleoption type="/vehicles/focus/focus.vehicle" />
+
+        <vehicleoption type="/vehicles/evo/evo.vehicle" />
+
+	
+	<race coordscale="3.0, -3.0"
+		targettime="200.0">
+		
+		<startposition pos="14, 13, 2.0" oridegrees="240" />
+		
+		<checkpoint coords="98, 128" />
+		<checkpoint coords="78, 247" />
+		<checkpoint coords="134, 372" />
+		<checkpoint coords="131, 210" />
+		<checkpoint coords="169, 161" />
+		<checkpoint coords="262, 16" />
+                <checkpoint coords="202, 173" />
+                <checkpoint coords="206, 369" />
+                <checkpoint coords="424, 314" />
+                <checkpoint coords="469, 130" />
+                <checkpoint coords="426, 24" />
+                <checkpoint coords="398, 122" />
+                <checkpoint coords="259, 246" />
+	</race>
+	
+</level>

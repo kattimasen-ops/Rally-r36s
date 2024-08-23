@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Nissan"
+	class="240SX"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1257"
+		enginebhp="155"
+		maxspeed="240"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1257.0"
+		dimensions="1.5, 3.0, 1.0"
+		wheelmodel="240sx_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="115584">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="3000" power="0.5" />
+			<powerpoint rpm="4400" power="0.8" />
+			<powerpoint rpm="5600" power="1.0" />
+			<powerpoint rpm="6000" power="0.0" />
+		</engine>
+	<!--main gear 4.636 1: 2.784 2: 1.544 3: 1.00 4:0.694 back 2.272
+		<gearbox>
+			<gear absolute="0.0457" />
+			<gear relative="3.09" />
+			<gear relative="1.85" />
+			<gear relative="1.306" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0841" />
+			<gear relative="1.803" />
+			<gear relative="1.544" />
+			<gear relative="1.441" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.5, 0.2"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="Nissan240sx.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.724, 1.119, -0.06" radius="0.316" force="65000.0" dampening="15000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.724, 1.119, -0.06" radius="0.316" force="65000.0" dampening="15000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7235, -1.355, -0.06" radius="0.316" force="70000.0" dampening="10000.0" brake2="1000.0" friction="0.030"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7235, -1.355, -0.06" radius="0.316" force="70000.0" dampening="10000.0" brake2="1000.0" friction="0.030"/>
+
+		<clip type="body" pos="1.0, 1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-1.0, 1.8, 0.3" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="1.0, -1.2, 0.3" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-1.0, -1.2, 0.3" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

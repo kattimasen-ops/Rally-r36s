@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Lancer E6"
+	class="WRC"
+	type="plane"
+	locked="yes">
+
+	<genparams
+		mass="1350.0"
+		dimensions="1.77, 4.35, 1.415"
+		wheelmodel="evo6_wheel.obj"
+		wheelscale="1.0"
+		enginesound="../sounds/engine2.wav" />
+
+	<pstats
+		weightkg="1350"
+		enginebhp="280-330"
+		wheeldrive="4WD"
+		maxspeed="250"
+		handling="good" />
+	<!--
+		ATMOSPHERIC EFFECTS IN CTRLPARAMS
+		DRAG:
+			a linear force that push in the opposite direction the vehicle is moving.
+			it has different value respect the x, y and z axis relative the car.
+				x is the drag when moving sideways (left-right axis)
+				y is the drag when moving forward (front-back axis).
+					This is the main drag that will slow down the car
+				z is the drag when moving vertically (top-bottom axis).
+		ANG DRAG:
+			a torque that pushes in the opposite direction the vehicle is rolling
+			this drag will slow down the car from spinning unrealistically fast,
+			for exaxmple when it gets out of control
+		LIFT:
+			this force pushes the car up or down. Normally this is caused by spoilers
+			that push the car down at high speeds to get better grip on the groud.
+			Planes use this force to take off by going very fast
+		FIN EFFECT:
+			Like an arrow, when the car goes very fast it tends to naturally orient
+			itself towards the dirction it is going due to the drag.
+			This makes an external force change the orientation of the vehicle harder at higher speed
+	-->
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="246081">
+			<powerpoint rpm="2000" power="0.4" />
+			<powerpoint rpm="5000" power="0.8" />
+			<powerpoint rpm="8000" power="1.0" />
+			<powerpoint rpm="9000" power="0.6" />
+			<powerpoint rpm="9500" power="0.0" />
+		</engine>
+	<!--"final":5.5,"forward":[3.454,2.256,1.673,1.279,0.922,0.718],"reverse":4.5
+		<gearbox>
+			<gear absolute="0.00545" />
+			<gear relative="3.736" />
+			<gear relative="2.538" />
+			<gear relative="1.955" />
+			<gear relative="1.561" />
+			<gear relative="1.204" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.044" />
+			<gear relative="1.53" />
+			<gear relative="1.35" />
+			<gear relative="1.31" />
+			<gear relative="1.387" />
+			<gear relative="1.284" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.3, 0.15"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="evo6.obj"
+		scale="1.0">
+
+		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="0.7575, 1.26, -0.05" radius="0.33" force="50000.0" dampening="8000.0" friction="0.02"/>
+		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="-0.7575, 1.26, -0.05" radius="0.33" force="50000.0" dampening="8000.0" friction="0.02"/>
+		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="0.7575, -1.25, -0.05" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.02"/>
+		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="-0.7575, -1.25, -0.05" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.02"/>
+
+		<clip type="body" pos="0.885, 2.18, 1.415" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.885, 2.18, 1.415" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.885, -2.17, 1.415" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.885, -2.17, 1.415" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

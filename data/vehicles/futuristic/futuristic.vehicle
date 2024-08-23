@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="3A3"
+	class="PAKETA"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="860"
+		enginebhp="120"
+		maxspeed="200"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="860.0"
+		dimensions="1.678, 4.074, 1.432"
+		wheelmodel="futuristic_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100,100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="89484">
+			<powerpoint rpm="500" power="0.3" />
+			<powerpoint rpm="1000" power="0.4" />
+			<powerpoint rpm="2000" power="0.6" />
+			<powerpoint rpm="3000" power="0.8" />
+			<powerpoint rpm="4400" power="1.0" />
+			<powerpoint rpm="5000" power="0.0" />
+		</engine>
+	<!--main gear 4.125 1: 3.8 2: 2.117 3: 1.409 4: 0.964 back 3.936
+		<gearbox>
+			<gear absolute="0.019" />
+			<gear relative="3.836" />
+			<gear relative="2.156" />
+			<gear relative="1.445" />
+			<gear relative="1.0" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.074" />
+			<gear relative="1.795" />
+			<gear relative="1.502" />
+			<gear relative="1.46" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.55, 0.18"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="Futuristic.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="800.0" pos="0.8, 1.32, 0.0" radius="0.37" force="35000.0" dampening="10000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.7" brake1="800.0" pos="-0.8, 1.32, 0.0" radius="0.37" force="35000.0" dampening="10000.0" friction="0.018"/>
+		<wheel drive="1.0" steer="0.0" brake1="400.0" pos="0.85, -1.65, 0.0" radius="0.37" force="45000.0" dampening="8000.0" brake2="2000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="400.0" pos="-0.85, -1.65, 0.0" radius="0.37" force="45000.0" dampening="8000.0" brake2="2000.0" friction="0.022"/>
+
+		<clip type="body" pos="0.9, 1.9, 1.43" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-0.9, 1.9, 1.43" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="0.9, -2.2, 1.43" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.9, -2.2, 1.43" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>

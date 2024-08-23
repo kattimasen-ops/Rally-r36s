@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Lancia"
+	class="Stratos"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="981"
+		enginebhp="190-280"
+		maxspeed="232"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="981.0"
+		dimensions="1.75, 3.708, 1.11"
+		wheelmodel="lancia_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="208796">
+			<powerpoint rpm="1000" power="0.4" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="5000" power="0.8" />
+			<powerpoint rpm="7000" power="1.0" />
+			<powerpoint rpm="7800" power="0.0" />
+		</engine>
+	<!--gear ratios: 3.554, 2.459, 1.781, 1.32, 0.986 final drive 3.824
+		<gearbox>
+			<gear absolute="0.0126" />
+			<gear relative="3.568" />
+			<gear relative="2.473" />
+			<gear relative="1.795" />
+			<gear relative="1.334" />
+			<gear relative="0.99" />
+		</gearbox>-->
+		<gearbox>
+			<gear absolute="0.0733" />
+			<gear relative="1.445" />
+			<gear relative="1.381" />
+			<gear relative="1.349" />
+			<gear relative="1.339" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.0, 0.4"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="lancia.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.7155, 1.49, -0.22" radius="0.3" force="65000.0" dampening="15000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.7155, 1.49, -0.22" radius="0.3" force="65000.0" dampening="15000.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7305, -0.71, -0.26" radius="0.3" force="75000.0" dampening="10000.0" brake2="1000.0" friction="0.030"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7305, -0.71, -0.26" radius="0.3" force="75000.0" dampening="10000.0" brake2="1000.0" friction="0.030"/>
+
+		<clip type="body" pos="0.875, 2.634, 1.11" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="-0.875, 2.634, 1.11" force="300000.0" dampening="30000.0" />
+		<clip type="body" pos="0.875, -1.074, 1.11" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="-0.875, -1.074, 1.11" force="300000.0" dampening="100000.0" />
+
+	</part>
+
+</vehicle>
