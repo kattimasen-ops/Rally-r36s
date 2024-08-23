@@ -3,6 +3,7 @@
 
 	<unlocks file="/events/02-alps/alps.event" />
 	<unlocks file="/vehicles/focus/focus.vehicle" />
+	<unlocks file="/vehicles/GAZ67/gaz67.vehicle" />
 
 	<level file="warmup/warmup.level" />
 	<level file="operation/operation.level" />

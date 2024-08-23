@@ -4,12 +4,8 @@
 	author="M&aacute;rcio Bremm"
 	>
 
-	<unlocks file="/vehicles/Plimouth/plimouth.vehicle" />
-	<unlocks file="/vehicles/lancero/lancero.vehicle" />
-	<unlocks file="/vehicles/IZH/IZH2715.vehicle" />
 	<unlocks file="/vehicles/Quadri/quadri.vehicle" />
 	<unlocks file="/vehicles/Scooter/Scooter.vehicle" />
-	<unlocks file="/vehicles/GAZ24_Volga/volga.vehicle" />
 
 	<level file="8765/8765.level" />
 

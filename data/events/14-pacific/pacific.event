@@ -3,6 +3,7 @@
 
 	<unlocks file="/events/15-polar/polar.event" />
 	<unlocks file="/vehicles/Cooper/cooper.vehicle" />
+	<unlocks file="/vehicles/Pickup/pickup.vehicle" />
 
 	<level file="holiday/holiday.level" />
 	<level file="narrowvalley/narrowvalley.level" />

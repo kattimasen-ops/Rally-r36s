@@ -3,14 +3,11 @@
 	name="WRC Cup"
 	author="Eugene_MC"
 	>
-	<unlocks file="/vehicles/GAZ67/gaz67.vehicle" />
-	<unlocks file="/vehicles/jeep/jeep.vehicle" />
 	<unlocks file="/vehicles/Tractor/tractor.vehicle" />
 	<unlocks file="/vehicles/farmtractor/farmtractor.vehicle" />
 	<unlocks file="/vehicles/dumptrack/dumptrack.vehicle" />
-	<unlocks file="/vehicles/SUV/SUV.vehicle" />
 	<unlocks file="/vehicles/Bus/bus.vehicle" />
-	<unlocks file="/vehicles/RangeRover/rangerover.vehicle" />
+
 
 	<level file="alignster/alignster.level" />
 

@@ -3,6 +3,8 @@
 
 	<unlocks file="/events/11-tight/tight.event" />
 	<unlocks file="/vehicles/eva/evo.vehicle" />
+	<unlocks file="/vehicles/IZH/IZH2715.vehicle" />
+
 
 	<level file="flood/flood.level" />
 	<level file="flood/wettarmac.level" />

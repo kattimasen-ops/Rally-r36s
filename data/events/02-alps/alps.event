@@ -3,6 +3,7 @@
 
 	<unlocks file="/events/03-highstakes/highstakes.event" />
 	<unlocks file="/vehicles/seat/seat.vehicle" />
+	<unlocks file="/vehicles/lancero/lancero.vehicle" />
 
 	<level file="maze/maze.level" />
 	<level file="rocky/rocky.level" />
