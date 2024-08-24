@@ -1,18 +1,6 @@
 # Blender MTL File: 'None'
 # Material Count: 2
 
-newmtl truck.001
-Ns 562.401458
-Ka 1.000000 1.000000 1.000000
-Kd 0.640000 0.640000 0.640000
-Ks 0.731884 0.731884 0.731884
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
-d 1.000000
-illum 3
-map_Kd trucktexture.png
-map_Ke trucktexture_emission.png
-
 newmtl glass.001
 Ns 575.999996
 Ka 0.500000 0.500000 0.500000
@@ -22,5 +10,17 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.800000
 illum 6
+map_Kd trucktexture.png
+map_Ke trucktexture_emission.png
+
+newmtl truck.001
+Ns 562.401458
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.731884 0.731884 0.731884
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
 map_Kd trucktexture.png
 map_Ke trucktexture_emission.png

@@ -166,7 +166,7 @@
 
   <water
     height="13.3"
-    watertexture="/textures/water/woda.png"
+    watertexture="/textures/water/black-water.png"
     alpha="0.99"
     fixedalpha="yes"
     />

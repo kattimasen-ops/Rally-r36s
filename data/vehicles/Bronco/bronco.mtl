@@ -14,7 +14,7 @@ map_Kd bronco.png
 map_Ke bronco_emission.png
 
 newmtl brake_light.001
-Ns 225.000000
+Ns 575.999996
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -46,15 +46,15 @@ d 1.000000
 illum 3
 map_Kd bronco.png
 
-newmtl glass.001
-Ns 225.000000
+newmtl glass.002
+Ns 575.999996
 Ka 0.546667 0.546667 0.546667
 Kd 0.800000 0.800000 0.800000
 Ks 1.000000 1.000000 1.000000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 1.000000
-illum 3
+d 0.500000
+illum 6
 map_Kd bronco.png
 
 newmtl indicator_light.001
@@ -69,14 +69,14 @@ illum 9
 map_Kd bronco.png
 
 newmtl main_light.001
-Ns 310.066172
+Ns 575.999996
 Ka 0.840000 0.840000 0.840000
 Kd 0.800000 0.800000 0.800000
 Ks 1.000000 1.000000 1.000000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 1.000000
-illum 3
+d 0.500000
+illum 6
 map_Kd bronco.png
 
 newmtl roof.001

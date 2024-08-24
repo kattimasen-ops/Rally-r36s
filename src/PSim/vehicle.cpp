@@ -1356,13 +1356,13 @@ void PVehicle::tick(const float& delta)
           const float crashthreshold = 0.025f;
           vec3f crashpoint = collision.getCrashPoint(body->getPosition(), contact[j]);
 
-          ptvel.x = -ptvel.x * contact[j].rigidity / type->mass * 1000;
-          ptvel.y = -ptvel.y * contact[j].rigidity / type->mass * 1000;
+          ptvel.x = -ptvel.x * contact[j].rigidity / type->mass * 10;
+          ptvel.y = -ptvel.y * contact[j].rigidity / type->mass * 10;
           ptvel.z = 0.0f;
 
           // apply crash force [N] at center of object in X/Y direction (F=v*m/t)
           if (delta != 0.0f)
-            crashforce = ptvel * type->mass / delta;
+            crashforce = ptvel * 1000 / delta;
           body->addForceAtPoint(crashforce, crashpoint);
           part[i].damage.addDamage(crashpoint, crashforce.length() * 0.0000001f, part[i].ref_world);
 

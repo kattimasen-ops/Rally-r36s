@@ -67,10 +67,10 @@
 		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="0.7305, -1.25, -0.2" radius="0.30" force="45000.0" dampening="15000.0" brake2="1000.0" />
 		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="-0.7305, -1.25, -0.2" radius="0.30" force="45000.0" dampening="15000.0" brake2="1000.0" />
 
-		<clip type="body" pos="1.0, 1.5, 1.0" force="300000.0" dampening="30000.0" />
-		<clip type="body" pos="-1.0, 1.5, 1.0" force="300000.0" dampening="30000.0" />
-		<clip type="body" pos="1.0, -1.0, 1.0" force="300000.0" dampening="100000.0" />
-		<clip type="body" pos="-1.0, -1.0, 1.0" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="1.0, 1.5, 1.0" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.0, 1.5, 1.0" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="1.0, -1.0, 1.0" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.0, -1.0, 1.0" force="300000.0" dampening="25000.0" />
 
 	</part>
 

@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="90.0, 0.0, 20.0"
+		angdrag="19.0, 0.0, 2.0"
 		lift="1"
 		fineffect="100"
 		speedrate="1.0"
@@ -64,10 +64,10 @@
 		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.78, -1.35, -0.22" radius="0.35" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
 		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.78, -1.35, -0.22" radius="0.35" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
 
-		<clip type="body" pos="0.995, 2.45, 1.481" force="300000.0" dampening="100000.0" />
-		<clip type="body" pos="-0.995, 2.45, 1.481" force="300000.0" dampening="100000.0" />
-		<clip type="body" pos="0.995, -2.15, 1.481" force="300000.0" dampening="100000.0" />
-		<clip type="body" pos="-0.995, -2.15, 1.481" force="300000.0" dampening="100000.0" />
+		<clip type="body" pos="0.995, 2.45, 1.481" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.995, 2.45, 1.481" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="0.995, -2.15, 1.481" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.995, -2.15, 1.481" force="300000.0" dampening="25000.0" />
 
 	</part>
 
