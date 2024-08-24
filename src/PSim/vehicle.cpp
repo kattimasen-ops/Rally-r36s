@@ -1360,9 +1360,9 @@ void PVehicle::tick(const float& delta)
           ptvel.y = -ptvel.y * contact[j].rigidity / type->mass * 10;
           ptvel.z = 0.0f;
 
-          // apply crash force [N] at center of object in X/Y direction (F=v*m/t)
+          // apply crash force [N] at center of object in X/Y direction (F=v*m/t) mass ov veg max is 10 tonns > 100000 N
           if (delta != 0.0f)
-            crashforce = ptvel * 1000 / delta;
+            crashforce = ptvel * 100000 / delta;
           body->addForceAtPoint(crashforce, crashpoint);
           part[i].damage.addDamage(crashpoint, crashforce.length() * 0.0000001f, part[i].ref_world);
 
