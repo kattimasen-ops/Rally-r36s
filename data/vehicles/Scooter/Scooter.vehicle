@@ -2,7 +2,7 @@
 <vehicle
 	name="Scooter"
 	class="2wheel"
-	type="hovercraft"
+	type="helicopter"
 	locked="yes">
 
 	<genparams
@@ -14,7 +14,6 @@
 	<pstats
 		weightkg="130"
 		enginebhp="10.5-12.7"
-		power="10.5"
 		wheeldrive="RWD"
 		maxspeed="95"
 		handling="good" />
@@ -43,13 +42,13 @@
 	-->
 
 	<ctrlparams
-		angdrag="2.7, 0.0, 0.0"
-		drag="0.0, 0.0, 0.0"
-		lift="0"
-		speed="0"
+		angdrag="3.0, 0.0, 2.0"
+		drag="0.0, 5.0, 0.0"
+		lift="1"
+		speed="600"
 		fineffect="100, 100"
 		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 128.0" />
+		turnspeedrate="0.0, 0.0, 16.0" />
 
 	<drivesystem>
 		<engine powerscale="9470">
@@ -87,7 +86,7 @@
 		<wheel drive="0.0" steer="0.7" brake1="75.0" pos="0.0, 0.65, -0.2" radius="0.2" force="25000.0" dampening="15000.0" friction="0.025"/>
 		<wheel drive="0.5" steer="0.0" brake1="125.0" pos="0.0, -0.64, -0.2" radius="0.2" force="45000.0" dampening="10000.0" brake2="250.0" friction="0.025"/>
 	<!--		<wheel drive="0.5" steer="0.0" brake1="125.0" pos="0.0, -0.64, -0.2" radius="0.2" force="45000.0" dampening="10000.0" brake2="250.0" friction="0.025"/>-->
-		<jetflame pos="0.0, -0.84, -0.2" ori="0.1, 0.0, 0.0, 1.0"/>
+		<jetflame pos="0.0, 0.0, 0.0" ori="0.1, 0.0, 0.0, 1.0"/>
 		<clip type="body" pos="0.37, 0.93, 0.82" force="30000.0" dampening="20000.0" />
 		<clip type="body" pos="-0.37, 0.93, 0.82" force="30000.0" dampening="20000.0" />
 		<clip type="body" pos="0.37, -0.93, 0.82" force="30000.0" dampening="20000.0" />
