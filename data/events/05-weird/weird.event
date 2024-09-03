@@ -4,6 +4,8 @@
 	<unlocks file="/events/06-picturesque/picturesque.event" />
 	<unlocks file="/vehicles/fox_wrc/fox_wrc.vehicle" />
 	<unlocks file="/vehicles/Nissan/nissan240sx.vehicle" />
+	<unlocks file="/vehicles/fordpolice/fordpolice.vehicle" />
+
 
 	<level file="china/china.level" />
 	<level file="frisky/frisky.level" />

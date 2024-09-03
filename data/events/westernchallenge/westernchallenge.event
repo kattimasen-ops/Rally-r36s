@@ -4,10 +4,8 @@
 	author="Matthias Keysermann"
 	>
 	<unlocks file="/vehicles/Buggy/buggy.vehicle" />
-	<unlocks file="/vehicles/GAZ66/gaz66.vehicle" />
 	<unlocks file="/vehicles/guncar/guncar.vehicle" />
 	<unlocks file="/vehicles/ORB_jeep/orb.vehicle" />
-	<unlocks file="/vehicles/Hammer/hammer.vehicle" />
 
 	<level file="smoothcanyon/smoothcanyon.level" />
 

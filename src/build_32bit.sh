@@ -3,8 +3,8 @@
 #
 # Build script for Trigger Rally, for Windows 32-bit, using MSYS2.
 #
-# Last updated:     2019-02-25
-# TR version:       0.6.6.1
+# Last updated:     2024-09-03
+# TR version:       0.6.7
 #
 
 #
@@ -21,7 +21,7 @@ DN_SDL="SDL2-2.0.9"
 DN_SDLIMG="SDL2_image-2.0.4"
 DN_PHYSFS="physfs-3.0.1"
 DN_TINYXML="tinyxml2-7.0.1"
-DN_TRIGGER="trigger-rally-0.6.6.1"
+DN_TRIGGER="trigger-rally-code-r1019"
 
 #
 # clean old binaries

@@ -4,6 +4,7 @@
 	<unlocks file="/events/07-odd/odd.event" />
 	<unlocks file="/vehicles/cordo_wrc/cordo_wrc.vehicle" />
 	<unlocks file="/vehicles/BMWM3E30/bmwm3e30.vehicle" />
+	<unlocks file="/vehicles/GAZ66/gaz66.vehicle" />
 
 	<level file="fields/fields.level" />
 	<level file="canyon/canyon.level" />

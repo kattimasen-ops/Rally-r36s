@@ -4,12 +4,9 @@
 	author="Eugene_MC"
 	>
 
-	<unlocks file="/vehicles/fordpolice/fordpolice.vehicle" />
+	<unlocks file="/vehicles/Hammer/hammer.vehicle" />
 	<unlocks file="/vehicles/policecar/policecar.vehicle" />
-	<unlocks file="/vehicles/futuristic/futuristic.vehicle" />
-	<unlocks file="/vehicles/triwheelcar/3wheel.vehicle" />
-	<unlocks file="/vehicles/Alpine/alpine.vehicle" />
-
+	<unlocks file="/vehicles/monstertruck/monstertruck.vehicle" />
 
 	<level file="banana/banana.level" />
 	<level file="leaves/leaves.level" />

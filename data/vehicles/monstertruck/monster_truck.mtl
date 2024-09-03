@@ -1,0 +1,122 @@
+# Blender MTL File: 'None'
+# Material Count: 10
+
+newmtl v018_car_monstertruck_body.004
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl v018_car_monstertruck_light.004
+Ns 7.999999
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl v018_car_monstertruck_light_gla.003
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.500000
+illum 6
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl v018_car_monstertruck_undercarr.003
+Ns 7.999999
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl v018_car_monstertruck_undercarr0.003
+Ns 7.999999
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl v018_car_monstertruck_window.004
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.500000
+illum 6
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl v036_car_modernpickup_interior.004
+Ns 7.999999
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl z80_body.004
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl z80_glass_lights.004
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.500000
+illum 9
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png
+
+newmtl z80_light.004
+Ns 7.999999
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 1.000000 1.000000
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd monstertruck.png
+map_Ke monstertruck_emission.png

@@ -4,6 +4,7 @@
 	author="M&aacute;rcio Bremm"
 	>
 
+	<unlocks file="/vehicles/Alpine/alpine.vehicle" />
 	<unlocks file="/vehicles/Quadri/quadri.vehicle" />
 	<unlocks file="/vehicles/Scooter/Scooter.vehicle" />
 
