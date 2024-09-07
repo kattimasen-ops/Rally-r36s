@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+<level
+    name="06\F1 Monte Carlo, GP Monaco "
+    comment="Robert dawaj!!!!"
+    author="Janusz Opila"
+    randomseed="1000"
+    screenshot="MonteCarlo_View.jpg"
+    minimap="HUD.jpg"
+    description="Monte Carlo circuit, GP Monaco"
+  >
+
+  <terrain
+      heightmap="HM.png"
+      colormap="CM.png"
+      foliagemap="FM.png"
+      hudmap="HUD.jpg"
+      terrainmap="TR.png"
+      tilesize="32"
+      horizontalscale="2"
+      verticalscale=".25"
+    >
+
+    <blurfilter>
+        <row data="0.1 0.1 0.1" />
+        <row data="0.1 0.0 0.1" />
+        <row data="0.1 0.1 0.1" />
+    </blurfilter>
+
+    <foliageband
+      middle="0.9"
+      range="0.1"
+      density="0.00002"
+      sprite="/textures/veg/horse-chestnut-tree.png"
+      spritecount="2"
+      scale="7"
+    />
+    <foliageband
+      middle="0.9"
+      range="0.2"
+      density="0.00005"
+      sprite="/textures/veg/horse-chestnut-tree.png"
+      spritecount="2"
+      scale="5"
+    />
+
+    <foliageband
+      middle="0.8"
+      range="0.4"
+      density="0.001"
+      sprite="/textures/veg/grass2.png"
+      spritecount="1"
+      scale=".25"
+    />
+
+    <foliageband
+      middle="0.5"
+      range="0.1"
+      density="0.0005"
+      sprite="/textures/veg/olive-bush.png"
+      spritecount="1"
+      scale="1.5"
+    />
+
+    <roadsign sprite="Start.png" scale="13">
+        <location coords="175.1, 327" oridegrees="7" />
+    </roadsign>
+
+    <roadsign sprite="2Right.png" scale="1">
+          <location coords="208, 180.5" oridegrees=" 55" />
+    </roadsign>
+
+    <roadsign sprite="2Left.png" scale="1">
+          <location coords="219, 185" oridegrees=" 0" />
+    </roadsign>
+
+    <roadsign sprite="Forest2.png" scale="1280">
+          <location coords="512,   3" oridegrees=" -180" />
+    </roadsign>
+
+    <roadsign sprite="Forest2.png" scale="1280">
+          <location coords="-1, 512" oridegrees="90" />
+    </roadsign>
+
+    <roadsign sprite="Forest2.png" scale="1280">
+          <location coords="512, 1021" oridegrees="0" />
+    </roadsign>
+
+      <roadsign sprite="/textures/Banners/01.png" scale="11"> <location coords="186, 553" oridegrees="12" /> </roadsign>
+      <roadsign sprite="/textures/Banners/02.png" scale="11"> <location coords="518, 643" oridegrees="-64" /> </roadsign>
+      <roadsign sprite="/textures/Banners/03.png" scale="11"> <location coords="656, 695" oridegrees="-49" /> </roadsign>
+      <roadsign sprite="/textures/Banners/04.png" scale="11"> <location coords="616, 819" oridegrees="25" /> </roadsign>
+      <roadsign sprite="/textures/Banners/05.png" scale="11"> <location coords="738, 974" oridegrees="-50" /> </roadsign>
+      <roadsign sprite="/textures/Banners/06.png" scale="11"> <location coords="803, 898" oridegrees="230" /> </roadsign>
+      <roadsign sprite="/textures/Banners/07.png" scale="11"> <location coords="778, 965" oridegrees="10" /> </roadsign>
+      <roadsign sprite="/textures/Banners/08.png" scale="11"> <location coords="857, 983" oridegrees="243" /> </roadsign>
+      <roadsign sprite="/textures/Banners/09.png" scale="11"> <location coords="785, 728" oridegrees="140" /> </roadsign>
+      <roadsign sprite="/textures/Banners/10.png" scale="11"> <location coords="495, 583" oridegrees="100" /> </roadsign>
+      <roadsign sprite="/textures/Banners/11.png" scale="11"> <location coords="462, 563" oridegrees="92" /> </roadsign>
+      <roadsign sprite="/textures/Banners/12.png" scale="11"> <location coords="246, 537" oridegrees="120" /> </roadsign>
+      <roadsign sprite="/textures/Banners/13.png" scale="11"> <location coords="217, 407" oridegrees="180" /> </roadsign>
+      <roadsign sprite="/textures/Banners/14.png" scale="11"> <location coords="243, 387" oridegrees="232" /> </roadsign>
+      <roadsign sprite="/textures/Banners/15.png" scale="11"> <location coords="261, 275" oridegrees="187" /> </roadsign>
+      <roadsign sprite="/textures/Banners/16.png" scale="11"> <location coords="244, 243" oridegrees="148" /> </roadsign>
+      <roadsign sprite="/textures/Banners/17.png" scale="11"> <location coords="272, 167" oridegrees="205" /> </roadsign>
+      <roadsign sprite="/textures/Banners/18.png" scale="11"> <location coords="334,  98" oridegrees="175" /> </roadsign>
+      <roadsign sprite="/textures/Banners/19.png" scale="11"> <location coords="258,  84" oridegrees="88" /> </roadsign>
+
+  </terrain>
+
+  <weather
+    cloudtexture="/textures/sky/blue.jpg"
+    cloudscrollrate="0.03"
+    fogcolor="0.9, 0.95, 1.0"
+    fogdensity="0.0002"
+    fogdensitysky="0.03"
+    />
+
+  <water
+    height="4"
+    watertexture="/textures/water/default.png"
+    alpha="0.99"
+    fixedalpha="yes"
+    />
+
+  <race coordscale="2, 2"
+    targettime="720.0" laps="1">
+
+    <startposition pos="180, 317, 1.0" oridegrees="7" />
+      <checkpoint coords="186, 553" />
+      <checkpoint coords="518, 643" />
+      <checkpoint coords="656, 695" />
+      <checkpoint coords="616, 819" />
+      <checkpoint coords="738, 974" />
+      <checkpoint coords="803, 898" />
+      <checkpoint coords="778, 965" />
+      <checkpoint coords="857, 983" />
+      <checkpoint coords="785, 728" />
+      <checkpoint coords="495, 583" />
+      <checkpoint coords="462, 563" />
+      <checkpoint coords="246, 537" />
+      <checkpoint coords="217, 407" />
+      <checkpoint coords="243, 387" />
+      <checkpoint coords="261, 275" />
+      <checkpoint coords="244, 243" />
+      <checkpoint coords="272, 167" />
+      <checkpoint coords="334,  98" />
+      <checkpoint coords="258,  84" />
+
+      <checkpoint coords="175.1, 327" />
+
+  </race>
+
+</level>

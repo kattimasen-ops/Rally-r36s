@@ -4,6 +4,7 @@
 	<unlocks file="/events/04-chasing/chasing.event" />
 	<unlocks file="/vehicles/evo/evo.vehicle" />
 	<unlocks file="/vehicles/htz150/htz150.vehicle" />
+	<unlocks file="/vehicles/Dana/Dana.vehicle" />
 
 	<level file="sky/sky.level" />
 	<level file="crossing/crossing.level" />
