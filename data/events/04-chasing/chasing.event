@@ -4,6 +4,7 @@
 	<unlocks file="/events/05-weird/weird.event" />
 	<unlocks file="/vehicles/nimrud/nimrud.vehicle" />
 	<unlocks file="/vehicles/volkswagen/volkswagen.vehicle" />
+	<unlocks file="/vehicles/3A3965/ZAZ965.vehicle" />
 
 	<level file="oldquarry/oldquarry.level" />
 	<level file="softbumps/softbumps.level" />

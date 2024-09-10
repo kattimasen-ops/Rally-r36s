@@ -63,24 +63,23 @@
 		</roadsign>
 
 
-	</terrain>
 
+	</terrain>
 
 	<weather
 		cloudtexture="/textures/sky/sunrise.jpg"
 		cloudscrollrate="0.003"
-		fogcolor="5.0, 1.0, 0.0"
+		fogcolor="1.0, 0.7, 0.0"
 		fogdensity="0.001"
 		fogdensitysky="0.4"
 		/>
 
 	<water
-		height="10"
+		height="0"
 		watertexture="/textures/water/muddy-water.png"
 		alpha="0.5"
 		fixedalpha="no"
 		/>
-
 
 
 	<race coordscale="10, 10" targettime="360.0">

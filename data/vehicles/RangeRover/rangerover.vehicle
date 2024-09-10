@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="85.0, 0.0, .0"
+		angdrag="55.0, 0.0, .0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -58,10 +58,10 @@
 		model="RangeRover.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="0.843, 1.24, -0.08" radius="0.408" force="75000.0" dampening="8000.0" friction="0.025"/>
-		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="-0.843, 1.24, -0.08" radius="0.408" force="75000.0" dampening="8000.0" friction="0.025"/>
-		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="0.843, -1.45, -0.13" radius="0.408" force="95000.0" dampening="7000.0" brake2="1000.0" friction="0.025"/>
-		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="-0.843, -1.45, -0.13" radius="0.408" force="95000.0" dampening="7000.0" brake2="1000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="0.843, 1.24, -0.08" radius="0.408" force="85000.0" dampening="18000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="-0.843, 1.24, -0.08" radius="0.408" force="55000.0" dampening="18000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="0.843, -1.45, -0.13" radius="0.408" force="105000.0" dampening="17000.0" brake2="1000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="-0.843, -1.45, -0.13" radius="0.408" force="105000.0" dampening="17000.0" brake2="1000.0" friction="0.025"/>
 
 		<clip type="body" pos="1.04, 2.128, 1.79" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.04, 2.128, 1.79" force="300000.0" dampening="25000.0" />
