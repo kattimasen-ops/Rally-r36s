@@ -3,12 +3,12 @@
 	name="UAZ"
 	class="Off-Road"
 	type="tank"
-	locked="no">
+	locked="yes">
 
 	<pstats
 		weightkg="1650"
-		enginebhp="112"
-		maxspeed="130"
+		enginebhp="92"
+		maxspeed="120"
 		wheeldrive="4WD"
 		handling="moderate" />
 
@@ -27,7 +27,7 @@
 		turnspeedrate="0.0, 0.0, 16.0" />
 
 	<drivesystem>
-		<engine powerscale="83519">
+		<engine powerscale="68605">
 			<powerpoint rpm="1000" power="0.4" />
 			<powerpoint rpm="3000" power="0.7" />
 			<powerpoint rpm="4000" power="1.0" />
@@ -43,7 +43,7 @@
 			<gear relative="1.00" />
 		</gearbox>-->
 		<gearbox>
-			<gear absolute="0.0377" />
+			<gear absolute="0.0348" />
 			<gear relative="1.454" />
 			<gear relative="1.677" />
 			<gear relative="1.55" />
@@ -53,7 +53,7 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.4, 0.3"
+		pos="0.0, 0.35, -0.2"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="uaz.obj"
 		scale="1.0">

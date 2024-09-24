@@ -4,6 +4,7 @@
 	<unlocks file="/events/08-coy/coy.event" />
 	<unlocks file="/vehicles/evo_wrc/evo_wrc.vehicle" />
 	<unlocks file="/vehicles/BMWE34/bmwe34.vehicle" />
+	<unlocks file="/vehicles/3A3968M/ZAZ968M.vehicle" />
 
 	<level file="scale/scale.level" />
 	<level file="rotated/rotated.level" />
