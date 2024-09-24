@@ -54,13 +54,13 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.35, -0.1"
+		pos="0.0, 0.3, -0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="Jeep.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="900.0" pos="0.9, 1.38, -0.25" radius="0.455" force="75000.0" dampening="20000.0" friction="0.025"/>
-		<wheel drive="0.4" steer="0.7" brake1="900.0" pos="-0.9, 1.38, -0.25" radius="0.455" force="75000.0" dampening="20000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="900.0" pos="0.9, 1.38, -0.25" radius="0.455" force="100000.0" dampening="20000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="900.0" pos="-0.9, 1.38, -0.25" radius="0.455" force="100000.0" dampening="20000.0" friction="0.025"/>
 		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="0.9, -0.935, -0.3" radius="0.455" force="100000.0" dampening="20000.0" brake2="2000.0" friction="0.025"/>
 		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-0.9, -0.935, -0.3" radius="0.455" force="100000.0" dampening="20000.0" brake2="2000.0" friction="0.025"/>
 

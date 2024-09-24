@@ -1159,8 +1159,8 @@ void MainApp::tickStateGame(float delta)
     const mat44f &rfmat = rf->getInverseOrientationMatrix();
     //campos = rf->getPosition() + makevec3f(cammat.row[2]) * 100.0;
     campos = rf->getPosition() +
-      makevec3f(rfmat.row[1]) * 1.7f +
-      makevec3f(rfmat.row[2]) * 1.5f;
+      makevec3f(rfmat.row[1]) * 0.7f +
+      makevec3f(rfmat.row[2]) * 1.6f;
     } break;
 
     // Piggyback (fixed chase)

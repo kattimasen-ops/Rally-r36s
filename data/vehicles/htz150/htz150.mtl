@@ -46,7 +46,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.400000
 illum 1
-map_Kd htz150_glass.png
+map_Kd htz150.png
 map_Ke htz150_emission.png
 
 newmtl Motor
