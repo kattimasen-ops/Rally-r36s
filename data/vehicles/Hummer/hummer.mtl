@@ -10,8 +10,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl damageli_01.001
 Ns 2.143552
@@ -22,8 +22,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl damageli_02.001
 Ns 2.143552
@@ -34,8 +34,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl damagelight_01.001
 Ns 2.143552
@@ -46,8 +46,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl dashboardltv01.001
 Ns 103.967989
@@ -58,8 +58,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl default02.001
 Ns 36.758292
@@ -70,8 +70,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.750000
 illum 9
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl headlightus_01.001
 Ns 181.019011
@@ -82,8 +82,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl proxy_canvas01.001
 Ns 147.032994
@@ -94,8 +94,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl proxy_canvas010.001
 Ns 147.032994
@@ -106,8 +106,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl proxy_canvas011.001
 Ns 147.032994
@@ -118,8 +118,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl proxy_canvas012.001
 Ns 147.032994
@@ -130,8 +130,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl roofus_ltv_r01.001
 Ns 36.758292
@@ -142,8 +142,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl roofus_ltv_r010.001
 Ns 36.758292
@@ -154,8 +154,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl roofus_ltv_r011.001
 Ns 36.758292
@@ -166,8 +166,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl roofus_ltv_r012.001
 Ns 36.758292
@@ -178,8 +178,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl searchlights01.001
 Ns 31.999996
@@ -190,8 +190,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl tripodtripod01.001
 Ns 42.224306
@@ -202,8 +202,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl tripodtripod010.001
 Ns 42.224306
@@ -214,8 +214,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_detai01.001
 Ns 63.999992
@@ -226,8 +226,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_detai010.001
 Ns 63.999992
@@ -238,8 +238,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_detai011.001
 Ns 63.999992
@@ -250,8 +250,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_detai012.001
 Ns 63.999992
@@ -262,8 +262,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_detai013.001
 Ns 63.999992
@@ -274,8 +274,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_detai014.001
 Ns 63.999992
@@ -286,8 +286,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_detai015.001
 Ns 63.999992
@@ -298,8 +298,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_mainu01.001
 Ns 25.992097
@@ -310,8 +310,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_mainu010.001
 Ns 25.992097
@@ -322,8 +322,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_mainu011.001
 Ns 25.992097
@@ -334,8 +334,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_mainu012.001
 Ns 25.992097
@@ -346,8 +346,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_mainu013.001
 Ns 25.992097
@@ -358,8 +358,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_mainu014.001
 Ns 25.992097
@@ -370,8 +370,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_mainu015.001
 Ns 25.992097
@@ -382,8 +382,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png
 
 newmtl us_ltv_wheel01.001
 Ns 78.793186
@@ -394,5 +394,5 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd hammer.png
-map_Ke hammer_emission.png
+map_Kd hummer.png
+map_Ke hummer_emission.png

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <vehicle
-	name="Hammer"
+	name="HMMWV"
 	class="Off-Road"
 	type="tank"
 	locked="yes">
@@ -15,7 +15,7 @@
 	<genparams
 		mass="3901.0"
 		dimensions="2.197, 4.686, 1.956"
-		wheelmodel="hammer_wheel.obj"
+		wheelmodel="hummer_wheel.obj"
 		wheelscale="1.0" />
 
 	<ctrlparams
@@ -57,7 +57,7 @@
 		name="body"
 		pos="0.0, 0.2, 0.07"
 		orientation="0.0, 0.0, 0.0, 0.0"
-		model="hammer.obj"
+		model="hummer.obj"
 		scale="1.0">
 
 		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="0.915, 2.04, -0.2" radius="0.47" force="90000.0" dampening="9000.0" friction="0.025"/>

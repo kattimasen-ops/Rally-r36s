@@ -6,7 +6,6 @@
 	<unlocks file="/vehicles/UAZRally/uazrally.vehicle" />
 
 
-
 	<level file="flood/flood.level" />
 	<level file="flood/wettarmac.level" />
 	<level file="flood/dirtycruise.level" />

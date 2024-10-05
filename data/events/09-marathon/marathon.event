@@ -4,6 +4,7 @@
 	<unlocks file="/events/10-flood/flood.event" />
 	<unlocks file="/vehicles/cordon/seat.vehicle" />
 	<unlocks file="/vehicles/evo6/evo6.vehicle" />
+	<unlocks file="/vehicles/Navara/navara.vehicle" />
 
 	<level file="marathon/marathon.level" />
 	<level file="marathon/midnight.level" />

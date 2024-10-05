@@ -4,7 +4,7 @@
 	author="Eugene_MC"
 	>
 
-	<unlocks file="/vehicles/Hammer/hammer.vehicle" />
+	<unlocks file="/vehicles/Hummer/hummer.vehicle" />
 	<unlocks file="/vehicles/policecar/policecar.vehicle" />
 	<unlocks file="/vehicles/monstertruck/monstertruck.vehicle" />
 

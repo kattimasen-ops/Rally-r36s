@@ -1,6 +1,6 @@
 # Blender v3.0.1 OBJ File: ''
 # www.blender.org
-mtllib hammer_wheel.mtl
+mtllib hummer_wheel.mtl
 o Cylinder.001
 v -0.291429 1.000000 0.000000
 v 0.291429 1.000000 0.000000
