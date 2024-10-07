@@ -7,7 +7,7 @@
 
 	<pstats
 		weightkg="2200"
-		enginebhp="393"
+		enginebhp="305"
 		maxspeed="200"
 		wheeldrive="4WD"
 		handling="moderate" />
@@ -27,7 +27,7 @@
 		turnspeedrate="0.0, 0.0, 16.0" />
 
 	<drivesystem>
-		<engine powerscale="223710">
+		<engine powerscale="227440">
 			<powerpoint rpm="1000" power="0.3" />
 			<powerpoint rpm="2000" power="0.4" />
 			<powerpoint rpm="3000" power="0.6" />
@@ -40,7 +40,7 @@
 	<!--H3 main gear 4.56 high 1.0 low 2.64 1: 3.06 2: 1.62 3: 1.0 4: 0.69 back 2.29
 -->
 		<gearbox>
-			<gear absolute="0.034" />
+			<gear absolute="0.0519" />
 			<gear relative="1.889" />
 			<gear relative="1.62" />
 			<gear relative="1.449" />
