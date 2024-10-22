@@ -72,6 +72,8 @@ public:
     ActionLeft,
     ActionRight,
     ActionHandbrake,
+    ActionUpshift,
+    ActionDownshift,
     ActionRecover,
     ActionRecoverAtCheckpoint,
     ActionCamMode,
@@ -156,6 +158,7 @@ private:
   bool cfg_video_fullscreen;
 
   float cfg_drivingassist;
+  bool cfg_automatictransmission;
   bool cfg_enable_sound;
   bool cfg_enable_codriversigns;
   bool cfg_enable_fps;

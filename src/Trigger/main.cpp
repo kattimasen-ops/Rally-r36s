@@ -8,7 +8,7 @@
 #include "main.h"
 #include "physfs_utils.h"
 #include "vehicle.h"
-
+#include "config.h"
 #include <SDL2/SDL_main.h>
 #include <SDL2/SDL_thread.h>
 
@@ -590,6 +590,7 @@ bool MainApp::startGame(const std::string &filename)
     appstate = AS_CHOOSE_VEHICLE;
   } else {
     game->chooseVehicle(game->vehiclechoices[choose_type]);
+//    game->vehicle.front()->automatictransmission = cfg_automatictransmission;
     if (cfg.getEnableGhost())
       ghost.recordStart(filename, game->vehiclechoices[choose_type]->getName());
 
@@ -860,6 +861,9 @@ void MainApp::tickStateGame(float delta)
 
   // Do input/control processing
 
+  float prev_upshift_value = cfg.getCtrl().map[PConfig::ActionUpshift].value;
+  float prev_downshift_value = cfg.getCtrl().map[PConfig::ActionDownshift].value;
+
   for (int a = 0; a < PConfig::ActionCount; a++) {
 
     switch(cfg.getCtrl().map[a].type) {
@@ -927,16 +931,23 @@ void MainApp::tickStateGame(float delta)
   float braketarget = 0.0f;
 
   if (cfg.getCtrl().map[PConfig::ActionForward].value > 0.0f) {
-    if (vehic->wheel_angvel > -10.0f)
-      throttletarget = cfg.getCtrl().map[PConfig::ActionForward].value;
-    else
-      braketarget = cfg.getCtrl().map[PConfig::ActionForward].value;
-  }
+    if (vehic->hasAutomaticTransmission() || vehic->getCurrentGear() != -1) {
+      if (vehic->wheel_angvel > -10.0f)
+        throttletarget = cfg.getCtrl().map[PConfig::ActionForward].value;
+      else
+        braketarget = cfg.getCtrl().map[PConfig::ActionForward].value;
+    } else {
+      if (vehic->wheel_angvel < 10.0f)
+        throttletarget = -cfg.getCtrl().map[PConfig::ActionForward].value;
+      else
+        braketarget = cfg.getCtrl().map[PConfig::ActionForward].value;
+    }
+   }
   if (cfg.getCtrl().map[PConfig::ActionBack].value > 0.0f) {
-    if (vehic->wheel_angvel < 10.0f)
-      throttletarget = -cfg.getCtrl().map[PConfig::ActionBack].value;
-    else
-      braketarget = cfg.getCtrl().map[PConfig::ActionBack].value;
+    if (vehic->hasAutomaticTransmission() && vehic->wheel_angvel < 10.0f)
+       throttletarget = -cfg.getCtrl().map[PConfig::ActionBack].value;
+     else
+       braketarget = cfg.getCtrl().map[PConfig::ActionBack].value;
   }
 
   PULLTOWARD(vehic->ctrl.throttle, throttletarget, delta * 15.0f);
@@ -944,7 +955,10 @@ void MainApp::tickStateGame(float delta)
 
   vehic->ctrl.brake2 = cfg.getCtrl().map[PConfig::ActionHandbrake].value;
 
+  int upshift = prev_upshift_value < 1.0f && cfg.getCtrl().map[PConfig::ActionUpshift].value > 0.0f;
+  int downshift = prev_downshift_value < 1.0f && cfg.getCtrl().map[PConfig::ActionDownshift].value > 0.0f;
 
+  vehic->ctrl.shift = upshift - downshift;
   //PULLTOWARD(vehic->ctrl.aim.x, 0.0, delta * 2.0);
   //PULLTOWARD(vehic->ctrl.aim.y, 0.0, delta * 2.0);
 
@@ -1422,31 +1436,32 @@ void MainApp::keyEvent(const SDL_KeyboardEvent &ke)
         return;
       }
 
-      switch (ke.keysym.sym) {
-      case SDLK_RETURN:
-      case SDLK_KP_ENTER:
-      {
-        if (!game->vehiclechoices[choose_type]->getLocked()) {
-          initAudio();
-          game->chooseVehicle(game->vehiclechoices[choose_type]);
-          if (cfg.getEnableGhost())
-            ghost.recordStart(race_data.mapname, game->vehiclechoices[choose_type]->getName());
-
-          if (lss.state == AM_TOP_LVL_PREP)
+          switch (ke.keysym.sym) {
+          case SDLK_RETURN:
+          case SDLK_KP_ENTER:
           {
-              const float bct = best_times.getBestClassTime(
-                  race_data.mapname,
-                  game->vehicle.front()->type->proper_class);
+            if (!game->vehiclechoices[choose_type]->getLocked()) {
+              initAudio();
+              game->chooseVehicle(game->vehiclechoices[choose_type]);
+//              game->vehicle.front()->automatictransmission = cfg_automatictransmission;
+              if (cfg.getEnableGhost())
+                ghost.recordStart(race_data.mapname, game->vehiclechoices[choose_type]->getName());
 
-              if (bct >= 0.0f)
-                  game->targettime = bct;
+              if (lss.state == AM_TOP_LVL_PREP)
+              {
+                  const float bct = best_times.getBestClassTime(
+                      race_data.mapname,
+                      game->vehicle.front()->type->proper_class);
+
+                  if (bct >= 0.0f)
+                      game->targettime = bct;
+              }
+
+              appstate = AS_IN_GAME;
+              return;
+            }
+            break;
           }
-
-          appstate = AS_IN_GAME;
-          return;
-        }
-        break;
-      }
       case SDLK_ESCAPE:
         endGame(Gamefinish::not_finished);
         return;

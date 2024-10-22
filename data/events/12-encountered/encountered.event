@@ -3,6 +3,7 @@
 
 	<unlocks file="/events/13-generic/generic.event" />
 	<unlocks file="/vehicles/fox_super500/fox_super500.vehicle" />
+	<unlocks file="/vehicles/Pegeout/pegeout.vehicle" />
 	<unlocks file="/vehicles/SUV/SUV.vehicle" />
 
 	<level file="swiss/swiss.level" />

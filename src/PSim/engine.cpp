@@ -99,110 +99,175 @@ float PEngine::getPowerAtRPS(float rps)
 /// @param delta = timeslice to compute
 /// @param wheel_rps = current rps of the wheel
 /// @param thottle = input throttle
+/// @param shift = shift change (-2 automatic transmission, -1 downshift, 1 upshift, 0 no shift change)
 ///
-void PEngineInstance::tick(float delta, float throttle, float wheel_rps)
+void PEngineInstance::tick(float delta, float throttle, float wheel_rps, int shift)
 {
 	// convert the rps of the wheel to the actual engine rps
 	// multiplying it for the inverse of the current gear ratio
 	rps = wheel_rps / engine->gear[currentgear];
 
-	bool wasreverse = reverse;
+	// automatic transmission
+	if (shift == -2) {
+		bool wasreverse = reverse;
 
-	// check if the throttle will going reverse or not
-	reverse = (throttle < 0.0f);
+		// check if the throttle will going reverse or not
+		reverse = (throttle < 0.0f);
 
-	// if reverse changes, there is a gear change
-	if (wasreverse != reverse) {
-		flag_gearchange = true;
-		shiftdirection = reverse ? -1 : 1;
-	}
-	// rps and throttle will be set here always positive
-	if (reverse)
-	{
-		rps *= -1.0f;
-		throttle *= -1.0f;
-	}
+		// if reverse changes, there is a gear change
+		if (wasreverse != reverse) {
+			flag_gearchange = true;
+			shiftdirection = reverse ? -1 : 1;
+		}
+		// rps and throttle will be set here always positive
+		if (reverse)
+		{
+			rps *= -1.0f;
+			throttle *= -1.0f;
+		}
 
-	CLAMP_UPPER(throttle, 1.0f);
+		CLAMP_UPPER(throttle, 1.0f);
 
-	// engine rps have to be in the range
-	CLAMP(rps, engine->minRPS, engine->maxRPS);
+		// engine rps have to be in the range
+		CLAMP(rps, engine->minRPS, engine->maxRPS);
 
-	if (reverse)
-		currentgear = 0;
+		if (reverse)
+			currentgear = 0;
 
-	// final output engine torque
-	out_torque = engine->getPowerAtRPS(rps) / (engine->gear[currentgear] * rps);
+		// final output engine torque
+		out_torque = engine->getPowerAtRPS(rps) / (engine->gear[currentgear] * rps);
 
-	// Change gear only if it's not reversed
-	if (!reverse)
-	{
+		// Change gear only if it's not reversed
+		if (!reverse)
+		{
+			// store if we should change gear (0 no, 1 go up, -1 go down)
+			int newtarget_rel = 0;
+
+			// if it's not last gear (we can go up)
+			if (currentgear < (int)engine->gear.size()-1)
+			{
+				// nextrate = rps if the gear was the next one
+				float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear+1];
+				// nextrate has to be in the rps range
+				CLAMP(nextrate, engine->minRPS, engine->maxRPS);
+				// final output engine torque if the gear was the next one
+				float nexttorque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear+1] * nextrate);
+				// if going up we gain torque
+				if (nexttorque > out_torque)
+					// do it
+					newtarget_rel = 1;
+			}
+
+			// if the gear is not reverse and we haven't yet decided to go up
+			if (currentgear > 0 && newtarget_rel == 0)
+			{
+				// nextrate = rps if the gear was the previous one
+				float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear-1];
+				// nextrate has to be in the rps range
+				CLAMP(nextrate, engine->minRPS, engine->maxRPS);
+				// final output engine torque if the gear was the previous one
+				float nexttorque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear-1] * nextrate);
+				// if going down we gain gear
+				if (nexttorque > out_torque)
+					// do it
+					newtarget_rel = -1;
+			}
+
+			// if we are going to change gear and targetgear_rel is updated
+			if (newtarget_rel != 0 && newtarget_rel == targetgear_rel)
+			{
+				// if has passed enought time
+				if ((gearch -= delta) <= 0.0f)
+				{
+					// the rps with the new gear
+					float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear + targetgear_rel];
+					CLAMP(nextrate, engine->minRPS, engine->maxRPS);
+					// final output torque with the new gear
+					out_torque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear + targetgear_rel] * nextrate);
+					// change gear
+					currentgear += targetgear_rel;
+					// set gearch
+					gearch = engine->gearch_repeat;
+					// there is a gear change
+					flag_gearchange = true;
+					shiftdirection = targetgear_rel;
+				}
+			} else {
+				// update targetgear_rel, and set gearch
+				gearch = engine->gearch_first;
+				targetgear_rel = newtarget_rel;
+			}
+		}
+
+		// output torque is proportional to throttle
+		out_torque *= throttle;
+
+		// if reverse the output torque is obviously reversed
+		if (reverse)
+			out_torque *= -1.0;
+
+		// transimission and rolling energy dispersion and resistance
+		out_torque -= wheel_rps * 0.1f;
+	} else {
+		bool neg_throttle = (throttle < 0.0f);
+
+		// rps and throttle will be set here always positive
+		if (neg_throttle)
+		{
+			rps *= -1.0f;
+			throttle *= -1.0f;
+		}
+
+		CLAMP_UPPER(throttle, 1.0f);
+
+		// engine rps have to be in the range
+		CLAMP(rps, engine->minRPS, engine->maxRPS);
+
+		// final output engine torque
+		out_torque = engine->getPowerAtRPS(rps) / (engine->gear[currentgear] * rps);
+
 		// store if we should change gear (0 no, 1 go up, -1 go down)
 		int newtarget_rel = 0;
 
-		// if it's not last gear (we can go up)
-		if (currentgear < (int)engine->gear.size()-1)
-		{
-			// nextrate = rps if the gear was the next one
-			float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear+1];
-			// nextrate has to be in the rps range
-			CLAMP(nextrate, engine->minRPS, engine->maxRPS);
-			// final output engine torque if the gear was the next one
-			float nexttorque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear+1] * nextrate);
-			// if going up we gain torque
-			if (nexttorque > out_torque)
-				// do it
-				newtarget_rel = 1;
-		}
-
-		// if the gear is not reverse and we haven't yet decided to go up
-		if (currentgear > 0 && newtarget_rel == 0)
-		{
-			// nextrate = rps if the gear was the previous one
-			float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear-1];
-			// nextrate has to be in the rps range
-			CLAMP(nextrate, engine->minRPS, engine->maxRPS);
-			// final output engine torque if the gear was the previous one
-			float nexttorque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear-1] * nextrate);
-			// if going down we gain gear
-			if (nexttorque > out_torque)
-				// do it
-				newtarget_rel = -1;
-		}
-
-		// if we are going to change gear and targetgear_rel is updated
-		if (newtarget_rel != 0 && newtarget_rel == targetgear_rel)
-		{
-			// if has passed enought time
-			if ((gearch -= delta) <= 0.0f)
-			{
-				// the rps with the new gear
-				float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear + targetgear_rel];
-				CLAMP(nextrate, engine->minRPS, engine->maxRPS);
-				// final output torque with the new gear
-				out_torque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear + targetgear_rel] * nextrate);
-				// change gear
-				currentgear += targetgear_rel;
-				// set gearch
-				gearch = engine->gearch_repeat;
-				// there is a gear change
+		if (shift == 1) { // try to go up
+			if (reverse) {
+				reverse = false;
 				flag_gearchange = true;
-				shiftdirection = targetgear_rel;
+				shiftdirection = 1;
+			} else if (currentgear < (int)engine->gear.size() - 1) {
+				newtarget_rel = 1;
 			}
-		} else {
-			// update targetgear_rel, and set gearch
-			gearch = engine->gearch_first;
-			targetgear_rel = newtarget_rel;
+		} else if (shift == -1) { // try to go down
+			if (currentgear == 0) {
+				if (!reverse) {
+					reverse = true;
+					flag_gearchange = true;
+					shiftdirection = -1;
+				}
+			} else {
+				newtarget_rel = -1;
+			}
 		}
+
+		if (newtarget_rel != 0) {
+			// the rps with the new gear
+			float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear + newtarget_rel];
+			CLAMP(nextrate, engine->minRPS, engine->maxRPS);
+			// final output torque with the new gear
+			out_torque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear + newtarget_rel] * nextrate);
+			// change gear
+			currentgear += newtarget_rel;
+			flag_gearchange = true;
+			shiftdirection = newtarget_rel;
+		}
+
+		// output_torque is proportional to throttle
+		out_torque *= throttle;
+
+		if (neg_throttle)
+			out_torque *= -1.0f;
+
+		// transmission and rolling energy dispersion and resistance
+		out_torque -= wheel_rps * 0.1f;
 	}
-
-	// output torque is proportional to throttle
-	out_torque *= throttle;
-
-	// if reverse the output torque is obviously reversed
-	if (reverse)
-		out_torque *= -1.0;
-
-	// transimission and rolling energy dispersion and resistance
-	out_torque -= wheel_rps * 0.1f;
 }

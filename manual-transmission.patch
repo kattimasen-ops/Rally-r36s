@@ -1,0 +1,528 @@
+Index: bin/trigger-rally.config.defs
+===================================================================
+--- bin/trigger-rally.config.defs	(revision 1019)
++++ bin/trigger-rally.config.defs	(working copy)
+@@ -129,5 +129,6 @@
+ 	<parameters
+ 		drivingassist="0.33"
++		transmission="auto"
+ 		enablesound="yes"
+ 		enablecodriversigns="yes"
+ 		speedunit="mph"
+@@ -140,6 +141,11 @@
+ 		enablefps="no"
+ 		enableghost="no"
+ 		/>
+-		<!-- Possible values for speedunit:
++		<!--
++			transmission:
++				"auto" - automatic transmission
++				"manual" - manual transmission
++
++			Possible values for speedunit:
+ 			kph - Kilometres per hour
+ 			mph - Miles per hour
+@@ -173,6 +179,8 @@
+ 			<key action="left" id="Left" />
+ 			<key action="right" id="Right" />
+ 			<key action="handbrake" id="Space" />
++			<key action="upshift" id="X" />
++			<key action="downshift" id="Z" />
+ 			<key action="recover" id="R" />
+ 			<key action="recoveratcheckpoint" id="Q" />
+ 			<key action="cammode" id="C" />
+Index: doc/README-win.txt
+===================================================================
+--- doc/README-win.txt	(revision 1019)
++++ doc/README-win.txt	(working copy)
+@@ -19,6 +19,8 @@
+     Left Arrow      steer left
+     Right Arrow     steer right
+     Space           handbrake
++    X               upshift
++    Z               downshift
+     R               recover car
+     Q               recover car at last checkpoint
+     P               pause race
+Index: doc/README.txt
+===================================================================
+--- doc/README.txt	(revision 1019)
++++ doc/README.txt	(working copy)
+@@ -33,6 +33,8 @@
+ Left    Steer left
+ Right   Steer right
+ Space   Handbrake
++X       Upshift
++Z       Downshift
+ C       Change camera view
+ M       Toggle map
+ N       Toggle user interface
+Index: src/PSim/engine.cpp
+===================================================================
+--- src/PSim/engine.cpp	(revision 1019)
++++ src/PSim/engine.cpp	(working copy)
+@@ -99,110 +99,175 @@
+ /// @param delta = timeslice to compute
+ /// @param wheel_rps = current rps of the wheel
+ /// @param thottle = input throttle
++/// @param shift = shift change (-2 automatic transmission, -1 downshift, 1 upshift, 0 no shift change)
+ ///
+-void PEngineInstance::tick(float delta, float throttle, float wheel_rps)
++void PEngineInstance::tick(float delta, float throttle, float wheel_rps, int shift)
+ {
+ 	// convert the rps of the wheel to the actual engine rps
+ 	// multiplying it for the inverse of the current gear ratio
+ 	rps = wheel_rps / engine->gear[currentgear];
++
++	// automatic transmission
++	if (shift == -2) {
++		bool wasreverse = reverse;
+
+-	bool wasreverse = reverse;
++		// check if the throttle will going reverse or not
++		reverse = (throttle < 0.0f);
+
+-	// check if the throttle will going reverse or not
+-	reverse = (throttle < 0.0f);
++		// if reverse changes, there is a gear change
++		if (wasreverse != reverse) {
++			flag_gearchange = true;
++			shiftdirection = reverse ? -1 : 1;
++		}
++		// rps and throttle will be set here always positive
++		if (reverse)
++		{
++			rps *= -1.0f;
++			throttle *= -1.0f;
++		}
+
+-	// if reverse changes, there is a gear change
+-	if (wasreverse != reverse) {
+-		flag_gearchange = true;
+-		shiftdirection = reverse ? -1 : 1;
+-	}
+-	// rps and throttle will be set here always positive
+-	if (reverse)
+-	{
+-		rps *= -1.0f;
+-		throttle *= -1.0f;
+-	}
++		CLAMP_UPPER(throttle, 1.0f);
+
+-	CLAMP_UPPER(throttle, 1.0f);
++		// engine rps have to be in the range
++		CLAMP(rps, engine->minRPS, engine->maxRPS);
+
+-	// engine rps have to be in the range
+-	CLAMP(rps, engine->minRPS, engine->maxRPS);
++		if (reverse)
++			currentgear = 0;
+
+-	if (reverse)
+-		currentgear = 0;
++		// final output engine torque
++		out_torque = engine->getPowerAtRPS(rps) / (engine->gear[currentgear] * rps);
+
+-	// final output engine torque
+-	out_torque = engine->getPowerAtRPS(rps) / (engine->gear[currentgear] * rps);
++		// Change gear only if it's not reversed
++		if (!reverse)
++		{
++			// store if we should change gear (0 no, 1 go up, -1 go down)
++			int newtarget_rel = 0;
+
+-	// Change gear only if it's not reversed
+-	if (!reverse)
+-	{
+-		// store if we should change gear (0 no, 1 go up, -1 go down)
+-		int newtarget_rel = 0;
++			// if it's not last gear (we can go up)
++			if (currentgear < (int)engine->gear.size()-1)
++			{
++				// nextrate = rps if the gear was the next one
++				float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear+1];
++				// nextrate has to be in the rps range
++				CLAMP(nextrate, engine->minRPS, engine->maxRPS);
++				// final output engine torque if the gear was the next one
++				float nexttorque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear+1] * nextrate);
++				// if going up we gain torque
++				if (nexttorque > out_torque)
++					// do it
++					newtarget_rel = 1;
++			}
+
+-		// if it's not last gear (we can go up)
+-		if (currentgear < (int)engine->gear.size()-1)
+-		{
+-			// nextrate = rps if the gear was the next one
+-			float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear+1];
+-			// nextrate has to be in the rps range
+-			CLAMP(nextrate, engine->minRPS, engine->maxRPS);
+-			// final output engine torque if the gear was the next one
+-			float nexttorque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear+1] * nextrate);
+-			// if going up we gain torque
+-			if (nexttorque > out_torque)
+-				// do it
+-				newtarget_rel = 1;
++			// if the gear is not reverse and we haven't yet decided to go up
++			if (currentgear > 0 && newtarget_rel == 0)
++			{
++				// nextrate = rps if the gear was the previous one
++				float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear-1];
++				// nextrate has to be in the rps range
++				CLAMP(nextrate, engine->minRPS, engine->maxRPS);
++				// final output engine torque if the gear was the previous one
++				float nexttorque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear-1] * nextrate);
++				// if going down we gain gear
++				if (nexttorque > out_torque)
++					// do it
++					newtarget_rel = -1;
++			}
++
++			// if we are going to change gear and targetgear_rel is updated
++			if (newtarget_rel != 0 && newtarget_rel == targetgear_rel)
++			{
++				// if has passed enought time
++				if ((gearch -= delta) <= 0.0f)
++				{
++					// the rps with the new gear
++					float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear + targetgear_rel];
++					CLAMP(nextrate, engine->minRPS, engine->maxRPS);
++					// final output torque with the new gear
++					out_torque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear + targetgear_rel] * nextrate);
++					// change gear
++					currentgear += targetgear_rel;
++					// set gearch
++					gearch = engine->gearch_repeat;
++					// there is a gear change
++					flag_gearchange = true;
++					shiftdirection = targetgear_rel;
++				}
++			} else {
++				// update targetgear_rel, and set gearch
++				gearch = engine->gearch_first;
++				targetgear_rel = newtarget_rel;
++			}
+ 		}
+
+-		// if the gear is not reverse and we haven't yet decided to go up
+-		if (currentgear > 0 && newtarget_rel == 0)
++		// output torque is proportional to throttle
++		out_torque *= throttle;
++
++		// if reverse the output torque is obviously reversed
++		if (reverse)
++			out_torque *= -1.0;
++
++		// transimission and rolling energy dispersion and resistance
++		out_torque -= wheel_rps * 0.1f;
++	} else {
++		bool neg_throttle = (throttle < 0.0f);
++
++		// rps and throttle will be set here always positive
++		if (neg_throttle)
+ 		{
+-			// nextrate = rps if the gear was the previous one
+-			float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear-1];
+-			// nextrate has to be in the rps range
+-			CLAMP(nextrate, engine->minRPS, engine->maxRPS);
+-			// final output engine torque if the gear was the previous one
+-			float nexttorque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear-1] * nextrate);
+-			// if going down we gain gear
+-			if (nexttorque > out_torque)
+-				// do it
+-				newtarget_rel = -1;
++			rps *= -1.0f;
++			throttle *= -1.0f;
+ 		}
+
+-		// if we are going to change gear and targetgear_rel is updated
+-		if (newtarget_rel != 0 && newtarget_rel == targetgear_rel)
+-		{
+-			// if has passed enought time
+-			if ((gearch -= delta) <= 0.0f)
+-			{
+-				// the rps with the new gear
+-				float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear + targetgear_rel];
+-				CLAMP(nextrate, engine->minRPS, engine->maxRPS);
+-				// final output torque with the new gear
+-				out_torque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear + targetgear_rel] * nextrate);
+-				// change gear
+-				currentgear += targetgear_rel;
+-				// set gearch
+-				gearch = engine->gearch_repeat;
+-				// there is a gear change
++		CLAMP_UPPER(throttle, 1.0f);
++
++		// engine rps have to be in the range
++		CLAMP(rps, engine->minRPS, engine->maxRPS);
++
++		// final output engine torque
++		out_torque = engine->getPowerAtRPS(rps) / (engine->gear[currentgear] * rps);
++
++		// store if we should change gear (0 no, 1 go up, -1 go down)
++		int newtarget_rel = 0;
++
++		if (shift == 1) { // try to go up
++			if (reverse) {
++				reverse = false;
+ 				flag_gearchange = true;
+-				shiftdirection = targetgear_rel;
++				shiftdirection = 1;
++			} else if (currentgear < (int)engine->gear.size() - 1) {
++				newtarget_rel = 1;
+ 			}
+-		} else {
+-			// update targetgear_rel, and set gearch
+-			gearch = engine->gearch_first;
+-			targetgear_rel = newtarget_rel;
++		} else if (shift == -1) { // try to go down
++			if (currentgear == 0) {
++				if (!reverse) {
++					reverse = true;
++					flag_gearchange = true;
++					shiftdirection = -1;
++				}
++			} else {
++				newtarget_rel = -1;
++			}
+ 		}
+-	}
++
++		if (newtarget_rel != 0) {
++			// the rps with the new gear
++			float nextrate = rps * engine->gear[currentgear] / engine->gear[currentgear + newtarget_rel];
++			CLAMP(nextrate, engine->minRPS, engine->maxRPS);
++			// final output torque with the new gear
++			out_torque = engine->getPowerAtRPS(nextrate) / (engine->gear[currentgear + newtarget_rel] * nextrate);
++			// change gear
++			currentgear += newtarget_rel;
++			flag_gearchange = true;
++			shiftdirection = newtarget_rel;
++		}
+
+-	// output torque is proportional to throttle
+-	out_torque *= throttle;
++		// output_torque is proportional to throttle
++		out_torque *= throttle;
+
+-	// if reverse the output torque is obviously reversed
+-	if (reverse)
+-		out_torque *= -1.0;
++		if (neg_throttle)
++			out_torque *= -1.0f;
+
+-	// transimission and rolling energy dispersion and resistance
+-	out_torque -= wheel_rps * 0.1f;
++		// transmission and rolling energy dispersion and resistance
++		out_torque -= wheel_rps * 0.1f;
++	}
+ }
+Index: src/PSim/sim.cpp
+===================================================================
+--- src/PSim/sim.cpp	(revision 1019)
++++ src/PSim/sim.cpp	(working copy)
+@@ -174,8 +174,10 @@
+ 		t -= timeslice;
+
+ 		// tick for vehicles
+-		for (unsigned int i=0; i<vehicle.size(); ++i)
++		for (unsigned int i=0; i<vehicle.size(); ++i) {
+ 			vehicle[i]->tick(timeslice);
++			vehicle[i]->ctrl.shift = 0;
++		}
+
+ 		// tick for rigid bodies
+ 		for (unsigned int i=0; i<body.size(); ++i)
+Index: src/PSim/vehicle.cpp
+===================================================================
+--- src/PSim/vehicle.cpp	(revision 1019)
++++ src/PSim/vehicle.cpp	(working copy)
+@@ -707,7 +707,8 @@
+ 	wheel_angvel(0.0f),
+ 	offroadtime_begin(0),
+ 	offroadtime_end(0),
+-	offroadtime_total(0)
++	offroadtime_total(0),
++	automatictransmission(true)
+ {
+ 	// vehicle mass is approximately meant to be cuboid
+ 	body->setMassCuboid(type->mass, type->dims);
+@@ -981,7 +982,7 @@
+   //vec3f rightdir = makevec3f(body->getInverseOrientationMatrix().row[0]);
+
+   // handle engine (output torque, change gear if needed...)
+-  iengine.tick(delta, state.throttle, wheel_angvel);
++  iengine.tick(delta, state.throttle, wheel_angvel, hasAutomaticTransmission() ? -2 : ctrl.shift);
+
+   // Output engine power delivered to each wheel
+   // the power will be shared equally to each wheel
+Index: src/PEngine/config.cpp
+===================================================================
+--- src/PEngine/config.cpp	(revision 1019)
++++ src/PEngine/config.cpp	(working copy)
+@@ -51,6 +51,7 @@
+   cfg_video_fullscreen = false;
+
+   cfg_drivingassist = 1.0f;
++  cfg_automatictransmission = true;
+   cfg_enable_sound = true;
+   cfg_enable_codriversigns = true;
+   cfg_skip_saves = 5;
+@@ -78,6 +79,8 @@
+   ctrl.action_name[ActionLeft] = std::string("left");
+   ctrl.action_name[ActionRight] = std::string("right");
+   ctrl.action_name[ActionHandbrake] = std::string("handbrake");
++  ctrl.action_name[ActionUpshift] = std::string("upshift");
++  ctrl.action_name[ActionDownshift] = std::string("downshift");
+   ctrl.action_name[ActionRecover] = std::string("recover");
+   ctrl.action_name[ActionRecoverAtCheckpoint] = std::string("recoveratcheckpoint");
+   ctrl.action_name[ActionCamMode] = std::string("cammode");
+@@ -352,6 +355,14 @@
+       val = walk->Attribute("drivingassist");
+       if (val) cfg_drivingassist = atof(val);
+
++      val = walk->Attribute("transmission");
++      if (val) {
++        if (!strcmp(val, "auto"))
++          cfg_automatictransmission = true;
++        else // "manual"
++          cfg_automatictransmission = false;
++      }
++
+       val = walk->Attribute("enablesound");
+       if (val) {
+         if (!strcmp(val, "yes"))
+Index: src/Trigger/main.cpp
+===================================================================
+--- src/Trigger/main.cpp	(revision 1019)
++++ src/Trigger/main.cpp	(working copy)
+@@ -11,1 +11,1 @@
+-
++#include "config.h"
+@@ -590,8 +590,9 @@
+     appstate = AS_CHOOSE_VEHICLE;
+   } else {
+     game->chooseVehicle(game->vehiclechoices[choose_type]);
++    game->vehicle.front()->automatictransmission = cfg_automatictransmission;
+     if (cfg.getEnableGhost())
+       ghost.recordStart(filename, game->vehiclechoices[choose_type]->getName());
+
+     if (lss.state == AM_TOP_LVL_PREP)
+     {
+@@ -861,5 +862,8 @@
+   // Do input/control processing
+
++  float prev_upshift_value = cfg.getCtrl().map[PConfig::ActionUpshift].value;
++  float prev_downshift_value = cfg.getCtrl().map[PConfig::ActionDownshift].value;
++
+  for (int a = 0; a < PConfig::ActionCount; a++) {
+
+    switch(cfg.getCtrl().map[a].type) {
+@@ -927,13 +931,20 @@
+   float braketarget = 0.0f;
+
+  if (cfg.getCtrl().map[PConfig::ActionForward].value > 0.0f) {
+-    if (vehic->wheel_angvel > -10.0f)
+-      throttletarget = cfg.getCtrl().map[PConfig::ActionForward].value;
+-    else
+-      braketarget = cfg.getCtrl().map[PConfig::ActionForward].value;
++    if (vehic->hasAutomaticTransmission() || vehic->getCurrentGear() != -1) {
++      if (vehic->wheel_angvel > -10.0f)
++        throttletarget = cfg.getCtrl().map[PConfig::ActionForward].value;
++      else
++        braketarget = cfg.getCtrl().map[PConfig::ActionForward].value;
++    } else {
++      if (vehic->wheel_angvel < 10.0f)
++        throttletarget = -cfg.getCtrl().map[PConfig::ActionForward].value;
++      else
++        braketarget = cfg.getCtrl().map[PConfig::ActionForward].value;
++    }
+   }
+  if (cfg.getCtrl().map[PConfig::ActionBack].value > 0.0f) {
+-    if (vehic->wheel_angvel < 10.0f)
++    if (vehic->hasAutomaticTransmission() && vehic->wheel_angvel < 10.0f)
+       throttletarget = -cfg.getCtrl().map[PConfig::ActionBack].value;
+     else
+       braketarget = cfg.getCtrl().map[PConfig::ActionBack].value;
+@@ -945,5 +956,9 @@
+   vehic->ctrl.brake2 = cfg.getCtrl().map[PConfig::ActionHandbrake].value;
+
++  int upshift = prev_upshift_value < 1.0f && ctrl.map[ActionUpshift].value > 0.0f;
++  int downshift = prev_downshift_value < 1.0f && ctrl.map[ActionDownshift].value > 0.0f;
+
++  vehic->ctrl.shift = upshift - downshift;
++
+   //PULLTOWARD(vehic->ctrl.aim.x, 0.0, delta * 2.0);
+   //PULLTOWARD(vehic->ctrl.aim.y, 0.0, delta * 2.0);
+@@ -1429,7 +1444,8 @@
+           initAudio();
+           game->chooseVehicle(game->vehiclechoices[choose_type]);
++          game->vehicle.front()->automatictransmission = cfg_automatictransmission;
+           if (cfg.getEnableGhost())
+             ghost.recordStart(race_data.mapname, game->vehiclechoices[choose_type]->getName());
+
+           if (lss.state == AM_TOP_LVL_PREP)
+           {
+Index: src/include/engine.h
+===================================================================
+--- src/include/engine.h	(revision 1019)
++++ src/include/engine.h	(working copy)
+@@ -128,7 +128,7 @@
+ 		shiftdirection(0) { }
+
+ 	// Simulation tick
+-	void tick(float delta, float throttle, float wheel_rps);
++	void tick(float delta, float throttle, float wheel_rps, int shift);
+
+ 	// return current information
+ 	float getOutputTorque()
+Index: src/include/config.h
+===================================================================
+--- src/include/config.h	(revision 1019)
++++ src/include/config.h	(working copy)
+@@ -72,6 +72,8 @@
+ 		ActionLeft,
+ 		ActionRight,
+ 		ActionHandbrake,
++		ActionUpshift,
++		ActionDownshift,
+ 		ActionRecover,
+ 		ActionRecoverAtCheckpoint,
+ 		ActionCamMode,
+@@ -156,5 +158,6 @@
+   bool cfg_video_fullscreen;
+
+   float cfg_drivingassist;
++  bool cfg_automatictransmission;
+   bool cfg_enable_sound;
+   bool cfg_enable_codriversigns;
+Index: src/include/vehicle.h
+===================================================================
+--- src/include/vehicle.h	(revision 1019)
++++ src/include/vehicle.h	(working copy)
+@@ -69,6 +69,7 @@
+   // shared
+   float throttle;
+   float brake1,brake2;
++  int shift;
+   vec3f turn;
+   vec2f aim;
+
+@@ -359,6 +360,8 @@
+   float offroadtime_end;
+   // total time offroad
+   float offroadtime_total;
+
++  bool automatictransmission;
++
+    PVehicle(PSim &sim_parent, PVehicleType *_type);
+    //~PVehicle() { unload(); } // body unloaded by sim
+@@ -401,6 +404,7 @@
+   }
+   float getWheelSpeed() { return wheel_speed; }
+   float getSkidLevel() { return skid_level; }
++  bool hasAutomaticTransmission() { return automatictransmission; }
+
+ private:
+   // subroutines that reset and stops status of the car

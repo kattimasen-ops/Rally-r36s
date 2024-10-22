@@ -4,6 +4,7 @@
 	<unlocks file="/events/11-tight/tight.event" />
 	<unlocks file="/vehicles/eva/evo.vehicle" />
 	<unlocks file="/vehicles/UAZRally/uazrally.vehicle" />
+	<unlocks file="/vehicles/LandRover/landrover.vehicle" />
 
 
 	<level file="flood/flood.level" />

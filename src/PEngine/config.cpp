@@ -51,6 +51,7 @@ void PConfig::loadConfig()
   cfg_video_fullscreen = false;
 
   cfg_drivingassist = 1.0f;
+  cfg_automatictransmission = true;
   cfg_enable_sound = true;
   cfg_enable_codriversigns = true;
   cfg_skip_saves = 5;
@@ -78,6 +79,8 @@ void PConfig::loadConfig()
   ctrl.action_name[ActionLeft] = std::string("left");
   ctrl.action_name[ActionRight] = std::string("right");
   ctrl.action_name[ActionHandbrake] = std::string("handbrake");
+  ctrl.action_name[ActionUpshift] = std::string("upshift");
+  ctrl.action_name[ActionDownshift] = std::string("downshift");
   ctrl.action_name[ActionRecover] = std::string("recover");
   ctrl.action_name[ActionRecoverAtCheckpoint] = std::string("recoveratcheckpoint");
   ctrl.action_name[ActionCamMode] = std::string("cammode");
@@ -351,6 +354,14 @@ void PConfig::loadConfig()
 
       val = walk->Attribute("drivingassist");
       if (val) cfg_drivingassist = atof(val);
+
+      val = walk->Attribute("transmission");
+      if (val) {
+        if (!strcmp(val, "auto"))
+          cfg_automatictransmission = true;
+        else // "manual"
+          cfg_automatictransmission = false;
+      }
 
       val = walk->Attribute("enablesound");
       if (val) {

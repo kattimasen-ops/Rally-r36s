@@ -33,6 +33,8 @@ Down    Foot brake / Reverse
 Left    Steer left
 Right   Steer right
 Space   Handbrake
+X       Upshift
+Z       Downshift
 C       Change camera view
 M       Toggle map
 N       Toggle user interface
@@ -80,13 +82,13 @@ Trigger ships car models in .obj formats.
 
 You can add completely new cars in the Wavefront .obj format with the
 following restrictions:
- 
+
   - Use only one material per .obj.
   - All faces must be triangles.
   - The material is ignored, only the texture defined by it gets loaded.
   - All meshes, besides the wheels, need to be on a single object.
   - Wheels are in their own files.
- 
+
 When exporting from Blender, following settings work:
 
   - "Apply Modifiers"
@@ -95,15 +97,15 @@ When exporting from Blender, following settings work:
   - "Write Materials"
   - "Triangulate Faces"
   - "Objects as OBJ Objects"
- 
+
 To test the model, replace the file name in an existing .vehicle file inside
 
 data/vehicles/VEHICLENAME/
 
- 
+
 B. Levels/maps/tracks
 ---------------------
- 
+
 Use any tool that saves .png or .jpg images, for example GIMP and Inkscape.
 
 You will need to create a heightmap, color map and need to assign coordinates.
@@ -173,7 +175,7 @@ http://sourceforge.net/projects/trigger-rally/support
   - Updated code to use TinyXML-2, SDL2 and SDL2_image
   - Improved code friendliness to Linux when searching for the default
     configuration file "trigger-rally.config.defs"
-  - Released 64-bit binaries for Windows x64, optimized for AMD K8 
+  - Released 64-bit binaries for Windows x64, optimized for AMD K8
 
 23/04/2016 - Trigger 0.6.4
   - Added recording of best times
@@ -205,7 +207,7 @@ http://sourceforge.net/projects/trigger-rally/support
   - Include new .obj textures (disabled by default)
   - Add 6 new events and 23 new single races courtesy of Onsemeliot
   - Add several new textures
-  - Replace most media content (textures, audio, fonts, etc.) with 
+  - Replace most media content (textures, audio, fonts, etc.) with
     FOSS equivalents
   - New FOSS Trigger Rally icon
   - Many other changes (check SVN logs from about r48)
@@ -343,5 +345,4 @@ Many thanks to all contributors!
 I haven't been keeping strict records of who has
 contributed what. If you've been left out, or if
 you'd like your email to be listed, please email
-me. (ja-reiko@users.sourceforge.net)
-
+me. (ja-reiko@users.sourceforge.net)
