@@ -4,6 +4,7 @@
 	<unlocks file="/events/17-roughvoyage/roughvoyage.event" />
 	<unlocks file="/vehicles/BMWM3E92/bmwm3e92.vehicle" />
 	<unlocks file="/vehicles/truck/Truck.vehicle" />
+	<unlocks file="/vehicles/Bus/bus.vehicle" />
 
 	<level file="highpass/highmorning.level" />
 	<level file="smoothie/smoothie.level" />

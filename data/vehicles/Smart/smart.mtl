@@ -1,0 +1,146 @@
+# Blender MTL File: 'None'
+# Material Count: 12
+
+newmtl small-flights-bulb_17
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.429226 0.429226 0.429226
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.500000
+illum 6
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-flights-frame_16
+Ns 728.999998
+Ka 1.000000 1.000000 1.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-flights-glass_15
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.207843 0.215686 0.227451
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.100000
+illum 6
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-flights-orange_12
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.784314 0.478431 0.003922
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.500000
+illum 9
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-flights-red_11
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.309804 0.043137 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.200000
+illum 6
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-glass_10
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.058548 0.063704 0.087140
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.100000
+illum 6
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-glass_black_9
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.013411 0.013411 0.013411
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-inside_8
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.162635 0.155752 0.146086
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-main_19
+Ns 575.999996
+Ka 0.300000 0.300000 0.300000
+Kd 0.549020 0.356863 0.117647
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-mirror_7
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.548821 0.548821 0.548821
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-rubber_6
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.036889 0.036889 0.036889
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd smart.png
+map_Ke smart_emission.png
+
+newmtl small-tire_1.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.017388 0.013026 0.010517
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd smart.png
+map_Ke smart_emission.png
