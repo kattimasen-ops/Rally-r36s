@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Mini FAV"
+	class="Off-Road"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1240"
+		enginebhp="210"
+		maxspeed="222"
+		wheeldrive="4WD"
+		handling="good" />
+
+	<genparams
+		mass="1240.0"
+		dimensions="2.4, 5.4, 1.7"
+		wheelmodel="FAV_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		angdrag="20.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 8.0" />
+
+	<drivesystem>
+		<engine powerscale="156597">
+			<powerpoint rpm="1000" power="0.2" />
+			<powerpoint rpm="2000" power="0.4" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="5000" power="0.9" />
+			<powerpoint rpm="5650" power="1.0" />
+			<powerpoint rpm="6000" power="0.0" />
+		</engine>
+	<!--"final":3.65,"forward":[3.31,2.13,1.48,1.14,0.95,0.82],"reverse":3.394
+-->
+		<gearbox>
+			<gear absolute="0.0424" />
+			<gear relative="1.554" />
+			<gear relative="1.439" />
+			<gear relative="1.298" />
+			<gear relative="1.2" />
+			<gear relative="1.159" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.6, 0.0"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="FAV.obj"
+		scale="1.0">
+
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="1.05, 1.45, 0.05" radius="0.575" force="65000.0" dampening="15000.0" />
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-1.05, 1.45, 0.05" radius="0.575" force="65000.0" dampening="15000.0" />
+		<wheel drive="0.6" steer="0.0" brake1="400.0" pos="1.05, -1.78, 0.05" radius="0.575" force="75000.0" dampening="15000.0" brake2="1000.0" />
+		<wheel drive="0.6" steer="0.0" brake1="400.0" pos="-1.05, -1.78, 0.05" radius="0.575" force="75000.0" dampening="15000.0" brake2="1000.0" />
+
+		<clip type="body" pos="1.2, 2.3, 1.25" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.2, 2.3, 1.25" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="1.2, -3.13, 1.7" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.2, -3.13, 1.7" force="300000.0" dampening="25000.0" />
+
+	</part>
+
+</vehicle>

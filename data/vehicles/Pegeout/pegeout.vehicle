@@ -7,8 +7,8 @@
 
 	<pstats
 		weightkg="1100"
-		enginebhp="110"
-		maxspeed="188"
+		enginebhp="177"
+		maxspeed="220"
 		wheeldrive="FWD"
 		handling="good" />
 
@@ -27,7 +27,7 @@
 		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
-		<engine powerscale="82027">
+		<engine powerscale="131989">
 			<powerpoint rpm="1000" power="0.2" />
 			<powerpoint rpm="2000" power="0.4" />
 			<powerpoint rpm="3000" power="0.7" />
@@ -39,7 +39,7 @@
 	    "final":3.17,"forward":[2.72, 1.50, 1.0, 0.71],"reverse":2.46
 -->
 		<gearbox>
-			<gear absolute="0.0725" />
+			<gear absolute="0.0848" />
 			<gear relative="1.813" />
 			<gear relative="1.5" />
 			<gear relative="1.408" />
@@ -54,10 +54,10 @@
 		model="pegeout.obj"
 		scale="1.0">
 
-		<wheel drive="1.0" steer="0.6" brake1="800.0" pos="0.7125, 1.152, -0.13" radius="0.30" force="55000.0" dampening="15000.0" />
-		<wheel drive="1.0" steer="0.6" brake1="800.0" pos="-0.7125, 1.152, -0.13" radius="0.30" force="55000.0" dampening="15000.0" />
-		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="0.708, -1.29, -0.13" radius="0.30" force="55000.0" dampening="15000.0" brake2="1000.0" />
-		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="-0.708, -1.29, -0.13" radius="0.30" force="55000.0" dampening="15000.0" brake2="1000.0" />
+		<wheel drive="1.0" steer="0.6" brake1="800.0" pos="0.7125, 1.152, -0.13" radius="0.30" force="55000.0" dampening="18000.0" friction="0.025" />
+		<wheel drive="1.0" steer="0.6" brake1="800.0" pos="-0.7125, 1.152, -0.13" radius="0.30" force="55000.0" dampening="18000.0" friction="0.025" />
+		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="0.708, -1.29, -0.13" radius="0.30" force="55000.0" dampening="18000.0" brake2="1000.0" friction="0.025" />
+		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="-0.708, -1.29, -0.13" radius="0.30" force="55000.0" dampening="18000.0" brake2="1000.0" friction="0.025" />
 
 		<clip type="body" pos="0.826, 1.917, 1.0" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.826, 1.917, 1.0" force="300000.0" dampening="25000.0" />

@@ -68,7 +68,7 @@ Kd 0.191202 0.191202 0.191202
 Ks 0.496800 0.496800 0.496800
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 0.550725
+d 0.100000
 illum 6
 map_Kd alpine.png
 map_Ke alpine_emission.png
@@ -92,7 +92,7 @@ Kd 0.337164 0.337164 0.337164
 Ks 0.621000 0.621000 0.621000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 0.521739
+d 0.100000
 illum 6
 map_Kd alpine.png
 map_Ke alpine_emission.png
