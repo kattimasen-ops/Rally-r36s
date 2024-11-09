@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Banana Island"
 	comment="Get the monkey!"
 	author="Bruno &quot;Fuddl&quot; Kleinert"
 	description="easy going and fast with crazy jumps"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -18,7 +18,7 @@
 		horizontalscale="4.0"
 		verticalscale="0.15"
 		>
-		
+
 		<foliageband
 			middle="1.0"
 			range="0.2"
@@ -26,10 +26,10 @@
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
 			/>
-		
-		
+
+
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/blue.jpg"
 		cloudscrollrate="0.005"
@@ -37,13 +37,18 @@
 		fogdensity="0.005"
 		fogdensitysky="0.8"
 		/>
-	
+
+	<water
+		height="5.0"
+		watertexture="/textures/water/default.png"
+		/>
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
-	
+
 	<race coordscale="4.0, -4.0"
 		targettime="300.0" codrivercpmode="ordered">
-		
+
 		<startposition pos="202, 114, 4.0" oridegrees="210" />
 
 		<checkpoint coords="220, 158" />
@@ -116,5 +121,5 @@
 		<codrivercp coords="267, 167" notes="hard right over finish" />
 
 	</race>
-	
+
 </level>

@@ -46,7 +46,7 @@
 
 	<water
 		height="0.4"
-		watertexture="/textures/water/pool-water.png"
+		watertexture="/textures/water/default.png"
 		/>
 
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
