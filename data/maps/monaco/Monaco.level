@@ -15,7 +15,7 @@
       foliagemap="FM.png"
       hudmap="HUD.jpg"
       terrainmap="TR.png"
-      tilesize="32"
+      tilesize="64"
       horizontalscale="2"
       verticalscale=".25"
     >

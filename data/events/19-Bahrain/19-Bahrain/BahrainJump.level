@@ -14,7 +14,7 @@
     foliagemap="F.png"
     hudmap="HUD.png"
     terrainmap="T.png"
-    tilesize="32"
+    tilesize="128"
     horizontalscale="3.0"
     verticalscale="0.35"
     >
@@ -130,9 +130,9 @@
   <weather
     cloudtexture="/textures/sky/stars.jpg"
     cloudscrollrate="0.0"
-    fogcolor="0.9, 0.95, .8"
+    fogcolor="0.95, 0.5, 0.5"
     fogdensity="0.00001"
-    fogdensitysky="0.0001"
+    fogdensitysky="0.10"
     />
 
   <water
