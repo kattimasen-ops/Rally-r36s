@@ -99,7 +99,7 @@
 
   <water
     height="11"
-    watertexture="/textures/water/default.png"
+    watertexture="/textures/water/dark-water.png"
     alpha="0.99"
     fixedalpha="yes"
     />
