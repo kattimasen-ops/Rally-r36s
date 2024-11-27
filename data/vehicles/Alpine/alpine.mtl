@@ -1,218 +1,194 @@
 # Blender MTL File: 'None'
-# Material Count: 18
+# Material Count: 16
 
-newmtl supersport-black.011
-Ns 449.999985
-Ka 1.000000 1.000000 1.000000
-Kd 0.000000 0.000000 0.000000
-Ks 1.000000 1.000000 1.000000
+newmtl b_metal.001
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.035601 0.191202 0.863157
+Ks 0.306000 0.306000 0.306000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+map_Kd alpine.png
+map_Ke alpine_emission.png
 
-newmtl supersport-black.012
-Ns 449.999985
+newmtl black.001
+Ns 225.000000
 Ka 1.000000 1.000000 1.000000
-Kd 0.000000 0.000000 0.000000
-Ks 1.000000 1.000000 1.000000
+Kd 0.011612 0.011612 0.011612
+Ks 0.000000 0.000000 0.000000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
-illum 2
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+illum 1
+map_Kd alpine.png
+map_Ke alpine_emission.png
 
-newmtl supersport-chrome.005
-Ns 235.878758
-Ka 0.370000 0.370000 0.370000
-Kd 0.333333 0.333333 0.333333
-Ks 1.000000 1.000000 1.000000
+newmtl black_m.001
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.046665 0.046665 0.046665
+Ks 0.496800 0.496800 0.496800
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+map_Kd alpine.png
+map_Ke alpine_emission.png
 
-newmtl supersport-glass-black.006
-Ns 336.778527
-Ka 1.000000 1.000000 1.000000
-Kd 0.093882 0.093882 0.093882
-Ks 1.000000 1.000000 1.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-glass.006
-Ns 336.778527
-Ka 1.000000 1.000000 1.000000
-Kd 0.094180 0.094180 0.094180
-Ks 1.000000 1.000000 1.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 0.400000
-illum 9
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-grid2.011
-Ns 449.999985
-Ka 1.000000 1.000000 1.000000
-Kd 0.000000 0.000000 0.000000
-Ks 1.000000 1.000000 1.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-grid2.012
-Ns 449.999985
-Ka 1.000000 1.000000 1.000000
-Kd 0.000000 0.000000 0.000000
-Ks 1.000000 1.000000 1.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-inside.006
-Ns 90.000016
-Ka 1.000000 1.000000 1.000000
-Kd 0.784314 0.717647 0.647059
-Ks 1.000000 1.000000 1.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-interior.011
-Ns 109.700730
-Ka 1.000000 1.000000 1.000000
-Kd 0.784314 0.741176 0.670588
-Ks 1.000000 1.000000 1.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-interior.012
-Ns 109.700730
-Ka 1.000000 1.000000 1.000000
-Kd 0.784314 0.741176 0.670588
-Ks 1.000000 1.000000 1.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-lights-bulb.006
-Ns 900.000000
-Ka 0.385000 0.385000 0.385000
-Kd 1.000000 1.000000 1.000000
-Ks 1.000000 1.000000 1.000000
-Ke 0.190000 0.190000 0.190000
-Ni 1.450000
-d 1.000000
-illum 3
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-lights-frame.006
-Ns 456.081842
-Ka 0.255000 0.255000 0.255000
-Kd 0.118235 0.118235 0.118235
-Ks 1.000000 1.000000 1.000000
+newmtl body.001
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.063010 0.208637 0.679542
+Ks 0.450000 0.450000 0.450000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+map_Kd alpine.png
+map_Ke alpine_emission.png
 
-newmtl supersport-lights-glass.006
-Ns 399.975777
+newmtl chrome.001
+Ns 575.999996
 Ka 1.000000 1.000000 1.000000
-Kd 0.210196 0.218039 0.227451
-Ks 1.000000 1.000000 1.000000
-Ke 0.024173 0.025075 0.026157
-Ni 1.450000
-d 0.400000
-illum 9
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
-
-newmtl supersport-lights-lens.006
-Ns 456.081842
-Ka 0.265000 0.265000 0.265000
-Kd 0.031373 0.031373 0.031373
-Ks 1.000000 1.000000 1.000000
+Kd 0.887923 0.887923 0.913099
+Ks 0.496800 0.496800 0.496800
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 0.040000
+d 1.000000
+illum 3
+map_Kd alpine.png
+map_Ke alpine_emission.png
+
+newmtl d_glass.001
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.191202 0.191202 0.191202
+Ks 0.496800 0.496800 0.496800
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.550725
 illum 6
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+map_Kd alpine.png
+map_Ke alpine_emission.png
 
-newmtl supersport-lights-mirror.006
-Ns 399.975777
+newmtl d_silver.001
+Ns 575.999996
 Ka 1.000000 1.000000 1.000000
-Kd 0.000000 0.000000 0.000000
-Ks 1.000000 1.000000 1.000000
+Kd 0.250980 0.250980 0.250980
+Ks 0.360000 0.360000 0.360000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+map_Kd alpine.png
+map_Ke alpine_emission.png
 
-newmtl supersport-mainbody.006
-Ns 566.999990
+newmtl glass.002
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.337164 0.337164 0.337164
+Ks 0.621000 0.621000 0.621000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.521739
+illum 6
+map_Kd alpine.png
+map_Ke alpine_emission.png
+
+newmtl gum.001
+Ns 7.999999
 Ka 1.000000 1.000000 1.000000
-Kd 0.088667 0.513333 0.105000
-Ks 1.000000 1.000000 1.000000
+Kd 0.250158 0.250158 0.250158
+Ks 0.422280 0.422280 0.422280
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+map_Kd alpine.png
+map_Ke alpine_emission.png
 
-newmtl supersport-red1.006
-Ns 288.405922
-Ka 0.145000 0.145000 0.145000
-Kd 0.000000 0.000000 0.000000
-Ks 1.000000 1.000000 1.000000
+newmtl lights.001
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.913099 0.913099 0.930111
+Ks 0.496800 0.496800 0.496800
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd alpine.png
+map_Ke alpine_emission.png
+
+newmtl plate.001
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.364706 0.364706 0.364706
+Ks 0.531000 0.531000 0.531000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd alpine.png
+map_Ke alpine_emission.png
+
+newmtl r_glass.001
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.647059 0.000000 0.000000
+Ks 0.360000 0.360000 0.360000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+map_Kd alpine.png
+map_Ke alpine_emission.png
 
-newmtl supersport-red2.006
-Ns 456.081842
-Ka 0.120000 0.120000 0.120000
-Kd 0.000000 0.000000 0.000000
-Ks 1.000000 1.000000 1.000000
+newmtl r_lights.001
+Ns 575.999996
+Ka 0.500000 0.500000 0.500000
+Kd 0.650980 0.000000 0.000000
+Ks 0.315000 0.315000 0.315000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/futuristic/futuristic_emission.png
+map_Kd alpine.png
+map_Ke alpine_emission.png
+
+newmtl red.001
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.651406 0.000000 0.000000
+Ks 0.315000 0.315000 0.315000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd alpine.png
+map_Ke alpine_emission.png
+
+newmtl silver.001
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.913099 0.913099 0.930111
+Ks 0.496800 0.496800 0.496800
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd alpine.png
+map_Ke alpine_emission.png
+
+newmtl white.001
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.306000 0.306000 0.306000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd alpine.png
+map_Ke alpine_emission.png

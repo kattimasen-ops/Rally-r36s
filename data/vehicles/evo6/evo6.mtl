@@ -1,14 +1,38 @@
 # Blender MTL File: 'None'
-# Material Count: 1
+# Material Count: 3
 
-newmtl Default_OBJ
-Ns 575.999996
-Ka 0.500000 0.500000 0.500000
+newmtl Default_OBJ.001
+Ns 835.964098
+Ka 0.463768 0.463768 0.463768
 Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.521739
+illum 6
+map_Kd evo6.png
+map_Ke evo6_emission.png
+
+newmtl Default_OBJ.003
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.011088 0.009455 0.007235
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
-illum 3
-map_Kd /home/eugene/trigger-rally-code-r1019/data/vehicles/subaru/subaru.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/subaru/subaru_emission.png
+illum 2
+map_Kd evo6.png
+map_Ke evo6_emission.png
+
+newmtl Default_OBJ.005
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.035218 0.035218 0.035218
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd evo6.png
+map_Ke evo6_emission.png
