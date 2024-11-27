@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 7
 
-newmtl Obj1051Mtl
+newmtl Obj1051Mtl.001
 Ns 900.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
@@ -13,7 +13,7 @@ illum 6
 map_Kd Navara.png
 map_Ke Navara_emission.png
 
-newmtl Obj1281Mtl
+newmtl Obj1281Mtl.001
 Ns 408.742933
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
@@ -25,7 +25,7 @@ illum 3
 map_Kd Navara.png
 map_Ke Navara_emission.png
 
-newmtl Obj1371Mtl
+newmtl Obj1371Mtl.001
 Ns 750.283551
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
@@ -37,7 +37,7 @@ illum 2
 map_Kd Navara.png
 map_Ke Navara_emission.png
 
-newmtl Obj1381Mtl
+newmtl Obj1381Mtl.001
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
@@ -49,7 +49,7 @@ illum 2
 map_Kd Navara.png
 map_Ke Navara_emission.png
 
-newmtl Obj381Mtl
+newmtl Obj381Mtl.001
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
@@ -61,7 +61,7 @@ illum 2
 map_Kd Navara.png
 map_Ke Navara_emission.png
 
-newmtl Obj391Mtl
+newmtl Obj391Mtl.001
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
@@ -73,7 +73,7 @@ illum 2
 map_Kd Navara.png
 map_Ke Navara_emission.png
 
-newmtl Obj941Mtl
+newmtl Obj941Mtl.001
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000

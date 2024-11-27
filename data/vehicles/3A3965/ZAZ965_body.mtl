@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 9
 
-newmtl body.001
+newmtl body.002
 Ns 575.999996
 Ka 0.500000 0.500000 0.500000
 Kd 0.898039 0.356863 0.027451
@@ -13,7 +13,7 @@ illum 3
 map_Kd ZAZ965.png
 map_Ke ZAZ965_emission.png
 
-newmtl chest.001
+newmtl chest.002
 Ns 18.000005
 Ka 1.000000 1.000000 1.000000
 Kd 0.588235 0.588235 0.588235
@@ -24,7 +24,7 @@ d 1.000000
 illum 1
 map_Kd ZAZ965.png
 
-newmtl chrome.001
+newmtl chrome.002
 Ns 900.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.588235 0.588235 0.588235
@@ -35,7 +35,7 @@ d 1.000000
 illum 1
 map_Kd ZAZ965.png
 
-newmtl glass.001
+newmtl glass.002
 Ns 143.999940
 Ka 1.000000 1.000000 1.000000
 Kd 0.447059 0.650980 0.882353
@@ -46,7 +46,7 @@ d 0.250000
 illum 6
 map_Kd ZAZ965.png
 
-newmtl interior.001
+newmtl interior.002
 Ns 18.000005
 Ka 1.000000 1.000000 1.000000
 Kd 0.549020 0.929412 0.211765
@@ -57,7 +57,7 @@ d 1.000000
 illum 1
 map_Kd ZAZ965.png
 
-newmtl lights.001
+newmtl lights.002
 Ns 18.000005
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -69,7 +69,7 @@ illum 1
 map_Kd ZAZ965.png
 map_Ke ZAZ965_emission.png
 
-newmtl number.001
+newmtl number.002
 Ns 18.000005
 Ka 1.000000 1.000000 1.000000
 Kd 0.588235 0.588235 0.588235
@@ -80,7 +80,7 @@ d 1.000000
 illum 1
 map_Kd ZAZ965.png
 
-newmtl rubber.001
+newmtl rubber.002
 Ns 143.999940
 Ka 1.000000 1.000000 1.000000
 Kd 0.078431 0.078431 0.078431
@@ -91,7 +91,7 @@ d 1.000000
 illum 3
 map_Kd ZAZ965.png
 
-newmtl wheels.001
+newmtl wheels.002
 Ns 18.000005
 Ka 1.000000 1.000000 1.000000
 Kd 0.117647 0.117647 0.117647

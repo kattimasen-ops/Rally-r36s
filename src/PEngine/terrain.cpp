@@ -166,17 +166,17 @@ PTerrain::PTerrain (XMLElement *element, const std::string &filepath, PSSTexture
       /*
       val = walk->Attribute("scalemin");
       if (val) tfb.scalemin = atof(val);
-
+        */
+/*
       val = walk->Attribute("scalemax");
       if (val) tfb.scalemax = atof(val);
-        */
-      /*
+
       val = walk->Attribute("model");
       if (val) tfb.model = ssModel.loadModel(PUtil::assemblePath(val, filepath));
 
       val = walk->Attribute("modelscale");
       if (val) tfb.modelscale = atof(val);
-      */
+*/
 
       val = walk->Attribute("sprite");
       if (val) tfb.sprite_tex = ssTexture.loadTexture(PUtil::assemblePath(val, filepath));
@@ -519,10 +519,10 @@ PTerrainTile *PTerrain::getTile(int tilex, int tiley)
   }
   tileptr->vert.create(ramfile1.getSize(), PVBuffer::VertexContent, PVBuffer::StaticUsage, ramfile1.getData());
 
-  //tileptr->maxs.z += 10.0;
+  tileptr->maxs.z += 10.0;
 
   //tileptr->mins = vec3f((float)tilex * scale_hz, (float)tiley * scale_hz, 0.0);
-  //tileptr->maxs = vec3f((float)(tilex+1) * scale_hz, (float)(tiley+1) * scale_hz, 100.0);
+  tileptr->maxs = vec3f((float)(tilex+1) * scale_hz, (float)(tiley+1) * scale_hz, 100.0);
 
   tileptr->numverts = tilesizep1 * tilesizep1;
 
@@ -559,7 +559,7 @@ PTerrainTile *PTerrain::getTile(int tilex, int tiley)
       tileptr->foliage[b].inst.back().ang = rand01 * PI*2.0f;
       //tileptr->foliage[b].inst.back().scale = (1.0f + fol * 0.5f) * (rand01 * rand01 + 0.5) * 1.4;
       //tileptr->foliage[b].inst.back().scale = (foliageband[b].scalemin + fol * 0.5f) * (rand01 * rand01 + 0.5) * foliageband[b].scalemax;
-      tileptr->foliage[b].inst.back().scale = (foliageband[b].scale + fol * 0.5f) * (rand01 * rand01 + 0.5) * 1.4;
+      tileptr->foliage[b].inst.back().scale = (1.0f + fol * (0.5f * (rand01 * rand01 + 0.5) * foliageband[b].scale));
 
       rigidityvalue = rigidity.getRigidity(foliageband[b].sprite_tex->getName());
       if (rigidityvalue != 0.0f) {
@@ -966,6 +966,3 @@ void PTerrain::drawSplat(float x, float y, float scale, float angle)
 
   glMatrixMode(GL_MODELVIEW);
 }
-
-
-

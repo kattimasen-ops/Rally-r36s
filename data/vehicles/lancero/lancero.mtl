@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 1
 
-newmtl Material_#324.001
+newmtl Material_#324.002
 Ns 18.000005
 Ka 1.000000 1.000000 1.000000
 Kd 0.588000 0.588000 0.588000
@@ -10,6 +10,5 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump Material_33_Metallic.png
 map_Kd Material_33_Base_Color.png
 map_Ke lancero_emission.png

@@ -49,7 +49,7 @@ illum 2
 map_Kd volga.png
 map_Ke volga_emission.png
 
-newmtl Glass.001
+newmtl Glass.002
 Ns 900.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.752942 0.783538 0.783538

@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Marathon"
 	comment="Don't get tired!"
 	author="Onsemeliot"
 	description="constantly curvy, tiresome long race"
 	screenshot="marathon.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -25,6 +25,7 @@
 			density="0.00035"
 			sprite="/textures/veg/post.png"
 			spritecount="2"
+			scale="0.0"
 			/>
 
 		<foliageband
@@ -35,7 +36,7 @@
 			spritecount="2"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/blue.jpg"
 		cloudscrollrate="0.00"
@@ -48,14 +49,14 @@
 		height="3"
 		watertexture="/textures/water/dark-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
+
 	<race coordscale="4.5, 4.5"
 		targettime="1360">
-		
+
 		<startposition pos="124, 2" oridegrees="0" />
 		<checkpoint coords="140, 25" />
 		<checkpoint coords="138, 73" />
@@ -204,7 +205,7 @@
 		<checkpoint coords="2618, 1272" />
 		<checkpoint coords="2608, 1241" />
 		<checkpoint coords="2626, 1186" />
-		
+
 		<codrivercp coords="131, 17" notes="square left" />
 		<codrivercp coords="136, 37" notes="medium right into chicane right" />
 		<codrivercp coords="156, 86" notes="medium right long into hard right into hard left" />
@@ -326,5 +327,5 @@
 		<codrivercp coords="2614, 1252" notes="chicane left" />
 		<codrivercp coords="2616, 1207" notes="medium right over finish" />
 	</race>
-	
+
 </level>

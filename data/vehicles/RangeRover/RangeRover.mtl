@@ -1,5 +1,5 @@
 # Blender MTL File: 'None'
-# Material Count: 37
+# Material Count: 36
 
 newmtl Handle1Mtl.002
 Ns 900.000000
@@ -334,18 +334,6 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.840580
 illum 9
-map_Kd rangerover.png
-map_Ke rangerover_emission.png
-
-newmtl Part6Mtl.002
-Ns 728.999998
-Ka 0.500000 0.500000 0.500000
-Kd 1.000000 0.686275 0.000000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 3
 map_Kd rangerover.png
 map_Ke rangerover_emission.png
 

@@ -85,7 +85,7 @@ void PEffect::unload()
 PEffect::PEffect(const std::string &filename)
 {
    cur_tech = -1;
-   
+
    /* Let's check each effect type will load (FX or OBJ's MTL) */
    if(filename.find(".fx") != std::string::npos)
    {
@@ -111,7 +111,7 @@ void PEffect::loadMTL(const std::string &filename)
 
    if(PUtil::isDebugLevel(DEBUGLEVEL_TEST))
    {
-      PUtil::outLog() << "Loading .mtl Material \"" << filename 
+      PUtil::outLog() << "Loading .mtl Material \"" << filename
          << "\"" << std::endl;
    }
 
@@ -127,7 +127,7 @@ void PEffect::loadMTL(const std::string &filename)
    }
 
    name = filename;
-   
+
    /* Loop throught all file */
    while(PUtil::fgets2(buff,BUF_SIZE,pfile))
    {
@@ -167,6 +167,7 @@ void PEffect::loadMTL(const std::string &filename)
             currs->depthtest = true;
             currs->cullface = CULLFACE_CW;
             currs->texunit[0].texindex = 0;
+            currs->blendmode = BLEND_ALPHA;
          }
          else if(tok == "map_Ke")
          {
@@ -225,7 +226,7 @@ void PEffect::loadFX(const std::string &filename)
 		con_printf("Cannot find effect file \"%s\"\n",filename);
 		throw MakePException ("PhysFS: " + physfs_getErrorString());
 	}
-	
+
 	// set the name
 	name = filename;
 
@@ -234,7 +235,7 @@ void PEffect::loadFX(const std::string &filename)
 	char *source = new char[leng+1];
 	physfs_read(pfile, source, sizeof(char), leng);
 	source[leng] = '\0';
-	
+
 	// close file since we have everything in char *source
 	PHYSFS_close(pfile);
 
@@ -283,18 +284,18 @@ void PEffect::loadFX(const std::string &filename)
 }
 
 	char buff1[512];
-  
+
 	char *token;
 
 	// In case of failures, stores short descriptive string
 	std::string detail("parse error");
-  
+
 	int linec = 1;
 	bool parseerror = false;
 
 	// this is the pointer to the char in source that's to be read next
 	char* scan = source;
-	
+
 	while (1)
 	{
 		SKIPWHITESPACE;
@@ -309,7 +310,7 @@ void PEffect::loadFX(const std::string &filename)
 		{
 			tex.push_back(fx_texture_s());
 			fx_texture_s *curtex = &tex.back();
-      
+
 			curtex->texobject = nullptr;
 
 			SKIPWHITESPACE;
@@ -319,7 +320,7 @@ void PEffect::loadFX(const std::string &filename)
 			READTOKEN;
 			if (!*scan)
 				FAILURE;
-			
+
 			curtex->name = token;
 
 			SKIPWHITESPACE;
@@ -330,7 +331,7 @@ void PEffect::loadFX(const std::string &filename)
 			}
 			if (*scan != '{')
 				FAILURE;
-			
+
 			scan++;
 
 			while (1)
@@ -338,7 +339,7 @@ void PEffect::loadFX(const std::string &filename)
 				SKIPWHITESPACE;
 				if (!*scan)
 				FAILURE;
-			
+
 				if (*scan == '}')
 				{
 					scan++;
@@ -348,7 +349,7 @@ void PEffect::loadFX(const std::string &filename)
 				READTOKEN;
 				if (!*scan)
 					FAILURE;
-			
+
 
 				// type = [ TEX_2D | TEX_3D | TEX_CUBE ];
 				if (!strcmp(token, "type"))
@@ -356,19 +357,19 @@ void PEffect::loadFX(const std::string &filename)
 					SKIPWHITESPACE;
 					if (!*scan)
 						FAILURE;
-			
+
 					if (*scan != '=')
 						FAILURE;
-			
+
 					scan++;
 					SKIPWHITESPACE;
 					if (!*scan)
 						FAILURE;
-			
+
 					READTOKEN;
 					if (!*scan)
 						FAILURE;
-			
+
 					if (!strcmp(token,"TEX_2D"))
 						curtex->type = GL_TEXTURE_2D;
 					else if (!strcmp(token,"TEX_3D"))
@@ -383,10 +384,10 @@ void PEffect::loadFX(const std::string &filename)
 					SKIPWHITESPACE;
 					if (!*scan)
 						FAILURE;
-			
+
 					if (*scan != ';')
 						FAILURE;
-			
+
 					scan++;
 				}
 				// src = "blah.png";
@@ -395,27 +396,27 @@ void PEffect::loadFX(const std::string &filename)
 					SKIPWHITESPACE;
 					if (!*scan)
 						FAILURE;
-			
+
 					if (*scan != '=')
 						FAILURE;
-			
+
 					scan++;
 					SKIPWHITESPACE;
 					if (!*scan)
 						FAILURE;
-			
+
 					READTOKEN;
 					if (!*scan)
 						FAILURE;
-			
+
 					curtex->filename = PUtil::assemblePath(token, filename);
 					SKIPWHITESPACE;
 					if (!*scan)
 						FAILURE;
-			
+
 					if (*scan != ';')
 						FAILURE;
-			
+
 					scan++;
 				}
 				else
@@ -426,25 +427,25 @@ void PEffect::loadFX(const std::string &filename)
 		{
 			tech.push_back(fx_technique_s());
 			fx_technique_s *curtech = &tech.back();
-      
+
 			SKIPWHITESPACE;
 			if (!*scan)
 				FAILURE;
-			
+
 
 			READTOKEN;
 			if (!*scan)
 				FAILURE;
-			
+
 			curtech->name = token;
 
 			SKIPWHITESPACE;
 			if (!*scan)
 				FAILURE;
-			
+
 			if (*scan != '{')
 				FAILURE;
-			
+
 			scan++;
 
 			while (1)
@@ -452,16 +453,16 @@ void PEffect::loadFX(const std::string &filename)
 				SKIPWHITESPACE;
 				if (!*scan)
 					FAILURE;
-			
+
 				if (*scan == '}')
 					FAILURE;
-			
+
 
 				READTOKEN;
 				if (!*scan)
 					FAILURE;
-			
-        
+
+
 				if (!strcmp(token, "pass"))
 				{
 					curtech->pass.push_back(fx_pass_s());
@@ -480,10 +481,10 @@ void PEffect::loadFX(const std::string &filename)
 					SKIPWHITESPACE;
 					if (!*scan)
 						FAILURE;
-			
+
 					if (*scan != '{')
 						FAILURE;
-			
+
 					scan++;
 
 					while (1)
@@ -491,15 +492,15 @@ void PEffect::loadFX(const std::string &filename)
 						SKIPWHITESPACE;
 						if (!*scan)
 							FAILURE;
-			
+
 						if (*scan == '}')
 							FAILURE;
-			
+
 
 						READTOKEN;
 						if (!*scan)
 							FAILURE;
-			
+
 
 						// depthtest = [ true | false ];
 						if (!strcmp(token, "depthtest"))
@@ -508,19 +509,19 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != '=')
 								FAILURE;
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							READTOKEN;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (0);
 							else if (!strcmp(token,"true"))
 								currs->depthtest = true;
@@ -528,14 +529,14 @@ void PEffect::loadFX(const std::string &filename)
 								currs->depthtest = false;
 							else
 								FAILURE;
-			
+
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != ';')
 								FAILURE;
-			
+
 							scan++;
 						}
 						// alphatest = { FUNC, value };
@@ -545,27 +546,27 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != '=')
 								FAILURE;
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE
-			
+
 							if (*scan != '{')
 								FAILURE
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE
-			
+
 							READTOKEN;
 							if (!*scan)
 								FAILURE
-			
+
 							if (0);
 							else if (!strcmp(token,"LESS"))
 								currs->alphatest.func = GL_LESS;
@@ -589,35 +590,35 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != ',')
 								FAILURE;
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							READNUMERICALTOKEN;
 							if (!*scan)
 								FAILURE;
-			
+
 							currs->alphatest.ref = atof(token);
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != '}')
 								FAILURE;
-				
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != ';')
 								FAILURE;
-			
+
 							scan++;
 						}
 						// cullface
@@ -627,19 +628,19 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != '=')
 								FAILURE;
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							READTOKEN;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (0);
 							else if (!strcmp(token,"NONE"))
 								currs->cullface = CULLFACE_NONE;
@@ -655,10 +656,10 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != ';')
 								FAILURE;
-			
+
 							scan++;
 						}
 						// blendmode
@@ -667,10 +668,10 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != '=')
 								FAILURE;
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
@@ -679,7 +680,7 @@ void PEffect::loadFX(const std::string &filename)
 							READTOKEN;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (0);
 							else if (!strcmp(token,"NONE"))
 								currs->blendmode = BLEND_NONE;
@@ -699,10 +700,10 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != ';')
 								FAILURE;
-			
+
 							scan++;
 						}
 						// texunit0 = <texture>;
@@ -712,19 +713,19 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != '=')
 								FAILURE;
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							READTOKEN;
 							if (!*scan)
 								FAILURE;
-			
+
 							unsigned int iter;
 							for (iter=0; iter<tex.size(); iter++)
 							{
@@ -741,10 +742,10 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != ';')
 								FAILURE;
-			
+
 							scan++;
 						}
 						else if (!strcmp(token, "lighting"))
@@ -752,19 +753,19 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != '=')
 								FAILURE;
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							READTOKEN;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (0);
 							else if (!strcmp(token,"true"))
 								currs->lighting = true;
@@ -772,14 +773,14 @@ void PEffect::loadFX(const std::string &filename)
 								currs->lighting = false;
 							else
 								FAILURE;
-			
+
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != ';')
 								FAILURE;
-			
+
 							scan++;
 						}
 						else if (!strcmp(token, "lightmodeltwoside"))
@@ -787,19 +788,19 @@ void PEffect::loadFX(const std::string &filename)
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != '=')
 								FAILURE;
-			
+
 							scan++;
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							READTOKEN;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (0);
 							else if (!strcmp(token,"true"))
 								currs->lightmodeltwoside = true;
@@ -807,14 +808,14 @@ void PEffect::loadFX(const std::string &filename)
 								currs->lightmodeltwoside = false;
 							else
 								FAILURE;
-			
+
 							SKIPWHITESPACE;
 							if (!*scan)
 								FAILURE;
-			
+
 							if (*scan != ';')
 								FAILURE;
-			
+
 							scan++;
 						}
 						else
@@ -826,14 +827,14 @@ void PEffect::loadFX(const std::string &filename)
 				}
 				else
 					FAILURE;
-			
+
 				if (parseerror)
 					break;
 			}
 		}
 		else
 			FAILURE;
-		
+
 		if (parseerror)
 			break;
 	}
@@ -848,7 +849,7 @@ void PEffect::loadFX(const std::string &filename)
 		unload();
 		throw MakePException (name + ": error at line " + PUtil::formatInt (linec) + " : " + detail);
 	}
-  
+
 	con_printf("Load complete\n");
 }
 
@@ -1033,9 +1034,3 @@ void PEffect::renderEnd()
   migrateRenderState(&tech[cur_tech].pass.back().rs,
           &def_rs);
 }
-
-
-
-
-
-
