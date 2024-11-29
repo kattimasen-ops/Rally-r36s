@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 8
 
-newmtl body.001
+newmtl body.002
 Ns 689.633251
 Ka 1.000000 1.000000 1.000000
 Kd 0.000000 0.089244 0.793799
@@ -35,7 +35,7 @@ d 1.000000
 illum 1
 map_Kd bronco.png
 
-newmtl chrome.001
+newmtl chrome.002
 Ns 714.981090
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
@@ -46,7 +46,7 @@ d 1.000000
 illum 3
 map_Kd bronco.png
 
-newmtl glass.002
+newmtl glass.001
 Ns 575.999996
 Ka 0.546667 0.546667 0.546667
 Kd 0.800000 0.800000 0.800000

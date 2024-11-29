@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 13
 
-newmtl Cabin.001
+newmtl Cabin.003
 Ns 50.000007
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -13,7 +13,7 @@ illum 3
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Car_Body_Paint.001
+newmtl Car_Body_Paint.003
 Ns 575.999996
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -25,7 +25,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Discs.001
+newmtl Discs.003
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -37,7 +37,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Glass.001
+newmtl Glass.004
 Ns 575.999996
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -49,7 +49,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Grills.001
+newmtl Grills.003
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -61,7 +61,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Lights_Pod.001
+newmtl Lights_Pod.003
 Ns 575.999996
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -73,7 +73,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Lights_Satin.001
+newmtl Lights_Satin.003
 Ns 575.999996
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -85,7 +85,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Matt.001
+newmtl Matt.003
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -97,7 +97,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Shiny_Metal.001
+newmtl Shiny_Metal.003
 Ns 575.999996
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -109,7 +109,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Spare_Tyre_Tread.001
+newmtl Spare_Tyre_Tread.003
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -121,7 +121,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Spare_Tyre_Wall.001
+newmtl Spare_Tyre_Wall.003
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -133,7 +133,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Spare_Wheel.001
+newmtl Spare_Wheel.003
 Ns 575.999996
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
@@ -145,7 +145,7 @@ illum 1
 map_Kd humvee.png
 map_Ke humvee_emission.png
 
-newmtl Suspension.001
+newmtl Suspension.003
 Ns 575.999996
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 1.000000
