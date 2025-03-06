@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<!-- By Will Pittenger - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=8986552 -->
+<level
+  name="F1 Melbourne Ring Sprint Race"
+  comment="Do your sprint sprinter!!!!"
+  author="Janusz Opila"
+  description="Alberta Park circuit, Australia, Sprint"
+  screenshot="sst.png"
+  minimap="HUD.png">
+
+  <terrain
+    heightmap="H.png"
+    colormap="HUD.png"
+    foliagemap="F.png"
+    hudmap="HUD.png"
+    terrainmap="T.png"
+    tilesize="128"
+    horizontalscale="4"
+    verticalscale="0.3"
+    >
+    <blurfilter>
+        <row data="0.1 0.2 0.1" />
+        <row data="0.2 0.2 0.2" />
+        <row data="0.1 0.2 0.1" />
+    </blurfilter>
+
+  <foliageband
+      middle="0.9"
+      range="0.1"
+      density="0.0002"
+      sprite="/textures/veg/fine-tree.png"
+      spritecount="1"
+      scale="6"
+  />
+  <foliageband
+      middle="0.5"
+      range="0.1"
+      density="0.0002"
+      sprite="/textures/veg/bush-low.png"
+      spritecount="1"
+      scale="1"
+  />
+  <foliageband
+      middle="0.25"
+      range="0.1"
+      density="0.0002"
+      sprite="/textures/veg/palm-tree2.png"
+      spritecount="2"
+      scale="4"
+  />
+
+
+  <roadsign sprite="Start.png" scale="20">
+        <location coords="290, 198" oridegrees="90" />
+    </roadsign>
+
+  <roadsign sprite="2Right.png" scale="3">
+        <location coords="220, 208" oridegrees="  90" />
+        <location coords="196, 255" oridegrees="  10" />
+        <location coords="236, 252" oridegrees=" -45" />
+        <location coords="264, 300" oridegrees="   0" />
+        <location coords="197, 195" oridegrees=" 110" />
+        <location coords=" 44, 241" oridegrees="  90" />
+        <location coords=" 24, 306" oridegrees="  90" />
+        <location coords=" 60, 403" oridegrees="   0" />
+        <location coords="116, 426" oridegrees="  10" />
+        <location coords="196, 375" oridegrees=" 230" />
+        <location coords="338, 324" oridegrees=" -12" />
+        <location coords="413, 328" oridegrees=" -20" />
+        <location coords="488, 279" oridegrees=" 239" />
+        <location coords="452, 221" oridegrees="-160" />
+        <location coords="395, 215" oridegrees=" 180" />
+        <location coords="396, 196" oridegrees=" 175" />
+    </roadsign>
+
+  <roadsign sprite="2Left.png" scale="3">
+        <location coords="264, 245" oridegrees=" -90" />
+        <location coords="188, 227" oridegrees="   0" />
+        <location coords=" 70, 273" oridegrees=" -50" />
+        <location coords="180, 357" oridegrees=" 130" />
+        <location coords="225, 301" oridegrees=" 200" />
+        <location coords="331, 300" oridegrees=" -75" />
+        <location coords="395, 238" oridegrees="  80" />
+    </roadsign>
+
+  <roadsign sprite="Forest2.png" scale="1024">
+        <location coords="507, 256" oridegrees="90" />
+        <location coords= "5, 256" oridegrees="270" />
+  </roadsign>
+
+  <roadsign sprite="Forest2.png" scale="1024">
+        <location coords="256, 507" oridegrees="180" />
+        <location coords="256,  5" oridegrees="0" />
+    </roadsign>
+
+  </terrain>
+
+  <weather
+    cloudtexture="/textures/sky/blue.jpg"
+    cloudscrollrate="0.03"
+    fogcolor="0.9, 0.95, 1.0"
+    fogdensity="0.0005"
+    fogdensitysky="0.8"
+  />
+
+  <water
+    height="21"
+    watertexture="/textures/water/dark-water.png"
+    alpha="0.99"
+    fixedalpha="no"
+    />
+
+  <race coordscale="4, 4"
+    targettime="540.0" laps="5">
+
+    <startposition pos="302, 199, 2.0" oridegrees="90" />
+
+    <checkpoint coords="206,195" />
+    <checkpoint coords="133,217" />
+    <checkpoint coords=" 52,237" />
+    <checkpoint coords=" 65,265" />
+    <checkpoint coords=" 32,326" />
+    <checkpoint coords="120,419" />
+    <checkpoint coords="186,356" />
+    <checkpoint coords="217,314" />
+    <checkpoint coords="342,320" />
+    <checkpoint coords="412,320" />
+    <checkpoint coords="482,277" />
+    <checkpoint coords="455,226" />
+    <checkpoint coords="400,235" />
+    <checkpoint coords="400,205" />
+    <checkpoint coords="302,199" />
+
+  </race>
+
+</level>

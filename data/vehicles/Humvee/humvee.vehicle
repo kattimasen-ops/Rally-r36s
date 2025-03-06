@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <vehicle
-	name="Hummer"
+	name="Hummer 3"
 	class="Off-Road"
 	type="tank"
 	locked="yes">

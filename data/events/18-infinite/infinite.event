@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <event name="18. Infinite Dare" author="Onsemeliot" locked="yes">
 
+	<unlocks file="/events/19-Bahrain/Bahrain.event" />
 	<unlocks file="/vehicles/lancia/lancia_stratos.vehicle" />
 	<unlocks file="/vehicles/Camaro/camero.vehicle" />
 	<unlocks file="/vehicles/vanquish/vanq.vehicle" />

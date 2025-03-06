@@ -167,12 +167,12 @@
   <water
     height="13.3"
     watertexture="/textures/water/black-water.png"
-    alpha="0.99"
-    fixedalpha="yes"
+    alpha="0.65"
+    fixedalpha="no"
     />
 
   <race coordscale="3.0, 3.0"
-    targettime="305.0">
+    targettime="300.0">
     <startposition pos="82, 410, 2.0" oridegrees="103" />
     <checkpoint coords=" 14, 395" />
     <checkpoint coords="  9, 286" />

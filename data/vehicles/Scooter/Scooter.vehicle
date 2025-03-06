@@ -84,7 +84,7 @@
 		scale="1.0">
 
 		<wheel drive="0.0" steer="0.7" brake1="75.0" pos="0.0, 0.65, -0.2" radius="0.2" force="25000.0" dampening="15000.0" friction="0.025"/>
-		<wheel drive="0.5" steer="0.0" brake1="125.0" pos="0.0, -0.64, -0.2" radius="0.2" force="45000.0" dampening="10000.0" brake2="250.0" friction="0.025"/>
+		<wheel drive="1.0" steer="0.0" brake1="125.0" pos="0.0, -0.64, -0.2" radius="0.2" force="45000.0" dampening="10000.0" brake2="250.0" friction="0.025"/>
 	<!--		<wheel drive="0.5" steer="0.0" brake1="125.0" pos="0.0, -0.64, -0.2" radius="0.2" force="45000.0" dampening="10000.0" brake2="250.0" friction="0.025"/>-->
 		<jetflame pos="0.0, 0.0, 0.0" ori="0.1, 0.0, 0.0, 1.0"/>
 		<clip type="body" pos="0.37, 0.93, 0.82" force="30000.0" dampening="20000.0" />

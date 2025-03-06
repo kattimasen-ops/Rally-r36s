@@ -138,8 +138,8 @@
   <water
     height="13.3"
     watertexture="/textures/water/black-water.png"
-    alpha="0.99"
-    fixedalpha="yes"
+    alpha="0.65"
+    fixedalpha="no"
     />
 
   <race coordscale="3.0, 3.0" targettime="25">

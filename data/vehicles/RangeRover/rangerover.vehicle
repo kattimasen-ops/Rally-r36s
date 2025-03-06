@@ -20,11 +20,11 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="15.0, 0.0, .0"
+		angdrag="0.0, 15.0, 0.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 16.0" />
+		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
 		<engine powerscale="151378">
@@ -58,8 +58,8 @@
 		model="RangeRover.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="0.843, 1.24, -0.08" radius="0.408" force="85000.0" dampening="15000.0" friction="0.025"/>
-		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="-0.843, 1.24, -0.08" radius="0.408" force="85000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="0.843, 1.24, -0.08" radius="0.408" force="75000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="500.0" pos="-0.843, 1.24, -0.08" radius="0.408" force="75000.0" dampening="15000.0" friction="0.025"/>
 		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="0.843, -1.45, -0.13" radius="0.408" force="105000.0" dampening="10000.0" brake2="1000.0" friction="0.025"/>
 		<wheel drive="0.6" steer="0.0" brake1="300.0" pos="-0.843, -1.45, -0.13" radius="0.408" force="105000.0" dampening="10000.0" brake2="1000.0" friction="0.025"/>
 
