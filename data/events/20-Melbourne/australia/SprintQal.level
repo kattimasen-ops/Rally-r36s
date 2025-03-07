@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- By Will Pittenger - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=8986552 -->
 <level
-  name="F1 Melbourne Sprint Qualify"
+  name="Melbourne Sprint Qualify"
   comment="Show your sprint position!!!"
   author="Janusz Opila"
   description="Alberta Park circuit, Australia, Sprint Qualification"
@@ -12,6 +12,7 @@
     heightmap="H.png"
     colormap="HUD.png"
     foliagemap="F.png"
+    roadmap="R.png"
     hudmap="HUD.png"
     terrainmap="T.png"
     tilesize="128"

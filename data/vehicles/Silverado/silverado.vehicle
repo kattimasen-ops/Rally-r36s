@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Silverado"
+	class="Off-Road"
+	type="tank"
+	locked="yes">
+
+	<pstats
+		weightkg="2095"
+		enginebhp="300"
+		maxspeed="185-213"
+		wheeldrive="RWD-4WD"
+		handling="moderate" />
+
+	<genparams
+		mass="2095.0"
+		dimensions="1.82, 4.975, 1.7"
+		wheelmodel="rally_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		angdrag="17.0, 0.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
+
+	<drivesystem>
+		<engine powerscale="223710">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="3000" power="0.5" />
+			<powerpoint rpm="4000" power="0.7" />
+			<powerpoint rpm="5200" power="1.0" />
+			<powerpoint rpm="5500" power="0.0" />
+		</engine>
+	<!--main gear ? 1: 2.48 2: 1.48 3: 1.0 4: 0.75 back 2.08
+-->
+		<gearbox>
+			<gear absolute="0.0712" />
+			<gear relative="1.676" />
+			<gear relative="1.48" />
+			<gear relative="1.333" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.7, 0.1"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="silverado.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="900.0" pos="0.876, 1.06, 0.0" radius="0.38" force="85000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="0.0" steer="0.7" brake1="900.0" pos="-0.876, 1.06, 0.0" radius="0.38" force="85000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.876, -1.55, -0.1" radius="0.38" force="90000.0" dampening="10000.0" brake2="2000.0" friction="0.035"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.876, -1.55, -0.1" radius="0.38" force="90000.0" dampening="10000.0" brake2="2000.0" friction="0.035"/>
+
+		<clip type="body" pos="0.91, 2.86, 1.0" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.91, 2.86, 1.0" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="0.91, -1.17, 1.7" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.91, -1.17, 1.7" force="300000.0" dampening="25000.0" />
+
+	</part>
+
+</vehicle>

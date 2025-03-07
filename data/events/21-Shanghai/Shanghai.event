@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<event name="21. China Grand Prix" author="Eugene MC" locked="yes">
+
+	<unlocks file="/events/22-Monaco/Monaco.event" />
+	<unlocks file="/vehicles/McLaren/mclaren.vehicle" />
+	<unlocks file="/vehicles/Silverado/silverado.vehicle" />
+
+	<level file="china/Practice.level" />
+	<level file="china/SprintQal.level" />
+	<level file="china/Sprint.level" />
+	<level file="china/Qualification.level" />
+	<level file="china/Race.level" />
+
+</event>

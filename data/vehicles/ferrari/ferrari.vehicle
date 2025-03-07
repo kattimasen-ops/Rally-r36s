@@ -27,7 +27,7 @@
 		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
-		<engine powerscale="313000">
+		<engine powerscale="316923">
 			<powerpoint rpm="1000" power="0.3" />
 			<powerpoint rpm="3000" power="0.5" />
 			<powerpoint rpm="5000" power="0.7" />

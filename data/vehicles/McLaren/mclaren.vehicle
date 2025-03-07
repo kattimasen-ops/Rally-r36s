@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="McLaren"
+	class="F1 LM"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1140"
+		enginebhp="680"
+		maxspeed="362"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1223.0"
+		dimensions="1.820, 4.287, 1.140"
+		wheelmodel="gt_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		angdrag="10.0, 0.0, 0.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 8.0" />
+
+	<drivesystem>
+		<engine powerscale="507076">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="3000" power="0.5" />
+			<powerpoint rpm="5000" power="0.7" />
+			<powerpoint rpm="6000" power="0.9" />
+			<powerpoint rpm="7200" power="1.0" />
+			<powerpoint rpm="7500" power="0.0" />
+		</engine>
+	<!--main gear 2.389 1: 3.231 2: 2.187 3: 1.714 4: 1.391 5: 1.160 6: 0.929 back 2.88
+-->
+		<gearbox>
+			<gear absolute="0.1026" />
+			<gear relative="1.477" />
+			<gear relative="1.276" />
+			<gear relative="1.232" />
+			<gear relative="1.199" />
+			<gear relative="1.249" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.4, 0.25"
+		orientation="1.0, 0.0, 0.0"
+		model="mclaren.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="0.8085, 1.46, 0.0" radius="0.322" force="45000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="-0.8085, 1.46, 0.0" radius="0.322" force="45000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="0.0" brake1="500.0" pos="0.791, -1.26, 0.02" radius="0.36" force="55000.0" dampening="10000.0" brake2="2000.0" friction="0.035"/>
+		<wheel drive="1.0" steer="0.0" brake1="500.0" pos="-0.791, -1.26, 0.02" radius="0.36" force="55000.0" dampening="10000.0" brake2="2000.0" friction="0.035"/>
+
+		<clip type="body" pos="0.91, 2.25, 1.1" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.91, 2.25, 1.1" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="0.91, -2.04, 1.14" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.91, -2.04, 1.14" force="300000.0" dampening="25000.0" />
+
+	</part>
+
+</vehicle>
