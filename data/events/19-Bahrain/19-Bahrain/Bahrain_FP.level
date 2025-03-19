@@ -52,11 +52,11 @@
   />
 
 
-    <roadsign sprite="Start.png" scale="14">
+    <roadsign sprite="/textures/structures/Start.png" scale="14">
         <location coords="215, 145" oridegrees=" 90" />
     </roadsign>
 
-    <roadsign sprite="2Right.png" scale="3">
+    <roadsign sprite="/textures/structures/2Right.png" scale="3">
           <location coords=" 64, 146" oridegrees=" 90" />
           <location coords="100, 400" oridegrees=" 28" />
           <location coords="208, 325" oridegrees="-88" />
@@ -70,7 +70,7 @@
           <location coords=" 68, 213" oridegrees=" 62" />
     </roadsign>
 
-    <roadsign sprite="2Left.png" scale="3">
+    <roadsign sprite="/textures/structures/2Left.png" scale="3">
           <location coords=" 97, 175" oridegrees=" -69" />
           <location coords="184, 181" oridegrees="  37" />
           <location coords="123, 205" oridegrees=" 180" />
@@ -102,7 +102,7 @@
           <location coords="256, 2" oridegrees="180" />
     </roadsign>
 
-    <roadsign sprite="Lights.png" scale="8">
+    <roadsign sprite="/textures/structures/Lights.png" scale="8">
           <location coords=" 27, 144" oridegrees="  90" />
           <location coords="108, 158" oridegrees="   0" />
           <location coords=" 73, 177" oridegrees="  20" />

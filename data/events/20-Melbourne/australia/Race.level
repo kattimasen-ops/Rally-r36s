@@ -50,11 +50,11 @@
       scale="4"
   />
 
-  <roadsign sprite="Start.png" scale="20">
+  <roadsign sprite="/textures/structures/Start.png" scale="20">
         <location coords="290, 198" oridegrees="90" />
     </roadsign>
 
-  <roadsign sprite="2Right.png" scale="3">
+  <roadsign sprite="/textures/structures/2Right.png" scale="3">
         <location coords="220, 208" oridegrees="  90" />
         <location coords="196, 255" oridegrees="  10" />
         <location coords="236, 252" oridegrees=" -45" />
@@ -73,7 +73,7 @@
         <location coords="396, 196" oridegrees=" 175" />
     </roadsign>
 
-  <roadsign sprite="2Left.png" scale="3">
+  <roadsign sprite="/textures/structures/2Left.png" scale="3">
         <location coords="264, 245" oridegrees=" -90" />
         <location coords="188, 227" oridegrees="   0" />
         <location coords=" 70, 273" oridegrees=" -50" />
@@ -83,12 +83,12 @@
         <location coords="395, 238" oridegrees="  80" />
     </roadsign>
 
-  <roadsign sprite="Forest2.png" scale="1024">
+  <roadsign sprite="/textures/veg/Forest2.png" scale="1024">
         <location coords="507, 256" oridegrees="90" />
         <location coords= "5, 256" oridegrees="270" />
   </roadsign>
 
-  <roadsign sprite="Forest2.png" scale="1024">
+  <roadsign sprite="/textures/veg/Forest2.png" scale="1024">
         <location coords="256, 507" oridegrees="180" />
         <location coords="256,  5" oridegrees="0" />
     </roadsign>
@@ -111,7 +111,7 @@
     />
 
   <race coordscale="4, 4"
-    targettime="1080.0" laps="10">
+    targettime="990.0" laps="10">
 
     <startposition pos="302, 199, 2.0" oridegrees="90" />
 

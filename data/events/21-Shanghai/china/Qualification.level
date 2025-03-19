@@ -72,16 +72,16 @@
       scale="1"
   />
 
-    <roadsign sprite="Start.png" scale="20">
+    <roadsign sprite="/textures/structures/Start.png" scale="20">
         <location coords="239, 319" oridegrees=" -21" />
     </roadsign>
 
-    <roadsign sprite="ForzaKubica.png" scale="47">
+    <roadsign sprite="/textures/structures/ForzaKubica.png" scale="47">
         <location coords="209, 242" oridegrees=" -21" />
         <location coords="244, 332" oridegrees=" -21" />
     </roadsign>
 
-    <roadsign sprite="2Right.png" scale="3">
+    <roadsign sprite="/textures/structures/2Right.png" scale="3">
           <location coords="264, 383" oridegrees="  20" />
           <location coords="306, 361" oridegrees=" 260" />
           <location coords="365, 347" oridegrees=" -29" />
@@ -95,7 +95,7 @@
 
     </roadsign>
 
-    <roadsign sprite="2Left.png" scale="3">
+    <roadsign sprite="/textures/structures/2Left.png" scale="3">
           <location coords="258, 339" oridegrees=" -68" />
           <location coords="266, 364" oridegrees="  46" />
           <location coords="282, 329" oridegrees=" 167" />
@@ -107,12 +107,12 @@
           <location coords="226, 180" oridegrees=" 262" />
     </roadsign>
 
-    <roadsign sprite="Forest2.png" scale="1020">
+    <roadsign sprite="/textures/veg/Forest2.png" scale="1020">
           <location coords="509, 256" oridegrees="90" />
           <location coords="  2, 256" oridegrees="270" />
     </roadsign>
 
-    <roadsign sprite="Forest2.png" scale="1020">
+    <roadsign sprite="/textures/veg/Forest2.png" scale="1020">
           <location coords="256, 509" oridegrees="180" />
           <location coords="256,   2" oridegrees="0" />
     </roadsign>

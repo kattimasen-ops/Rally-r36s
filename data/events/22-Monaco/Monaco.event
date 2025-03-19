@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<event name="22. Monte Carlo, GP Monaco" author="Eugene MC" locked="yes">
+
+	<unlocks file="/events/23-Suzuka/Suzuka.event" />
+	<unlocks file="/vehicles/Veyron/veyron.vehicle" />
+	<unlocks file="/vehicles/McRae/mcrae.vehicle" />
+
+	<level file="monaco/Practice.level" />
+	<level file="monaco/SprintQal.level" />
+	<level file="monaco/Sprint.level" />
+	<level file="monaco/Qualification.level" />
+	<level file="monaco/Race.level" />
+
+</event>

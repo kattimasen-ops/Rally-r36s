@@ -42,7 +42,7 @@
 	-->
 
 	<ctrlparams
-		angdrag="15.0, 0.0, 0.0"
+		angdrag="10.0, 0.0, 15.0"
 		drag="0.0, 0.0, 0.0"
 		lift="0"
 		fineffect="100"
