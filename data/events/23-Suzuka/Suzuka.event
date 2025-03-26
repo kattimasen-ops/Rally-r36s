@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<event name="23. Japan, GP Suzuka" author="Eugene_MC" locked="yes">
+
+	<unlocks file="/vehicles/BMWX3/bmwx3.vehicle" />
+	<unlocks file="/vehicles/Mercedes_F1/mercedesf1.vehicle" />
+
+	<level file="suzuka/Practice.level" />
+	<level file="suzuka/SprintQal.level" />
+	<level file="suzuka/Sprint.level" />
+	<level file="suzuka/Qualification.level" />
+	<level file="suzuka/Race.level" />
+
+</event>

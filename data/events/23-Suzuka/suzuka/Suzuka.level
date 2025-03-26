@@ -12,6 +12,7 @@
     heightmap="H.png"
     colormap="HUD.png"
     foliagemap="F.png"
+    roadmap="R.png"
     hudmap="HUD.png"
     terrainmap="T.png"
     tilesize="128"

@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <!-- By Will Pittenger - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=8986552 -->
 <level
-  name="17\F1 Japan GP-Suzuka track"
-  comment="#Forza Robert!!!!"
+  name="Suzuka Sprint Qualification"
+  comment="Show your sprint position!!!"
   author="Janusz Opila"
-  description="Suzuka circuit, Japan, 2018-10-07"
+  description="Suzuka circuit, Sprint Qualification"
   screenshot="sst.png"
   minimap="HUD.png">
 
@@ -12,6 +12,7 @@
     heightmap="H.png"
     colormap="HUD.png"
     foliagemap="F.png"
+    roadmap="R.png"
     hudmap="HUD.png"
     terrainmap="T.png"
     tilesize="128"
@@ -100,8 +101,8 @@
   <water
     height="11"
     watertexture="/textures/water/dark-water.png"
-    alpha="0.99"
-    fixedalpha="yes"
+    alpha="0.65"
+    fixedalpha="no"
     />
 
 

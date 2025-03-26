@@ -6,7 +6,7 @@
     randomseed="1000"
     screenshot="MonteCarlo_View.jpg"
     minimap="HUD.jpg"
-    description="Monte Carlo, GP Monaco, Race"
+    description="Monte Carlo, Monaco GP Race"
   >
 
   <terrain

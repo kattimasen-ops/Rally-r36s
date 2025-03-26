@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <level
-    name="Monaco Sprint Qualification"
-    comment="Show your sprint position!!!"
+    name="Monaco Qualification"
+    comment="Go for pole position!"
     author="Janusz Opila"
     randomseed="1000"
     screenshot="MonteCarlo_View.jpg"
     minimap="HUD.jpg"
-    description="Monte Carlo, Sprint Qualification"
+    description="Monte Carlo, Monaco, Qualification"
   >
 
   <terrain
