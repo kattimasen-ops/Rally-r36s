@@ -12,6 +12,7 @@
     heightmap="H.png"
     colormap="HUD.png"
     foliagemap="F.png"
+    roadmap="R.png"
     hudmap="HUD.png"
     terrainmap="T.png"
     tilesize="128"
@@ -100,8 +101,8 @@
   <water
     height="11"
     watertexture="/textures/water/dark-water.png"
-    alpha="0.99"
-    fixedalpha="yes"
+    alpha="0.65"
+    fixedalpha="no"
     />
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<event name="23. Japan, GP Suzuka" author="Eugene_MC" locked="yes">
+<event name="23. Japan, GP Suzuka" author="Eugene_MC" locked="no">
 
 	<unlocks file="/vehicles/BMWX3/bmwx3.vehicle" />
 	<unlocks file="/vehicles/Mercedes_F1/mercedesf1.vehicle" />
