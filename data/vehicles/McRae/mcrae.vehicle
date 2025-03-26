@@ -3,7 +3,7 @@
 	name="McRae EV"
 	class="Off-Road"
 	type="tank"
-	locked="no">
+	locked="yes">
 
 	<pstats
 		weightkg="750"

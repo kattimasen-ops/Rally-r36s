@@ -3,7 +3,7 @@
 	name="Bugatty"
 	class="Veyron"
 	type="car"
-	locked="no">
+	locked="yes">
 
 	<pstats
 		weightkg="2200"
