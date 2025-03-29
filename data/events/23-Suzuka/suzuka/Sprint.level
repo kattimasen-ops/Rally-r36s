@@ -27,15 +27,15 @@
   <foliageband
       middle="0.7"
       range="0.4"
-      density="0.0002"
-      sprite="/textures/veg/fine-tree.png"
+      density="0.002"
+      sprite="/textures/veg/thick-tree.png"
       spritecount="1"
-      scale="6"
+      scale="10"
   />
   <foliageband
       middle="0.5"
       range="0.3"
-      density="0.002"
+      density="0.02"
       sprite="/textures/veg/bush-low.png"
       spritecount="2"
       scale="2"
@@ -45,7 +45,7 @@
       <location coords="406, 263" oridegrees="215" />
   </roadsign>
 
-  <roadsign sprite="Bridge.png" scale="27">
+  <roadsign sprite="/textures/structures/Bridge.png" scale="27">
       <location coords="211, 239" oridegrees="339" />
       <location coords="214, 262" oridegrees="339" />
   </roadsign>
@@ -112,7 +112,7 @@
 
   <race coordscale="2.5, 2.5" targettime="260.0" laps="5" >
 
-    <startposition pos="397, 277, 2.0" oridegrees="215"  />
+    <startposition pos="397, 277, 2.0" oridegrees="515"  />
 
     <checkpoint coords="472,160" />
     <checkpoint coords="459,133" />
