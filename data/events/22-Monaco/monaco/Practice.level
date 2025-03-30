@@ -275,7 +275,7 @@
     />
 
   <race coordscale="2, 2"
-    targettime="720.0">
+    targettime="120.0">
 
     <startposition pos="240, 200, 1.0" oridegrees="18" />
       <checkpoint coords="207, 308" />
