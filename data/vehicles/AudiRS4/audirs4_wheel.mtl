@@ -1,0 +1,43 @@
+# Blender 4.4.0 MTL File: 'None'
+# www.blender.org
+
+newmtl BrushedMetal.005
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd rs4_wheel.jpg
+
+newmtl chrom.005
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd rs4_wheel.jpg
+
+newmtl rs4_alu_logo.004
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.643800 0.643800 0.643800
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd rs4_wheel.jpg
+
+newmtl rs4_tire.004
+Ns 41.000015
+Ka 1.000000 1.000000 1.000000
+Ks 0.810000 0.810000 0.810000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rs4_wheel.jpg
+map_Bump rs4-tire.jpg
