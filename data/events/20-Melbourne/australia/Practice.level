@@ -28,26 +28,26 @@
   <foliageband
       middle="0.9"
       range="0.1"
-      density="0.0002"
+      density="0.0008"
       sprite="/textures/veg/fine-tree.png"
       spritecount="1"
-      scale="6"
+      scale="26"
   />
   <foliageband
       middle="0.5"
       range="0.1"
-      density="0.0002"
+      density="0.0008"
       sprite="/textures/veg/bush-low.png"
       spritecount="1"
-      scale="1"
+      scale="10"
   />
   <foliageband
       middle="0.25"
       range="0.1"
-      density="0.0002"
+      density="0.0008"
       sprite="/textures/veg/palm-tree2.png"
       spritecount="2"
-      scale="4"
+      scale="24"
   />
 
 

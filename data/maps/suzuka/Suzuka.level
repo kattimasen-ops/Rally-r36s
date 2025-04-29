@@ -27,15 +27,15 @@
   <foliageband
       middle="0.7"
       range="0.4"
-      density="0.002"
+      density="0.001"
       sprite="/textures/veg/thick-tree.png"
       spritecount="1"
-      scale="10"
+      scale="30"
   />
   <foliageband
       middle="0.5"
       range="0.3"
-      density="0.02"
+      density="0.01"
       sprite="/textures/veg/bush-low.png"
       spritecount="2"
       scale="2"
@@ -46,8 +46,8 @@
   </roadsign>
 
   <roadsign sprite="/textures/structures/Bridge.png" scale="27">
-      <location coords="211, 239" oridegrees="339" />
-      <location coords="214, 262" oridegrees="339" />
+      <location coords="211, 240" oridegrees="339" />
+      <location coords="214, 255" oridegrees="339" />
   </roadsign>
 
   <roadsign sprite="/textures/structures/2Right.png" scale="3">

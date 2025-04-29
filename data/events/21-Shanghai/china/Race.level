@@ -31,15 +31,15 @@
   <foliageband
       middle="1.0"
       range="0.1"
-      density="0.00002"
+      density="0.0001"
       sprite="/textures/veg/fine-tree.png"
       spritecount="1"
-      scale="8"
+      scale="18"
   />
   <foliageband
       middle="1.0"
       range="0.1"
-      density="0.002"
+      density="0.01"
       sprite="/textures/veg/grass.png"
       spritecount="1"
       scale="1"
@@ -49,16 +49,16 @@
   <foliageband
       middle="0.5"
       range="0.2"
-      density="0.00002"
-      sprite="/textures/veg/fine-tree.png"
+      density="0.0001"
+      sprite="/textures/veg/thick-tree.png"
       spritecount="1"
-      scale="8"
+      scale="28"
   />
 
   <foliageband
       middle="0.5"
       range="0.2"
-      density="0.00004"
+      density="0.0002"
       sprite="/textures/veg/bush-low.png"
       spritecount="1"
       scale="3"
@@ -66,10 +66,10 @@
   <foliageband
       middle="0.25"
       range="0.1"
-      density="0.0006"
+      density="0.003"
       sprite="/textures/veg/palmy.png"
       spritecount="2"
-      scale="1"
+      scale="11"
   />
 
     <roadsign sprite="/textures/structures/Start.png" scale="20">

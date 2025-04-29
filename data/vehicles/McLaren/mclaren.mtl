@@ -1,12 +1,10 @@
-# Blender MTL File: 'None'
-# Material Count: 2
+# Blender 3.6.22 MTL File: 'None'
+# www.blender.org
 
 newmtl Default_OBJ
-Ns 225.000000
+Ns 224.999985
 Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
@@ -14,11 +12,9 @@ map_Kd f1_lm.png
 map_Ke f1_lm_b.png
 
 newmtl Glass
-Ns 575.999996
+Ns 575.999939
 Ka 0.500000 0.500000 0.500000
-Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.500000
 illum 6

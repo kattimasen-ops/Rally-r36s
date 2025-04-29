@@ -13,6 +13,7 @@
       heightmap="HM.png"
       colormap="CM.png"
       foliagemap="FM.png"
+      roadmap="R.png"
       hudmap="HUD.jpg"
       terrainmap="TR.png"
       tilesize="64"
@@ -22,7 +23,7 @@
 
     <blurfilter>
         <row data="0.1 0.1 0.1" />
-        <row data="0.1 0.0 0.1" />
+        <row data="0.1 0.11 0.1" />
         <row data="0.1 0.1 0.1" />
     </blurfilter>
 
@@ -104,10 +105,10 @@
         <location coords="134.6, 234.28" oridegrees="12" />
         <location coords="126.28, 273.4" oridegrees="192" />
 
-        <location coords="760, 1000" oridegrees="-88" />
-        <location coords="779.29, 1020.69" oridegrees="-178" />
-        <location coords="780.69, 980.71" oridegrees="2" />
-        <location coords="799.98, 1001.4" oridegrees="-268" />
+        <location coords="760, 1000" oridegrees="-80" />
+        <location coords="776.22, 1023.17" oridegrees="-170" />
+        <location coords="783.17, 983.78" oridegrees="10" />
+        <location coords="799.39, 1006.95" oridegrees="-260" />
     </roadsign>
     <roadsign sprite="/textures/structures/04.png" scale="40">
         <location coords="182, 226" oridegrees="101" />
@@ -274,7 +275,7 @@
     />
 
   <race coordscale="2, 2"
-    targettime="110.0" laps="1">
+    targettime="160.0" laps="1">
 
     <startposition pos="180, 317, 1.0" oridegrees="7" />
       <checkpoint coords="186, 553" />

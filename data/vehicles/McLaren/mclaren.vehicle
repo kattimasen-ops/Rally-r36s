@@ -20,18 +20,18 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="15.0, 0.0, 0.0"
+		angdrag="15.0, 10.0, 0.0"
 		lift="2"
 		fineffect="100"
-		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 8.0" />
+		speedrate="5.0"
+		turnspeedrate="0.0, 0.0, 16.0" />
 
 	<drivesystem>
 		<engine powerscale="507076">
 			<powerpoint rpm="1000" power="0.3" />
-			<powerpoint rpm="3000" power="0.5" />
-			<powerpoint rpm="5000" power="0.7" />
-			<powerpoint rpm="6000" power="0.9" />
+			<powerpoint rpm="2000" power="0.5" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="5000" power="0.8" />
 			<powerpoint rpm="7200" power="1.0" />
 			<powerpoint rpm="7500" power="0.0" />
 		</engine>
@@ -55,15 +55,15 @@
 		model="mclaren.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="0.8085, 1.46, 0.0" radius="0.322" force="45000.0" dampening="18000.0" friction="0.025"/>
-		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="-0.8085, 1.46, 0.0" radius="0.322" force="45000.0" dampening="18000.0" friction="0.025"/>
-		<wheel drive="1.0" steer="0.0" brake1="500.0" pos="0.791, -1.26, 0.02" radius="0.36" force="55000.0" dampening="15000.0" brake2="2000.0" friction="0.035"/>
-		<wheel drive="1.0" steer="0.0" brake1="500.0" pos="-0.791, -1.26, 0.02" radius="0.36" force="55000.0" dampening="15000.0" brake2="2000.0" friction="0.035"/>
+		<wheel drive="0.0" steer="0.7" brake1="900.0" pos="0.8085, 1.46, 0.0" radius="0.322" force="40000.0" dampening="17000.0" friction="0.025"/>
+		<wheel drive="0.0" steer="0.7" brake1="900.0" pos="-0.8085, 1.46, 0.0" radius="0.322" force="40000.0" dampening="17000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.791, -1.26, 0.0" radius="0.36" force="60000.0" dampening="15000.0" brake2="2000.0" friction="0.035"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.791, -1.26, 0.0" radius="0.36" force="60000.0" dampening="15000.0" brake2="2000.0" friction="0.035"/>
 
-		<clip type="body" pos="0.91, 2.25, 1.1" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="-0.91, 2.25, 1.1" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="0.91, -2.04, 1.14" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="-0.91, -2.04, 1.14" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="0.91, 2.25, 1.1" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.91, 2.25, 1.1" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="0.91, -2.04, 1.14" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.91, -2.04, 1.14" force="100000.0" dampening="25000.0" />
 
 	</part>
 

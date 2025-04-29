@@ -23,40 +23,40 @@
 
     <blurfilter>
         <row data="0.1 0.1 0.1" />
-        <row data="0.1 0.0 0.1" />
+        <row data="0.1 0.11 0.1" />
         <row data="0.1 0.1 0.1" />
     </blurfilter>
 
     <foliageband
       middle="0.9"
       range="0.1"
-      density="0.00002"
+      density="0.0002"
       sprite="/textures/veg/horse-chestnut-tree.png"
       spritecount="2"
-      scale="7"
+      scale="14"
     />
     <foliageband
       middle="0.9"
       range="0.2"
-      density="0.00005"
+      density="0.0005"
       sprite="/textures/veg/horse-chestnut-tree.png"
       spritecount="2"
-      scale="5"
+      scale="10"
     />
 
     <foliageband
       middle="0.8"
       range="0.4"
-      density="0.001"
+      density="0.01"
       sprite="/textures/veg/grass2.png"
       spritecount="1"
-      scale=".25"
+      scale="0.25"
     />
 
     <foliageband
       middle="0.5"
       range="0.1"
-      density="0.0005"
+      density="0.005"
       sprite="/textures/veg/olive-bush.png"
       spritecount="1"
       scale="1.5"
@@ -105,10 +105,10 @@
         <location coords="134.6, 234.28" oridegrees="12" />
         <location coords="126.28, 273.4" oridegrees="192" />
 
-        <location coords="760, 1000" oridegrees="-88" />
-        <location coords="779.29, 1020.69" oridegrees="-178" />
-        <location coords="780.69, 980.71" oridegrees="2" />
-        <location coords="799.98, 1001.4" oridegrees="-268" />
+        <location coords="760, 1000" oridegrees="-81" />
+        <location coords="776.63, 1022.88" oridegrees="-171" />
+        <location coords="782.88, 983.38" oridegrees="9" />
+        <location coords="799.51, 1006.26" oridegrees="-261" />
     </roadsign>
     <roadsign sprite="/textures/structures/04.png" scale="40">
         <location coords="182, 226" oridegrees="101" />
