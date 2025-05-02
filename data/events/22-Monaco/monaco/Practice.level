@@ -22,9 +22,9 @@
     >
 
     <blurfilter>
-        <row data="0.1 0.1 0.1" />
-        <row data="0.1 0.11 0.1" />
-        <row data="0.1 0.1 0.1" />
+        <row data="0.08 0.1 0.08" />
+        <row data="0.1 0.01 0.1" />
+        <row data="0.08 0.1 0.08" />
     </blurfilter>
 
     <foliageband
