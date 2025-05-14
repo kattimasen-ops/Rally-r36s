@@ -46,8 +46,8 @@
   </roadsign>
 
   <roadsign sprite="/textures/structures/Bridge.png" scale="27">
-      <location coords="211, 239" oridegrees="339" />
-      <location coords="214, 262" oridegrees="339" />
+      <location coords="211, 241" oridegrees="339" />
+      <location coords="214, 255" oridegrees="339" />
   </roadsign>
 
   <roadsign sprite="/textures/structures/2Right.png" scale="3">
@@ -110,9 +110,9 @@
   <vehicleoption type="/vehicles/focus/focus.vehicle" />
   <vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-  <race coordscale="2.5, 2.5" targettime="260.0">
+  <race coordscale="2.5, 2.5" targettime="200.0">
 
-    <startposition pos="386, 256, 2.0" oridegrees="215"  />
+    <startposition pos="386, 256, 2.0" oridegrees="205"  />
 
     <checkpoint coords="420,208" />
     <checkpoint coords="445,200" />

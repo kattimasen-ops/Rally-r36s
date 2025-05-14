@@ -45,8 +45,8 @@
       <location coords="406, 263" oridegrees="215" />
   </roadsign>
 
-  <roadsign sprite="/textures/structures/Bridge.png" scale="27">
-      <location coords="211, 240" oridegrees="339" />
+  <roadsign sprite="/textures/structures/Bridge.png" scale="25">
+      <location coords="211, 241" oridegrees="339" />
       <location coords="214, 255" oridegrees="339" />
   </roadsign>
 

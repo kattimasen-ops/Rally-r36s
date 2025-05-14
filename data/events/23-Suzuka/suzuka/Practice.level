@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- By Will Pittenger - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=8986552 -->
 <level
-  name="Japan, FP Suzuka track"
+  name="Japan, FP Suzuka FP"
   comment="#Forza Robert!!!!"
   author="Janusz Opila"
   description="Japan, Suzuka circuit FP"
@@ -46,8 +46,8 @@
   </roadsign>
 
   <roadsign sprite="/textures/structures/Bridge.png" scale="27">
-      <location coords="211, 239" oridegrees="339" />
-      <location coords="214, 262" oridegrees="339" />
+      <location coords="211, 241" oridegrees="339" />
+      <location coords="214, 255" oridegrees="339" />
   </roadsign>
 
   <roadsign sprite="/textures/structures/2Right.png" scale="3">
@@ -112,7 +112,7 @@
 
   <race coordscale="2.5, 2.5" targettime="130.0">
 
-    <startposition pos="386, 256, 2.0" oridegrees="215"  />
+    <startposition pos="386, 256, 2.0" oridegrees="215"/>
 
     <checkpoint coords="420,208" />
     <checkpoint coords="445,200" />

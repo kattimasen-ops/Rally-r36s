@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<!-- By Will Pittenger - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=8986552 -->
+<level
+  name="F1 Japan GP-Suzuka real"
+  comment="#Forza Eugene!!!!"
+  author="Eugene_MC"
+  description="Suzuka circuit, Japan, 2025-05-07"
+  screenshot="sst.png"
+  minimap="map.png">
+
+  <terrain
+    heightmap="height.png"
+    colormap="map.png"
+    foliagemap="foliage.png"
+    roadmap="road.png"
+    hudmap="map.png"
+    terrainmap="terrain.png"
+    tilesize="128"
+    horizontalscale="5.5"
+    verticalscale="0.1"
+    >
+  <blurfilter>
+      <row data="0.09 0.1 0.09" />
+      <row data="0.1 0.1 0.1" />
+      <row data="0.09 0.1 0.09" />
+  </blurfilter>
+
+  <foliageband
+      middle="0.7"
+      range="0.4"
+      density="0.0001"
+      sprite="/textures/veg/thick-tree.png"
+      spritecount="1"
+      scale="30"
+  />
+  <foliageband
+      middle="0.5"
+      range="0.3"
+      density="0.001"
+      sprite="/textures/veg/bush-low.png"
+      spritecount="2"
+      scale="2"
+  />
+
+  <roadsign sprite="/textures/structures/Start.png" scale="20">
+      <location coords="808, 459" oridegrees="215" />
+  </roadsign>
+
+  <roadsign sprite="/textures/structures/Bridge.png" scale="27">
+      <location coords="432, 509" oridegrees="339" />
+      <location coords="433, 502" oridegrees="339" />
+  </roadsign>
+
+  <roadsign sprite="/textures/structures/2Right.png" scale="3">
+        <location coords="906, 335" oridegrees=" 258" />
+        <location coords="861, 284" oridegrees=" 148" />
+        <location coords="762, 371" oridegrees="  95" />
+        <location coords="680, 440" oridegrees=" 105" />
+        <location coords="477, 469" oridegrees=" 175" />
+        <location coords="439, 470" oridegrees="  98" />
+        <location coords="413, 600" oridegrees="  36" />
+        <location coords="366, 580" oridegrees=" 165" />
+        <location coords="212, 616" oridegrees=" 112" />
+        <location coords="589, 596" oridegrees=" -31" />
+        <location coords="648, 605" oridegrees=" -31" />
+    </roadsign>
+
+  <roadsign sprite="/textures/structures/2Left.png" scale="3">
+        <location coords="783, 361" oridegrees=" -12" />
+        <location coords="753, 411" oridegrees=" -19" />
+        <location coords="686, 510" oridegrees=" -46" />
+        <location coords="620, 558" oridegrees="  21" />
+        <location coords="434, 650" oridegrees=" -29" />
+        <location coords="422, 658" oridegrees="  50" />
+        <location coords="347, 588" oridegrees="   5" />
+        <location coords="169, 705" oridegrees="   5" />
+        <location coords="103, 684" oridegrees="  94" />
+        <location coords="447, 500" oridegrees=" 209" />
+        <location coords="617, 682" oridegrees=" 221" />
+        <location coords="666, 600" oridegrees=" 221" />
+    </roadsign>
+
+  <roadsign sprite="/textures/veg/Forest2.png" scale="1024">
+        <location coords="1024, 512" oridegrees="90" />
+        <location coords= "0, 512" oridegrees="270" />
+  </roadsign>
+
+  <roadsign sprite="/textures/veg/Forest2.png" scale="1024">
+        <location coords="512, 1024" oridegrees="180" />
+        <location coords="512,  0" oridegrees="0" />
+    </roadsign>
+
+  </terrain>
+
+  <weather
+    cloudtexture="/textures/sky/blue.jpg"
+    cloudscrollrate="0.03"
+    fogcolor="0.9, 0.95, 1.0"
+    fogdensity="0.001"
+    fogdensitysky="0.6"
+    />
+
+  <water
+    height="7"
+    watertexture="/textures/water/dark-water.png"
+    alpha="0.65"
+    fixedalpha="no"
+    />
+
+
+  <vehicleoption type="/vehicles/seat/seat.vehicle" />
+  <vehicleoption type="/vehicles/focus/focus.vehicle" />
+  <vehicleoption type="/vehicles/evo/evo.vehicle" />
+
+  <race coordscale="5.5, 5.5" targettime="600.0" laps="2" >
+
+    <startposition pos="806, 461, 2.0" oridegrees="215"  />
+
+    <checkpoint coords="901,343" />
+    <checkpoint coords="878,280" />
+    <checkpoint coords="812,355" />
+    <checkpoint coords="767,367" />
+    <checkpoint coords="744,420" />
+    <checkpoint coords="681,442" />
+    <checkpoint coords="680,527" />
+    <checkpoint coords="600,558" />
+    <checkpoint coords="505,473" />
+    <checkpoint coords="441,471" />
+    <checkpoint coords="415,600" />
+    <checkpoint coords="428,654" />
+    <checkpoint coords="360,579" />
+    <checkpoint coords="347,586" />
+    <checkpoint coords="330,572" />
+    <checkpoint coords="208,625" />
+    <checkpoint coords="138,708" />
+    <checkpoint coords="134,640" />
+    <checkpoint coords="452,501" />
+    <checkpoint coords="592,595" />
+    <checkpoint coords="611,583" />
+    <checkpoint coords="659,602" />
+    <checkpoint coords="807,460" />
+  </race>
+
+</level>

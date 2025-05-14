@@ -1,18 +1,64 @@
-#!/bin/sh
+#!/bin/bash
+set -e
 
-#
-# Build script for Trigger Rally, for Windows 32-bit, using MSYS2.
-#
-# Last updated:     2024-09-03
-# TR version:       0.6.7
-#
+# Конфигурация
+PREFIX="$HOME/trigger-win32-root"
+SRC_DIR="$(pwd)"
+BUILD_DIR="$SRC_DIR/build"
+OPTIMS="-march=x86-64 -mtune=generic -O2"
+HOST="x86_64-w64-mingw32"
 
-#
-# set variables according to the current release and library versions
-#
-CFG_OPTIMS="-march=i686 -mtune=generic -O2"
-CFG_HOST="mingw32"
-CFG_PREFIX="/usr/local"
+export CC="${HOST}-gcc"
+export CXX="${HOST}-g++"
+export STRIP="${HOST}-strip"
+
+# Библиотеки и их ссылки
+declare -A LIBS=(
+  [jpeg]="https://www.ijg.org/files/jpegsrc.v9c.tar.gz"
+  [zlib]="https://zlib.net/fossils/zlib-1.2.11.tar.gz"
+  [libpng]="https://download.sourceforge.net/libpng/libpng-1.6.36.tar.gz"
+  [glew]="https://sourceforge.net/projects/glew/files/glew/2.1.0/glew-2.1.0.tgz"
+  [sdl2]="https://www.libsdl.org/release/SDL2-2.0.9.tar.gz"
+  [sdl2_image]="https://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.4.tar.gz"
+  [physfs]="https://icculus.org/physfs/downloads/physfs-3.0.1.tar.bz2"
+  [tinyxml2]="https://github.com/leethomason/tinyxml2/archive/7.0.1.tar.gz"
+)
+
+mkdir -p "$BUILD_DIR"
+cd "$BUILD_DIR"
+
+# Скачиваем и распаковываем библиотеки
+for lib in "${!LIBS[@]}"; do
+  url="${LIBS[$lib]}"
+  filename="${url##*/}"
+  dirname="${filename%.tar.*}"
+  echo "==> Обработка: $lib ($filename)"
+
+  if [ ! -f "$filename" ]; then
+    echo "   → Скачиваем $filename"
+    wget -c "$url"
+  fi
+
+  if [ ! -d "$dirname" ]; then
+    echo "   → Распаковываем $filename"
+    case "$filename" in
+      *.tar.gz|*.tgz) tar -xzf "$filename" ;;
+      *.tar.bz2) tar -xjf "$filename" ;;
+      *) echo "Неизвестный формат: $filename"; exit 1 ;;
+    esac
+  fi
+done
+
+echo "==> Всё скачано и распаковано."
+echo "Теперь можно переходить к сборке библиотек..."
+
+# Cross-compilation for Windows 64-bit from Linux
+
+CFG_OPTIMS="-march=x86-64 -mtune=generic -O2"
+CFG_HOST="x86_64-w64-mingw32"
+CFG_PREFIX="$HOME/trigger-win64-root"  # изолированная папка для сборки и библиотек
+
+# Названия архивов/папок с исходниками
 DN_JPEG="jpeg-9c"
 DN_ZLIB="zlib-1.2.11"
 DN_LIBPNG="libpng-1.6.36"
@@ -23,19 +69,14 @@ DN_PHYSFS="physfs-3.0.1"
 DN_TINYXML="tinyxml2-7.0.1"
 DN_TRIGGER="trigger-rally-code-r1019"
 
-#
-# clean old binaries
-#
-rm --recursive --dir --verbose $CFG_PREFIX/*
+export CC="${CFG_HOST}-gcc"
+export CXX="${CFG_HOST}-g++"
+export STRIP="${CFG_HOST}-strip"
 
-#
-# build and install libjpeg
-#
+# Пример настройки libjpeg:
 cd $DN_JPEG
-sh ./configure \
-    --host="$CFG_HOST" --build="$CFG_HOST" --prefix="$CFG_PREFIX" \
-    CFLAGS="$CFG_OPTIMS -m32" \
-    LDFLAGS="-m32"
+./configure --host=$CFG_HOST --prefix=$CFG_PREFIX \
+    CFLAGS="$CFG_OPTIMS -m64" LDFLAGS="-m64"
 make clean
 make
 make install-strip
