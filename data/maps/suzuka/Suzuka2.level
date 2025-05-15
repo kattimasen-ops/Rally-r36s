@@ -52,32 +52,34 @@
   </roadsign>
 
   <roadsign sprite="/textures/structures/2Right.png" scale="3">
-        <location coords="906, 335" oridegrees=" 258" />
-        <location coords="861, 284" oridegrees=" 148" />
-        <location coords="762, 371" oridegrees="  95" />
-        <location coords="680, 440" oridegrees=" 105" />
-        <location coords="477, 469" oridegrees=" 175" />
-        <location coords="439, 470" oridegrees="  98" />
-        <location coords="413, 600" oridegrees="  36" />
-        <location coords="366, 580" oridegrees=" 165" />
-        <location coords="212, 616" oridegrees=" 112" />
-        <location coords="589, 596" oridegrees=" -31" />
-        <location coords="648, 605" oridegrees=" -31" />
+        <location coords="910, 320" oridegrees=" 258" />
+        <location coords="872, 278" oridegrees=" 148" />
+        <location coords="760, 372" oridegrees="  95" />
+        <location coords="692, 430" oridegrees=" 105" />
+        <location coords="506, 470" oridegrees=" 175" />
+        <location coords="440, 467" oridegrees="  98" />
+        <location coords="412, 589" oridegrees="  36" />
+        <location coords="363, 577" oridegrees=" 165" />
+        <location coords="230, 597" oridegrees=" 112" />
+        <location coords="600, 596" oridegrees=" -31" />
+        <location coords="643, 605" oridegrees=" -31" />
     </roadsign>
 
   <roadsign sprite="/textures/structures/2Left.png" scale="3">
-        <location coords="783, 361" oridegrees=" -12" />
-        <location coords="753, 411" oridegrees=" -19" />
-        <location coords="686, 510" oridegrees=" -46" />
+        <location coords="812, 358" oridegrees=" -12" />
+        <location coords="753, 414" oridegrees=" -19" />
+        <location coords="687, 512" oridegrees=" -46" />
         <location coords="620, 558" oridegrees="  21" />
-        <location coords="434, 650" oridegrees=" -29" />
-        <location coords="422, 658" oridegrees="  50" />
-        <location coords="347, 588" oridegrees="   5" />
-        <location coords="169, 705" oridegrees="   5" />
-        <location coords="103, 684" oridegrees="  94" />
-        <location coords="447, 500" oridegrees=" 209" />
-        <location coords="617, 682" oridegrees=" 221" />
-        <location coords="666, 600" oridegrees=" 221" />
+        <location coords="640, 558" oridegrees="  45" />
+        <location coords="595, 560" oridegrees="  89" />
+        <location coords="435, 650" oridegrees=" -29" />
+        <location coords="418, 658" oridegrees="  50" />
+        <location coords="345, 589" oridegrees="  50" />
+        <location coords="166, 708" oridegrees="   5" />
+        <location coords="113, 704" oridegrees="  94" />
+        <location coords="459, 499" oridegrees=" 209" />
+        <location coords="618, 683" oridegrees=" 221" />
+        <location coords="668, 599" oridegrees=" 221" />
     </roadsign>
 
   <roadsign sprite="/textures/veg/Forest2.png" scale="1024">
