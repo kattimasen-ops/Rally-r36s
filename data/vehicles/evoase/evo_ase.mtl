@@ -11,6 +11,7 @@ Ni 1.450000
 d 1.000000
 illum 2
 map_Kd evoase.png
+map_Ke evo_complete_emission.png
 
 newmtl _evo.png
 Ns 575.999996

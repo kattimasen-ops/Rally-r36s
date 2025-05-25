@@ -1,7 +1,7 @@
 # Blender MTL File: 'None'
 # Material Count: 2
 
-newmtl Bus01_A.tga.001
+newmtl Bus01_A.tga.002
 Ns 0.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.600000 0.600000 0.600000
@@ -12,9 +12,8 @@ d 1.000000
 illum 2
 map_Kd bus.png
 map_Ke bus_emission.png
-map_d bus.png
 
-newmtl Bus01_B.tga.001
+newmtl Bus01_B.tga.002
 Ns 0.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.600000 0.600000 0.600000
@@ -25,4 +24,3 @@ d 1.000000
 illum 2
 map_Kd bus.png
 map_Ke bus_emission.png
-map_d bus.png
