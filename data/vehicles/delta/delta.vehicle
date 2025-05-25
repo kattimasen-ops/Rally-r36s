@@ -44,7 +44,7 @@
 			<gear relative="1.0" />
 		</gearbox>-->
 		<gearbox>
-			<gear absolute="0.0715" />
+			<gear absolute="0.0807" />
 			<gear relative="1.45" />
 			<gear relative="1.353" />
 			<gear relative="1.33" />
