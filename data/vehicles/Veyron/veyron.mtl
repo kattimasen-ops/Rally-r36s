@@ -1,9 +1,10 @@
-# Blender 4.4.0 MTL File: 'None'
-# www.blender.org
+# Blender MTL File: 'None'
+# Material Count: 2
 
 newmtl 01_-_Default
-Ns 640.000000
+Ns 639.999999
 Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
 Ks 0.898039 0.898039 0.898039
 Ke 0.000000 0.000000 0.000000
 Ni 1.500000
@@ -13,8 +14,9 @@ map_Kd veyron.png
 map_Ke veyron_b.png
 
 newmtl glass
-Ns 640.000000
+Ns 639.999999
 Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
 Ks 0.898039 0.898039 0.898039
 Ke 0.000000 0.000000 0.000000
 Ni 1.500000
