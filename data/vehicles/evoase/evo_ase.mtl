@@ -15,12 +15,13 @@ map_Ke evo_complete_emission.png
 
 newmtl _evo.png
 Ns 575.999996
-Ka 1.000000 1.000000 1.000000
+Ka 0.500000 0.500000 0.500000
 Kd 0.800000 0.800000 0.800000
 Ks 0.800000 0.800000 0.800000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
-illum 2
+illum 3
 map_Kd evoase.png
 map_Ke evo_complete_emission.png
+map_d evoase.png

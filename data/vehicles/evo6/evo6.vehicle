@@ -42,10 +42,11 @@
 	-->
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
+		angdrag="5.0, 0.0, 0.0"
 		lift="1"
 		fineffect="100"
 		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 16.0" />
+		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
 		<engine powerscale="246081">
@@ -83,10 +84,10 @@
 		model="evo6.obj"
 		scale="1.0">
 
-		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="0.7575, 1.26, -0.05" radius="0.33" force="50000.0" dampening="8000.0" friction="0.02"/>
-		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="-0.7575, 1.26, -0.05" radius="0.33" force="50000.0" dampening="8000.0" friction="0.02"/>
-		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="0.7575, -1.25, -0.05" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.02"/>
-		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="-0.7575, -1.25, -0.05" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.02"/>
+		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="0.7575, 1.26, -0.05" radius="0.33" force="50000.0" dampening="8000.0" friction="0.018"/>
+		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="-0.7575, 1.26, -0.05" radius="0.33" force="50000.0" dampening="8000.0" friction="0.018"/>
+		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="0.7575, -1.25, -0.05" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.022"/>
+		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="-0.7575, -1.25, -0.05" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.022"/>
 
 		<clip type="body" pos="0.885, 2.18, 1.415" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.885, 2.18, 1.415" force="300000.0" dampening="25000.0" />

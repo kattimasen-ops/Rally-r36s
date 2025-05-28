@@ -41,8 +41,8 @@
 	-->
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="5.0, 0.0, 0.0"
-		lift="0"
+		angdrag="10.0, 0.0, 0.0"
+		lift="1"
 		fineffect="100"
 		speedrate="1.0"
 		turnspeedrate="0.0, 0.0, 8.0" />
@@ -83,10 +83,10 @@
 		model="Subaru.obj"
 		scale="1.0">
 
-		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="0.765, 1.31, 0.0" radius="0.33" force="50000.0" dampening="8000.0" friction="0.02"/>
-		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="-0.765, 1.31, 0.0" radius="0.33" force="50000.0" dampening="8000.0" friction="0.02"/>
-		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="0.77, -1.31, 0.0" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.02"/>
-		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="-0.77, -1.31, 0.0" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.02"/>
+		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="0.765, 1.31, 0.0" radius="0.33" force="50000.0" dampening="8000.0" friction="0.018"/>
+		<wheel drive="0.41" steer="0.8" brake1="500.0" pos="-0.765, 1.31, 0.0" radius="0.33" force="50000.0" dampening="8000.0" friction="0.018"/>
+		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="0.77, -1.31, 0.0" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.022"/>
+		<wheel drive="0.59" steer="0.0" brake1="300.0" pos="-0.77, -1.31, 0.0" radius="0.33" force="55000.0" dampening="8000.0" brake2="1000.0" friction="0.022"/>
 
 		<clip type="body" pos="0.898, 2.19, 1.47" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.898, 2.19, 1.47" force="300000.0" dampening="25000.0" />
