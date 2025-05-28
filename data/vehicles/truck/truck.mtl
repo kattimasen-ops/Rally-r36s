@@ -11,6 +11,7 @@ Ni 1.450000
 d 1.000000
 illum 1
 map_Kd trucktexture.png
+map_Ke trucktexture_emission.png
 
 newmtl glass.002
 Ns 575.999996

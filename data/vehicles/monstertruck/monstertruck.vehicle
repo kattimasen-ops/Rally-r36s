@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="80.0, 0.0, 80.0"
+		angdrag="20.0, 90.0, 40.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -59,10 +59,10 @@
 		model="monster_truck.obj"
 		scale="1.0">
 
-		<wheel drive="1.0" steer="0.3" brake1="1500.0" pos="1.75, 1.62, -0.85" radius="1.0" force="85000.0" dampening="20000.0" friction="0.025"/>
-		<wheel drive="1.0" steer="0.3" brake1="1500.0" pos="-1.75, 1.62, -0.85" radius="1.0" force="85000.0" dampening="20000.0" friction="0.025"/>
-		<wheel drive="1.0" steer="-0.3" brake1="1000.0" pos="1.75, -1.55, -0.9" radius="1.0" force="85000.0" dampening="20000.0" brake2="3000.0" friction="0.025"/>
-		<wheel drive="1.0" steer="-0.3" brake1="1000.0" pos="-1.75, -1.55, -0.9" radius="1.0" force="85000.0" dampening="20000.0" brake2="3000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="0.3" brake1="1500.0" pos="1.75, 1.62, -0.85" radius="1.0" force="75000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="0.3" brake1="1500.0" pos="-1.75, 1.62, -0.85" radius="1.0" force="75000.0" dampening="15000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="-0.3" brake1="1000.0" pos="1.75, -1.55, -0.9" radius="1.0" force="85000.0" dampening="12000.0" brake2="3000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="-0.3" brake1="1000.0" pos="-1.75, -1.55, -0.9" radius="1.0" force="85000.0" dampening="12000.0" brake2="3000.0" friction="0.025"/>
 
 		<clip type="body" pos="2.3, 2.725, 3.75" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-2.3, 2.725, 3.75" force="300000.0" dampening="25000.0" />

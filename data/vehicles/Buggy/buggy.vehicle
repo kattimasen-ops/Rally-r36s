@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="5.0, 0.0, 2.0"
+		angdrag="0.0, 5.0, 10.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -59,10 +59,10 @@
 		model="buggy.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.47" brake1="800.0" pos="1.05, 1.68, -0.25" radius="0.4" force="20000.0" dampening="15000.0" friction="0.016"/>
-		<wheel drive="0.0" steer="0.47" brake1="800.0" pos="-1.05, 1.68, -0.25" radius="0.4" force="20000.0" dampening="15000.0" friction="0.016"/>
-		<wheel drive="1.0" steer="0.0" brake1="400.0" pos="1.0, -1.5, -0.3" radius="0.4" force="35000.0" dampening="10000.0" brake2="2000.0" friction="0.02"/>
-		<wheel drive="1.0" steer="0.0" brake1="400.0" pos="-1.0, -1.5, -0.3" radius="0.4" force="35000.0" dampening="10000.0" brake2="2000.0" friction="0.02"/>
+		<wheel drive="0.0" steer="0.47" brake1="800.0" pos="1.05, 1.68, -0.25" radius="0.4" force="20000.0" dampening="15000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.47" brake1="800.0" pos="-1.05, 1.68, -0.25" radius="0.4" force="20000.0" dampening="15000.0" friction="0.018"/>
+		<wheel drive="1.0" steer="0.0" brake1="400.0" pos="1.0, -1.5, -0.3" radius="0.4" force="35000.0" dampening="10000.0" brake2="2000.0" friction="0.018"/>
+		<wheel drive="1.0" steer="0.0" brake1="400.0" pos="-1.0, -1.5, -0.3" radius="0.4" force="35000.0" dampening="10000.0" brake2="2000.0" friction="0.018"/>
 
 		<clip type="body" pos="1.0, 1.8, 1.0" force="100000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.0, 1.8, 1.0" force="100000.0" dampening="25000.0" />

@@ -11,6 +11,7 @@ Ni 1.450000
 d 1.000000
 illum 2
 map_Kd trigger_policecar.png
+map_Ke policecar_emission.png
 
 newmtl car_glass.tga
 Ns 575.999996

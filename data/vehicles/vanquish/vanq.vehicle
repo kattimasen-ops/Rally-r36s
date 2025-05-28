@@ -40,7 +40,7 @@
 			This makes an external force change the orientation of the vehicle harder at higher speed
 	-->
 	<ctrlparams
-		angdrag="10.0, 0.0, 0.0"
+		angdrag="5.0, 15.0, 0.0"
 		drag="0.0, 0.0, 0.0"
 		lift="1"
 		fineffect="100"
