@@ -20,11 +20,11 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="20.0, 120.0, 0.0"
+		angdrag="15.0, 100.0, 90.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 16.0" />
+		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
 		<engine powerscale="67113">
@@ -60,20 +60,20 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.8, 0.05"
+		pos="0.0, 0.65, 0.05"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="farmtractor.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="0.85, 1.4, -0.15" radius="0.457" force="115000.0" dampening="20000.0" friction="0.018"/>
-		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="-0.85, 1.4, -0.15" radius="0.457" force="115000.0" dampening="20000.0" friction="0.018"/>
-		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.87, -1.071, 0.05" radius="0.7678" force="120000.0" dampening="20000.0" brake2="2000.0" friction="0.022"/>
-		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.87, -1.071, 0.05" radius="0.7678" force="120000.0" dampening="20000.0" brake2="2000.0" friction="0.022"/>
+		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="0.85, 1.4, -0.15" radius="0.457" force="55000.0" dampening="20000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.7" brake1="1000.0" pos="-0.85, 1.4, -0.15" radius="0.457" force="55000.0" dampening="20000.0" friction="0.018"/>
+		<wheel drive="2.0" steer="0.0" brake1="600.0" pos="0.87, -1.071, 0.05" radius="0.7678" force="120000.0" dampening="20000.0" brake2="2000.0" friction="0.022"/>
+		<wheel drive="2.0" steer="0.0" brake1="600.0" pos="-0.87, -1.071, 0.05" radius="0.7678" force="120000.0" dampening="20000.0" brake2="2000.0" friction="0.022"/>
 
 		<clip type="body" pos="1.235, 2.4, 2.6" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.235, 2.4, 2.6" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="1.235, -1.746, 2.6" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="-1.235, -1.746, 2.6" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="1.235, -1.746, 0.6" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.235, -1.746, 0.6" force="300000.0" dampening="25000.0" />
 
 	</part>
 
