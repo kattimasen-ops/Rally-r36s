@@ -41,7 +41,7 @@ POption::POption(Gui &parent, PConfig &config) :
   options.push_back({ OptionCodriverVolume, "Codriver volume",
     { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }, 0 });
   options.push_back({ OptionCodriverVoice, "Codriver voice",
-    { "off", "ab", "paula", "tim", "robot" }, 0 });
+    { "off", "ab", "paula", "tim", "user" }, 0 });
   options.push_back({ OptionCodriverSigns, "Codriver signs",
     { "off", "abon", "glossy", "plain", "white" }, 0 });
   options.push_back({ OptionTextureQuality, "Texture quality",
