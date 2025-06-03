@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="5.0, 20.0, 20.0"
+		angdrag="10.0, 20.0, 20.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"

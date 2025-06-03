@@ -17,7 +17,7 @@
 		lift="1"
 		fineffect="100"
 		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 16.0" />
+		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
 		<engine powerscale="223710">
@@ -54,10 +54,10 @@
 		model="eva.obj"
 		scale="1.0">
 
-		<wheel drive="0.8" steer="0.7" brake1="600.0" pos="0.7575, 1.52, -0.21" radius="0.35" force="60000.0" dampening="20000.0" />
-		<wheel drive="0.8" steer="0.7" brake1="600.0" pos="-0.7575, 1.52, -0.21" radius="0.35" force="60000.0" dampening="20000.0" />
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7575, -1.16, -0.22" radius="0.35" force="60000.0" dampening="16000.0" brake2="1000.0" />
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7575, -1.16, -0.22" radius="0.35" force="60000.0" dampening="16000.0" brake2="1000.0" />
+		<wheel drive="0.45" steer="0.7" brake1="600.0" pos="0.7575, 1.52, -0.21" radius="0.35" force="60000.0" dampening="20000.0" />
+		<wheel drive="0.45" steer="0.7" brake1="600.0" pos="-0.7575, 1.52, -0.21" radius="0.35" force="60000.0" dampening="20000.0" />
+		<wheel drive="0.55" steer="0.0" brake1="300.0" pos="0.7575, -1.16, -0.22" radius="0.35" force="60000.0" dampening="16000.0" brake2="1000.0" />
+		<wheel drive="0.55" steer="0.0" brake1="300.0" pos="-0.7575, -1.16, -0.22" radius="0.35" force="60000.0" dampening="16000.0" brake2="1000.0" />
 
 		<clip type="body" pos="0.885, 2.6, 1.45" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.885, 2.6, 1.45" force="300000.0" dampening="25000.0" />

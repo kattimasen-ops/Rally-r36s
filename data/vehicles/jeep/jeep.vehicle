@@ -24,7 +24,7 @@
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 16.0" />
+		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
 		<engine powerscale="137209">

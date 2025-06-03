@@ -35,10 +35,11 @@
 	-->
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
+		angdrag="5.0, 0.0, 0.0"
 		lift="1"
 		fineffect="100"
 		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 16.0" />
+		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
 		<engine powerscale="372850">
@@ -74,10 +75,10 @@
 		model="evo_super500.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="1400.0" pos="0.7575, 1.52, -0.16" radius="0.35" force="70000.0" dampening="20000.0" friction="0.025"/>
-		<wheel drive="0.4" steer="0.7" brake1="1400.0" pos="-0.7575, 1.52, -0.16" radius="0.35" force="70000.0" dampening="20000.0" friction="0.025"/>
-		<wheel drive="0.6" steer="0.0" brake1="800.0" pos="0.7575, -1.16, -0.18" radius="0.35" force="70000.0" dampening="18000.0" brake2="2500.0" friction="0.025"/>
-		<wheel drive="0.6" steer="0.0" brake1="800.0" pos="-0.7575, -1.16, -0.18" radius="0.35" force="70000.0" dampening="18000.0" brake2="2500.0" friction="0.025"/>
+		<wheel drive="0.45" steer="0.7" brake1="1400.0" pos="0.7575, 1.52, -0.16" radius="0.35" force="70000.0" dampening="20000.0" friction="0.025"/>
+		<wheel drive="0.45" steer="0.7" brake1="1400.0" pos="-0.7575, 1.52, -0.16" radius="0.35" force="70000.0" dampening="20000.0" friction="0.025"/>
+		<wheel drive="0.55" steer="0.0" brake1="800.0" pos="0.7575, -1.16, -0.18" radius="0.35" force="70000.0" dampening="18000.0" brake2="2500.0" friction="0.025"/>
+		<wheel drive="0.55" steer="0.0" brake1="800.0" pos="-0.7575, -1.16, -0.18" radius="0.35" force="70000.0" dampening="18000.0" brake2="2500.0" friction="0.025"/>
 
 		<clip type="body" pos="0.885, 2.6, 1.45" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.885, 2.6, 1.45" force="300000.0" dampening="25000.0" />

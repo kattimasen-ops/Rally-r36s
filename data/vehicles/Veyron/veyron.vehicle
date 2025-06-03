@@ -56,10 +56,10 @@
 		model="veyron.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="1000.0" pos="0.863, 1.05, 0.02" radius="0.343" force="60000.0" dampening="12000.0" friction="0.026"/>
-		<wheel drive="0.4" steer="0.7" brake1="1000.0" pos="-0.863, 1.05, 0.02" radius="0.343" force="60000.0" dampening="12000.0" friction="0.026"/>
-		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="0.815, -1.65, 0.0" radius="0.358" force="90000.0" dampening="10000.0" brake2="2000.0" friction="0.034"/>
-		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="-0.815, -1.65, 0.0" radius="0.358" force="90000.0" dampening="10000.0" brake2="2000.0" friction="0.034"/>
+		<wheel drive="0.4" steer="0.7" brake1="1000.0" pos="0.863, 1.05, 0.02" radius="0.343" force="60000.0" dampening="12000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="1000.0" pos="-0.863, 1.05, 0.02" radius="0.343" force="60000.0" dampening="12000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="0.815, -1.65, 0.0" radius="0.358" force="90000.0" dampening="10000.0" brake2="2000.0" friction="0.035"/>
+		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="-0.815, -1.65, 0.0" radius="0.358" force="90000.0" dampening="10000.0" brake2="2000.0" friction="0.035"/>
 
 		<clip type="body" pos="0.999, 1.86, 1.1" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.999, 1.86, 1.1" force="300000.0" dampening="25000.0" />
