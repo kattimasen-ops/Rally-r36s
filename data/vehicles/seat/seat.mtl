@@ -11,7 +11,7 @@ Ni 1.450000
 d 1.000000
 illum 2
 map_Kd seat.png
-map_Ke /home/eugene/trigger-rally-code-r1019/data/vehicles/cordo_kitcar/cordo_kitcar_emission.png
+map_Ke seat_emission.png
 
 newmtl seat.png.001
 Ns 575.999996
