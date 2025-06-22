@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<event name="FOREST COMMUNAR" author="Xandr" locked="no">
+	<unlocks file="/vehicles/Renault19/renault19.vehicle" />
+	<unlocks file="/vehicles/Bentley/bentley.vehicle" />
+	<unlocks file="/vehicles/Mercedes/mercedesf1.vehicle" />
+
+	<level file="cmf-mist.level" />
+	<level file="cmf-dh.level" />
+	<level file="cmf-lumber.level" />
+	<level file="cmf-trix.level" />
+	<level file="cmf-dive.level" />
+	<level file="cmf-rev.level" />
+	<level file="cmf-launch.level" />
+	<level file="cmf-climb.level" />
+	<level file="cmf-cyrcle.level" />
+	<level file="cmf-lab.level" />
+	<level file="cmf-gaps.level" />
+	<level file="cmf-tour.level" />
+	<level file="cmf-fr.level" />
+</event>

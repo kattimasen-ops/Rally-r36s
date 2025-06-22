@@ -3,7 +3,7 @@
 	name="Gun Car"
 	class="Off-Road"
 	type="tank"
-	locked="no">
+	locked="yes">
 
 	<pstats
 		weightkg="1300"

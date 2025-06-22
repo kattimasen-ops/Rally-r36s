@@ -1,5 +1,6 @@
 <?xml version="0.5" ?>
 <rigiditymap>
+	//ROADSGNS
 	<rigidity sprite="textures/roadsigns/10down.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/10up.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/arrowright.png" value="0.5"/>
@@ -13,63 +14,159 @@
 	<rigidity sprite="textures/roadsigns/slippery.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/uturnright.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/zigzag.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/bbees.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/bump.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/potholeL.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/pothole.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/embankment.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/titty.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/titty2.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/upstears.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/downstears.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/noway.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/turnmark.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/danger.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/grape.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/camp.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/plane.png" value="0.5"/>
+	<rigidity sprite="textures/veg/post.png" value="0.1"/>
+
+
+
+	//FOLIAGE
+
+
+	//A
 	<rigidity sprite="textures/veg/aloe.png" value="0.003"/>
-	<rigidity sprite="textures/veg/b-pear.png" value="0.5"/>
-	<rigidity sprite="textures/veg/b-pear2.png" value="0.5"/>
+	<rigidity sprite="textures/veg/akaz-big.png" value="0.5"/>
+	<rigidity sprite="textures/veg/akaz-med.png" value="0.2"/>
+	<rigidity sprite="textures/veg/apple-tree-tall.png" value="0.02"/>
+
+
+	//B
 	<rigidity sprite="textures/veg/berry-bush.png" value="0.0025"/>
 	<rigidity sprite="textures/veg/big-bush.png" value="0.0025"/>
 	<rigidity sprite="textures/veg/birch.png" value="0.5"/>
 	<rigidity sprite="textures/veg/bland-birch.png" value="0.5"/>
 	<rigidity sprite="textures/veg/brown-tree.png" value="0.5"/>
+
+	<rigidity sprite="textures/veg/bush.png" value="0.003"/>
 	<rigidity sprite="textures/veg/bush-ash.png" value="0.005"/>
 	<rigidity sprite="textures/veg/bush-dry.png" value="0.005"/>
 	<rigidity sprite="textures/veg/bush-low.png" value="0.003"/>
-	<rigidity sprite="textures/veg/bush.png" value="0.003"/>
-	<rigidity sprite="textures/veg/cactus1.png" value="0.5"/>
+	<rigidity sprite="textures/veg/bush-wide.png" value="0.005"/>
+
+
+	//C
+	<rigidity sprite="textures/veg/cactus1.png" value="0.2"/>
+
 	<rigidity sprite="textures/veg/color-tree7.png" value="0.5"/>
+
+	<rigidity sprite="textures/veg/crooked-tree.png" value="0.5"/>
 	<rigidity sprite="textures/veg/crooked-tree1.png" value="0.5"/>
 	<rigidity sprite="textures/veg/crooked-tree2.png" value="0.5"/>
 	<rigidity sprite="textures/veg/crooked-tree3.png" value="0.5"/>
 	<rigidity sprite="textures/veg/crooked-tree4.png" value="0.5"/>
 	<rigidity sprite="textures/veg/crooked-tree5.png" value="0.5"/>
+
+	<rigidity sprite="textures/veg/crooked-tree1black.png" value="0.5"/>
+	<rigidity sprite="textures/veg/crooked-tree2black.png" value="0.5"/>
+	<rigidity sprite="textures/veg/crooked-tree3black.png" value="0.5"/>
+	<rigidity sprite="textures/veg/crooked-tree4black.png" value="0.5"/>
+	<rigidity sprite="textures/veg/crooked-tree1black.png" value="0.5"/>
+
+	<rigidity sprite="textures/veg/curwed-tree.png" value="0.3"/>
+
+
+	//D
 	<rigidity sprite="textures/veg/dry-grass.png" value="0.0005"/>
 	<rigidity sprite="textures/veg/dry-slim-bush1.png" value="0.002"/>
 	<rigidity sprite="textures/veg/dry-slim-bush2.png" value="0.002"/>
 	<rigidity sprite="textures/veg/dusty-bush.png" value="0.0025"/>
+	<rigidity sprite="textures/veg/dry-slim-bush1black.png" value="0.002"/>
+	<rigidity sprite="textures/veg/dry-slim-bush2black.png" value="0.002"/>
+
+
+	//F
 	<rigidity sprite="textures/veg/fine-tree.png" value="0.5"/>
 	<rigidity sprite="textures/veg/fir.png" value="0.5"/>
 	<rigidity sprite="textures/veg/first-branch.png" value="0.001"/>
 	<rigidity sprite="textures/veg/flow-branches.png" value="0.002"/>
+
+
+	//G
 	<rigidity sprite="textures/veg/grain.png" value="0.001"/>
+
 	<rigidity sprite="textures/veg/grass-sprite.png" value="0.0005"/>
+
 	<rigidity sprite="textures/veg/grass.png" value="0.0005"/>
-	<rigidity sprite="textures/veg/grass15.png" value="0.0005"/>
 	<rigidity sprite="textures/veg/grass2.png" value="0.0005"/>
+	<rigidity sprite="textures/veg/grass6.png" value="0.001"/>
+	<rigidity sprite="textures/veg/grass7.png" value="0.001"/>
+	<rigidity sprite="textures/veg/grass14.png" value="0.001"/>
+	<rigidity sprite="textures/veg/grass15.png" value="0.0005"/>
+
 	<rigidity sprite="textures/veg/green-tree.png" value="0.5"/>
 	<rigidity sprite="textures/veg/green-tree2.png" value="0.5"/>
+
+
+	//H
 	<rigidity sprite="textures/veg/herbs.png" value="0.004"/>
 	<rigidity sprite="textures/veg/horse-chestnut-tree.png" value="0.5"/>
+
+
+	//I
 	<rigidity sprite="textures/veg/ivy.png" value="0.001"/>
+
+
+	//M
 	<rigidity sprite="textures/veg/mais.png" value="0.002"/>
+	<rigidity sprite="textures/veg/moxed-tree.png" value="0.9"/>
+
+
+	//N
 	<rigidity sprite="textures/veg/needle.png" value="0.05"/>
+
+
+	//O
+	<rigidity sprite="textures/veg/oak.png" value="0.5"/>
+	<rigidity sprite="textures/veg/oak-holed.png" value="0.5"/>
+
 	<rigidity sprite="textures/veg/olive-bush.png" value="0.01"/>
+
+
+	//P
 	<rigidity sprite="textures/veg/palm-tree.png" value="0.5"/>
 	<rigidity sprite="textures/veg/palm-tree2.png" value="0.5"/>
 	<rigidity sprite="textures/veg/palm3.png" value="0.5"/>
 	<rigidity sprite="textures/veg/palm4.png" value="0.5"/>
 	<rigidity sprite="textures/veg/palmy.png" value="0.0025"/>
 	<rigidity sprite="textures/veg/pear-tree.png" value="0.5"/>
-	<rigidity sprite="textures/veg/post.png" value="0.1"/>
+	<rigidity sprite="textures/veg/pear-giant.png" value="0.5"/>
 	<rigidity sprite="textures/veg/purple-leaf-plum.png" value="0.5"/>
+
+
+	//R
 	<rigidity sprite="textures/veg/red-tree.png" value="0.5"/>
+	<rigidity sprite="textures/veg/rogoz.png" value="0.002"/>
+
+
+	//S
 	<rigidity sprite="textures/veg/snowy-spruce.png" value="0.15"/>
 	<rigidity sprite="textures/veg/snowy-tree.png" value="0.5"/>
+
+	<rigidity sprite="textures/veg/smeli.png" value="0.005"/>
+
 	<rigidity sprite="textures/veg/spruce-little.png" value="0.15"/>
 	<rigidity sprite="textures/veg/spruce.png" value="0.15"/>
+
+
+	//T
 	<rigidity sprite="textures/veg/thick-leafes.png" value="0.0015"/>
 	<rigidity sprite="textures/veg/thick-tree.png" value="0.5"/>
 	<rigidity sprite="textures/veg/thin-bush.png" value="0.001"/>
 	<rigidity sprite="textures/veg/thorn-bush.png" value="0.002"/>
+
 	<rigidity sprite="textures/veg/tree-shape1.png" value="0.5"/>
 	<rigidity sprite="textures/veg/tree-shape2.png" value="0.5"/>
 	<rigidity sprite="textures/veg/tree-shape3.png" value="0.5"/>
@@ -77,16 +174,21 @@
 	<rigidity sprite="textures/veg/tree-shape5.png" value="0.5"/>
 	<rigidity sprite="textures/veg/tree-shape6.png" value="0.5"/>
 	<rigidity sprite="textures/veg/tree-shape7.png" value="0.5"/>
+
+	<rigidity sprite="textures/veg/topol.png" value="0.5"/>
+
+
+	//W
 	<rigidity sprite="textures/veg/wide-tree.png" value="0.5"/>
 	<rigidity sprite="textures/veg/wide-tree2.png" value="0.5"/>
+	<rigidity sprite="textures/veg/wide-tree4.png" value="0.5"/>
+
 	<rigidity sprite="textures/veg/willow.png" value="0.5"/>
-	<rigidity sprite="textures/veg/crooked-tree1black.png" value="0.5"/>
-	<rigidity sprite="textures/veg/crooked-tree2black.png" value="0.5"/>
-	<rigidity sprite="textures/veg/crooked-tree3black.png" value="0.5"/>
-	<rigidity sprite="textures/veg/crooked-tree4black.png" value="0.5"/>
-	<rigidity sprite="textures/veg/crooked-tree1black.png" value="0.5"/>
-	<rigidity sprite="textures/veg/dry-slim-bush1black.png" value="0.002"/>
-	<rigidity sprite="textures/veg/dry-slim-bush2black.png" value="0.002"/>
+
+
+
+
+	//OTHER OBJECTS
 	<rigidity sprite="textures/structures/castle.png" value="1.0"/>
 	<rigidity sprite="textures/structures/small.castle.png" value="1.0"/>
 	<rigidity sprite="textures/structures/power.png" value="1.0"/>
