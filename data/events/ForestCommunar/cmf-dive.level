@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <level
-	name="DIVE IN GREEN"
+	name="Dive In The Greenery"
 	comment="Adventures continue"
 	author="Xandr"
 	description="A winding wooded descent into a ravine"
@@ -786,7 +786,7 @@
 
 
 
-	<race coordscale="2.5, 2.5" targettime="185"  codrivercpmode="free" >
+	<race coordscale="2.5, 2.5" targettime="200"  codrivercpmode="free" >
 
 		<startposition pos="752, 444" oridegrees="0" />
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <level
-	name="IMPOSSIBLE CLIMB"
+	name="Impossible Climb"
 	comment="Never give up!"
 	author="Xandr"
-	description="Uphill race over clay gully"
+	description="Uphill race over a clay gully"
 	screenshot="ss-climb.png"
 	minimap="mm-climb.png">
 

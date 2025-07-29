@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <level
-	name="PATH OF LUMBERJACK"
+	name="Path Of Lumberjack"
 	comment="...Don't screw up"
 	author="Xandr"
-	description="Short narrow route through the woods thicket"
+	description="Short, narrow route through the woods thicket"
 	screenshot="ss-lumb.png"
 	minimap="mm-lumb.png">
 
@@ -786,7 +786,7 @@
 
 
 
-	<race coordscale="2.5, 2.5" targettime="115" codrivercpmode="free" >
+	<race coordscale="2.5, 2.5" targettime="140" codrivercpmode="free" >
 
 		<startposition pos="44, 39" oridegrees="7" />
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 
-<event name="FOREST COMMUNAR" author="Xandr" locked="no">
+<event name="Communard Forest" author="Xandr" locked="no">
 	<unlocks file="/vehicles/Renault19/renault19.vehicle" />
 	<unlocks file="/vehicles/Bentley/bentley.vehicle" />
 	<unlocks file="/vehicles/Mercedes/mercedesf1.vehicle" />

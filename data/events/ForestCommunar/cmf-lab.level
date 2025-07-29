@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <level
-	name="PATH TO EXIT"
+	name="Path To Exit"
 	comment="Just get out of here..."
 	author="Xandr"
-	description="Two checkpoints in ruins of basement"
+	description="Two checkpoints in the basement ruins"
 	screenshot="ss-lab.png"
 	minimap="mm-lab.png">
 

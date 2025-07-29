@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <level
-	name="ROAD THROUGHT MIST"
-	comment="Don't stop even if fall"
+	name="Road Through the Haze"
+	comment="Don't stop even if you fall!"
 	author="Xandr"
-	description="Wide gravel road in limited visibility"
+	description="Wide gravel road with limited visibility"
 	screenshot="ss-mist.png"
 	minimap="mm-mist.png">
 
@@ -787,7 +787,7 @@
 
 
 
-	<race coordscale="2.5, 2.5" targettime="210" codrivercpmode="free" >
+	<race coordscale="2.5, 2.5" targettime="240" codrivercpmode="free" >
 
 		<startposition pos="39, 87" oridegrees="7" />
 

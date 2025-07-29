@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <level
-	name="LAUNCH"
-	comment="Acceleration don't solve"
+	name="Launch"
+	comment="Acceleration doesn't solve"
 	author="Xandr"
 	description="Two insane jumps over the woods"
 	screenshot="ss-launch.png"

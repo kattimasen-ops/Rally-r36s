@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <level
-	name="CATCHING GAPS"
+	name="Catching The Potholes"
 	comment="Got a compass?!"
 	author="Xandr"
-	description="Night foray in forest bumblefucks"
+	description="Night foray into the forest's nowhere"
 	screenshot="ss-gaps.png"
 	minimap="mm-gaps.png">
 
@@ -787,7 +787,7 @@
 
 
 
-	<race coordscale="2.5, 2.5" targettime="420" codrivercpmode="free" >
+	<race coordscale="2.5, 2.5" targettime="480" codrivercpmode="free" >
 
 		<startposition pos="166, 280" oridegrees="0" />
 

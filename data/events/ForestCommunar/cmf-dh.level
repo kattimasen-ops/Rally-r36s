@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <level
-	name="DOWNHILL"
+	name="Downhill"
 	comment="...You better not cheat"
 	author="Xandr"
-	description="Tricky turns, jamps, dangerous gaps and holes"
+	description="Tricky turns, jumps, dangerous gaps and holes"
 	screenshot="ss-dh.png"
 	minimap="mm-dh.png">
 
@@ -786,7 +786,7 @@
 
 
 
-	<race coordscale="2.5, 2.5" targettime="155" codrivercpmode="free">
+	<race coordscale="2.5, 2.5" targettime="180" codrivercpmode="free">
 
 		<startposition pos="52, 33" oridegrees="305" />
 

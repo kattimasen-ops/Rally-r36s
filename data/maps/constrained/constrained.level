@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Constrained"
 	comment="No way out"
 	author="Onsemeliot"
 	description="very curvy on racing tarmac and sand"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -17,6 +17,22 @@
 		horizontalscale="0.7"
 		verticalscale="1.2"
 		>
+
+		<foliageband
+			middle="0.3"
+			range="0.3"
+			density="0.000003"
+			sprite="/textures/veg/cactus1.png"
+			spritecount="2"
+			/>
+
+		<foliageband
+			middle="0.5"
+			range="0.4"
+			density="0.00001"
+			sprite="/textures/veg/bush-dry.png"
+			spritecount="2"
+			/>
 
 		<blurfilter>
 			<row data="0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001" />
@@ -30,11 +46,18 @@
 			<row data="0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001" />
 		</blurfilter>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
-			<location coords="0, 0" oridegrees="0" />
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="1">
+			<location coords="222, 211" oridegrees="35" />
+			<location coords="299, 344" oridegrees="-54" />
+			<location coords="2270, 2259" oridegrees="35" />
+			<location coords="2347, 2392" oridegrees="-54" />
+			<location coords="-1826, -1837" oridegrees="35" />
+			<location coords="-1749, -1704" oridegrees="-54" />
+			<location coords="2270, -1837" oridegrees="35" />
+			<location coords="2347, -1704" oridegrees="-54" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-blue.png"
 		cloudscrollrate="0.002"
@@ -46,7 +69,7 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="0.7, 0.7" targettime="250">
 		<startposition pos="2346, -1632" oridegrees="0" />
 		<checkpoint coords="2348, -1594" notes="easy right into flat left into medium right" />

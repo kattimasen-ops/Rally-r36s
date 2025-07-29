@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <level
-	name="MAD REVERSE"
-	comment="Heat up!"
+	name="Crazy Reverse"
+	comment="Warm up!"
 	author="Xandr"
 	description="Stunt speed race with backwards obstacles"
 	screenshot="ss-rev.png"
@@ -786,7 +786,7 @@
 
 
 
-	<race coordscale="2.5, 2.5" targettime="310" codrivercpmode="free" >
+	<race coordscale="2.5, 2.5" targettime="360" codrivercpmode="free" >
 
 		<startposition pos="942, 723" oridegrees="347" />
 

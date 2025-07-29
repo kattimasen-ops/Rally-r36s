@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <level
-	name="TRICKSTER'S ROUTE"
-	comment="Watch your head"
+	name="Trickster's Route"
+	comment="Watch your head!"
 	author="Xandr"
 	description="Grass trails among ruins and ditches"
 	screenshot="ss-trix.png"
@@ -784,7 +784,7 @@
 		/>
 
 
-	<race coordscale="2.5, 2.5" targettime="160" codrivercpmode="free" >
+	<race coordscale="2.5, 2.5" targettime="200" codrivercpmode="free" >
 
 		<startposition pos="973, 953" oridegrees="125" />
 

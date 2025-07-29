@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <level
-	name="CIRCLE OF HONOR"
-	comment="Let's plow gravel!"
+	name="Circle Of Honour"
+	comment="Let's plough gravel!"
 	author="Xandr"
 	description="Evening speed drive-in on a gravel road"
 	screenshot="ss-cyrc.png"
@@ -786,7 +786,7 @@
 
 
 
-	<race coordscale="2.5, 2.5" targettime="195" codrivercpmode="free" >
+	<race coordscale="2.5, 2.5" targettime="240" codrivercpmode="free" >
 
 		<startposition pos="764, 353" oridegrees="180" />
 

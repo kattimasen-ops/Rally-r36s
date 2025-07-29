@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <level
-	name="FAR LANDS"
+	name="Far Lands"
 	comment="More tour than race"
 	author="Xandr"
-	description="Fast rally road with several bastardly traps"
+	description="A high-speed rally track with several tricky traps"
 	screenshot="ss-tour.png"
 	minimap="mm-tour.png">
 
@@ -789,7 +789,7 @@
 
 
 
-	<race coordscale="2.5, 2.5" targettime="335" codrivercpmode="free" >
+	<race coordscale="2.5, 2.5" targettime="365" codrivercpmode="free" >
 
 		<startposition pos="1070, 568" oridegrees="10" />
 
