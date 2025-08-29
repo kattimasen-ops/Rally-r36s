@@ -1,0 +1,162 @@
+# Blender 4.0.2 MTL File: 'None'
+# www.blender.org
+
+newmtl black.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl body.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl bottom.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl dash1.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl dash2.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl door.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl flights.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl glass.002
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 0.100000
+illum 6
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl interior.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl label.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl lights.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 0.800000
+illum 9
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl logo.001
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl mirror.001
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl plaque.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl red
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png
+
+newmtl tacho.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd r19.png
+map_Ke r19_emission.png

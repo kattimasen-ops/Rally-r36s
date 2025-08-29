@@ -5,8 +5,8 @@ set -e
 PREFIX="$HOME/trigger-win32-root"
 SRC_DIR="$(pwd)"
 BUILD_DIR="$SRC_DIR/build"
-OPTIMS="-march=x86-64 -mtune=generic -O2"
-HOST="x86_64-w64-mingw32"
+OPTIMS="-march=i386 -mtune=generic -O2"
+HOST="i686-w64-mingw32-windres"
 
 export CC="${HOST}-gcc"
 export CXX="${HOST}-g++"

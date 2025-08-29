@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Renault"
+	class="19 Euro"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1115"
+		enginebhp="75, 109, 135"
+		maxspeed="180, 195, 212"
+		wheeldrive="FWD"
+		handling="good" />
+
+	<genparams
+		mass="1115.0"
+		dimensions="1.696, 4.248, 1.412"
+		wheelmodel="r19_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		angdrag="5.0, 0.0, 0.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 8.0" />
+
+	<drivesystem>
+		<engine powerscale="82000">
+			<powerpoint rpm="1000" power="0.13" />
+			<powerpoint rpm="2400" power="0.4" />
+			<powerpoint rpm="3480" power="0.67" />
+			<powerpoint rpm="4250" power="0.84" />
+			<powerpoint rpm="5500" power="1.0" />
+			<powerpoint rpm="6000" power="0.27" />
+			<powerpoint rpm="6010" power="0.0" />
+		</engine>
+	<!--"final":3.563,"forward":[3.727, 2.048, 1.321, 0.967, 0.795],"reverse":3.545
+		<engine powerscale="55928">
+-->
+		<gearbox>
+			<gear absolute="0.0635" />
+			<gear relative="1.820" />
+			<gear relative="1.55" />
+			<gear relative="1.366" />
+			<gear relative="1.216" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.35, 0.2"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="r19.obj"
+		scale="1.0">
+
+		<wheel drive="1.0" steer="0.6" brake1="800.0" pos="0.713, 1.455, -0.05" radius="0.29" force="40000.0" dampening="18000.0" friction="0.025" />
+		<wheel drive="1.0" steer="0.6" brake1="800.0" pos="-0.7125, 1.455, -0.05" radius="0.29" force="40000.0" dampening="18000.0" friction="0.025" />
+		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="0.709, -1.09, -0.1" radius="0.29" force="70000.0" dampening="18000.0" brake2="1000.0" friction="0.03" />
+		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="-0.709, -1.09, -0.1" radius="0.29" force="70000.0" dampening="18000.0" brake2="1000.0" friction="0.03" />
+
+		<clip type="body" pos="0.848, 2.268, 1.0" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.848, 2.268, 1.0" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="0.848, -1.981, 1.41" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.848, -1.981, 1.41" force="100000.0" dampening="25000.0" />
+
+	</part>
+
+</vehicle>
