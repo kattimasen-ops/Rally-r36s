@@ -19,8 +19,8 @@
 		wheelscale="1.0" />
 
 	<ctrlparams
-		drag="0.0, 0.0, 0.0"
-		angdrag="20.0, 150.0, 50.0"
+		drag="0.0, 0.0, 80.0"
+		angdrag="40.0, 550.0, 50.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -54,15 +54,15 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.2, -0.4"
+		pos="0.0, 0.2, -0.9"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="htz150.obj"
 		scale="1.0">
 
-		<wheel drive="1.0" steer="0.3" brake1="2500.0" pos="0.93, 1.26, 0.2" radius="0.7" force="150000.0" dampening="15000.0" friction="0.025"/>
-		<wheel drive="1.0" steer="0.3" brake1="2500.0" pos="-0.93, 1.26, 0.2" radius="0.7" force="150000.0" dampening="15000.0" friction="0.025"/>
-		<wheel drive="1.0" steer="-0.3" brake1="1500.0" pos="0.93, -1.6, 0.2" radius="0.7" force="150000.0" dampening="15000.0" brake2="5000.0" friction="0.015"/>
-		<wheel drive="1.0" steer="-0.3" brake1="1500.0" pos="-0.93, -1.6, 0.2" radius="0.7" force="150000.0" dampening="15000.0" brake2="5000.0" friction="0.015"/>
+		<wheel drive="1.0" steer="0.3" brake1="2500.0" pos="0.93, 1.26, 0.2" radius="0.7" force="210000.0" dampening="24000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="0.3" brake1="2500.0" pos="-0.93, 1.26, 0.2" radius="0.7" force="210000.0" dampening="24000.0" friction="0.025"/>
+		<wheel drive="1.0" steer="-0.3" brake1="1500.0" pos="0.93, -1.6, 0.2" radius="0.7" force="210000.0" dampening="24000.0" brake2="5000.0" friction="0.015"/>
+		<wheel drive="1.0" steer="-0.3" brake1="1500.0" pos="-0.93, -1.6, 0.2" radius="0.7" force="210000.0" dampening="24000.0" brake2="5000.0" friction="0.015"/>
 
 		<clip type="body" pos="1.23, 2.725, 3.175" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.23, 2.725, 3.175" force="300000.0" dampening="25000.0" />

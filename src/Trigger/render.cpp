@@ -359,7 +359,7 @@ const char *creditstext[] =
     "Graphics",
     "Alex",
     "Roberto Diez Gonzalez",
-    "",
+    "Eugene MC",
     "",
     "",
     "",

@@ -50,7 +50,7 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.0, 0.0"
+		pos="0.0, 0.0, 0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="pickup.obj"
 		scale="1.0">

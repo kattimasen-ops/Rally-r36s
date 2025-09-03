@@ -19,8 +19,8 @@
 		wheelscale="1.0" />
 
 	<ctrlparams
-		drag="0.0, 0.0, 0.0"
-		angdrag="5.0, 80.0, 0.0"
+		drag="0.0, 0.0, 30.0"
+		angdrag="30.0, 180.0, 20.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -54,7 +54,7 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.3, 0.3"
+		pos="0.0, 0.3, -0.2"
 		orientation="0.0, 0.0, 0.0, 0.0"
 		model="dumptrack.obj"
 		scale="1.0">

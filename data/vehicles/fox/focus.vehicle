@@ -51,7 +51,7 @@
 
 	<part
 		name="body"
-		pos="0.0, -0.5, 0.4"
+		pos="0.0, -0.55, 0.35"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="fox.obj"
 		scale="1.0">

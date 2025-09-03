@@ -54,7 +54,7 @@
 
 	<part
 		name="body"
-		pos="0.0, -0.3, 0.25"
+		pos="0.0, -0.4, 0.2"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="SUV.obj"
 		scale="1.0">

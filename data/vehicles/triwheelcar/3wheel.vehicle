@@ -42,7 +42,7 @@
 	-->
 
 	<ctrlparams
-		angdrag="5.0, 30.0, 15.0"
+		angdrag="5.0, 10.0, 15.0"
 		drag="0.0, 0.0, 0.0"
 		lift="0"
 		fineffect="100"
@@ -79,7 +79,7 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.35, 0.5"
+		pos="0.0, 0.35, 0.3"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="3wheelcar.obj"
 		scale="1.0">

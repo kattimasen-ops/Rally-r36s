@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="20.0, 120.0, 0.0"
+		angdrag="20.0, 150.0, 40.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -54,13 +54,13 @@
 
 	<part
 		name="body"
-		pos="0.0, -0.3, -0.5"
+		pos="0.0, -0.3, -0.9"
 		orientation="0.0, 0.0, 0.0, 0.0"
 		model="gaz-66.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="0.95, 1.45, 0.4" radius="0.61" force="250000.0" dampening="20000.0" />
-		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-0.95, 1.45, 0.4" radius="0.61" force="250000.0" dampening="20000.0" />
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="0.95, 1.45, 0.4" radius="0.61" force="240000.0" dampening="22000.0" />
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-0.95, 1.45, 0.4" radius="0.61" force="240000.0" dampening="22000.0" />
 		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="0.925, -1.85, 0.2" radius="0.61" force="50000.0" dampening="20000.0" brake2="2000.0" />
 		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="-0.925, -1.85, 0.2" radius="0.61" force="50000.0" dampening="20000.0" brake2="2000.0" />
 

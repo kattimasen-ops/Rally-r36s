@@ -54,7 +54,7 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.6, 0.1"
+		pos="0.0, 0.55, 0.05"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="Gaz67.obj"
 		scale="1.0">

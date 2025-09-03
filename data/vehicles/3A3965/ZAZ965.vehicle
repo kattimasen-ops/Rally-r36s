@@ -54,13 +54,13 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.35, 0.2"
+		pos="0.0, 0.25, 0.2"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="ZAZ965_body.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.47" brake1="500.0" pos="0.572, 1.213, 0.02" radius="0.28" force="50000.0" dampening="10000.0" friction="0.02"/>
-		<wheel drive="0.0" steer="0.47" brake1="500.0" pos="-0.572, 1.213, 0.02" radius="0.28" force="50000.0" dampening="10000.0" friction="0.02"/>
+		<wheel drive="0.0" steer="0.47" brake1="500.0" pos="0.572, 1.213, 0.0" radius="0.28" force="50000.0" dampening="10000.0" friction="0.02"/>
+		<wheel drive="0.0" steer="0.47" brake1="500.0" pos="-0.572, 1.213, 0.0" radius="0.28" force="50000.0" dampening="10000.0" friction="0.02"/>
 		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.58, -0.81, -0.07" radius="0.28" force="50000.0" dampening="10000.0" brake2="1000.0" friction="0.02"/>
 		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.58, -0.81, -0.07" radius="0.28" force="50000.0" dampening="10000.0" brake2="1000.0" friction="0.02"/>
 

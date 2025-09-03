@@ -42,7 +42,7 @@
 	-->
 
 	<ctrlparams
-		angdrag="3.0, 120.0, 2.0"
+		angdrag="3.0, 20.0, 2.0"
 		drag="0.0, 0.0, 0.0"
 		lift="1"
 		speed="600"
@@ -78,7 +78,7 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.3, 0.2"
+		pos="0.0, 0.25, 0.45"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="Scooter.obj"
 		scale="1.0">

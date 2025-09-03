@@ -51,7 +51,7 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.35, 0.2"
+		pos="0.0, 0.15, 0.2"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="r19.obj"
 		scale="1.0">

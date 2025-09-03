@@ -35,7 +35,7 @@
 	-->
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="5.0, 0.0, 0.0"
+		angdrag="5.0, 10.0, 0.0"
 		lift="1"
 		fineffect="100"
 		speedrate="1.0"
@@ -70,7 +70,7 @@
 
 	<part
 		name="body"
-		pos="0.0, -0.2, 0.2"
+		pos="0.0, -0.3, 0.15"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="evo_super500.obj"
 		scale="1.0">

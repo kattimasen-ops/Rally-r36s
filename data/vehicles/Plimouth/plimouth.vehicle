@@ -52,13 +52,13 @@
 
 	<part
 		name="body"
-		pos="0.0, -0.35, 0.3"
+		pos="0.0, -0.5, 0.3"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="Plimouth.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.762, 1.75, -0.22" radius="0.35" force="45000.0" dampening="20000.0" />
-		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.762, 1.75, -0.22" radius="0.35" force="45000.0" dampening="20000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.762, 1.75, -0.24" radius="0.35" force="45000.0" dampening="20000.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.762, 1.75, -0.24" radius="0.35" force="45000.0" dampening="20000.0" />
 		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.747, -1.16, -0.24" radius="0.35" force="45000.0" dampening="20000.0" brake2="1000.0" friction="0.03"/>
 		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.747, -1.16, -0.24" radius="0.35" force="45000.0" dampening="20000.0" brake2="1000.0" friction="0.03"/>
 
