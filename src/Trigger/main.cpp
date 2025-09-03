@@ -1151,7 +1151,7 @@ void MainApp::tickStateGame(float delta)
     const mat44f &rfmat = rf->getInverseOrientationMatrix();
     //campos = rf->getPosition() + makevec3f(cammat.row[2]) * 100.0;
     campos = rf->getPosition() +
-      makevec3f(rfmat.row[0]) * -0.2f +
+      makevec3f(rfmat.row[0]) * -0.25f +
       makevec3f(rfmat.row[1]) * 0.4f +
       makevec3f(rfmat.row[2]) * 1.0f;
     } break;
