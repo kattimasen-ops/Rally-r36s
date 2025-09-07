@@ -73,7 +73,10 @@
 	<part
 		name="body"
 		pos="0.0, -0.1, 0.35"
+<<<<<<< HEAD
 		render_pos="0.0, 0.1, 0.1"
+=======
+>>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="cordo_super500.obj"
 		scale="1.0">

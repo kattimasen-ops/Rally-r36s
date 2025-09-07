@@ -54,7 +54,10 @@
 	<part
 		name="body"
 		pos="0.0, 0.7, 0.0"
+<<<<<<< HEAD
 		render_pos="0.0, 0.3, -0.2"
+=======
+>>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="RangeRover.obj"
 		scale="1.0">

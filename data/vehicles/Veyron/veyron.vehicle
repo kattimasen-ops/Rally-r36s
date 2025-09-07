@@ -52,7 +52,10 @@
 	<part
 		name="body"
 		pos="0.0, 0.5, 0.2"
+<<<<<<< HEAD
 		render_pos="0.0, 0.2, 0.0"
+=======
+>>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0"
 		model="veyron.obj"
 		scale="1.0">

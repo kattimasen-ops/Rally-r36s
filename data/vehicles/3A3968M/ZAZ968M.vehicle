@@ -55,7 +55,10 @@
 	<part
 		name="body"
 		pos="0.0, 0.25, 0.2"
+<<<<<<< HEAD
 		render_pos="0.0, 0.0, 0.1"
+=======
+>>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="ZAZ968M_body.obj"
 		scale="1.0">
