@@ -79,7 +79,8 @@
 
 	<part
 		name="body"
-		pos="0.0, -0.3, 0.15"
+		pos="0.0, -0.4, 0.15"
+		render_pos="0.0, 0.0, 0.0"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="evo6.obj"
 		scale="1.0">

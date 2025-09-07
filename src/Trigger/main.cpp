@@ -1129,7 +1129,7 @@ void MainApp::tickStateGame(float delta)
     //campos = rf->getPosition() + makevec3f(cammat.row[2]) * 100.0;
     campos = rf->getPosition() +
       makevec3f(rfmat.row[0]) * 1.2f +
-      makevec3f(rfmat.row[1]) * 0.3f +
+      makevec3f(rfmat.row[1]) * 0.0f +
       makevec3f(rfmat.row[2]) * 0.3f;
     } break;
 
@@ -1151,7 +1151,8 @@ void MainApp::tickStateGame(float delta)
     const mat44f &rfmat = rf->getInverseOrientationMatrix();
     //campos = rf->getPosition() + makevec3f(cammat.row[2]) * 100.0;
     campos = rf->getPosition() +
-      makevec3f(rfmat.row[1]) * 0.70f +
+      makevec3f(rfmat.row[0]) * -0.2f +
+      makevec3f(rfmat.row[1]) * 0.4f +
       makevec3f(rfmat.row[2]) * 1.0f;
     } break;
 
@@ -1173,55 +1174,38 @@ void MainApp::tickStateGame(float delta)
     const mat44f &rfmat = rf->getInverseOrientationMatrix();
     //campos = rf->getPosition() + makevec3f(cammat.row[2]) * 100.0;
     campos = rf->getPosition() +
-      makevec3f(rfmat.row[1]) * 0.7f +
-      makevec3f(rfmat.row[2]) * 1.6f;
+      makevec3f(rfmat.row[1]) * 0.5f +
+      makevec3f(rfmat.row[2]) * 1.1f;
     } break;
 
     // Piggyback (fixed chase)
     //
     // TODO: broken because of "world turns upside down" bug
 	//		the problem is in noseangle
-    /*
+
 	case CameraMode::piggyback:
 	{
-		vec3f nose = makevec3f(rf->getOrientationMatrix().row[1]);
-		float noseangle = atan2(nose.z, nose.y);
+		quatf temp2;
+    temp2.fromZAngle(camera_user_angle);
 
-		quatf temp2,temp3,temp4;
-		temp2.fromZAngle(forwangle + camera_user_angle);
-		//temp3.fromXAngle(noseangle);
-		temp3.fromXAngle
-		(
-			atan2
-			(
-				rf->getWorldToLocPoint(rf->getPosition()).z,
-				rf->getWorldToLocPoint(rf->getPosition()).x
-				//(rf->getLocToWorldPoint(vec3f(1,0,0))-rf->getPosition()).x,
-				//(rf->getLocToWorldPoint(vec3f(0,1,0))-rf->getPosition()).y
-			)
-		);
+    quatf target = tempo * temp2 * rf->getOrientation();
 
-		temp4 = temp3;// * temp2;
+    if (target.dot(camori) < 0.0f) target = target * -1.0f;
 
-		quatf target = tempo * temp4;
+    PULLTOWARD(camori, target, delta * 25.0f);
 
-		if (target.dot(camori) < 0.0f)
-			target = target * -1.0f;
-		//if (camori.dot(target) < 0.0f) camori = camori * -1.0f;
+    camori.normalize();
 
-		PULLTOWARD(camori, target, delta * 3.0f);
-
-		camori.normalize();
-
-		cammat = camori.getMatrix();
-		cammat = cammat.transpose();
-		//campos = rf->getPosition() + makevec3f(cammat.row[2]) * 100.0;
-		campos = rf->getPosition() +
-			makevec3f(cammat.row[1]) * 1.6f +
-			makevec3f(cammat.row[2]) * 6.5f;
+    cammat = camori.getMatrix();
+    cammat = cammat.transpose();
+    const mat44f &rfmat = rf->getInverseOrientationMatrix();
+    //campos = rf->getPosition() + makevec3f(cammat.row[2]) * 100.0;
+    campos = rf->getPosition() +
+      makevec3f(rfmat.row[1]) * 0.5f +
+      makevec3f(rfmat.row[2]) * 1.8f;
 	}
 	break;
-	*/
+
   }
 
   forw = makevec3f(cammat.row[0]);

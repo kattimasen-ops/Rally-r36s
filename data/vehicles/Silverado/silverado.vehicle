@@ -48,6 +48,7 @@
 	<part
 		name="body"
 		pos="0.0, 0.7, 0.1"
+		render_pos="0.0, 0.3, 0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="silverado.obj"
 		scale="1.0">

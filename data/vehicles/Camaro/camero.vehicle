@@ -57,15 +57,16 @@
 
 	<part
 		name="body"
-		pos="0.0, -0.2, 0.3"
+		pos="0.0, -0.4, 0.2"
+		render_pos="0.0, -0.25, 0.2"
 		orientation="1.0, 0.0, 0.0"
 		model="camero.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.809, 1.69, -0.22" radius="0.364" force="50000.0" dampening="8500.0" />
-		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.809, 1.69, -0.22" radius="0.364" force="50000.0" dampening="8500.0" />
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.809, -1.202, -0.22" radius="0.364" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.809, -1.202, -0.22" radius="0.364" force="65000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.809, 1.69, -0.22" radius="0.364" force="65000.0" dampening="8500.0" />
+		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.809, 1.69, -0.22" radius="0.364" force="65000.0" dampening="8500.0" />
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.809, -1.202, -0.22" radius="0.364" force="50000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.809, -1.202, -0.22" radius="0.364" force="50000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
 
 		<clip type="body" pos="1.0, 1.77, 0.6" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.0, 1.77, 0.6" force="300000.0" dampening="25000.0" />

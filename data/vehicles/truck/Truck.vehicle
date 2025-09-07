@@ -50,7 +50,8 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.3, 0.1"
+		pos="0.0, 0.2, 0.1"
+		render_pos="0.0, 0.6, 0.0"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="truck.obj"
 		scale="1.0">

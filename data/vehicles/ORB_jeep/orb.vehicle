@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="5.0, 190.0, 10.0"
+		angdrag="10.0, 200.0, 10.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -58,15 +58,16 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.4, 0.15"
+		pos="0.0, 0.3, 0.15"
+		render_pos="0.0, 0.4, 0.1"
 		orientation="0.0, 0.0, 0.0, 0.0"
 		model="orb_jeep.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="0.8, 1.15, -0.3" radius="0.42" force="80000.0" dampening="12000.0" friction="0.025"/>
-		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-0.8, 1.15, -0.3" radius="0.42" force="80000.0" dampening="12000.0" friction="0.025"/>
-		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="0.8, -1.5, -0.35" radius="0.42" force="125000.0" dampening="10000.0" brake2="2000.0" friction="0.025"/>
-		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="-0.8, -1.5, -0.35" radius="0.42" force="125000.0" dampening="10000.0" brake2="2000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="0.8, 1.15, -0.3" radius="0.42" force="85000.0" dampening="18000.0" friction="0.025"/>
+		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-0.8, 1.15, -0.3" radius="0.42" force="85000.0" dampening="18000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="0.8, -1.5, -0.35" radius="0.42" force="120000.0" dampening="15000.0" brake2="2000.0" friction="0.025"/>
+		<wheel drive="0.6" steer="0.0" brake1="500.0" pos="-0.8, -1.5, -0.35" radius="0.42" force="120000.0" dampening="15000.0" brake2="2000.0" friction="0.025"/>
 
 		<clip type="body" pos="0.92, 1.99, 1.88" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.92, 1.99, 1.88" force="300000.0" dampening="25000.0" />

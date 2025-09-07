@@ -50,7 +50,8 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.6, 0.0"
+		pos="0.0, 0.55, 0.0"
+		render_pos="0.0, 0.2, 0.0"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="FAV.obj"
 		scale="1.0">

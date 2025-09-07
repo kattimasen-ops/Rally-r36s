@@ -58,6 +58,7 @@
 	<part
 		name="body"
 		pos="0.0, 0.4, 0.15"
+		render_pos="0.0, -0.1, 0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="bmwm3e30.obj"
 		scale="1.0">

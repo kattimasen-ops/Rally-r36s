@@ -55,6 +55,7 @@
 	<part
 		name="body"
 		pos="0.0, 0.5, 0.1"
+		render_pos="0.0, 0.3, -0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="guncar.obj"
 		scale="1.0">

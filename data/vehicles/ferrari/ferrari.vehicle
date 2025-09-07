@@ -51,6 +51,7 @@
 	<part
 		name="body"
 		pos="0.0, 0.7, 0.2"
+		render_pos="0.0, 0.2, 0.0"
 		orientation="1.0, 0.0, 0.0"
 		model="ferrari.obj"
 		scale="1.0">

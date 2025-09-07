@@ -50,6 +50,7 @@
 	<part
 		name="body"
 		pos="0.0, 1.0, 0.07"
+		render_pos="0.0, 0.7, 0.1"
 		orientation="0.0, 0.0, 0.0, 0.0"
 		model="hummer2.obj"
 		scale="1.0">

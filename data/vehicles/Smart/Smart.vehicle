@@ -50,7 +50,8 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.4, 0.0"
+		pos="0.0, 0.35, -0.1"
+		render_pos="0.0, 0.0, -0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="smart.obj"
 		scale="1.0">

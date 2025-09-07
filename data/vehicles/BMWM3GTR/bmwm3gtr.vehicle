@@ -59,7 +59,8 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.35, 0.35"
+		pos="0.0, 0.3, 0.35"
+		render_pos="0.0, -0.3, 0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="BMWM3GTR.obj"
 		scale="1.0">

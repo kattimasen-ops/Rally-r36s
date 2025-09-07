@@ -54,6 +54,7 @@
 	<part
 		name="body"
 		pos="0.0, 0.25, 0.1"
+		render_pos="0.0, 0.0, 0.0"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="quadri.obj"
 		scale="1.0">

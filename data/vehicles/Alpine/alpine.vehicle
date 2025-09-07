@@ -60,7 +60,8 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.5, 0.2"
+		pos="0.0, 0.6, 0.22"
+		render_pos="0.0, -0.05, 0.1"
 		orientation="1.0, 0.0, 0.0"
 		model="alpine.obj"
 		scale="1.0">

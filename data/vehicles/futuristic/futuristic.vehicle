@@ -54,7 +54,8 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.55, 0.18"
+		pos="0.0, 0.5, 0.2"
+		render_pos="0.0, 0.1, 0.0"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="Futuristic.obj"
 		scale="1.0">

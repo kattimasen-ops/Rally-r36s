@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="10.0, 40.0, 20.0"
+		angdrag="10.0, 60.0, 20.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -53,6 +53,7 @@
 	<part
 		name="body"
 		pos="0.0, 0.2, -0.1"
+		render_pos="0.0, 0.1, 0.0"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="tractor.obj"
 		scale="1.0">

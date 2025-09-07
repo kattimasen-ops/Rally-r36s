@@ -57,14 +57,15 @@
 	<part
 		name="body"
 		pos="0.0, 0.4, 0.15"
+		render_pos="0.0, 0.0, 0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="BMWE34.obj"
 		scale="1.0">
 
 		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.735, 1.511, 0.0" radius="0.3212" force="55000.0" dampening="10000.0" friction="0.018"/>
 		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.735, 1.511, 0.0" radius="0.3212" force="55000.0" dampening="10000.0" friction="0.018"/>
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7475, -1.25, -0.05" radius="0.3212" force="75000.0" dampening="8000.0" brake2="1000.0" friction="0.022"/>
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7475, -1.25, -0.05" radius="0.3212" force="75000.0" dampening="8000.0" brake2="1000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.7475, -1.25, -0.07" radius="0.3212" force="75000.0" dampening="8000.0" brake2="1000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.7475, -1.25, -0.07" radius="0.3212" force="75000.0" dampening="8000.0" brake2="1000.0" friction="0.022"/>
 
 		<clip type="body" pos="1.0, 1.8, 0.3" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.0, 1.8, 0.3" force="300000.0" dampening="25000.0" />
