@@ -5,11 +5,17 @@
 	type="car">
 
 	<genparams
-		mass="1056.0"
+		mass="900.0"
 		dimensions="1.77, 4.49, 1.45"
 		wheelmodel="evo_wheel_ase.obj"
 		wheelscale="1.0" />
 
+	<pstats
+		weightkg="900"
+		enginebhp="106-150"
+		wheeldrive="FWD"
+		maxspeed="180-185"
+		handling="good" />
 	<!--
 		ATMOSPHERIC EFFECTS IN CTRLPARAMS
 		DRAG:
@@ -41,12 +47,13 @@
 		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
-		<engine powerscale="111855">
-			<powerpoint rpm="2000" power="0.4" />
-			<powerpoint rpm="5000" power="0.7" />
-			<powerpoint rpm="8000" power="1.0" />
-			<powerpoint rpm="11000" power="0.9" />
-			<powerpoint rpm="12000" power="0.0" />
+		<engine powerscale="79045">
+			<powerpoint rpm="1000" power="0.2" />
+			<powerpoint rpm="2000" power="0.5" />
+			<powerpoint rpm="3000" power="0.7" />
+			<powerpoint rpm="5000" power="0.8" />
+			<powerpoint rpm="6000" power="1.0" />
+			<powerpoint rpm="6100" power="0.0" />
 		</engine>
 	<!--D 15 main gear 4.176 1: 3.545 2: 2.048 3: 1.346 4: 0.971 5: 0.763 back 3.33
 D 16 main gear 3.722 1: 3.545 2: 2.158 3: 1.478 4: 1.129 5: 0.886 back 3.33
@@ -59,32 +66,32 @@ D 16 main gear 3.722 1: 3.545 2: 2.158 3: 1.478 4: 1.129 5: 0.886 back 3.33
 			<gear relative="1.0" />
 		</gearbox>-->
 		<gearbox>
-			<gear absolute="0.03" />
-			<gear relative="1.731" />
-			<gear relative="1.522" />
-			<gear relative="1.386" />
-			<gear relative="1.273" />
+			<gear absolute="0.0593" />
+			<gear relative="1.643" />
+			<gear relative="1.46" />
+			<gear relative="1.309" />
+			<gear relative="1.274" />
 			<gear relative="1.0" />
 		</gearbox>
 	</drivesystem>
 
 	<part
 		name="body"
-		pos="0.0, -0.3, 0.15"
+		pos="0.0, -0.4, 0.2"
 		render_pos="0.0, -0.2, 0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="evo_ase.obj"
 		scale="1.0">
 
-		<wheel drive="0.1" steer="0.7" brake1="800.0" pos="0.75, 1.54, -0.22" radius="0.35" force="45000.0" dampening="17000.0" />
-		<wheel drive="0.1" steer="0.7" brake1="800.0" pos="-0.75, 1.54, -0.22" radius="0.35" force="45000.0" dampening="17000.0" />
-		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="0.75, -1.18, -0.24" radius="0.35" force="45000.0" dampening="17000.0" brake2="1000.0" />
-		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="-0.75, -1.18, -0.24" radius="0.35" force="45000.0" dampening="17000.0" brake2="1000.0" />
+		<wheel drive="1.0" steer="0.7" brake1="800.0" pos="0.75, 1.54, -0.24" radius="0.34" force="45000.0" dampening="17000.0" friction="0.018"/>
+		<wheel drive="1.0" steer="0.7" brake1="800.0" pos="-0.75, 1.54, -0.24" radius="0.34" force="45000.0" dampening="17000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="0.75, -1.18, -0.24" radius="0.34" force="45000.0" dampening="17000.0" brake2="1000.0" friction="0.018"/>
+		<wheel drive="0.0" steer="0.0" brake1="400.0" pos="-0.75, -1.18, -0.24" radius="0.34" force="45000.0" dampening="17000.0" brake2="1000.0" friction="0.018"/>
 
-		<clip type="body" pos="0.885, 2.6, 1.45" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="-0.885, 2.6, 1.45" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="0.885, -1.89, 1.45" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="-0.885, -1.89, 1.45" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="0.885, 2.6, 1.45" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.885, 2.6, 1.45" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="0.885, -1.89, 1.45" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.885, -1.89, 1.45" force="100000.0" dampening="25000.0" />
 
 	</part>
 
