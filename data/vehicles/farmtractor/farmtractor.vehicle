@@ -60,12 +60,8 @@
 
 	<part
 		name="body"
-<<<<<<< HEAD
 		pos="0.0, 0.55, 0.25"
 		render_pos="0.0, -0.1, -0.5"
-=======
-		pos="0.0, 0.35, -0.45"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="farmtractor.obj"
 		scale="1.0">

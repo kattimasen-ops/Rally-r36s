@@ -54,12 +54,8 @@
 
 	<part
 		name="body"
-<<<<<<< HEAD
 		pos="0.0, 0.2, -0.2"
 		render_pos="0.0, 0.0, -1.2"
-=======
-		pos="0.0, 0.2, -0.9"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="htz150.obj"
 		scale="1.0">

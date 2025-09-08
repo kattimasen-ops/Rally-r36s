@@ -76,10 +76,7 @@
 	<part
 		name="body"
 		pos="0.0, -0.3, 0.4"
-<<<<<<< HEAD
 		render_pos="0.0, 0.0, 0.1"
-=======
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="lancero.obj"
 		scale="1.0">

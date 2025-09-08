@@ -20,11 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-<<<<<<< HEAD
 		angdrag="10.0, 170.0, 10.0"
-=======
-		angdrag="10.0, 210.0, 150.0"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -58,27 +54,16 @@
 
 	<part
 		name="body"
-<<<<<<< HEAD
 		pos="0.0, 0.1, 0.0"
 		render_pos="0.0, -0.2, -0.1"
-=======
-		pos="0.0, 0.2, -0.1"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="Jeep.obj"
 		scale="1.0">
 
-<<<<<<< HEAD
 		<wheel drive="0.4" steer="0.7" brake1="900.0" pos="0.9, 1.38, -0.25" radius="0.455" force="45000.0" dampening="18000.0" friction="0.025"/>
 		<wheel drive="0.4" steer="0.7" brake1="900.0" pos="-0.9, 1.38, -0.25" radius="0.455" force="45000.0" dampening="18000.0" friction="0.025"/>
 		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="0.9, -0.935, -0.3" radius="0.455" force="60000.0" dampening="20000.0" brake2="2000.0" friction="0.025"/>
 		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-0.9, -0.935, -0.3" radius="0.455" force="60000.0" dampening="20000.0" brake2="2000.0" friction="0.025"/>
-=======
-		<wheel drive="0.4" steer="0.7" brake1="900.0" pos="0.9, 1.38, -0.25" radius="0.455" force="50000.0" dampening="19000.0" friction="0.025"/>
-		<wheel drive="0.4" steer="0.7" brake1="900.0" pos="-0.9, 1.38, -0.25" radius="0.455" force="50000.0" dampening="19000.0" friction="0.025"/>
-		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="0.9, -0.935, -0.3" radius="0.455" force="70000.0" dampening="17000.0" brake2="2000.0" friction="0.025"/>
-		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-0.9, -0.935, -0.3" radius="0.455" force="70000.0" dampening="17000.0" brake2="2000.0" friction="0.025"/>
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 
 		<clip type="body" pos="1.15, 2.49, 1.5" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.15, 2.49, 1.5" force="300000.0" dampening="25000.0" />

@@ -20,11 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 30.0"
-<<<<<<< HEAD
-		angdrag="30.0, 220.0, 0.0"
-=======
 		angdrag="30.0, 180.0, 20.0"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -58,12 +54,8 @@
 
 	<part
 		name="body"
-<<<<<<< HEAD
 		pos="0.0, -0.2, -0.05"
 		render_pos="0.0, 0.25, -0.1"
-=======
-		pos="0.0, 0.3, -0.2"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="0.0, 0.0, 0.0, 0.0"
 		model="dumptrack.obj"
 		scale="1.0">

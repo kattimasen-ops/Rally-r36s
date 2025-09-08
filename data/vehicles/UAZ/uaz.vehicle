@@ -20,11 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-<<<<<<< HEAD
 		angdrag="10.0, 160.0, 0.0"
-=======
-		angdrag="10.0, 60.0, 0.0"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -57,12 +53,8 @@
 
 	<part
 		name="body"
-<<<<<<< HEAD
 		pos="0.0, 0.0, -0.1"
 		render_pos="0.0, -0.3, -0.1"
-=======
-		pos="0.0, 0.15, -0.2"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="uaz.obj"
 		scale="1.0">

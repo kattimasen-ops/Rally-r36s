@@ -78,12 +78,8 @@
 
 	<part
 		name="body"
-<<<<<<< HEAD
 		pos="0.0, 0.4, 0.2"
 		render_pos="0.0, 0.0, 0.1"
-=======
-		pos="0.0, 0.3, 0.45"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="Scooter.obj"
 		scale="1.0">

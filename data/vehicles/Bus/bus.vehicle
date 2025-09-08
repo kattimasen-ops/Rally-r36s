@@ -56,12 +56,8 @@
 
 	<part
 		name="body"
-<<<<<<< HEAD
 		pos="0.0, -2.0, -0.1"
 		render_pos="7.5, 0.0, -1.5"
-=======
-		pos="0.0, -2.0, -0.5"
->>>>>>> bc605e09a62f3b3e646bdcd61d0988e0db9aa258
 		orientation="0.0, 0.0, 0.0, 0.0"
 		model="Bus.obj"
 		scale="1.0">
