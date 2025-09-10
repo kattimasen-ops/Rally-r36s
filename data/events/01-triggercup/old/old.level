@@ -27,9 +27,10 @@
 			scale="0.5"
 			spritecount="1"
 			value="0.01"
+			scalemax="-1.0"
 			/>
 <rigidity
-			value="0.001"
+
 />
 	</terrain>
 
@@ -37,7 +38,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="2.0, -2.0" targettime="120.0">
+	<race coordscale="2.0, -2.0" targettime="120.0" codrivercpmode="free">
 
 		<startposition pos="459, 57" oridegrees="177" />
 		<checkpoint coords="401, 164" />

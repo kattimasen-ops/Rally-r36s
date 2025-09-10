@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Night Trip"
 	comment=""
 	author="Onsemeliot"
 	description="fast, curvy, dark"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,24 +18,26 @@
 		horizontalscale="3"
 		verticalscale="0.08"
 		>
-		
+
 		<foliageband
 			middle="0.3"
 			range="0.03"
 			density="0.00025"
 			sprite="/textures/veg/post.png"
 			spritecount="2"
+			scalemax="0.0"
 			/>
-		
+
 		<foliageband
 			middle="0.8"
 			range="0.2"
 			density="0.0003"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/stars.jpg"
 		cloudscrollrate="0"
@@ -43,14 +45,14 @@
 		fogdensity="0.015"
 		fogdensitysky="0.8"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="3, 3"
-		targettime="282">
-		
+		targettime="282" codrivercpmode="free">
+
 		<startposition pos="71, 2" oridegrees="357" />
 		<checkpoint coords="108, 104" />
 		<checkpoint coords="200, 24" />
@@ -103,5 +105,5 @@
 		<codrivercp coords="58, 466" notes="over finish" />
 
 	</race>
-	
+
 </level>

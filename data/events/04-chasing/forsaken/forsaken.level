@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Forsaken Path"
 	comment=""
 	author="Onsemeliot"
 	description="mostly smooth sunken road, big jumps"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,16 +18,17 @@
 		horizontalscale="2.5"
 		verticalscale="0.2"
 		>
-		
+
 		<foliageband
 			middle="0.65"
 			range="0.35"
 			density="0.00025"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/stars.jpg"
 		cloudscrollrate="0"
@@ -35,14 +36,14 @@
 		fogdensity="0.015"
 		fogdensitysky="0.8"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="2.5, 2.5"
-		targettime="282">
-		
+		targettime="282" codrivercpmode="free">
+
 		<startposition pos="371, 4" oridegrees="357" />
 		<checkpoint coords="243, 55" />
 		<checkpoint coords="166, 22" />
@@ -85,5 +86,5 @@
 		<codrivercp coords="255, 417" notes="medium left long over finish" />
 
 	</race>
-	
+
 </level>

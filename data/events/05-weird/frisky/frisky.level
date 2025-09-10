@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Frisky Hills"
 	comment="Enjoy the adventourous nature!"
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.0015"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.001"
 			sprite="/textures/veg/bush.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -41,6 +43,7 @@
 			density="0.0008"
 			sprite="/textures/veg/grain.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -57,7 +60,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="4, 4" targettime="810">
+	<race coordscale="4, 4" targettime="810" codrivercpmode="ordered">
 		<startposition pos="592, 389" oridegrees="22" />
 		<checkpoint coords="587, 487" />
 		<checkpoint coords="556, 432" />

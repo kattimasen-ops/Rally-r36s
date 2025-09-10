@@ -26,6 +26,7 @@
 			sprite="/textures/veg/spruce.png"
 			spritecount="3"
 			scale="15"
+			scalemax="2.0"
 			/>
 	</terrain>
 
@@ -41,7 +42,7 @@
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 
-	<race coordscale="3, 3" targettime="325.0">
+	<race coordscale="3, 3" targettime="325.0" codrivercpmode="free">
 
 		<startposition pos="367, 202" oridegrees="102" />
 		<checkpoint coords="232, 172" />

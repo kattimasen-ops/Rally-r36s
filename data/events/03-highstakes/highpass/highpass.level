@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="High Pass"
 	comment="Speed limits are a necessity."
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.002"
 			sprite="/textures/veg/ivy.png"
 			spritecount="2"
+			scalemax="-1.5"
 			/>
 
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.0005"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -41,6 +43,7 @@
 			density="0.0003"
 			sprite="/textures/veg/palmy.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -56,7 +59,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="2.5, 2.5" targettime="374">
+	<race coordscale="2.5, 2.5" targettime="374" codrivercpmode="free">
 
 		<startposition pos="1011, 46" oridegrees="60" />
 		<checkpoint coords="964, 183" />

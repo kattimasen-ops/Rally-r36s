@@ -145,7 +145,7 @@ PTerrain::PTerrain (XMLElement *element, const std::string &filepath, PSSTexture
       tfb.density = 1.0f;
       tfb.scale = 1.0f;
       //tfb.scalemin = 1.0f;
-      //tfb.scalemax = 1.4f;
+      tfb.scalemax = 1.4f;
       //tfb.model = nullptr;
       //tfb.modelscale = 1.0f;
       tfb.sprite_tex = nullptr;
@@ -167,10 +167,10 @@ PTerrain::PTerrain (XMLElement *element, const std::string &filepath, PSSTexture
       val = walk->Attribute("scalemin");
       if (val) tfb.scalemin = atof(val);
         */
-/*
+
       val = walk->Attribute("scalemax");
       if (val) tfb.scalemax = atof(val);
-
+/*
       val = walk->Attribute("model");
       if (val) tfb.model = ssModel.loadModel(PUtil::assemblePath(val, filepath));
 
@@ -559,7 +559,7 @@ PTerrainTile *PTerrain::getTile(int tilex, int tiley)
       tileptr->foliage[b].inst.back().ang = rand01 * PI*2.0f;
       //tileptr->foliage[b].inst.back().scale = (1.0f + fol * 0.5f) * (rand01 * rand01 + 0.5) * 1.4;
       //tileptr->foliage[b].inst.back().scale = (foliageband[b].scalemin + fol * 0.5f) * (rand01 * rand01 + 0.5) * foliageband[b].scalemax;
-      tileptr->foliage[b].inst.back().scale = (1.0f + fol * (0.5f * (rand01 * rand01 + 0.5) * foliageband[b].scale));
+      tileptr->foliage[b].inst.back().scale = (1.0f + fol * (0.5f * (rand01 * foliageband[b].scalemax + 0.5) * foliageband[b].scale));
 
       rigidityvalue = rigidity.getRigidity(foliageband[b].sprite_tex->getName());
       if (rigidityvalue != 0.0f) {
@@ -861,7 +861,7 @@ void PTerrain::render(const vec3f &campos, const mat44f &camorim)
           GL_UNSIGNED_INT,(*t)->foliage[b].buff[1].getPointer(0));
       }
 
-      #if 0
+#if 0
       for (std::vector<PTerrainFoliage>::iterator f = (*t)->foliage.begin(); f != (*t)->foliage.end(); f++) {
 
         #if 0
@@ -873,7 +873,7 @@ void PTerrain::render(const vec3f &campos, const mat44f &camorim)
         glEnd();
         #endif
 
-        #if 0
+
         if (!f->tfb->model) continue;
 
         glPushMatrix();
@@ -882,9 +882,9 @@ void PTerrain::render(const vec3f &campos, const mat44f &camorim)
         glScalef(f->tfb->modelscale, f->tfb->modelscale, f->tfb->modelscale);
         ssRender.drawModel(*f->tfb->model, ssEffect, ssTexture);
         glPopMatrix();
-        #endif
+
       }
-      #endif
+#endif
     }
   }
 

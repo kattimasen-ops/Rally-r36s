@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Tricky"
 	comment="Caution!"
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.0003"
 			sprite="/textures/veg/ivy.png"
 			spritecount="2"
+			scalemax="-1.5"
 			/>
 
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.003"
 			sprite="/textures/veg/grain.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -48,7 +50,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="4, 4" targettime="600">
+	<race coordscale="4, 4" targettime="600" codrivercpmode="free">
 		<startposition pos="412, 457" oridegrees="45" />
 		<checkpoint coords="336, 474" />
 		<checkpoint coords="361, 390" />

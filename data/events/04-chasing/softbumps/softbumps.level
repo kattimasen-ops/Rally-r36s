@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Soft Bumps"
 	comment=""
 	author="Onsemeliot"
 	description="smooth curves in low light"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -25,6 +25,7 @@
 			density="0.0004"
 			sprite="/textures/veg/ivy.png"
 			spritecount="1"
+			scalemax="-1.5"
 			/>
 
 		<foliageband
@@ -33,9 +34,10 @@
 			density="0.0003"
 			sprite="/textures/veg/palmy.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast-blue.jpg"
 		cloudscrollrate="0"
@@ -43,13 +45,13 @@
 		fogdensity="0.015"
 		fogdensitysky="0.7"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2.5, 2.5" targettime="212">
-		
+
+	<race coordscale="2.5, 2.5" targettime="212" codrivercpmode="free">
+
 		<startposition pos="330, 51" oridegrees="210" />
 		<checkpoint coords="405, 52" />
 		<checkpoint coords="287, 79" />
@@ -83,5 +85,5 @@
 		<codrivercp coords="227, 380" notes="flat right into medium left over finish" />
 
 	</race>
-	
+
 </level>

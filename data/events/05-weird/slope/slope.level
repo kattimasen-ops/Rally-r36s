@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Slope"
 	comment="Down and up again."
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.002"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.001"
 			sprite="/textures/veg/ivy.png"
 			spritecount="2"
+			scalemax="-1.5"
 			/>
 
 		<foliageband
@@ -42,6 +44,7 @@
 			sprite="/textures/veg/birch.png"
 			spritecount="2"
 			scale="11"
+			scalemax="3.0"
 			/>
 
 		<foliageband
@@ -51,6 +54,7 @@
 			sprite="/textures/veg/wide-tree.png"
 			spritecount="2"
 			scale="7"
+			scalemax="3.0"
 			/>
 
 		<foliageband
@@ -60,6 +64,7 @@
 			sprite="/textures/veg/spruce.png"
 			spritecount="2"
 			scale="8"
+			scalemax="2.0"
 			/>
 
 		<blurfilter>
@@ -82,7 +87,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="1.25, 1.25" targettime="174">
+	<race coordscale="1.25, 1.25" targettime="174" codrivercpmode="ordered">
 
 		<startposition pos="673, 905" oridegrees="215" />
 		<checkpoint coords="867, 698" />

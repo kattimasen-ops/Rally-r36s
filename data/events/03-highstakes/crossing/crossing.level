@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Crossing"
 	comment="Not time for detours. Keep at the race!"
 	author="Onsemeliot"
 	description="mixed fast and slow route"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,40 +18,44 @@
 		horizontalscale="3"
 		verticalscale="0.23"
 		>
-		
+
 		<foliageband
 			middle="0.2"
 			range="0.17"
 			density="0.0002"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
-		
+
 		<foliageband
 			middle="0.4"
 			range="0.35"
 			density="0.0005"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
-		
+
 		<foliageband
 			middle="0.65"
 			range="0.5"
 			density="0.0004"
 			sprite="/textures/veg/ivy.png"
 			spritecount="2"
+			scalemax="-1.0"
 			/>
-		
+
 		<foliageband
 			middle="0.75"
 			range="0.25"
 			density="0.0009"
 			sprite="/textures/veg/grain.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dawn.jpg"
 		cloudscrollrate="0"
@@ -59,13 +63,13 @@
 		fogdensity="0.0015"
 		fogdensitysky="1"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="3, 3" targettime="437" codrivercpmode="ordered">
-		
+
 		<startposition pos="480, 2" oridegrees="325" />
 		<checkpoint coords="464, 55" />
 		<checkpoint coords="411, 67" />
@@ -164,5 +168,5 @@
 		<codrivercp coords="467, 461" notes="hard left into hard right over finish" />
 
 	</race>
-	
+
 </level>

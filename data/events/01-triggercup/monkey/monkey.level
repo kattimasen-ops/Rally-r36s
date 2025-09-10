@@ -6,7 +6,7 @@
 	description="smooth, fast, plain"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,35 +18,37 @@
 		horizontalscale="3"
 		verticalscale="0.1"
 		>
-		
+
 		<foliageband
 			middle="0.7"
 			range="0.4"
 			density="0.0002"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
-		
+
 		<foliageband
 			middle="1.0"
 			range="0.3"
 			density="0.0001"
 			sprite="/textures/veg/palmy.png"
 			spritecount="3"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		rain="500.0"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3.0, -3.0" targettime="130">
-		
+
+	<race coordscale="3.0, -3.0" targettime="130" codrivercpmode="free">
+
 		<startposition pos="355, 29" oridegrees="180" />
 		<checkpoint coords="335, 150" />
 		<checkpoint coords="305, 103" />

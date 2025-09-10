@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Endless options"
 	comment="Just take the faster way!"
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.0004"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.0003"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -84,7 +86,7 @@
 		<checkpoint coords="378, 435" />
 		<checkpoint coords="416, 480" />
 		<checkpoint coords="476, 500" />
-		
+
 		<codrivercp coords="693, -83" notes="hard left" />
 		<codrivercp coords="687, -75" notes="medium right" />
 		<codrivercp coords="672, -71" notes="easy left long" />

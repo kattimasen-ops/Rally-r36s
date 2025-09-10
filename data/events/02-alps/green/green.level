@@ -6,19 +6,38 @@
 	description="fast, smooth, thick fog"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
 		roadmap="r.png"
 		colormap="c.png"
+		foliagemap="f.png"
 		hudmap="c.png"
 		tilesize="64"
 		horizontalscale="2"
 		verticalscale="0.14"
 		>
+		<foliageband
+			middle="0.7"
+			range="0.4"
+			density="0.001"
+			sprite="/textures/veg/grass.png"
+			spritecount="1"
+			scalemax="-2.0"
+			/>
+
+		<foliageband
+			middle="0.3"
+			range="0.05"
+			density="0.01"
+			sprite="/textures/veg/mais.png"
+			spritecount="1"
+			scale="4.0"
+			scalemax="0.1"
+			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		cloudscrollrate="0.02"
@@ -31,12 +50,12 @@
 		height="1.6"
 		watertexture="/textures/water/dark-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
-	<race coordscale="2, 2" targettime="120.0">
+
+	<race coordscale="2, 2" targettime="120.0" codrivercpmode="free">
 
 		<startposition pos="72, 60" oridegrees="320" />
 		<checkpoint coords="105, 229" />

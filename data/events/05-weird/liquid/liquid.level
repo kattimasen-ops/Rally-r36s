@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Liquid Rocks"
 	comment="Don't burn the rubber wheels!"
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.0002"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -40,7 +41,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="3.5, 3.5" targettime="300">
+	<race coordscale="3.5, 3.5" targettime="300" codrivercpmode="ordered">
 		<startposition pos="256, 0" oridegrees="0" />
 		<checkpoint coords="335, 59" />
 		<checkpoint coords="488, 85" />

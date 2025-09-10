@@ -6,19 +6,28 @@
 	description="only partly on asphalt, very curvy"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
 		roadmap="r.png"
 		colormap="c.jpg"
+		foliagemap="f.png"
 		hudmap="m.png"
 		tilesize="32"
 		horizontalscale="3"
 		verticalscale="0.15"
 		>
+		<foliageband
+			middle="0.5"
+			range="0.5"
+			density="0.0004"
+			sprite="/textures/veg/grass.png"
+			spritecount="1"
+			scalemax="-2.0"
+			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dawn.jpg"
 		cloudscrollrate="0.01"
@@ -26,13 +35,13 @@
 		fogdensity="0.009"
 		fogdensitysky="0.7"
 		/>
-	
+
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
+
 	<race coordscale="3, 3" targettime="372" codrivercpmode="ordered">
-		
+
 		<startposition pos="400, 5" oridegrees="20" />
 		<checkpoint coords="352, 27" />
 		<checkpoint coords="296, 47" />

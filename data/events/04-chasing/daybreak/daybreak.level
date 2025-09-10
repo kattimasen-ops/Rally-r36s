@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Day Break"
 	comment="Good morning!"
 	author="Onsemeliot"
 	description="smooth, tricky elevation, low light"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,24 +18,26 @@
 		horizontalscale="3"
 		verticalscale="0.12"
 		>
-		
+
 		<foliageband
 			middle="0.35"
 			range="0.3"
 			density="0.0006"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
-		
+
 		<foliageband
 			middle="0.75"
 			range="0.25"
 			density="0.0003"
 			sprite="/textures/veg/bush.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dawn.jpg"
 		cloudscrollrate="0"
@@ -43,13 +45,13 @@
 		fogdensity="0.023"
 		fogdensitysky="1"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3, 3" targettime="207">
-		
+
+	<race coordscale="3, 3" targettime="207" codrivercpmode="free">
+
 		<startposition pos="57, 241" oridegrees="0" />
 		<checkpoint coords="111, 342" />
 		<checkpoint coords="209, 292" />

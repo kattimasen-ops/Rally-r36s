@@ -6,7 +6,7 @@
 	description="smooth, nearly invisible road, potholes"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,24 +18,28 @@
 		horizontalscale="3"
 		verticalscale="0.1"
 		>
-		
+
 		<foliageband
 			middle="0.7"
 			range="0.4"
 			density="0.0002"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scale="1.0"
+			scalemax="-2.0"
 			/>
-		
+
 		<foliageband
 			middle="1.0"
 			range="0.3"
 			density="0.0001"
 			sprite="/textures/veg/palmy.png"
 			spritecount="3"
+			scale="1.0"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/stars.jpg"
 		cloudscrollrate="0"
@@ -43,12 +47,12 @@
 		fogdensity="0.002"
 		fogdensitysky="0.1"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
-	
-	<race coordscale="3, -3" targettime="100">
-		
+
+	<race coordscale="3, -3" targettime="100" codrivercpmode="free">
+
 		<startposition pos="426, 35" oridegrees="180" />
 		<checkpoint coords="426, 35" />
 		<checkpoint coords="342, 94" />

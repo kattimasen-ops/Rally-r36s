@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Old Quarry"
 	comment=""
 	author="Onsemeliot"
 	description="up and down the steps"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,24 +18,26 @@
 		horizontalscale="4"
 		verticalscale="0.4"
 		>
-		
+
 		<foliageband
 			middle="0.3"
 			range="0.2"
 			density="0.0005"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
-		
+
 		<foliageband
 			middle="0.65"
 			range="0.35"
 			density="0.001"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast-blue.jpg"
 		cloudscrollrate="0"
@@ -43,14 +45,14 @@
 		fogdensity="0.005"
 		fogdensitysky="0.2"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="4, 4"
-		targettime="312">
-		
+		targettime="312" codrivercpmode="free">
+
 		<startposition pos="168, 356" oridegrees="265" />
 		<checkpoint coords="292, 357" />
 		<checkpoint coords="355, 286" />
@@ -77,7 +79,7 @@
 		<checkpoint coords="432, 61" />
 		<checkpoint coords="296, 49" />
 		<checkpoint coords="250, -45" />
-		
+
 		<codrivercp coords="182, 353" notes="flat left" />
 		<codrivercp coords="265, 359" notes="medium right" />
 		<codrivercp coords="392, 240" notes="square right into square right dont cut" />
@@ -94,5 +96,5 @@
 		<codrivercp coords="414, 45" notes="medium right" />
 		<codrivercp coords="345, 42" notes="medium left long over finish" />
 	</race>
-	
+
 </level>

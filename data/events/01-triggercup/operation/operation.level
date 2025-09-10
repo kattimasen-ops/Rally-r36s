@@ -6,7 +6,7 @@
 	description="smooth, fast, flat, rain, thick fog"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,24 +18,26 @@
 		horizontalscale="3"
 		verticalscale="0.1"
 		>
-		
+
 		<foliageband
 			middle="0.7"
 			range="0.4"
 			density="0.0002"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
-		
+
 		<foliageband
 			middle="1.0"
 			range="0.3"
 			density="0.0001"
 			sprite="/textures/veg/palmy.png"
 			spritecount="3"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		cloudscrollrate="0.001"
@@ -44,11 +46,11 @@
 		fogdensitysky="1"
 		rain="1500"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
-	<race coordscale="3, -3" targettime="105">
-		
+
+	<race coordscale="3, -3" targettime="105" codrivercpmode="free">
+
 		<startposition pos="229, 78" oridegrees="180" />
 		<checkpoint coords="223, 373" />
 		<checkpoint coords="188, 387" />

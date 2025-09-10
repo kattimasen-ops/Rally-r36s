@@ -29,6 +29,7 @@
 			density="0.0007"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -44,7 +45,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="3, 3" targettime="318">
+	<race coordscale="3, 3" targettime="318" codrivercpmode="ordered">
 		<startposition pos="219, 169" oridegrees="245" />
 		<checkpoint coords="353, 216" />
 		<checkpoint coords="334, 338" />
