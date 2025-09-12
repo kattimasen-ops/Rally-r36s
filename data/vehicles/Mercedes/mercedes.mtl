@@ -1,0 +1,82 @@
+# Blender 4.0.2 MTL File: 'None'
+# www.blender.org
+
+newmtl Black.001
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd mercedes.png
+map_Ke mercedes_emission.png
+
+newmtl Carpaint.002
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd mercedes.png
+map_Ke mercedes_emission.png
+
+newmtl Dial.002
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd mercedes.png
+map_Ke mercedes_emission.png
+
+newmtl Glass.002
+Ns 224.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 0.494624
+illum 9
+map_Kd mercedes.png
+map_Ke mercedes_emission.png
+
+newmtl Grill.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd mercedes.png
+map_Ke mercedes_emission.png
+
+newmtl Mirror.002
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd mercedes.png
+map_Ke mercedes_emission.png
+
+newmtl SIlver.001
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd mercedes.png
+map_Ke mercedes_emission.png
+
+newmtl White.002
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd mercedes.png
+map_Ke mercedes_emission.png
