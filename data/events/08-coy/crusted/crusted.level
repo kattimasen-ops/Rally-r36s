@@ -24,8 +24,7 @@
 			density="0.00012"
 			sprite="/textures/veg/thin-bush.png"
 			spritecount="2"
-			scale="1"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
 		<blurfilter>
 			<row data="0.01001 0.01001 0.01001 0.01001 0.01001" />

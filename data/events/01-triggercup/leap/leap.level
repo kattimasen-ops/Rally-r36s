@@ -26,7 +26,6 @@
 			sprite="/textures/veg/cactus1.png"
 			spritecount="1"
 			scale="1.0"
-			scalemax="5.0"
 			/>
 	</terrain>
 

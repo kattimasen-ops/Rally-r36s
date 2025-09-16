@@ -376,8 +376,9 @@ struct PTerrainFoliageBand {
 
   /*
   float scalemin;
-  float scalemax;
   */
+  float scalemax;
+
 
   PTexture *sprite_tex;
   int sprite_count;

@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Plateau"
 	comment="Careful driving pays off."
 	author="Onsemeliot"
 	description="high speeds will cause accidents!"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,17 +18,17 @@
 		horizontalscale="3.2"
 		verticalscale="0.22"
 		>
-		
+
 		<foliageband
 			middle="0.94"
 			range="0.05"
 			density="0.0015"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/cloudy.png"
 		cloudscrollrate="0.01"
@@ -36,13 +36,13 @@
 		fogdensity="0.002"
 		fogdensitysky="0.1"
 		/>
-	
+
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
+
 	<race coordscale="3.2, 3.2" targettime="253" codrivercpmode="free">
-		
+
 		<startposition pos="513, 475" oridegrees="90" />
 		<checkpoint coords="465, 455" />
 		<checkpoint coords="429, 292" />
@@ -94,5 +94,5 @@
 		<codrivercp coords="54, 417" notes="easy left over finish" />
 
 	</race>
-	
+
 </level>

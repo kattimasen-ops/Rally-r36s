@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Hot hell"
 	comment="Finish before your wheels burn down!"
 	author="Onsemeliot"
 	description="Rough, curvy gravel and sand terrain"
 	screenshot="ss-dry.png"
 	minimap="mm-dry.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c-dry.png"
@@ -24,14 +24,14 @@
 			<row data="0.01 0.01 0.01 0.01" />
 			<row data="0.01 0.01 0.01 0.01" />
 		</blurfilter>
-		
+
 		<foliageband
 			middle="0.75"
 			range="0.3"
 			density="0.000005"
 			sprite="/textures/veg/cactus1.png"
 			spritecount="2"
-			scale="2"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.65"
@@ -39,7 +39,7 @@
 			density="0.000003"
 			sprite="/textures/veg/dusty-bush.png"
 			spritecount="2"
-			scale="6"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.64"
@@ -47,7 +47,7 @@
 			density="0.0000025"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
-			scale="2"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.7"
@@ -55,10 +55,10 @@
 			density="0.00001"
 			sprite="/textures/veg/dusty-bush.png"
 			spritecount="2"
-			scale="3"
+			scale="0.25"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/cloudy.png"
 		cloudscrollrate="0.04"
@@ -66,11 +66,11 @@
 		fogdensity="0.006"
 		fogdensitysky="0.8"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="4, 4" targettime="200">
 		<startposition pos="11, 375" oridegrees="200" />
 		<checkpoint coords="13, 368" notes="easy left"/>

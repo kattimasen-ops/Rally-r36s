@@ -32,7 +32,7 @@ DMACROS         := -DNDEBUG -DUNIX -DPACKAGE_VERSION=\"$(DISTVER)\"
 INCDIRS         := -I'./include'
 CXXFLAGS        += -std=c++11 $(WARNINGS) $(OPTIMS)
 CPPFLAGS        += $(DMACROS) $(INCDIRS)
-EXTRA_LIBS      := -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lopengl32 -lglu32 -lglew32 -lopenal -lalut -lphysfs -ltinyxml2 -lpthread
+EXTRA_LIBS      := -lSDL2main -lGL -lGLU -lGLEW -lSDL2 -lSDL2_image -lphysfs -lopenal -lalut -lpthread -ltinyxml2
 LDFLAGS         += $(EXTRA_LIBS)
 INSTALL_PROGRAM := install --mode=0755
 INSTALL_DATA    := install --mode=0644

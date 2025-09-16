@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Canyon"
 	comment="Alter the old ways!"
 	author="Onsemeliot"
 	description="smoothly down and up, shortcuts"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,17 +18,17 @@
 		horizontalscale="4"
 		verticalscale="0.35"
 		>
-		
+
 		<foliageband
 			middle="0.36"
 			range="0.35"
 			density="0.0012"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		cloudscrollrate="0.01"
@@ -36,13 +36,13 @@
 		fogdensity="0.0015"
 		fogdensitysky="1.2"
 		/>
-	
+
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
-	
+
 	<race coordscale="2, 2" targettime="158" codrivercpmode="free">
-		
+
 		<startposition pos="460, 440" oridegrees="178" />
 		<checkpoint coords="454, 263" />
 		<checkpoint coords="453, 83" />
@@ -75,5 +75,5 @@
 		<codrivercp coords="241, 231" notes="hard left cut over finish" />
 
 	</race>
-	
+
 </level>

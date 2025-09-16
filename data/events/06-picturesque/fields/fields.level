@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Fields"
 	comment="Don't destroy the wheat!"
 	author="Onsemeliot"
 	description="fast and smooth with curvy interludes"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,26 +18,26 @@
 		horizontalscale="3"
 		verticalscale="0.1"
 		>
-		
+
 		<foliageband
 			middle="0.55"
 			range="0.35"
 			density="0.0012"
 			sprite="/textures/veg/grain.png"
 			spritecount="1"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
-		
+
 		<foliageband
 			middle="0.6"
 			range="0.01"
 			density="0.001"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		cloudscrollrate="0.01"
@@ -46,13 +46,13 @@
 		fogdensitysky="0.3"
 		rain="2100"
 		/>
-	
+
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
+
 	<race coordscale="3, 3" targettime="323" codrivercpmode="free">
-		
+
 		<startposition pos="393, 3" oridegrees="0" />
 		<checkpoint coords="394, 67" />
 		<checkpoint coords="127, 65" />
@@ -109,5 +109,5 @@
 		<codrivercp coords="397, 484" notes="flat right over finish" />
 
 	</race>
-	
+
 </level>

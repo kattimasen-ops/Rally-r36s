@@ -25,7 +25,7 @@
 			density="0.002"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
 
 		<foliageband
@@ -34,7 +34,7 @@
 			density="0.001"
 			sprite="/textures/veg/ivy.png"
 			spritecount="2"
-			scalemax="-1.5"
+			scale="1.0"
 			/>
 
 		<foliageband
@@ -43,8 +43,7 @@
 			density="0.000015"
 			sprite="/textures/veg/birch.png"
 			spritecount="2"
-			scale="11"
-			scalemax="3.0"
+			scale="4"
 			/>
 
 		<foliageband
@@ -53,8 +52,7 @@
 			density="0.000012"
 			sprite="/textures/veg/wide-tree.png"
 			spritecount="2"
-			scale="7"
-			scalemax="3.0"
+			scale="3"
 			/>
 
 		<foliageband
@@ -63,8 +61,7 @@
 			density="0.00003"
 			sprite="/textures/veg/spruce.png"
 			spritecount="2"
-			scale="8"
-			scalemax="2.0"
+			scale="2"
 			/>
 
 		<blurfilter>

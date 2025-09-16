@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Faster"
 	comment="Test the speed limit!"
 	author="Onsemeliot"
 	description="maximum speed road but tight turns"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,26 +18,26 @@
 		horizontalscale="3.5"
 		verticalscale="0.12"
 		>
-		
+
 		<foliageband
 			middle="0.48"
 			range="0.47"
 			density="0.00015"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
-		
+
 		<foliageband
 			middle="0.8"
 			range="0.2"
 			density="0.0015"
 			sprite="/textures/veg/ivy.png"
 			spritecount="1"
-			scalemax="1.5"
+			scale="1.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/light-clouds.jpg"
 		cloudscrollrate="0.01"
@@ -45,13 +45,13 @@
 		fogdensity="0.001"
 		fogdensitysky="0.4"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="3.5, 3.5" targettime="143" codrivercpmode="free">
-		
+
 		<startposition pos="393, 3" oridegrees="0" />
 		<checkpoint coords="370, 200" />
 		<checkpoint coords="272, 332" />
@@ -75,5 +75,5 @@
 		<codrivercp coords="390, 386" notes="flat left into flat right over finish" />
 
 	</race>
-	
+
 </level>

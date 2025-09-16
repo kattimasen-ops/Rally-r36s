@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Flood"
 	comment="Healthy rainland"
 	author="Onsemeliot"
 	description="Slow and smooth on tarmac and dirt"
 	screenshot="ss.png"
 	minimap="mm-flood.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -24,14 +24,14 @@
 			<row data="0.01 0.01 0.01 0.01" />
 			<row data="0.01 0.01 0.01 0.01" />
 		</blurfilter>
-		
+
 		<foliageband
 			middle="0.75"
 			range="0.3"
 			density="0.000001"
 			sprite="/textures/veg/wide-tree.png"
 			spritecount="3"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.85"
@@ -39,7 +39,7 @@
 			density="0.000001"
 			sprite="/textures/veg/color-tree7.png"
 			spritecount="2"
-			scale="13"
+			scale="7"
 			/>
 		<foliageband
 			middle="0.65"
@@ -47,7 +47,7 @@
 			density="0.000003"
 			sprite="/textures/veg/olive-bush.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.64"
@@ -55,7 +55,7 @@
 			density="0.0000025"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
-			scale="2"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.7"
@@ -79,7 +79,7 @@
 			density="0.000016"
 			sprite="/textures/veg/fine-tree.png"
 			spritecount="2"
-			scale="16"
+			scale="4"
 			/>
 		<foliageband
 			middle="0.59"
@@ -87,7 +87,7 @@
 			density="0.0005"
 			sprite="/textures/veg/grain.png"
 			spritecount="2"
-			scale="0.7"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.4"
@@ -95,7 +95,7 @@
 			density="0.0015"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.6"
+			scale="0.3"
 			/>
 		<foliageband
 			middle="0.3"
@@ -103,10 +103,10 @@
 			density="0.001"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
-			scale="0.5"
+			scale="0.25"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/light-clouds.jpg"
 		cloudscrollrate="0.02"
@@ -119,11 +119,11 @@
 		height="11.5"
 		watertexture="/textures/water/dark-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="4, 4" targettime="442">
 		<startposition pos="480, 248" oridegrees="0" />
 		<checkpoint coords="479, 257" notes="chicane right"/>

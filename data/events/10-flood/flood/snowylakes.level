@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Snowy lakes"
 	comment="Avoid the frozen water!"
 	author="Onsemeliot"
 	description="Smooth curvy road on slippery ground"
 	screenshot="ss-snow.png"
 	minimap="mm-snowy.png">
-	
+
 	<terrain
 		heightmap="h-snow.png"
 		colormap="c-snow.png"
@@ -24,14 +24,14 @@
 			<row data="0.01 0.01 0.01 0.01" />
 			<row data="0.01 0.01 0.01 0.01" />
 		</blurfilter>
-		
+
 		<foliageband
 			middle="0.75"
 			range="0.3"
 			density="0.000001"
 			sprite="/textures/veg/snowy-tree.png"
 			spritecount="3"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.85"
@@ -39,7 +39,7 @@
 			density="0.000001"
 			sprite="/textures/veg/color-tree7.png"
 			spritecount="2"
-			scale="13"
+			scale="7"
 			/>
 		<foliageband
 			middle="0.65"
@@ -47,7 +47,7 @@
 			density="0.000003"
 			sprite="/textures/veg/big-bush.png"
 			spritecount="2"
-			scale="6"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.64"
@@ -55,7 +55,7 @@
 			density="0.0000025"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
-			scale="2"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.7"
@@ -63,7 +63,7 @@
 			density="0.00001"
 			sprite="/textures/veg/big-bush.png"
 			spritecount="2"
-			scale="3"
+			scale="0.5"
 			/>
 		<foliageband
 			middle="0.9"
@@ -79,10 +79,10 @@
 			density="0.000016"
 			sprite="/textures/veg/fine-tree.png"
 			spritecount="2"
-			scale="16"
+			scale="4"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-blue.png"
 		cloudscrollrate="0"
@@ -96,11 +96,11 @@
 		watertexture="/textures/water/ice-water.png"
 		alpha="0.8"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="4, 4" targettime="257">
 		<startposition pos="483, 459" oridegrees="153" />
 		<checkpoint coords="480, 455" notes="flat left into easy right into square left"/>

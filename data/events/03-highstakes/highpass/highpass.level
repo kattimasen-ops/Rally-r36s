@@ -25,7 +25,7 @@
 			density="0.002"
 			sprite="/textures/veg/ivy.png"
 			spritecount="2"
-			scalemax="-1.5"
+			scale="1.0"
 			/>
 
 		<foliageband
@@ -34,7 +34,7 @@
 			density="0.0005"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
 
 		<foliageband
@@ -43,7 +43,7 @@
 			density="0.0003"
 			sprite="/textures/veg/palmy.png"
 			spritecount="2"
-			scalemax="-2.0"
+			scale="0.25"
 			/>
 	</terrain>
 
