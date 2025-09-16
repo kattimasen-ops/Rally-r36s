@@ -25,6 +25,7 @@
 			density="0.0015"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
 	
@@ -40,7 +41,7 @@
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	
-	<race coordscale="3.2, 3.2" targettime="253">
+	<race coordscale="3.2, 3.2" targettime="253" codrivercpmode="free">
 		
 		<startposition pos="513, 475" oridegrees="90" />
 		<checkpoint coords="465, 455" />

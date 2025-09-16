@@ -32,6 +32,7 @@
       sprite="/textures/veg/fine-tree.png"
       spritecount="1"
       scale="26"
+      scalemax="2.0"
   />
   <foliageband
       middle="0.5"
@@ -40,6 +41,7 @@
       sprite="/textures/veg/bush-low.png"
       spritecount="1"
       scale="10"
+      scalemax="2.0"
   />
   <foliageband
       middle="0.25"
@@ -48,6 +50,7 @@
       sprite="/textures/veg/palm-tree2.png"
       spritecount="2"
       scale="24"
+      scalemax="2.0"
   />
 
 

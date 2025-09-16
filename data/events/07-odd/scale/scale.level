@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Scale"
 	comment="Don't mind the gap!"
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.00003"
 			sprite="/textures/veg/mais.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.0007"
 			sprite="/textures/veg/palmy.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -41,6 +43,7 @@
 			density="0.0003"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -49,6 +52,7 @@
 			density="0.0006"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -64,7 +68,7 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 
-	<race coordscale="3, 3" targettime="310">
+	<race coordscale="3, 3" targettime="310" codrivercpmode="free">
 		<startposition pos="438, -327" oridegrees="140" />
 		<checkpoint coords="104, -392" />
 		<checkpoint coords="82, -235" />

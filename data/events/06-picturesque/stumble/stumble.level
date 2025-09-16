@@ -25,6 +25,7 @@
 			density="0.0005"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 		
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.000008"
 			sprite="/textures/veg/cactus1.png"
 			spritecount="2"
+			scalemax="2.0"
 			/>
 	</terrain>
 	
@@ -48,7 +50,7 @@
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	
-	<race coordscale="2, 2" targettime="273.0">
+	<race coordscale="2, 2" targettime="273.0" codrivercpmode="free">
 		
 		<startposition pos="333, 1" oridegrees="0" />
 		<checkpoint coords="413, 206" />

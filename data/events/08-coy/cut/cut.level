@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Cut"
 	comment="Some jumps are traps."
 	author="Onsemeliot"
 	description="rough rocks along the road, harsh turns"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,13 +18,14 @@
 		horizontalscale="2.5"
 		verticalscale="0.12"
 		>
-		
+
 		<foliageband
 			middle="0.7"
 			range="0.25"
 			density="0.0001"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 		<foliageband
 			middle="0.8"
@@ -32,6 +33,7 @@
 			density="0.0002"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 		<foliageband
 			middle="0.5"
@@ -39,6 +41,7 @@
 			density="0.001"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 		<foliageband
 			middle="0.8"
@@ -46,9 +49,10 @@
 			density="0.0003"
 			sprite="/textures/veg/grain.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-blue.png"
 		cloudscrollrate="0.002"
@@ -56,13 +60,13 @@
 		fogdensity="0.001"
 		fogdensitysky="0.9"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2.5, 2.5" targettime="350">
-		
+
+	<race coordscale="2.5, 2.5" targettime="350" codrivercpmode="free">
+
 		<startposition pos="49, 447" oridegrees="190" />
 		<checkpoint coords="72, 372" />
 		<checkpoint coords="32, 205" />
@@ -122,5 +126,5 @@
 		<codrivercp coords="101, 476" notes="medium left over finish" />
 
 	</race>
-	
+
 </level>

@@ -1,23 +1,32 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Crusted Snow"
 	comment="Don't skid!"
 	author="Onsemeliot"
 	description="fast, smooth, alternative routes"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
 		roadmap="r.png"
 		colormap="c.png"
+		foliagemap="f.png"
 		hudmap="m.png"
 		tilesize="64"
 		horizontalscale="5"
 		verticalscale="1.2"
 		>
-
+			<foliageband
+			middle="0.4"
+			range="0.2"
+			density="0.00012"
+			sprite="/textures/veg/thin-bush.png"
+			spritecount="2"
+			scale="1"
+			scalemax="-2.0"
+			/>
 		<blurfilter>
 			<row data="0.01001 0.01001 0.01001 0.01001 0.01001" />
 			<row data="0.01001 0.01001 0.01001 0.01001 0.01001" />
@@ -26,7 +35,7 @@
 			<row data="0.01001 0.01001 0.01001 0.01001 0.01001" />
 		</blurfilter>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-blue.png"
 		cloudscrollrate="0"
@@ -34,13 +43,13 @@
 		fogdensity="0.008"
 		fogdensitysky="1"
 		/>
-	
+
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
-	<race coordscale="5, 5" targettime="465">
-		
+
+	<race coordscale="5, 5" targettime="465" codrivercpmode="free">
+
 		<startposition pos="268, 412" oridegrees="187" />
 		<checkpoint coords="191, 297" />
 		<checkpoint coords="163, 393" />
@@ -98,5 +107,5 @@
 		<codrivercp coords="190, 439" notes="medium right over finish" />
 
 	</race>
-	
+
 </level>

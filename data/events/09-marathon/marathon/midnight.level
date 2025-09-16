@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Midnight Endeavor"
 	comment="Hurry up!"
 	author="Onsemeliot"
 	description="curvy but smooth, tricky turns, dark"
 	screenshot="midnight.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -25,6 +25,7 @@
 			density="0.0003"
 			sprite="/textures/veg/post.png"
 			spritecount="2"
+			scalemax="0.0"
 			/>
 
 		<foliageband
@@ -33,9 +34,10 @@
 			density="0.0001"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/stars.jpg"
 		cloudscrollrate="0.00"
@@ -48,14 +50,14 @@
 		height="3"
 		watertexture="/textures/water/dark-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
+
 	<race coordscale="5, 5"
 		targettime="400">
-		
+
 		<startposition pos="591, 472" oridegrees="187" />
 		<checkpoint coords="631, 445" />
 		<checkpoint coords="762, 488" />
@@ -93,7 +95,7 @@
 		<checkpoint coords="719, 902" />
 		<checkpoint coords="760, 948" />
 		<checkpoint coords="748, 1077" />
-		
+
 	</race>
-	
+
 </level>

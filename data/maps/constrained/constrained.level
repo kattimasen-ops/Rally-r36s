@@ -11,6 +11,7 @@
 		heightmap="h.png"
 		colormap="c.png"
 		hudmap="c.png"
+		foliagemap="f.png"
 		roadmap="r.png"
 		terrainmap="t.png"
 		tilesize="64"
@@ -19,19 +20,22 @@
 		>
 
 		<foliageband
-			middle="0.3"
-			range="0.3"
-			density="0.000003"
-			sprite="/textures/veg/cactus1.png"
+			middle="0.5"
+			range="0.42"
+			density="0.0001"
+			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="2.0"
 			/>
 
 		<foliageband
-			middle="0.5"
-			range="0.4"
-			density="0.00001"
-			sprite="/textures/veg/bush-dry.png"
+			middle="0.2"
+			range="0.15"
+			density="0.00003"
+			sprite="/textures/veg/dusty-bush.png"
 			spritecount="2"
+			scale="3.0"
+			scalemax="-2.0"
 			/>
 
 		<blurfilter>

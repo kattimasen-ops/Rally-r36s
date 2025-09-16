@@ -33,7 +33,8 @@
       density="0.0002"
       sprite="/textures/veg/horse-chestnut-tree.png"
       spritecount="2"
-      scale="14"
+      scale="10"
+      scalemax="2.0"
     />
     <foliageband
       middle="0.9"
@@ -41,7 +42,8 @@
       density="0.0005"
       sprite="/textures/veg/horse-chestnut-tree.png"
       spritecount="2"
-      scale="10"
+      scale="7"
+      scalemax="2.0"
     />
 
     <foliageband
@@ -51,6 +53,7 @@
       sprite="/textures/veg/grass2.png"
       spritecount="1"
       scale="0.25"
+      scalemax="2.0"
     />
 
     <foliageband
@@ -60,6 +63,7 @@
       sprite="/textures/veg/olive-bush.png"
       spritecount="1"
       scale="1.5"
+      scalemax="2.0"
     />
 
     <roadsign sprite="/textures/structures/Start.png" scale="13">

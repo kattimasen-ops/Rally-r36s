@@ -25,7 +25,8 @@
 			density="0.00035"
 			sprite="/textures/veg/post.png"
 			spritecount="2"
-			scale="0.0"
+			scale="1.0"
+			scalemax="0.0"
 			/>
 
 		<foliageband
@@ -34,6 +35,7 @@
 			density="0.0006"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
 

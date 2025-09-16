@@ -12,11 +12,21 @@
 		terrainmap="t.png"
 		roadmap="r.png"
 		colormap="c.png"
+		foliagemap="f.png"
 		hudmap="m.png"
 		tilesize="64"
 		horizontalscale="3"
 		verticalscale="0.2"
 		>
+			<foliageband
+			middle="0.7"
+			range="0.2"
+			density="0.00012"
+			sprite="/textures/veg/grass7.png"
+			spritecount="2"
+			scale="1"
+			scalemax="-2.0"
+			/>
 	</terrain>
 	
 	<weather
@@ -31,7 +41,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	
-	<race coordscale="3, 3" targettime="277.0">
+	<race coordscale="3, 3" targettime="277.0" codrivercpmode="free">
 		
 		<startposition pos="483, 430" oridegrees="185" />
 		<checkpoint coords="466, 362" />

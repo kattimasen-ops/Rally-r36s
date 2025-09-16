@@ -1,4 +1,4 @@
-    <?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <level
 	name="Tricky"
 	comment="Caution!"
@@ -26,6 +26,7 @@
 			sprite="/textures/veg/flow-branches.png"
 			spritecount="2"
 			scale="4"
+			scalemax="2.0"
 			/>
 
 		<foliageband
@@ -35,6 +36,7 @@
 			sprite="/textures/veg/grain.png"
 			spritecount="1"
 			scale="0.5"
+			scalemax="2.0"
 			/>
 	</terrain>
 

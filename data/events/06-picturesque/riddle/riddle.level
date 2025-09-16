@@ -12,11 +12,21 @@
 		terrainmap="t.png"
 		roadmap="r.png"
 		colormap="c.png"
+		foliagemap="f.png"
 		hudmap="c.png"
 		tilesize="32"
 		horizontalscale="4"
 		verticalscale="0.14"
 		>
+			<foliageband
+			middle="0.7"
+			range="0.2"
+			density="0.000012"
+			sprite="/textures/veg/thin-bush.png"
+			spritecount="2"
+			scale="1"
+			scalemax="-2.0"
+			/>
 	</terrain>
 	
 	<weather

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Freeride"
 	comment="This should be a fun ride."
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.00003"
 			sprite="/textures/veg/cactus1.png"
 			spritecount="2"
+			scalemax="2.0"
 			/>
 
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.0004"
 			sprite="/textures/veg/grain.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -41,6 +43,7 @@
 			density="0.0003"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -56,7 +59,7 @@
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 
-	<race coordscale="4, 4" targettime="281">
+	<race coordscale="4, 4" targettime="281" codrivercpmode="free">
 		<startposition pos="256, 0" oridegrees="297" />
 		<checkpoint coords="501, 84" />
 		<checkpoint coords="345, 202" />

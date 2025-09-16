@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Wet Ponds"
 	comment="No Bathing!"
 	author="Onsemeliot"
 	description="slow, very curvy, partly elevated road"
 	screenshot="wet.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -25,6 +25,7 @@
 			density="0.00035"
 			sprite="/textures/veg/post.png"
 			spritecount="2"
+			scalemax="0.0"
 			/>
 
 		<foliageband
@@ -33,9 +34,10 @@
 			density="0.0004"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		cloudscrollrate="0.02"
@@ -49,14 +51,14 @@
 		height="6"
 		watertexture="/textures/water/dark-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
+
 	<race coordscale="4.5, 4.5"
 		targettime="180">
-		
+
 		<startposition pos="126, 926" oridegrees="195" />
 		<checkpoint coords="146, 889" />
 		<checkpoint coords="164, 880" />
@@ -82,7 +84,7 @@
 		<checkpoint coords="9, 922" />
 		<checkpoint coords="-20, 917" />
 		<checkpoint coords="-32, 887" />
-		
+
 	</race>
-	
+
 </level>

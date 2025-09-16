@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Borderline"
 	comment="More than rocky. Isn't it?"
 	author="Onsemeliot"
 	description="slow, tortuous road, massive rocks"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,13 +18,14 @@
 		horizontalscale="3"
 		verticalscale="0.25"
 		>
-		
+
 		<foliageband
 			middle="0.8"
 			range="0.10"
 			density="0.00015"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 		<foliageband
 			middle="0.8"
@@ -32,6 +33,7 @@
 			density="0.0002"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 		<foliageband
 			middle="0.5"
@@ -39,6 +41,7 @@
 			density="0.0005"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 		<foliageband
 			middle="0.45"
@@ -46,9 +49,10 @@
 			density="0.0002"
 			sprite="/textures/veg/grain.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast-blue.jpg"
 		cloudscrollrate="0.001"
@@ -61,13 +65,13 @@
 		height="5"
 		watertexture="/textures/water/black-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="3, 3" targettime="740" codrivercpmode="ordered">
-		
+
 		<startposition pos="565, 195" oridegrees="170" />
 		<checkpoint coords="562, 138" />
 		<checkpoint coords="818, 149" />
@@ -90,7 +94,7 @@
 		<checkpoint coords="417, 712" />
 		<checkpoint coords="490, 662" />
 		<checkpoint coords="539, 670" />
-		
+
 		<codrivercp coords="566, 192" notes="chicane right" />
 		<codrivercp coords="559, 156" notes="hard left into square right" />
 		<codrivercp coords="557, 128" notes="medium left into chicane left" />

@@ -30,7 +30,8 @@
       density="0.001"
       sprite="/textures/veg/thick-tree.png"
       spritecount="1"
-      scale="30"
+      scale="23"
+      scalemax="2.0"
   />
   <foliageband
       middle="0.5"
@@ -38,7 +39,8 @@
       density="0.01"
       sprite="/textures/veg/bush-low.png"
       spritecount="2"
-      scale="2"
+      scale="1.5"
+      scalemax="2.0"
   />
 
   <roadsign sprite="/textures/structures/Start.png" scale="20">

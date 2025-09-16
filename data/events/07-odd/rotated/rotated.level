@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Rotated"
 	comment="Doesn't this look famillar?"
 	author="Onsemeliot"
@@ -25,6 +25,7 @@
 			density="0.0003"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.0001"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="1"
+			scalemax="-2.0"
 			/>
 	</terrain>
 
@@ -48,7 +50,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="5, 5" targettime="275">
+	<race coordscale="5, 5" targettime="275" codrivercpmode="free">
 		<startposition pos="438, 698" oridegrees="140" />
 		<checkpoint coords="156, 677" />
 		<checkpoint coords="225, 783" />

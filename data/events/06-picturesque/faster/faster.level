@@ -25,6 +25,7 @@
 			density="0.00015"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
+			scalemax="-2.0"
 			/>
 		
 		<foliageband
@@ -33,6 +34,7 @@
 			density="0.0015"
 			sprite="/textures/veg/ivy.png"
 			spritecount="1"
+			scalemax="1.5"
 			/>
 	</terrain>
 	
@@ -48,7 +50,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 	
-	<race coordscale="3.5, 3.5" targettime="143">
+	<race coordscale="3.5, 3.5" targettime="143" codrivercpmode="free">
 		
 		<startposition pos="393, 3" oridegrees="0" />
 		<checkpoint coords="370, 200" />
