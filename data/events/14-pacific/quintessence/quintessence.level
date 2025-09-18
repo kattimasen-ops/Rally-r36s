@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Quintessence"
 	comment="What's the essence of this?"
 	author="Onsemeliot"
 	description="adventurous up and down, curvy"
 	screenshot="ss.jpg"
 	minimap="mm.jpg">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.jpg"
@@ -18,23 +18,25 @@
 		horizontalscale="3"
 		verticalscale="0.15"
 		>
-		
+
 		<foliageband
 			middle="0.49"
 			range="0.47"
 			density="0.0005"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scale="0.25"
 			/>
-		
+
 		<foliageband
 			middle="0.6"
 			range="0.4"
 			density="0.0001"
 			sprite="/textures/veg/grain.png"
 			spritecount="2"
+			scale="0.25"
 			/>
-		
+
 		<foliageband
 			middle="0.7"
 			range="0.3"
@@ -43,7 +45,7 @@
 			spritecount="2"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-blue.png"
 		cloudscrollrate="0"
@@ -51,12 +53,12 @@
 		fogdensity="0.002"
 		fogdensitysky="0.9"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3, 3" targettime="319">
+
+	<race coordscale="3, 3" targettime="319" codrivercpmode="free">
 
 		<startposition pos="463, 348" oridegrees="0" />
 		<checkpoint coords="456, 441" />
@@ -111,5 +113,5 @@
 		<codrivercp coords="455, 309" notes="over finish" />
 
 	</race>
-	
+
 </level>

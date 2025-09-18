@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Southern"
 	comment="Consider the state of the road!"
 	author="Onsemeliot"
 	description="dirt and gravel road, hilly terrain"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -30,7 +30,7 @@
 			range="0.37"
 			density="0.00006"
 			sprite="/textures/veg/thick-leafes.png"
-			spritecount="2"
+			spritecount="1"
 			/>
 		<foliageband
 			middle="0.5"
@@ -38,7 +38,7 @@
 			density="0.00003"
 			sprite="/textures/veg/mais.png"
 			spritecount="2"
-			scale="3"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.55"
@@ -54,7 +54,7 @@
 			density="0.000001"
 			sprite="/textures/veg/palm3.png"
 			spritecount="2"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.62"
@@ -62,7 +62,7 @@
 			density="0.000002"
 			sprite="/textures/veg/palm4.png"
 			spritecount="2"
-			scale="7"
+			scale="4"
 			/>
 		<foliageband
 			middle="0.69"
@@ -70,7 +70,7 @@
 			density="0.000002"
 			sprite="/textures/veg/palm-tree2.png"
 			spritecount="2"
-			scale="13"
+			scale="7"
 			/>
 		<foliageband
 			middle="0.7"
@@ -81,7 +81,7 @@
 			scale="2"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/light-clouds.jpg"
 		cloudscrollrate="0.002"
@@ -98,8 +98,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3, 3" targettime="540">
+
+	<race coordscale="3, 3" targettime="540" codrivercpmode="free">
 		<startposition pos="946, 260" oridegrees="0" />
 		<checkpoint coords="948, 300" notes="flat left" />
 		<checkpoint coords="920, 420" notes="over jump into square right" />

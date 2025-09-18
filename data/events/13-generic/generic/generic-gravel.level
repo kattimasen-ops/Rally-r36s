@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Gravel"
 	comment="Morning rush"
 	author="Onsemeliot"
 	description="gravel, tarmac and dirt; curvy with some jumps"
 	screenshot="ss-gravel.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -32,7 +32,7 @@
 			density="0.000002"
 			sprite="/textures/veg/palm4.png"
 			spritecount="2"
-			scale="9"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.1"
@@ -40,14 +40,14 @@
 			density="0.000007"
 			sprite="/textures/veg/dusty-bush.png"
 			spritecount="2"
-			scale="1"
+			scale="0.5"
 			/>
 		<foliageband
 			middle="0.58"
 			range="0.23"
 			density="0.0001"
 			sprite="/textures/veg/bush-low.png"
-			spritecount="2"
+			spritecount="1"
 			/>
 		<foliageband
 			middle="0.6"
@@ -55,7 +55,7 @@
 			density="0.000001"
 			sprite="/textures/veg/willow.png"
 			spritecount="2"
-			scale="5"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.65"
@@ -63,7 +63,7 @@
 			density="0.0001"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
-			scale="1.2"
+			scale="0.6"
 			/>
 		<foliageband
 			middle="0.7"
@@ -79,7 +79,7 @@
 			density="0.00005"
 			sprite="/textures/veg/thick-leafes.png"
 			spritecount="2"
-			scale="0.8"
+			scale="0.4"
 			/>
 		<foliageband
 			middle="0.85"
@@ -95,7 +95,7 @@
 			density="0.000003"
 			sprite="/textures/veg/color-tree7.png"
 			spritecount="2"
-			scale="16"
+			scale="8"
 			/>
 
 		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
@@ -105,7 +105,7 @@
 			<location coords="945, 1012" oridegrees="250" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/cloudy.png"
 		cloudscrollrate="0.002"
@@ -117,7 +117,7 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="3, 3" targettime="310">
 		<startposition pos="1700, 811" oridegrees="105" />
 		<checkpoint coords="1691, 806" notes="medium right" />

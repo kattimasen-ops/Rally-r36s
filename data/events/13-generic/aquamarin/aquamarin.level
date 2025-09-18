@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Aquamarin"
 	comment="into the blue ..."
 	author="Onsemeliot"
 	description="fast on dirt with jumps and tight turns"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -31,7 +31,7 @@
 			density="0.0003"
 			sprite="/textures/veg/thick-leafes.png"
 			spritecount="2"
-			scale="0.7"
+			scale="0.3"
 			/>
 		<foliageband
 			middle="0.4"
@@ -39,7 +39,7 @@
 			density="0.001"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
-			scale="0.5"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.66"
@@ -47,7 +47,7 @@
 			density="0.00003"
 			sprite="/textures/veg/bush.png"
 			spritecount="2"
-			scale="2"
+			scale="0.5"
 			/>
 		<foliageband
 			middle="0.7"
@@ -55,7 +55,7 @@
 			density="0.00001"
 			sprite="/textures/veg/willow.png"
 			spritecount="2"
-			scale="5"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.76"
@@ -63,7 +63,7 @@
 			density="0.000005"
 			sprite="/textures/veg/brown-tree.png"
 			spritecount="2"
-			scale="8"
+			scale="4"
 			/>
 		<foliageband
 			middle="0.8"
@@ -71,7 +71,7 @@
 			density="0.000002"
 			sprite="/textures/veg/palm-tree2.png"
 			spritecount="2"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.9"
@@ -79,10 +79,10 @@
 			density="0.000003"
 			sprite="/textures/veg/palm4.png"
 			spritecount="2"
-			scale="7"
+			scale="4"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dawn.jpg"
 		cloudscrollrate="0.002"
@@ -98,8 +98,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="4, 4" targettime="610">
+
+	<race coordscale="4, 4" targettime="610" codrivercpmode="free">
 		<startposition pos="945, 260" oridegrees="180" />
 		<checkpoint coords="946, 240" notes="easy right" />
 		<checkpoint coords="922, 160" notes="hard right into medium left" />
