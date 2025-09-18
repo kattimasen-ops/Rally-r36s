@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Wet Woods"
 	comment="Stay on dry ground!"
 	author="Onsemeliot"
 	description="narrow dirt road, muddy roadside, low light"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -25,7 +25,7 @@
 			density="0.000022"
 			sprite="/textures/veg/tree-shape4.png"
 			spritecount="2"
-			scale="9"
+			scale="4"
 			/>
 		<foliageband
 			middle="0.53"
@@ -33,7 +33,7 @@
 			density="0.00006"
 			sprite="/textures/veg/tree-shape3.png"
 			spritecount="2"
-			scale="12"
+			scale="6"
 			/>
 		<foliageband
 			middle="0.3"
@@ -41,7 +41,7 @@
 			density="0.00008"
 			sprite="/textures/veg/tree-shape5.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.33"
@@ -49,10 +49,10 @@
 			density="0.0001"
 			sprite="/textures/veg/tree-shape4.png"
 			spritecount="2"
-			scale="4"
+			scale="2"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-clouds.png"
 		cloudscrollrate="0.001"
@@ -61,12 +61,12 @@
 		fogdensitysky="1.2"
 		rain="50"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3, 3" targettime="246">
+
+	<race coordscale="3, 3" targettime="246" codrivercpmode="free">
 		<startposition pos="53, 247" oridegrees="0" />
 		<checkpoint coords="52, 263" notes="easy right into easy left" />
 		<checkpoint coords="59, 385" notes="medium right long" />

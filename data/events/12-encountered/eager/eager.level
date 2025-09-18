@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Eager"
 	comment="Chase the clouds!"
 	author="Onsemeliot"
 	description="smooth on dry tarmac and gravel"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -24,14 +24,14 @@
 			<row data="0.004 0.004 0.004 0.004" />
 			<row data="0.004 0.004 0.004 0.004" />
 		</blurfilter>
-		
+
 		<foliageband
 			middle="0.63"
 			range="0.4"
 			density="0.0005"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
-			scale="0.4"
+			scale="0.2"
 			/>
 		<foliageband
 			middle="0.5"
@@ -39,7 +39,7 @@
 			density="0.0000003"
 			sprite="/textures/veg/spruce-little.png"
 			spritecount="2"
-			scale="4"
+			scale="2"
 			/>
 		<foliageband
 			middle="0.8"
@@ -47,10 +47,10 @@
 			density="0.0000004"
 			sprite="/textures/veg/wide-tree2.png"
 			spritecount="2"
-			scale="6"
+			scale="4"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/cloudy2.jpg"
 		cloudscrollrate="0.004"
@@ -58,12 +58,12 @@
 		fogdensity="0.002"
 		fogdensitysky="1"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3.7, 3.7" targettime="292">
+
+	<race coordscale="3.7, 3.7" targettime="292" codrivercpmode="free">
 		<startposition pos="7, 244" oridegrees="276" />
 		<checkpoint coords="14, 244" notes="medium left into hard right" />
 		<checkpoint coords="76, 264" notes="medium left into medium right" />

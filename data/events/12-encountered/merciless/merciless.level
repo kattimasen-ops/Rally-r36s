@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Merciless Heat"
 	comment="Through the dust of time!"
 	author="Onsemeliot"
 	description="fast tight gravel road, loose sand terrain"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -24,7 +24,7 @@
 			density="0.0008"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
-			scale="0.5"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.7"
@@ -40,7 +40,7 @@
 			density="0.000002"
 			sprite="/textures/veg/brown-tree.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.3"
@@ -48,7 +48,7 @@
 			density="0.000002"
 			sprite="/textures/veg/palm-tree2.png"
 			spritecount="3"
-			scale="12"
+			scale="6"
 			/>
 		<foliageband
 			middle="0.4"
@@ -56,7 +56,7 @@
 			density="0.000003"
 			sprite="/textures/veg/palm3.png"
 			spritecount="2"
-			scale="7"
+			scale="4"
 			/>
 		<foliageband
 			middle="0.7"
@@ -64,7 +64,7 @@
 			density="0.000004"
 			sprite="/textures/veg/palm4.png"
 			spritecount="2"
-			scale="8"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.4"
@@ -72,7 +72,7 @@
 			density="0.0000015"
 			sprite="/textures/veg/wide-tree2.png"
 			spritecount="2"
-			scale="5"
+			scale="4"
 			/>
 		<foliageband
 			middle="0.5"
@@ -80,10 +80,10 @@
 			density="0.0000012"
 			sprite="/textures/veg/purple-leaf-plum.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/light-clouds.jpg"
 		cloudscrollrate="0.003"
@@ -91,12 +91,12 @@
 		fogdensity="0.01"
 		fogdensitysky="0.9"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3.2, 3.2" targettime="179">
+
+	<race coordscale="3.2, 3.2" targettime="179" codrivercpmode="free">
 		<startposition pos="84, 78" oridegrees="0" />
 		<checkpoint coords="83, 96" notes="flat left into medium right" />
 		<checkpoint coords="33, 170" />

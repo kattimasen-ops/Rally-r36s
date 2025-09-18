@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Swiss Rain"
 comment="Don't mind the heavy rain!"
 	author="Onsemeliot"
 	description="slow narrow wet dirt road in low light"
 	screenshot="ss-rain.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h-rain.png"
 		colormap="c-rain.png"
@@ -25,7 +25,7 @@ comment="Don't mind the heavy rain!"
 			density="0.001"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.5"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.4"
@@ -41,7 +41,7 @@ comment="Don't mind the heavy rain!"
 			density="0.000003"
 			sprite="/textures/veg/spruce-little.png"
 			spritecount="2"
-			scale="2"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.6"
@@ -52,7 +52,7 @@ comment="Don't mind the heavy rain!"
 			scale="5"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-clouds.png"
 		cloudscrollrate="0.003"
@@ -66,12 +66,12 @@ comment="Don't mind the heavy rain!"
 		watertexture="/textures/water/black-water.png"
 		height="8"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2.5, 2.5" targettime="159">
+
+	<race coordscale="2.5, 2.5" targettime="159" codrivercpmode="free">
 		<startposition pos="411, 426" oridegrees="260" />
 		<checkpoint coords="425, 421" notes="easy left" />
 		<checkpoint coords="605, 489" notes="easy right" />

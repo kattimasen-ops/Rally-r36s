@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Meteor"
 	comment="The scar sur-face"
 	author="Onsemeliot"
 	description="fast, tight corners and jumps on gravel"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -24,7 +24,7 @@
 			range="0.2"
 			density="0.00006"
 			sprite="/textures/veg/big-bush.png"
-			spritecount="2"
+			spritecount="1"
 			/>
 		<foliageband
 			middle="0.89"
@@ -32,7 +32,7 @@
 			density="0.00008"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
-			scale="0.7"
+			scale="0.3"
 			/>
 		<foliageband
 			middle="0.89"
@@ -40,7 +40,7 @@
 			density="0.00007"
 			sprite="/textures/veg/thorn-bush.png"
 			spritecount="3"
-			scale="1.2"
+			scale="0.6"
 			/>
 		<foliageband
 			middle="0.7"
@@ -48,10 +48,10 @@
 			density="0.0012"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
-			scale="0.6"
+			scale="0.3"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-blue.png"
 		cloudscrollrate="0.001"
@@ -59,12 +59,12 @@
 		fogdensity="0.003"
 		fogdensitysky="0.5"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3, 3" targettime="331">
+
+	<race coordscale="3, 3" targettime="331" codrivercpmode="free">
 		<startposition pos="207, 328" oridegrees="332" />
 		<checkpoint coords="227, 367" notes="easy right into hard right" />
 		<checkpoint coords="307, 435" />

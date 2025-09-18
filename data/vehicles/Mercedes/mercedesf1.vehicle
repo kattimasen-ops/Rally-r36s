@@ -61,7 +61,7 @@
 	<!--"final": 2.222, "forward":[2.67, 1.75, 1.43, 1.07, 0.83],"reverse":2.222
 -->
 		<gearbox>
-			<gear absolute="0.0752" />
+			<gear absolute="0.0654" />
 			<gear relative="1.526" />
 			<gear relative="1.224" />
 			<gear relative="1.336" />
@@ -78,10 +78,10 @@
 		model="mercedes.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.38" brake1="500.0" pos="0.665, 1.35, 0.11" radius="0.33" force="35000.0" dampening="19000.0" friction="0.023"/>
-		<wheel drive="0.0" steer="0.38" brake1="500.0" pos="-0.665, 1.35, 0.11" radius="0.33" force="35000.0" dampening="19000.0" friction="0.023"/>
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.679, -1.0, 0.13" radius="0.33" force="40000.0" dampening="15000.0" brake2="1000.0" friction="0.027"/>
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.679, -1.0, 0.13" radius="0.33" force="40000.0" dampening="15000.0" brake2="1000.0" friction="0.027"/>
+		<wheel drive="0.0" steer="0.35" brake1="500.0" pos="0.665, 1.35, 0.11" radius="0.356" force="35000.0" dampening="19000.0" friction="0.023"/>
+		<wheel drive="0.0" steer="0.35" brake1="500.0" pos="-0.665, 1.35, 0.11" radius="0.356" force="35000.0" dampening="19000.0" friction="0.023"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.679, -1.0, 0.13" radius="0.38" force="40000.0" dampening="15000.0" brake2="1000.0" friction="0.027"/>
+		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.679, -1.0, 0.13" radius="0.38" force="40000.0" dampening="15000.0" brake2="1000.0" friction="0.027"/>
 
 		<clip type="body" pos="0.76, 2.12, 0.7" force="80000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.76, 2.12, 0.7" force="80000.0" dampening="25000.0" />

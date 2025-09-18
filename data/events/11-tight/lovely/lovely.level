@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Lovely"
 	comment="Concentration is key."
 	author="Onsemeliot"
 	description="curvy dirt road with steep hills"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -31,7 +31,7 @@
 			density="0.000006"
 			sprite="/textures/veg/color-tree7.png"
 			spritecount="2"
-			scale="14"
+			scale="7"
 			/>
 		<foliageband
 			middle="0.8"
@@ -39,7 +39,7 @@
 			density="0.00002"
 			sprite="/textures/veg/spruce.png"
 			spritecount="2"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.3"
@@ -47,7 +47,7 @@
 			density="0.000015"
 			sprite="/textures/veg/fir.png"
 			spritecount="2"
-			scale="9"
+			scale="7"
 			/>
 		<foliageband
 			middle="0.4"
@@ -55,10 +55,10 @@
 			density="0.002"
 			sprite="/textures/veg/grain.png"
 			spritecount="2"
-			scale="1"
+			scale="0.25"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-clouds.png"
 		cloudscrollrate="0.001"
@@ -72,12 +72,12 @@
 		alpha="0.9"
 		watertexture="/textures/water/black-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="4, 4" targettime="554">
+
+	<race coordscale="4, 4" targettime="554" codrivercpmode="free">
 		<startposition pos="436, 395" oridegrees="80" />
 		<checkpoint coords="432, 396" notes="flat right into easy left" />
 		<checkpoint coords="369, 416" notes="over jump into medium left into hard right" />

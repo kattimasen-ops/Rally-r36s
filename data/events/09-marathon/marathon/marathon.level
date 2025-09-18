@@ -57,7 +57,7 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 
 	<race coordscale="4.5, 4.5"
-		targettime="1360">
+		targettime="1360" codrivercpmode="free">
 
 		<startposition pos="124, 2" oridegrees="0" />
 		<checkpoint coords="140, 25" />

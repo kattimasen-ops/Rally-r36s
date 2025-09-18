@@ -32,7 +32,7 @@
 			density="0.0001"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
-			scale="0.4"
+			scale="0.2"
 			/>
 		<foliageband
 			middle="0.7"
@@ -40,7 +40,7 @@
 			density="0.00004"
 			sprite="/textures/veg/grain.png"
 			spritecount="2"
-			scale="0.6"
+			scale="0.3"
 			/>
 		<foliageband
 			middle="0.6"
@@ -76,7 +76,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="2.5, 2.5" targettime="246">
+	<race coordscale="2.5, 2.5" targettime="246" codrivercpmode="free">
 		<startposition pos="628, 304" oridegrees="320" />
 		<checkpoint coords="644, 328" notes="medium right" />
 		<checkpoint coords="844, 338" notes="hard left long" />

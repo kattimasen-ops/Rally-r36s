@@ -31,7 +31,7 @@
 			density="0.0005"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.4"
+			scale="0.2"
 			/>
 		<foliageband
 			middle="0.22"
@@ -39,7 +39,7 @@
 			density="0.000007"
 			sprite="/textures/veg/needle.png"
 			spritecount="2"
-			scale="3"
+			scale="1.5"
 			/>
 		<foliageband
 			middle="0.2"
@@ -47,7 +47,7 @@
 			density="0.000006"
 			sprite="/textures/veg/spruce-little.png"
 			spritecount="2"
-			scale="4"
+			scale="2"
 			/>
 		<foliageband
 			middle="0.3"
@@ -90,7 +90,7 @@
 			scale="6"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="354, 364" oridegrees="180" />
 			<location coords="336, 378" oridegrees="230" />
 			<location coords="288, 358" oridegrees="275" />
@@ -101,20 +101,20 @@
 			<location coords="496, 491" oridegrees="273" />
 			<location coords="500, 481" oridegrees="210" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="2">
 			<location coords="42, 57" oridegrees="345" />
 			<location coords="470, 489" oridegrees="265" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/bended.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/bended.png" scale="2">
 			<location coords="312, 149" oridegrees="350" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/deer.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/deer.png" scale="2">
 			<location coords="422, 259" oridegrees="0" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/rocks.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/rocks.png" scale="2">
 			<location coords="302, 370" oridegrees="90" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/junccurve.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/junccurve.png" scale="2">
 			<location coords="312, 427" oridegrees="355" />
 			<location coords="412, 283" oridegrees="0" />
 		</roadsign>
@@ -132,7 +132,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="3.5, 3.5" targettime="297">
+	<race coordscale="3.5, 3.5" targettime="297" codrivercpmode="free">
 		<startposition pos="69, 208" oridegrees="174" />
 		<checkpoint coords="67, 200" notes="flat left into flat right" />
 		<checkpoint coords="53, 140" notes="flat right" />

@@ -101,7 +101,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="4, 4" targettime="257">
+	<race coordscale="4, 4" targettime="257" codrivercpmode="free">
 		<startposition pos="483, 459" oridegrees="153" />
 		<checkpoint coords="480, 455" notes="flat left into easy right into square left"/>
 		<checkpoint coords="465, 413" notes="square right into square left over snow"/>

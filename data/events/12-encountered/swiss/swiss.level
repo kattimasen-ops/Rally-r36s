@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Swiss"
 	comment="Precise control is a necessity."
 	author="Onsemeliot"
 	description="tarmac and dirt, precise handling needed"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -32,7 +32,7 @@
 			density="0.001"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.5"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.4"
@@ -48,7 +48,7 @@
 			density="0.000003"
 			sprite="/textures/veg/spruce-little.png"
 			spritecount="2"
-			scale="2"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.6"
@@ -59,7 +59,7 @@
 			scale="5"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="734, 267" oridegrees="140" />
 			<location coords="727, 269" oridegrees="90" />
 			<location coords="654, 314" oridegrees="195" />
@@ -137,17 +137,17 @@
 			<location coords="1003, 593" oridegrees="140" />
 			<location coords="981, 595" oridegrees="280" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="2">
 			<location coords="665, 298" oridegrees="190" />
 			<location coords="120, 321" oridegrees="290" />
 			<location coords="183, 291" oridegrees="10" />
 			<location coords="957, 661" oridegrees="305" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/bended.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/bended.png" scale="2">
 			<location coords="763, 296" oridegrees="270" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/light-clouds.jpg"
 		cloudscrollrate="0"
@@ -160,12 +160,12 @@
 		watertexture="/textures/water/dark-water.png"
 		height="8"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2.5, 2.5" targettime="481">
+
+	<race coordscale="2.5, 2.5" targettime="481" codrivercpmode="free">
 		<startposition pos="1928, 482" oridegrees="350" />
 		<checkpoint coords="1929, 497" notes="medium left into square right" />
 		<checkpoint coords="1929, 529" notes="square left into medium left long" />
