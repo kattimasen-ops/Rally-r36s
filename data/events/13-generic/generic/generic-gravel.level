@@ -98,7 +98,7 @@
 			scale="8"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="1060, 977" oridegrees="210" />
 			<location coords="1053, 977" oridegrees="260" />
 			<location coords="958, 1010" oridegrees="200" />
@@ -118,7 +118,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="3, 3" targettime="310">
+	<race coordscale="3, 3" targettime="310" codrivercpmode="free">
 		<startposition pos="1700, 811" oridegrees="105" />
 		<checkpoint coords="1691, 806" notes="medium right" />
 		<checkpoint coords="1651, 826" notes="chicane left" />
