@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Rough"
 	comment="What a day!"
 	author="Onsemeliot"
 	description="plain but party icy on tarmac, mean turns"
 	screenshot="ss.jpg"
 	minimap="mm.jpg">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.jpg"
@@ -47,13 +47,13 @@
 			range="0.19"
 			density="0.0001"
 			sprite="/textures/veg/grass.png"
-			spritecount="1"
+			spritecount="0.25"
 			/>
-			
-		<roadsign sprite="/textures/roadsigns/rocks.png" scale="3">
+
+		<roadsign sprite="/textures/roadsigns/rocks.png" scale="2">
 			<location coords="78, 887" oridegrees="275" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/slippery.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/slippery.png" scale="2">
 			<location coords="162, 720" oridegrees="190" />
 			<location coords="62, 420" oridegrees="180" />
 			<location coords="305, 164" oridegrees="270" />
@@ -64,20 +64,20 @@
 			<location coords="972, 519" oridegrees="65" />
 			<location coords="821, 778" oridegrees="300" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="2">
 			<location coords="465, 467" oridegrees="5" />
 			<location coords="809, 34" oridegrees="40" />
 			<location coords="969, 495" oridegrees="90" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/bended.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/bended.png" scale="2">
 			<location coords="88, 292" oridegrees="185" />
 			<location coords="495, 471" oridegrees="180" />
 			<location coords="888, 302" oridegrees="295" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/zigzag.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/zigzag.png" scale="2">
 			<location coords="905, 611" oridegrees="40" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="444, 93" oridegrees="35" />
 			<location coords="463, 90" oridegrees="80" />
 			<location coords="480, 95" oridegrees="110" />
@@ -101,7 +101,7 @@
 			<location coords="981, 573" oridegrees="150" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/light-clouds.jpg"
 		cloudscrollrate="0.004"
@@ -109,12 +109,12 @@
 		fogdensity="0.002"
 		fogdensitysky="0.5"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3, 3" targettime="319">
+
+	<race coordscale="3, 3" targettime="319" codrivercpmode="free">
 		<startposition pos="12, 884" oridegrees="320" />
 		<checkpoint coords="25, 893" notes="medium right into easy left" />
 		<checkpoint coords="92, 894" notes="square right dont cut into flat left" />

@@ -78,12 +78,12 @@
         <location coords="357, 296" oridegrees=" 199" />
     </roadsign>
 
-  <roadsign sprite="/textures/veg/forest-wall.png" scale="635">
+  <roadsign sprite="/textures/veg/Forest2.png" scale="635">
         <location coords="509, 256" oridegrees="90" />
         <location coords= "3, 256" oridegrees="270" />
   </roadsign>
 
-  <roadsign sprite="/textures/veg/forest-wall.png" scale="635">
+  <roadsign sprite="/textures/veg/Forest2.png" scale="635">
         <location coords="256, 509" oridegrees="180" />
         <location coords="256,  3" oridegrees="0" />
     </roadsign>

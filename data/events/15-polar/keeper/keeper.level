@@ -6,7 +6,7 @@
 	description="fast hilly road on tarmac, ice and snow"
 	screenshot="ss.jpg"
 	minimap="mm.jpg">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.jpg"
@@ -31,7 +31,7 @@
 			density="0.0000009"
 			sprite="/textures/veg/snowy-tree.png"
 			spritecount="3"
-			scale="8"
+			scale="6"
 			/>
 		<foliageband
 			middle="0.3"
@@ -39,7 +39,7 @@
 			density="0.000008"
 			sprite="/textures/veg/snowy-spruce.png"
 			spritecount="2"
-			scale="4"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.45"
@@ -47,7 +47,7 @@
 			density="0.000012"
 			sprite="/textures/veg/bush-ash.png"
 			spritecount="2"
-			scale="2.5"
+			scale="0.5"
 			/>
 		<foliageband
 			middle="0.47"
@@ -55,7 +55,7 @@
 			density="0.0000013"
 			sprite="/textures/veg/bland-birch.png"
 			spritecount="2"
-			scale="6"
+			scale="4"
 			/>
 		<foliageband
 			middle="0.5"
@@ -63,20 +63,20 @@
 			density="0.0000016"
 			sprite="/textures/veg/snowy-spruce.png"
 			spritecount="2"
-			scale="7"
+			scale="5"
 			/>
-			
-		<roadsign sprite="/textures/roadsigns/slippery.png" scale="3">
+
+		<roadsign sprite="/textures/roadsigns/slippery.png" scale="2">
 			<location coords="43, 338" oridegrees="355" />
 			<location coords="241, 480" oridegrees="265" />
 			<location coords="429, 170" oridegrees="210" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/bended.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/bended.png" scale="2">
 			<location coords="297, 464" oridegrees="220" />
 			<location coords="434, 132" oridegrees="175" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast-blue.jpg"
 		cloudscrollrate="0.0002"
@@ -90,10 +90,10 @@
 		height="11.2"
 		watertexture="/textures/water/dark-ice-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
-	
-	<race coordscale="3.5, 3.5" targettime="298">
+
+	<race coordscale="3.5, 3.5" targettime="298" codrivercpmode="free">
 		<startposition pos="40, 324" oridegrees="0" />
 		<checkpoint coords="41, 334" notes="flat right over ice" />
 		<checkpoint coords="63, 396" notes="flat left" />

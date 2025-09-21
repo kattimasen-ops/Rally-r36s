@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Slip"
 	comment="tricky!"
 	author="Onsemeliot"
 	description="fast 3 laps on racing tarmac and ice"
 	screenshot="ss.jpg"
 	minimap="mm.jpg">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.jpg"
@@ -32,7 +32,7 @@
 			density="0.000005"
 			sprite="/textures/veg/spruce-little.png"
 			spritecount="2"
-			scale="3"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.58"
@@ -40,7 +40,7 @@
 			density="0.00001"
 			sprite="/textures/veg/fir.png"
 			spritecount="2"
-			scale="7"
+			scale="6"
 			/>
 		<foliageband
 			middle="0.66"
@@ -48,9 +48,9 @@
 			density="0.000007"
 			sprite="/textures/veg/spruce.png"
 			spritecount="2"
-			scale="5"
+			scale="4"
 			/>
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="904, 458" oridegrees="190" />
 			<location coords="884, 478" oridegrees="210" />
 			<location coords="858, 490" oridegrees="230" />
@@ -78,12 +78,12 @@
 			<location coords="902, 155" oridegrees="80" />
 			<location coords="926, 163" oridegrees="110" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/slippery.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/slippery.png" scale="2">
 			<location coords="186, 817" oridegrees="215" />
 			<location coords="424, 77" oridegrees="270" />
 		</roadsign>
 
-		<roadsign sprite="/textures/veg/post.png" scale="1.2">
+		<roadsign sprite="/textures/veg/post.png" scale="1.0">
 			<location coords="957, 275" oridegrees="0" />
 			<location coords="955, 295" oridegrees="0" />
 			<location coords="952, 315" oridegrees="0" />
@@ -277,7 +277,7 @@
 			<location coords="953, 209" oridegrees="0" />
 			<location coords="957, 233" oridegrees="0" />
 			<location coords="958, 255" oridegrees="0" />
-			
+
 			<location coords="946, 275" oridegrees="0" />
 			<location coords="944, 295" oridegrees="0" />
 			<location coords="941, 314" oridegrees="0" />
@@ -665,7 +665,7 @@
 			<location coords="953, 209" oridegrees="90" />
 			<location coords="957, 233" oridegrees="90" />
 			<location coords="958, 255" oridegrees="90" />
-			
+
 			<location coords="946, 275" oridegrees="90" />
 			<location coords="944, 295" oridegrees="90" />
 			<location coords="941, 314" oridegrees="90" />
@@ -861,7 +861,7 @@
 			<location coords="947, 255" oridegrees="90" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/cloudy2.jpg"
 		cloudscrollrate="0"
@@ -877,8 +877,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2, 2" targettime="900" laps="3">
+
+	<race coordscale="2, 2" targettime="900" laps="3" codrivercpmode="free">
 		<startposition pos="951, 250" oridegrees="3" />
 		<checkpoint coords="938, 356" notes="medium left" />
 		<checkpoint coords="808, 482" notes="hard right" />
