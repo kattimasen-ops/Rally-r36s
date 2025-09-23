@@ -4,6 +4,10 @@
 	<rigidity sprite="textures/roadsigns/10down.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/10up.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/arrowright.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/rally-right.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/rally-left.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/rally-right1.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/rally-left1.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/bended.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/crossroads.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/deer.png" value="0.5"/>
@@ -68,6 +72,7 @@
 	<rigidity sprite="textures/veg/crooked-tree3.png" value="0.05"/>
 	<rigidity sprite="textures/veg/crooked-tree4.png" value="0.05"/>
 	<rigidity sprite="textures/veg/crooked-tree5.png" value="0.05"/>
+	<rigidity sprite="textures/veg/crooked-tree6.png" value="0.05"/>
 
 	<rigidity sprite="textures/veg/crooked-tree1black.png" value="0.05"/>
 	<rigidity sprite="textures/veg/crooked-tree2black.png" value="0.05"/>

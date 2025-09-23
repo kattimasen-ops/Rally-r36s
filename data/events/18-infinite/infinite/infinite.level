@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Infinite"
 	comment="No sleeping!"
 	author="Onsemeliot"
 	description="fast and smooth on tarmac in the night"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -32,7 +32,7 @@
 			density="0.00003"
 			sprite="/textures/veg/grass2.png"
 			spritecount="2"
-			scale="1"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.53"
@@ -40,7 +40,7 @@
 			density="0.00002"
 			sprite="/textures/veg/grass2.png"
 			spritecount="2"
-			scale="1.2"
+			scale="0.2"
 			/>
 		<foliageband
 			middle="0.55"
@@ -48,7 +48,7 @@
 			density="0.000003"
 			sprite="/textures/veg/dry-slim-bush2.png"
 			spritecount="2"
-			scale="2"
+			scale="0.3"
 			/>
 		<foliageband
 			middle="0.57"
@@ -56,7 +56,7 @@
 			density="0.000004"
 			sprite="/textures/veg/thin-bush.png"
 			spritecount="2"
-			scale="3"
+			scale="0.4"
 			/>
 		<foliageband
 			middle="0.55"
@@ -64,7 +64,7 @@
 			density="0.000003"
 			sprite="/textures/veg/dry-slim-bush1.png"
 			spritecount="2"
-			scale="4"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.6"
@@ -72,7 +72,7 @@
 			density="0.0000003"
 			sprite="/textures/veg/crooked-tree1.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.61"
@@ -80,7 +80,7 @@
 			density="0.0000004"
 			sprite="/textures/veg/crooked-tree3.png"
 			spritecount="2"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.64"
@@ -88,10 +88,10 @@
 			density="0.0000005"
 			sprite="/textures/veg/crooked-tree4.png"
 			spritecount="2"
-			scale="7"
+			scale="4"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="1684, 1767" oridegrees="230" />
 			<location coords="1652, 1768" oridegrees="270" />
 			<location coords="1600, 1679" oridegrees="180" />
@@ -149,7 +149,7 @@
 			<location coords="1865, 1197" oridegrees="70" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/stars.jpg"
 		cloudscrollrate="0"
@@ -166,8 +166,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2, 2" targettime="640">
+
+	<race coordscale="2, 2" targettime="640" codrivercpmode="free">
 		<startposition pos="1880, 1258" oridegrees="0" />
 		<checkpoint coords="1880, 1298" notes="easy right into flat left into easy left" />
 		<checkpoint coords="1918, 1598" notes="flat right into medium left" />

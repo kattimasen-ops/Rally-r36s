@@ -369,7 +369,7 @@
 
 
 //IVY PLATE
-		<roadsign sprite="/textures/veg/crooked-tree3.png" scale="25">
+		<roadsign sprite="/textures/veg/crooked-tree6.png" scale="25">
 		//near turn left be downhill
 		<location coords="320, 480" oridegrees="125" />
 		//дальний

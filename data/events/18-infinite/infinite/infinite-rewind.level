@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Infinite Revind"
 	comment="Ejoy the sunset!"
 	author="Onsemeliot"
 	description="fast and smooth on tarmac and gravel"
 	screenshot="ss-rewind.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -32,7 +32,7 @@
 			density="0.00003"
 			sprite="/textures/veg/grass2.png"
 			spritecount="2"
-			scale="1"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.53"
@@ -40,7 +40,7 @@
 			density="0.00002"
 			sprite="/textures/veg/grass2.png"
 			spritecount="2"
-			scale="1.2"
+			scale="0.2"
 			/>
 		<foliageband
 			middle="0.55"
@@ -48,7 +48,7 @@
 			density="0.000003"
 			sprite="/textures/veg/dry-slim-bush2.png"
 			spritecount="2"
-			scale="2"
+			scale="0.3"
 			/>
 		<foliageband
 			middle="0.57"
@@ -56,7 +56,7 @@
 			density="0.000004"
 			sprite="/textures/veg/thin-bush.png"
 			spritecount="2"
-			scale="3"
+			scale="0.4"
 			/>
 		<foliageband
 			middle="0.55"
@@ -64,7 +64,7 @@
 			density="0.000003"
 			sprite="/textures/veg/dry-slim-bush1.png"
 			spritecount="2"
-			scale="4"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.6"
@@ -72,7 +72,7 @@
 			density="0.0000003"
 			sprite="/textures/veg/crooked-tree1.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.61"
@@ -80,7 +80,7 @@
 			density="0.0000004"
 			sprite="/textures/veg/crooked-tree3.png"
 			spritecount="2"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.64"
@@ -88,10 +88,10 @@
 			density="0.0000005"
 			sprite="/textures/veg/crooked-tree4.png"
 			spritecount="2"
-			scale="7"
+			scale="4"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/rally-left.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/rally-left.png" scale="2">
 			<location coords="1850, 520" oridegrees="180" />
 			<location coords="1469, 356" oridegrees="350" />
 			<location coords="1158, 338" oridegrees="115" />
@@ -99,13 +99,13 @@
 			<location coords="998, 1616" oridegrees="187" />
 			<location coords="1328, 1503" oridegrees="275" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/rally-right.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/rally-right.png" scale="2">
 			<location coords="612, 179" oridegrees="85" />
 			<location coords="180, 1049" oridegrees="40" />
 			<location coords="1065, 1762" oridegrees="190" />
 			<location coords="1464, 1685" oridegrees="280" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="1863, 1197" oridegrees="135" />
 			<location coords="1849, 1195" oridegrees="90" />
 			<location coords="1828, 1254" oridegrees="190" />
@@ -147,11 +147,11 @@
 			<location coords="1068, 1820" oridegrees="230" />
 			<location coords="1584, 1673" oridegrees="90" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="2">
 			<location coords="818, 496" oridegrees="90" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/cloudy.png"
 		cloudscrollrate="0"
@@ -168,8 +168,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2, 2" targettime="600">
+
+	<race coordscale="2, 2" targettime="600" codrivercpmode="free">
 		<startposition pos="1880, 1258" oridegrees="175" />
 		<checkpoint coords="1880, 1240" notes="hard right long" />
 		<checkpoint coords="1842, 1210" notes="hard left long" />
