@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="High Pass"
 	comment="Mind the thin air!"
 	author="Onsemeliot"
 	description="narrow on tarmak and gravel"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -32,10 +32,10 @@
 			density="0.0005"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.7"
+			scale="0.25"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="835, 491" oridegrees="200" />
 			<location coords="818, 493" oridegrees="250" />
 			<location coords="668, 429" oridegrees="100" />
@@ -79,22 +79,22 @@
 			<location coords="51, 196" oridegrees="290" />
 			<location coords="52, 184" oridegrees="320" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="2">
 			<location coords="742, 461" oridegrees="90" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/bended.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/bended.png" scale="2">
 			<location coords="675, 505" oridegrees="350" />
 			<location coords="546, 68" oridegrees="50" />
 			<location coords="725, 961" oridegrees="150" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/rocks.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/rocks.png" scale="2">
 			<location coords="621, 651" oridegrees="350" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/zigzag.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/zigzag.png" scale="2">
 			<location coords="411, 125" oridegrees="40" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/cloudy3.jpg"
 		cloudscrollrate="0.002"
@@ -105,14 +105,14 @@
 
 	<water
 		height="14"
-		watertexture="/textures/water/dark-water.png"
+		watertexture="/textures/water/black-water.png"
 		/>
 
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2, 2" targettime="420">
+
+	<race coordscale="2, 2" targettime="420" codrivercpmode="free">
 		<startposition pos="872, 454" oridegrees="51" />
 		<checkpoint coords="856, 464" notes="medium left dont cut into flat right" />
 		<checkpoint coords="714, 442" notes="hard right dont cut into flat left" />

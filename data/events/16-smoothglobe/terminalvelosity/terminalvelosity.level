@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Terminal Velosity"
 	comment="Mind survival!"
 	author="Onsemeliot"
 	description="very narrow and curvy on tarmac in the dark"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -36,7 +36,7 @@
 			density="0.0001"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.5"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.62"
@@ -63,7 +63,7 @@
 			scale="4"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="1556, 1909" oridegrees="270" />
 			<location coords="1579, 1893" oridegrees="245" />
 			<location coords="1590, 1867" oridegrees="220" />
@@ -104,7 +104,7 @@
 			<location coords="3310, 2337" oridegrees="300" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dawn.jpg"
 		cloudscrollrate="0.002"
@@ -116,8 +116,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="0.6, 0.6" targettime="260">
+
+	<race coordscale="0.6, 0.6" targettime="260" codrivercpmode="ordered">
 		<startposition pos="1450, 1908" oridegrees="270" />
 		<checkpoint coords="1492, 1910" notes="medium right into medium left" />
 		<checkpoint coords="1572, 1718" notes="medium right into medium right" />

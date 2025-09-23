@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="High Morning"
 	comment="Mind the thin air!"
 	author="Onsemeliot"
 	description="narrow on gravel and a little on tarmac"
 	screenshot="ss-highmorning.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -32,28 +32,28 @@
 			density="0.0005"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.7"
+			scale="0.25"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="506, 107" oridegrees="230" />
 			<location coords="460, 81" oridegrees="120" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/junccurve.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/junccurve.png" scale="2">
 			<location coords="676, 771" oridegrees="280" />
 			<location coords="808, 243" oridegrees="45" />
 			<location coords="271, 197" oridegrees="225" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/zigzag.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/zigzag.png" scale="2">
 			<location coords="742, 53" oridegrees="270" />
 			<location coords="545, 79" oridegrees="230" />
 			<location coords="284, 187" oridegrees="235" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/10up.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/10up.png" scale="2">
 			<location coords="718, 51" oridegrees="273" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dawn.jpg"
 		cloudscrollrate="0.001"
@@ -64,14 +64,14 @@
 
 	<water
 		height="14"
-		watertexture="/textures/water/dark-water.png"
+		watertexture="/textures/water/black-water.png"
 		/>
 
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="2, 2" targettime="300">
+
+	<race coordscale="2, 2" targettime="300" codrivercpmode="ordered">
 		<startposition pos="892, 454" oridegrees="325" />
 		<checkpoint coords="904, 474" notes="easy left into easy right" />
 		<checkpoint coords="902, 574" notes="flat left" />

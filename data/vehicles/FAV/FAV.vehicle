@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="10.0, 20.0, 0.0"
+		angdrag="15.0, 25.0, 0.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -56,15 +56,15 @@
 		model="FAV.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="1.05, 1.45, 0.05" radius="0.575" force="65000.0" dampening="15000.0" />
-		<wheel drive="0.4" steer="0.7" brake1="800.0" pos="-1.05, 1.45, 0.05" radius="0.575" force="65000.0" dampening="15000.0" />
-		<wheel drive="0.6" steer="0.0" brake1="400.0" pos="1.05, -1.78, 0.05" radius="0.575" force="75000.0" dampening="15000.0" brake2="1000.0" />
-		<wheel drive="0.6" steer="0.0" brake1="400.0" pos="-1.05, -1.78, 0.05" radius="0.575" force="75000.0" dampening="15000.0" brake2="1000.0" />
+		<wheel drive="0.4" steer="0.6" brake1="800.0" pos="1.05, 1.45, 0.05" radius="0.575" force="55000.0" dampening="18000.0" />
+		<wheel drive="0.4" steer="0.6" brake1="800.0" pos="-1.05, 1.45, 0.05" radius="0.575" force="55000.0" dampening="18000.0" />
+		<wheel drive="0.6" steer="0.0" brake1="400.0" pos="1.05, -1.78, 0.05" radius="0.575" force="65000.0" dampening="17000.0" brake2="2000.0" />
+		<wheel drive="0.6" steer="0.0" brake1="400.0" pos="-1.05, -1.78, 0.05" radius="0.575" force="65000.0" dampening="17000.0" brake2="2000.0" />
 
-		<clip type="body" pos="1.2, 2.3, 1.25" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="-1.2, 2.3, 1.25" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="1.2, -3.13, 1.7" force="300000.0" dampening="25000.0" />
-		<clip type="body" pos="-1.2, -3.13, 1.7" force="300000.0" dampening="25000.0" />
+		<clip type="body" pos="1.2, 2.3, 1.25" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.2, 2.3, 1.25" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="1.2, -3.13, 1.7" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.2, -3.13, 1.7" force="100000.0" dampening="25000.0" />
 
 	</part>
 

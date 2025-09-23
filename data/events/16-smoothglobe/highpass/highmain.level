@@ -32,10 +32,10 @@
 			density="0.0005"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.7"
+			scale="0.25"
 			/>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="30, 647" oridegrees="5" />
 			<location coords="100, 707" oridegrees="120" />
 			<location coords="28, 875" oridegrees="5" />
@@ -93,16 +93,16 @@
 			<location coords="145, 430" oridegrees="135" />
 			<location coords="20, 524" oridegrees="70" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="2">
 			<location coords="62, 792" oridegrees="5" />
 			<location coords="898, 783" oridegrees="265" />
 			<location coords="927, 441" oridegrees="270" />
 			<location coords="123, 187" oridegrees="100" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/bended.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/bended.png" scale="2">
 			<location coords="565, 903" oridegrees="10" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/junccurve.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/junccurve.png" scale="2">
 			<location coords="68, 677" oridegrees="130" />
 			<location coords="960, 740" oridegrees="180" />
 			<location coords="676, 771" oridegrees="280" />
@@ -112,12 +112,12 @@
 			<location coords="758, 119" oridegrees="200" />
 			<location coords="271, 197" oridegrees="225" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/zigzag.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/zigzag.png" scale="2">
 			<location coords="742, 53" oridegrees="270" />
 			<location coords="545, 79" oridegrees="230" />
 			<location coords="284, 187" oridegrees="235" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/10up.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/10up.png" scale="2">
 			<location coords="718, 51" oridegrees="273" />
 		</roadsign>
 	</terrain>
@@ -139,7 +139,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="2, 2" targettime="740" laps="2">
+	<race coordscale="2, 2" targettime="740" laps="2" codrivercpmode="free">
 		<startposition pos="24, 532" oridegrees="340" />
 		<checkpoint coords="32, 556" notes="easy left into medium right" />
 		<checkpoint coords="46, 662" notes="square left" />

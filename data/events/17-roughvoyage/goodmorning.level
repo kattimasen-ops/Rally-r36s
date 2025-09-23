@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Good Morning"
 	comment="Get Up!"
 	author="Onsemeliot"
 	description="uneven curvy gravel and dirt road; morning mist"
 	screenshot="ss-goodmorning.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -25,14 +25,14 @@
 			<row data="0.01 0.01 0.01 0.01" />
 			<row data="0.01 0.01 0.01 0.01" />
 		</blurfilter>
-		
+
 		<foliageband
 			middle="0.4"
 			range="0.37"
 			density="0.000001"
 			sprite="/textures/veg/needle.png"
 			spritecount="2"
-			scale="3"
+			scale="2"
 			/>
 		<foliageband
 			middle="0.45"
@@ -40,7 +40,7 @@
 			density="0.0000007"
 			sprite="/textures/veg/spruce-little.png"
 			spritecount="2"
-			scale="5"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.51"
@@ -48,7 +48,7 @@
 			density="0.0001"
 			sprite="/textures/veg/grass2.png"
 			spritecount="1"
-			scale="0.8"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.53"
@@ -56,7 +56,7 @@
 			density="0.0002"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="1"
+			scale="0.4"
 			/>
 		<foliageband
 			middle="0.55"
@@ -64,7 +64,7 @@
 			density="0.00005"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.9"
+			scale="0.3"
 			/>
 		<foliageband
 			middle="0.63"
@@ -72,7 +72,7 @@
 			density="0.0000003"
 			sprite="/textures/veg/birch.png"
 			spritecount="2"
-			scale="11"
+			scale="6"
 			/>
 		<foliageband
 			middle="0.6"
@@ -80,7 +80,7 @@
 			density="0.0000004"
 			sprite="/textures/veg/willow.png"
 			spritecount="2"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.65"
@@ -88,7 +88,7 @@
 			density="0.0000002"
 			sprite="/textures/veg/fir.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.7"
@@ -96,7 +96,7 @@
 			density="0.0000005"
 			sprite="/textures/veg/green-tree2.png"
 			spritecount="2"
-			scale="14"
+			scale="7"
 			/>
 		<foliageband
 			middle="0.75"
@@ -104,7 +104,7 @@
 			density="0.0000006"
 			sprite="/textures/veg/brown-tree.png"
 			spritecount="2"
-			scale="9"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.77"
@@ -112,7 +112,7 @@
 			density="0.0000004"
 			sprite="/textures/veg/birch.png"
 			spritecount="2"
-			scale="12"
+			scale="6"
 			/>
 		<foliageband
 			middle="0.8"
@@ -120,10 +120,10 @@
 			density="0.000001"
 			sprite="/textures/veg/horse-chestnut-tree.png"
 			spritecount="2"
-			scale="10"
+			scale="5"
 			/>
 
-		<roadsign sprite="/textures/veg/birch.png" scale="10">
+		<roadsign sprite="/textures/veg/birch.png" scale="5">
 			<location coords="154, 711" oridegrees="15" />
 			<location coords="154, 711" oridegrees="105" />
 			<location coords="368, 175" oridegrees="0" />
@@ -149,7 +149,7 @@
 			<location coords="236, 963" oridegrees="5" />
 			<location coords="236, 963" oridegrees="95" />
 		</roadsign>
-		<roadsign sprite="/textures/veg/color-tree7.png" scale="16">
+		<roadsign sprite="/textures/veg/color-tree7.png" scale="8">
 			<location coords="240, 353" oridegrees="0" />
 			<location coords="240, 353" oridegrees="90" />
 			<location coords="408, 491" oridegrees="0" />
@@ -171,7 +171,7 @@
 			<location coords="112, 943" oridegrees="3" />
 			<location coords="112, 943" oridegrees="93" />
 		</roadsign>
-		<roadsign sprite="/textures/veg/green-tree.png" scale="9">
+		<roadsign sprite="/textures/veg/green-tree.png" scale="5">
 			<location coords="784, 451" oridegrees="40" />
 			<location coords="784, 451" oridegrees="130" />
 			<location coords="586, 561" oridegrees="40" />
@@ -196,7 +196,7 @@
 			<location coords="228, 979" oridegrees="120" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dawn.jpg"
 		cloudscrollrate="0.001"
@@ -208,8 +208,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="3, 3" targettime="320">
+
+	<race coordscale="3, 3" targettime="320" codrivercpmode="free">
 		<startposition pos="283, 468" oridegrees="310" />
 		<checkpoint coords="320, 507" notes="hard right" />
 		<checkpoint coords="378, 509" notes="square left into easy right" />

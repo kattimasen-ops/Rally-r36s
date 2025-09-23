@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Smoothie"
 	comment="No Alcohol!"
 	author="Onsemeliot"
 	description="fast on curvy tarmac through thick fog"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -35,7 +35,7 @@
 			density="0.0001"
 			sprite="/textures/veg/grass.png"
 			spritecount="1"
-			scale="0.5"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.62"
@@ -62,7 +62,7 @@
 			scale="4"
 			/>
 
-		<roadsign sprite="indicator.png" scale="3">
+		<roadsign sprite="indicator.png" scale="2">
 			<location coords="1831, 1663" oridegrees="0" />
 			<location coords="1831, 1663" oridegrees="90" />
 		</roadsign>
@@ -93,7 +93,7 @@
 			<location coords="1154, 1885" oridegrees="105" />
 		</roadsign>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
 			<location coords="1123, 1863" oridegrees="275" />
 			<location coords="1116, 1833" oridegrees="290" />
 			<location coords="642, 649" oridegrees="175" />
@@ -139,14 +139,14 @@
 			<location coords="1098, 1984" oridegrees="270" />
 			<location coords="1122, 1968" oridegrees="255" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/bended.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/bended.png" scale="2">
 			<location coords="620, 915" oridegrees="5" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/uturnright.png" scale="2">
 			<location coords="1743, 285" oridegrees="190" />
 		</roadsign>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		cloudscrollrate="0.002"
@@ -158,8 +158,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="0.6, 0.6" targettime="240">
+
+	<race coordscale="0.6, 0.6" targettime="240" codrivercpmode="free">
 		<startposition pos="1810, 1750" oridegrees="12" />
 		<checkpoint coords="1788, 1798" notes="medium left" />
 		<checkpoint coords="1424, 1900" notes="flat right into hard left dont cut" />

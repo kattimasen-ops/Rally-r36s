@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Bark"
 	comment="Just chill!"
 	author="Onsemeliot"
 	description="smooth road on pressed dirt"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -25,7 +25,7 @@
 			density="0.00001"
 			sprite="/textures/veg/thorn-bush.png"
 			spritecount="1"
-			scale="1"
+			scale="0.5"
 			/>
 		<foliageband
 			middle="0.37"
@@ -33,7 +33,7 @@
 			density="0.0002"
 			sprite="/textures/veg/dry-grass.png"
 			spritecount="1"
-			scale="1.5"
+			scale="0.3"
 			/>
 		<foliageband
 			middle="0.41"
@@ -41,7 +41,7 @@
 			density="0.002"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
-			scale="0.7"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.43"
@@ -49,7 +49,7 @@
 			density="0.0006"
 			sprite="/textures/veg/grass2.png"
 			spritecount="1"
-			scale="1"
+			scale="0.5"
 			/>
 		<foliageband
 			middle="0.51"
@@ -57,7 +57,7 @@
 			density="0.00005"
 			sprite="/textures/veg/thin-bush.png"
 			spritecount="2"
-			scale="3"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.65"
@@ -65,7 +65,7 @@
 			density="0.000007"
 			sprite="/textures/veg/crooked-tree1.png"
 			spritecount="2"
-			scale="5"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.7"
@@ -73,7 +73,7 @@
 			density="0.00002"
 			sprite="/textures/veg/needle.png"
 			spritecount="2"
-			scale="7"
+			scale="4"
 			/>
 		<foliageband
 			middle="0.77"
@@ -81,7 +81,7 @@
 			density="0.0001"
 			sprite="/textures/veg/bush-low.png"
 			spritecount="2"
-			scale="2"
+			scale="1"
 			/>
 		<foliageband
 			middle="0.8"
@@ -89,7 +89,7 @@
 			density="0.000005"
 			sprite="/textures/veg/brown-tree.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.9"
@@ -97,10 +97,10 @@
 			density="0.00001"
 			sprite="/textures/veg/green-tree2.png"
 			spritecount="2"
-			scale="7"
+			scale="4"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/cloudy3.jpg"
 		cloudscrollrate="0.001"
@@ -116,8 +116,8 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="4, 4" targettime="260">
+
+	<race coordscale="4, 4" targettime="260" codrivercpmode="free">
 		<startposition pos="479, 428" oridegrees="144" />
 		<checkpoint coords="471, 416" notes="flat right into medium left" />
 		<checkpoint coords="433, 376" notes="medium right into medium right" />
