@@ -24,6 +24,7 @@
 			density="0.0002"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="1.0"
@@ -31,7 +32,11 @@
 			density="0.0001"
 			sprite="/textures/veg/palmy.png"
 			spritecount="3"
+			scale="0.5"
 			/>
+		<roadsign sprite="sun.png" scale="512">
+			<location coords="30, 256" oridegrees="90" />
+		</roadsign>
 	</terrain>
 
 	<water
@@ -42,7 +47,7 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="3.0, -3.0" targettime="200.0">
+	<race coordscale="3.0, -3.0" targettime="200.0" codrivercpmode="free">
 		<startposition pos="184, 84, 2.0" oridegrees="120" />
 		<checkpoint coords="139, 146" />
 		<checkpoint coords="108, 190" />

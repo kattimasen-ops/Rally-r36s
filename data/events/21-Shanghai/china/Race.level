@@ -34,7 +34,7 @@
       density="0.0001"
       sprite="/textures/veg/fine-tree.png"
       spritecount="1"
-      scale="18"
+      scale="6"
   />
   <foliageband
       middle="1.0"
@@ -42,7 +42,7 @@
       density="0.01"
       sprite="/textures/veg/grass.png"
       spritecount="1"
-      scale="1"
+      scale="0.5"
   />
 
 
@@ -52,7 +52,7 @@
       density="0.0001"
       sprite="/textures/veg/thick-tree.png"
       spritecount="1"
-      scale="28"
+      scale="7"
   />
 
   <foliageband
@@ -61,7 +61,7 @@
       density="0.0002"
       sprite="/textures/veg/bush-low.png"
       spritecount="1"
-      scale="3"
+      scale="1"
   />
   <foliageband
       middle="0.25"
@@ -69,7 +69,7 @@
       density="0.003"
       sprite="/textures/veg/palmy.png"
       spritecount="2"
-      scale="11"
+      scale="1"
   />
 
     <roadsign sprite="/textures/structures/Start.png" scale="20">
@@ -81,7 +81,7 @@
         <location coords="244, 332" oridegrees=" -21" />
     </roadsign>
 
-    <roadsign sprite="/textures/structures/2Right.png" scale="3">
+    <roadsign sprite="/textures/structures/2Right.png" scale="2">
           <location coords="264, 383" oridegrees="  20" />
           <location coords="306, 361" oridegrees=" 260" />
           <location coords="365, 347" oridegrees=" -29" />
@@ -95,7 +95,7 @@
 
     </roadsign>
 
-    <roadsign sprite="/textures/structures/2Left.png" scale="3">
+    <roadsign sprite="/textures/structures/2Left.png" scale="2">
           <location coords="258, 339" oridegrees=" -68" />
           <location coords="266, 364" oridegrees="  46" />
           <location coords="282, 329" oridegrees=" 167" />

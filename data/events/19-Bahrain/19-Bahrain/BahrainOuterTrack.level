@@ -12,6 +12,7 @@
     heightmap="H.png"
     colormap="CM.png"
     foliagemap="F.png"
+    roadmap="RM.png"
     hudmap="HUD.png"
     terrainmap="T.png"
     tilesize="128"
@@ -31,7 +32,7 @@
       density="0.0006"
       sprite="/textures/veg/bush-low.png"
       spritecount="1"
-      scale="2"
+      scale="1"
   />
   <foliageband
       middle="0.9"
@@ -55,7 +56,7 @@
         <location coords="72, 406.5" oridegrees=" 104" />
     </roadsign>
 
-    <roadsign sprite="/textures/structures/2Right.png" scale="3">
+    <roadsign sprite="/textures/structures/2Right.png" scale="1">
           <location coords=" 29,  44" oridegrees="225" />
           <location coords=" 93,  89" oridegrees=" 20" />
           <location coords="150,  94" oridegrees="-25" />
@@ -69,7 +70,7 @@
           <location coords="328, 405" oridegrees="117" />
     </roadsign>
 
-    <roadsign sprite="/textures/structures/2Left.png" scale="3">
+    <roadsign sprite="/textures/structures/2Left.png" scale="1">
           <location coords="346, 405" oridegrees="243" />
           <location coords="  8, 394" oridegrees=" 90" />
           <location coords=" 14,  94" oridegrees="108" />

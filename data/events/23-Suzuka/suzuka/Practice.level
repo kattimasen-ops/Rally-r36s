@@ -28,9 +28,9 @@
       middle="0.7"
       range="0.4"
       density="0.001"
-      sprite="/textures/veg/thick-tree.png"
+      sprite="/textures/veg/sakura.png"
       spritecount="1"
-      scale="30"
+      scale="5"
   />
   <foliageband
       middle="0.5"
@@ -38,7 +38,7 @@
       density="0.01"
       sprite="/textures/veg/bush-low.png"
       spritecount="2"
-      scale="2"
+      scale="1"
   />
 
   <roadsign sprite="/textures/structures/Start.png" scale="20">
@@ -50,7 +50,7 @@
       <location coords="214, 255" oridegrees="339" />
   </roadsign>
 
-  <roadsign sprite="/textures/structures/2Right.png" scale="3">
+  <roadsign sprite="/textures/structures/2Right.png" scale="2">
         <location coords="476, 156" oridegrees=" 258" />
         <location coords="444, 128" oridegrees=" 148" />
         <location coords="387, 194" oridegrees="  95" />
@@ -64,7 +64,7 @@
         <location coords="377, 306" oridegrees=" -31" />
     </roadsign>
 
-  <roadsign sprite="/textures/structures/2Left.png" scale="3">
+  <roadsign sprite="/textures/structures/2Left.png" scale="2">
         <location coords="405, 186" oridegrees=" -12" />
         <location coords="386, 222" oridegrees=" -19" />
         <location coords="354, 263" oridegrees=" -46" />

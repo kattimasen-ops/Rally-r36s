@@ -8,6 +8,8 @@
 	<rigidity sprite="textures/roadsigns/rally-left.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rally-right1.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rally-left1.png" value="0.5"/>
+	<rigidity sprite="textures/structures/2Left.png" value="0.1"/>
+	<rigidity sprite="textures/structures/2Right.png" value="0.1"/>
 	<rigidity sprite="textures/roadsigns/bended.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/crossroads.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/deer.png" value="0.5"/>
@@ -197,6 +199,29 @@
 	<rigidity sprite="textures/structures/castle.png" value="0.1"/>
 	<rigidity sprite="textures/structures/small.castle.png" value="0.1"/>
 	<rigidity sprite="textures/structures/power.png" value="0.1"/>
+	<rigidity sprite="textures/structures/flaktower.png" value="0.1"/>
 	<rigidity sprite="textures/structures/church.png" value="0.1"/>
 	<rigidity sprite="textures/structures/spirit.png" value="0.5"/>
+	<rigidity sprite="textures/structures/b-wall.png" value="0.1"/>
+	<rigidity sprite="textures/structures/b-wall2.png" value="0.3"/>
+	<rigidity sprite="textures/structures/Lights.png" value="0.3"/>
+	<rigidity sprite="textures/structures/01.png" value="0.1"/>
+	<rigidity sprite="textures/structures/02.png" value="0.1"/>
+	<rigidity sprite="textures/structures/03.png" value="0.1"/>
+	<rigidity sprite="textures/structures/04.png" value="0.1"/>
+	<rigidity sprite="textures/structures/05.png" value="0.1"/>
+	<rigidity sprite="textures/structures/06.png" value="0.1"/>
+	<rigidity sprite="textures/structures/07.png" value="0.1"/>
+	<rigidity sprite="textures/structures/08.png" value="0.1"/>
+	<rigidity sprite="textures/structures/09.png" value="0.1"/>
+	<rigidity sprite="textures/structures/10.png" value="0.1"/>
+	<rigidity sprite="textures/structures/11.png" value="0.1"/>
+	<rigidity sprite="textures/structures/12.png" value="0.1"/>
+	<rigidity sprite="textures/structures/13.png" value="0.1"/>
+	<rigidity sprite="textures/structures/14.png" value="0.1"/>
+	<rigidity sprite="textures/structures/15.png" value="0.1"/>
+	<rigidity sprite="textures/structures/16.png" value="0.1"/>
+	<rigidity sprite="textures/structures/17.png" value="0.1"/>
+	<rigidity sprite="textures/structures/18.png" value="0.1"/>
+	<rigidity sprite="textures/structures/19.png" value="0.1"/>
 </rigiditymap>

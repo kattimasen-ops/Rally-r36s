@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Leaves"
 	comment="Rush trough the soft hills!"
 	author="Onsemeliot"
 	description="smooth but not fast on tarmac"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		colormap="c.png"
@@ -30,7 +30,7 @@
 			density="0.000002"
 			sprite="/textures/veg/birch.png"
 			spritecount="2"
-			scale="12"
+			scale="6"
 			/>
 		<foliageband
 			middle="0.71"
@@ -38,7 +38,7 @@
 			density="0.000002"
 			sprite="/textures/veg/brown-tree.png"
 			spritecount="2"
-			scale="12"
+			scale="6"
 			/>
 		<foliageband
 			middle="0.45"
@@ -46,7 +46,7 @@
 			density="0.000003"
 			sprite="/textures/veg/fine-tree.png"
 			spritecount="2"
-			scale="11"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.5"
@@ -54,7 +54,7 @@
 			density="0.000005"
 			sprite="/textures/veg/olive-bush.png"
 			spritecount="2"
-			scale="6"
+			scale="3"
 			/>
 		<foliageband
 			middle="0.8"
@@ -62,7 +62,7 @@
 			density="0.000002"
 			sprite="/textures/veg/red-tree.png"
 			spritecount="2"
-			scale="5"
+			scale="2.5"
 			/>
 		<foliageband
 			middle="0.6"
@@ -70,7 +70,7 @@
 			density="0.000004"
 			sprite="/textures/veg/wide-tree.png"
 			spritecount="2"
-			scale="10"
+			scale="5"
 			/>
 		<foliageband
 			middle="0.46"
@@ -78,7 +78,7 @@
 			density="0.0005"
 			sprite="/textures/veg/thick-leafes.png"
 			spritecount="2"
-			scale="0.5"
+			scale="0.25"
 			/>
 		<foliageband
 			middle="0.7"
@@ -86,7 +86,7 @@
 			density="0.0003"
 			sprite="/textures/veg/thick-leafes.png"
 			spritecount="2"
-			scale="0.7"
+			scale="0.35"
 			/>
 		<foliageband
 			middle="0.82"
@@ -94,9 +94,10 @@
 			density="0.0002"
 			sprite="/textures/veg/thick-leafes.png"
 			spritecount="2"
+			scale="0.5"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/dark-blue.png"
 		fogcolor="0.8, 0.9, 1"
@@ -108,12 +109,12 @@
 		alpha="0.8"
 		watertexture="/textures/water/dark-water.png"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
-	<race coordscale="4, 4" targettime="283">
+
+	<race coordscale="4, 4" targettime="283" codrivercpmode="free">
 		<startposition pos="262, 208" oridegrees="0" />
 		<checkpoint coords="250, 230" notes="easy right long" />
 		<checkpoint coords="193, 300" />
