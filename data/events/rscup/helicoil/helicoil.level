@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<level 
+<level
 	name="Helicoil"
 	comment="Now you'll run in circles..."
 	author="Marcio Bremm"
 	description="difficult, monotonous, patience necessary"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,16 +18,17 @@
 		horizontalscale="4"
 		verticalscale="1.33"
 		>
-		
+
 		<foliageband
 			middle="0.5"
 			range="0.5"
 			density="0.001"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scale="0.25"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/blue.jpg"
 		cloudscrollrate="0"
@@ -39,9 +40,9 @@
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="4, -4" targettime="1200">
-		
+
 		<startposition pos="256, 256" oridegrees="0" />
 		<checkpoint coords="220, 254" />
 		<checkpoint coords="195, 254" />

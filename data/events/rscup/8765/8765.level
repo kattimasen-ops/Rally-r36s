@@ -6,7 +6,7 @@
 	description="demanding tight, rough roadside"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terrainmap="t.png"
@@ -18,33 +18,34 @@
 		horizontalscale="4.0"
 		verticalscale="0.10"
 		>
-		
+
 		<foliageband
 			middle="0.7"
 			range="0.4"
 			density="0.0003"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="1"
+			scale="0.25"
 			/>
-		
+
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		rain="5500.0"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="4.0, -4.0"
-		targettime="275.0">
-		
-		<startposition pos="87, 361, 2.0" oridegrees="90" />
-		
+		targettime="275.0" codrivercpmode="free">
+
+		<startposition pos="87, 361, 2.0" oridegrees="90"/>
+
 		<checkpoint coords="157, 357" />
 		<checkpoint coords="178, 313" />
 		<checkpoint coords="237, 305" />
@@ -63,5 +64,5 @@
 		<checkpoint coords="087, 361" />
 
 	</race>
-	
+
 </level>
