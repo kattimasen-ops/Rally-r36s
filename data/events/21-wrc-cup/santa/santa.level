@@ -23,8 +23,9 @@
 			middle="0.5"
 			range="0.5"
 			density="0.000500"
-			sprite="/textures/veg/palmy.png"
-			spritecount="0.5"
+			sprite="/textures/veg/spruce-little.png"
+			spritecount="2"
+			scale="1.5"
 			/>
 
 	</terrain>
