@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<level
+	name="Sinuous"
+	comment="Do you like sinuousity?"
+	author="Marcio Bremm"
+	description="fast, plain sunken road"
+	screenshot="ss.png"
+	minimap="mm.png">
+
+	<terrain
+		heightmap="h.png"
+		terrainmap="t.png"
+		roadmap="r.png"
+		colormap="c.jpg"
+		foliagemap="f.png"
+		hudmap="c.jpg"
+		tilesize="16"
+		horizontalscale="4.0"
+		verticalscale="0.15"
+		>
+
+		<foliageband
+			middle="0.8"
+			range="0.4"
+			density="0.000055"
+			sprite="/textures/veg/grass-sprite.png"
+			spritecount="1"
+			scale="0.25"
+			/>
+
+	</terrain>
+
+	<weather
+		cloudtexture="/textures/sky/stars.jpg"
+		cloudscrollrate="0.0"
+		fogcolor="0.3, 0.6, 0.3"
+		fogdensity="0.002"
+		fogdensitysky="0.05"
+		/>
+
+	<vehicleoption type="/vehicles/seat/seat.vehicle" />
+
+	<vehicleoption type="/vehicles/focus/focus.vehicle" />
+
+	<race coordscale="4.0, -4.0" targettime="240.0">
+
+		<startposition pos="233, 175, 2.0" oridegrees="80" />
+
+		<checkpoint coords="036, 113" />
+		<checkpoint coords="329, 098" />
+		<checkpoint coords="334, 271" />
+		<checkpoint coords="472, 295" />
+		<checkpoint coords="137, 477" />
+		<checkpoint coords="258, 348" />
+		<checkpoint coords="052, 392" />
+		<checkpoint coords="233, 179" />
+
+	</race>
+
+</level>

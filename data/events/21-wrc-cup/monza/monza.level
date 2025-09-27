@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<level
+	name="Monza"
+	comment="Allegro, ma non troppo"
+	author="Marcio Bremm"
+	description="wide road, fast, simple"
+	screenshot="ss.png"
+	minimap="mm.png">
+
+	<terrain
+		heightmap="h.png"
+		colormap="c.png"
+		foliagemap="f.png"
+		terrainmap="t.png"
+		roadmap="r.png"
+		hudmap="c.png"
+		tilesize="16"
+		horizontalscale="4"
+		verticalscale="0.15"
+		>
+
+		<foliageband
+			middle="0.5"
+			range="0.5"
+			density="0.000500"
+			sprite="/textures/veg/palmy.png"
+			spritecount="0.5"
+			/>
+	</terrain>
+
+	<weather
+		cloudtexture="/textures/sky/overcast.jpg"
+		cloudscrollrate="0.001"
+		fogcolor="0.3, 0.3, 0.3"
+		fogdensity="0.010"
+		fogdensitysky="0.6"
+		/>
+
+	<vehicleoption type="/vehicles/seat/seat.vehicle" />
+	<vehicleoption type="/vehicles/focus/focus.vehicle" />
+	<vehicleoption type="/vehicles/evo/evo.vehicle" />
+
+	<race coordscale="4, -4" targettime="125">
+
+		<startposition pos="238, 396" oridegrees="75" />
+		<checkpoint coords="071, 327" />
+		<checkpoint coords="055, 194" />
+		<checkpoint coords="125, 032" />
+		<checkpoint coords="237, 315" />
+		<checkpoint coords="284, 351" />
+		<checkpoint coords="475, 450" />
+		<checkpoint coords="238, 396" />
+	</race>
+</level>

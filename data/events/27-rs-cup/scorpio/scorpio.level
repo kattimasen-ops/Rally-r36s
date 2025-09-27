@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<level
+	name="Scorpio"
+	comment="Be quick or be dead!"
+	author="Marcio Bremm"
+	description="flat maze-like checkpoint hunt"
+	screenshot="ss.png"
+	minimap="mm.png">
+
+	<terrain
+		heightmap="h.png"
+		terrainmap="t.png"
+		roadmap="r.png"
+		colormap="c.jpg"
+		foliagemap="f.png"
+		hudmap="c.jpg"
+		tilesize="16"
+		horizontalscale="4.0"
+		verticalscale="0.15"
+		>
+
+		<foliageband
+			middle="0.5"
+			range="0.3"
+			density="0.000005"
+			sprite="/textures/veg/grass-sprite.png"
+			spritecount="1"
+			scale="0.25"
+			/>
+
+
+	</terrain>
+
+	<weather
+		cloudtexture="/textures/sky/stars.jpg"
+		cloudscrollrate="0.0"
+		fogcolor="0.3, 0.3, 0.3"
+		fogdensity="0.002"
+		fogdensitysky="0.05"
+		/>
+
+	<vehicleoption type="/vehicles/seat/seat.vehicle" />
+
+	<vehicleoption type="/vehicles/focus/focus.vehicle" />
+
+	<race coordscale="4.0, -4.0"
+		targettime="240.0">
+
+		<startposition pos="252, 140, 2.0" oridegrees="0" />
+
+		<checkpoint coords="213, 162" />
+		<checkpoint coords="151, 119" />
+		<checkpoint coords="131, 015" />
+		<checkpoint coords="101, 117" />
+		<checkpoint coords="156, 190" />
+		<checkpoint coords="146, 292" />
+		<checkpoint coords="210, 350" />
+		<checkpoint coords="164, 444" />
+		<checkpoint coords="248, 438" />
+		<checkpoint coords="258, 500" />
+		<checkpoint coords="336, 444" />
+		<checkpoint coords="285, 363" />
+		<checkpoint coords="350, 326" />
+		<checkpoint coords="348, 262" />
+		<checkpoint coords="340, 196" />
+		<checkpoint coords="399, 134" />
+		<checkpoint coords="389, 020" />
+		<checkpoint coords="352, 121" />
+		<checkpoint coords="252, 140" />
+
+	</race>
+
+</level>

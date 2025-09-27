@@ -4,6 +4,7 @@
 	<unlocks file="/events/16-smoothglobe/smoothglobe.event" />
 	<unlocks file="/vehicles/delta/delta.vehicle" />
 	<unlocks file="/vehicles/UAZ/uaz.vehicle" />
+	<unlocks file="/vehicles/truck/Truck.vehicle" />
 
 	<level file="snowdrift/snowdrift.level" />
 	<level file="frozen/frozen.level" />

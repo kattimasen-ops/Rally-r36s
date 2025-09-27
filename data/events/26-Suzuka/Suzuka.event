@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<event name="26. Japan, GP Suzuka" author="Eugene_MC" locked="yes">
+
+	<unlocks file="/events/27-rs-cup/rscup.event" />
+	<unlocks file="/vehicles/Porsche918/porsche918.vehicle" />
+	<unlocks file="/vehicles/AudiRS4/audirs4.vehicle" />
+
+	<level file="suzuka/Practice.level" />
+	<level file="suzuka/SprintQal.level" />
+	<level file="suzuka/Sprint.level" />
+	<level file="suzuka/Qualification.level" />
+	<level file="suzuka/Race.level" />
+
+</event>

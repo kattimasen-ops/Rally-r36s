@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<event name="23. Bahrain Championship" author="Janusz Opila" locked="yes">
+
+	<unlocks file="/events/24-Shanghai/Shanghai.event" />
+	<unlocks file="/vehicles/vanquish/vanq.vehicle" />
+	<unlocks file="/vehicles/Bentley/bentley.vehicle" />
+
+
+
+	<level file="19-Bahrain/BahrainJump.level" />
+	<level file="19-Bahrain/BahrainOuterTrack.level" />
+	<level file="19-Bahrain/Bahrain_FP.level" />
+	<level file="19-Bahrain/BahrainQuali.level" />
+	<level file="19-Bahrain/BahrainRace.level" />
+
+
+</event>

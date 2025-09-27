@@ -2,8 +2,8 @@
 
 <event name="Communard Forest" author="Xandr" locked="no">
 	<unlocks file="/vehicles/Renault19/renault19.vehicle" />
-	<unlocks file="/vehicles/Bentley/bentley.vehicle" />
 	<unlocks file="/vehicles/Mercedes/mercedesf1.vehicle" />
+
 
 	<level file="cmf-mist.level" />
 	<level file="cmf-dh.level" />

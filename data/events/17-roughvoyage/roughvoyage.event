@@ -3,6 +3,7 @@
 
 	<unlocks file="/events/18-infinite/infinite.event" />
 	<unlocks file="/vehicles/Bronco/bronco.vehicle" />
+	<unlocks file="/vehicles/RangeRover/rangerover.vehicle" />
 	<unlocks file="/vehicles/subaru/subaru.vehicle" />
 
 	<level file="goodmorning.level" />

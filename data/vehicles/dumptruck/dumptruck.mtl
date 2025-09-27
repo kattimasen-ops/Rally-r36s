@@ -1,0 +1,74 @@
+# Blender MTL File: 'None'
+# Material Count: 6
+
+newmtl 000-0-0.001
+Ns 9.599995
+Ka 1.000000 1.000000 1.000000
+Kd 0.505900 0.309800 0.274500
+Ks 1.000000 1.000000 1.000000
+Ke 0.505900 0.309800 0.274500
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd dumptruck.png
+map_Ke dumptruck_emission.png
+
+newmtl 000-1-0.001
+Ns 9.599995
+Ka 1.000000 1.000000 1.000000
+Kd 0.164700 0.349000 0.188200
+Ks 1.000000 1.000000 1.000000
+Ke 0.164700 0.349000 0.188200
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd dumptruck.png
+map_Ke dumptruck_emission.png
+
+newmtl 001-0-1.001
+Ns 9.599995
+Ka 1.000000 1.000000 1.000000
+Kd 0.207800 0.596100 0.807800
+Ks 1.000000 1.000000 1.000000
+Ke 0.207800 0.596100 0.807800
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd dumptruck.png
+map_Ke dumptruck_emission.png
+
+newmtl 001-1-1.001
+Ns 9.599995
+Ka 1.000000 1.000000 1.000000
+Kd 0.843100 0.145100 0.082400
+Ks 1.000000 1.000000 1.000000
+Ke 0.843100 0.145100 0.082400
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd dumptruck.png
+map_Ke dumptruck_emission.png
+
+newmtl 002-0-2.001
+Ns 9.599995
+Ka 1.000000 1.000000 1.000000
+Kd 0.545100 0.545100 0.325500
+Ks 1.000000 1.000000 1.000000
+Ke 0.545100 0.545100 0.325500
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd dumptruck.png
+map_Ke dumptruck_emission.png
+
+newmtl 002-1-2.001
+Ns 9.599995
+Ka 1.000000 1.000000 1.000000
+Kd 0.329400 0.756900 0.513700
+Ks 1.000000 1.000000 1.000000
+Ke 0.329400 0.756900 0.513700
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd dumptruck.png
+map_Ke dumptruck_emission.png
