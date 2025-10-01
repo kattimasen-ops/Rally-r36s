@@ -1,4 +1,4 @@
-# Blender 3.6.21 MTL File: 'None'
+# Blender 4.0.2 MTL File: 'None'
 # www.blender.org
 
 newmtl BrushedMetal.002
@@ -21,7 +21,7 @@ illum 3
 map_Kd audi_rs4.png
 map_Ke audi_emission.png
 
-newmtl glass.002
+newmtl glass.001
 Ns 640.000000
 Ka 0.500000 0.500000 0.500000
 Ks 0.840000 0.840000 0.840000

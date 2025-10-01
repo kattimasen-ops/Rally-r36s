@@ -6,7 +6,7 @@
 	description="slow, steep, narrow, unpredictable"
 	screenshot="ss.png"
 	minimap="mm.png">
-	
+
 	<terrain
 		heightmap="h.png"
 		terraintmap="t.png"
@@ -19,13 +19,14 @@
 		horizontalscale="2"
 		verticalscale="0.4"
 		>
-		
+
 		<foliageband
 			middle="0.7"
 			range="0.3"
 			density="0.0001"
 			sprite="/textures/veg/grass-sprite.png"
 			spritecount="3"
+			scale="0.25"
 			/>
 
 		<foliageband
@@ -34,9 +35,10 @@
 			density="0.0001"
 			sprite="/textures/veg/palmy.png"
 			spritecount="3"
+			scale="0.5"
 			/>
 	</terrain>
-	
+
 	<weather
 		cloudtexture="/textures/sky/overcast.jpg"
 		cloudscrollrate="0.04"
@@ -45,13 +47,13 @@
 		fogdensitysky="0.008"
 		rain="84"
 		/>
-	
+
 	<vehicleoption type="/vehicles/seat/seat.vehicle" />
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
-	
+
 	<race coordscale="2, -2" targettime="201.32">
-		
+
 		<startposition pos="485, 85" oridegrees="70" />
 		<checkpoint coords="106, 185" />
 		<checkpoint coords="215, 485" />
