@@ -10,6 +10,7 @@ Ni 1.450000
 d 0.200000
 illum 1
 map_Kd patrol.png
+map_Ke patrol_emission.png
 
 newmtl material_5
 Ns 640.000000
@@ -20,6 +21,7 @@ Ni 1.450000
 d 1.000000
 illum 1
 map_Kd patrol.png
+map_Ke patrol_emission.png
 
 newmtl material_7
 Ns 640.000000
@@ -30,3 +32,4 @@ Ni 1.450000
 d 1.000000
 illum 1
 map_Kd patrol.png
+map_Ke patrol_emission.png
