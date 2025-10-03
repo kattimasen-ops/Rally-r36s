@@ -38,7 +38,7 @@
 	<!--main gear ? 1: 56 2: 105 3: 154 4: 192 5: 235 6: 250 back 18
 -->
 		<gearbox>
-			<gear absolute="0.0308" />
+			<gear absolute="0.0331" />
 			<gear relative="1.858" />
 			<gear relative="1.466" />
 			<gear relative="1.283" />
@@ -49,16 +49,16 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.15, 0.2"
+		pos="0.0, 0.2, -0.2"
 		render_pos="0.0, 0.1, 0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="patrol.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.47" brake1="1000.0" pos="0.83, 1.45, -0.2" radius="0.41" force="60000.0" dampening="19000.0" friction="0.018"/>
-		<wheel drive="0.4" steer="0.47" brake1="1000.0" pos="-0.83, 1.45, -0.2" radius="0.41" force="60000.0" dampening="19000.0" friction="0.018"/>
-		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="0.84, -1.52, -0.2" radius="0.41" force="75000.0" dampening="18000.0" brake2="2000.0" friction="0.022"/>
-		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-0.84, -1.52, -0.2" radius="0.41" force="75000.0" dampening="18000.0" brake2="2000.0" friction="0.022"/>
+		<wheel drive="0.4" steer="0.47" brake1="1000.0" pos="0.98, 1.75, -0.1" radius="0.41" force="60000.0" dampening="19000.0" friction="0.018"/>
+		<wheel drive="0.4" steer="0.47" brake1="1000.0" pos="-0.98, 1.75, -0.1" radius="0.41" force="60000.0" dampening="19000.0" friction="0.018"/>
+		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="0.99, -1.52, -0.1" radius="0.41" force="75000.0" dampening="18000.0" brake2="2000.0" friction="0.022"/>
+		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-0.99, -1.52, -0.1" radius="0.41" force="75000.0" dampening="18000.0" brake2="2000.0" friction="0.022"/>
 
 		<clip type="body" pos="1.25, 1.98, 1.0" force="100000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.25, 1.98, 1.0" force="100000.0" dampening="25000.0" />
