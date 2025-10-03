@@ -3,17 +3,17 @@
 	name="Toreador"
 	class="Off-Road"
 	type="tank"
-	locked="no">
+	locked="yes">
 
 	<pstats
-		weightkg="1550"
+		weightkg="1050"
 		enginebhp="150"
-		maxspeed="206"
+		maxspeed="250"
 		wheeldrive="RWD"
 		handling="bad" />
 
 	<genparams
-		mass="1550.0"
+		mass="1050.0"
 		dimensions="2.9, 3.9, 1.7"
 		wheelmodel="Toreador_wheel.obj"
 		wheelscale="1.0" />
@@ -27,22 +27,22 @@
 		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
-		<engine powerscale="111855">
+		<engine powerscale="149140">
 			<powerpoint rpm="1000" power="0.3" />
-			<powerpoint rpm="2000" power="0.4" />
-			<powerpoint rpm="3000" power="0.6" />
-			<powerpoint rpm="4000" power="0.8" />
-			<powerpoint rpm="5000" power="1.0" />
-			<powerpoint rpm="6000" power="0.0" />
+			<powerpoint rpm="3000" power="0.5" />
+			<powerpoint rpm="4000" power="0.7" />
+			<powerpoint rpm="5000" power="0.9" />
+			<powerpoint rpm="7000" power="1.0" />
+			<powerpoint rpm="8000" power="0.0" />
 		</engine>
-	<!--main gear 4.125 1: 18 2: 26 3: 45 4: 63 5: 90 back 18
+	<!--main gear 4.125 1: 63 2: 118 3: 173 4: 222 5: 251 back 18
 -->
 		<gearbox>
-			<gear absolute="0.032" />
-			<gear relative="1.877" />
-			<gear relative="1.731" />
-			<gear relative="1.4" />
-			<gear relative="1.429" />
+			<gear absolute="0.0481" />
+			<gear relative="1.858" />
+			<gear relative="1.466" />
+			<gear relative="1.283" />
+			<gear relative="1.126" />
 			<gear relative="1.0" />
 		</gearbox>
 	</drivesystem>
