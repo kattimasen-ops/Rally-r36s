@@ -3,7 +3,7 @@
 	name="Patrol GR"
 	class="Off-Road"
 	type="car"
-	locked="no">
+	locked="yes">
 
 	<pstats
 		weightkg="2080"
