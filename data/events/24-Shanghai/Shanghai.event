@@ -4,6 +4,7 @@
 	<unlocks file="/events/25-Monaco/Monaco.event" />
 	<unlocks file="/vehicles/McLaren/mclaren.vehicle" />
 	<unlocks file="/vehicles/Silverado/silverado.vehicle" />
+	<unlocks file="/vehicles/Scarab/scarab.vehicle" />
 
 	<level file="china/Practice.level" />
 	<level file="china/SprintQal.level" />

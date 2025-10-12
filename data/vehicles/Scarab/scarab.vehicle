@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Schlesser"
+	class="Off-Road"
+	type="tank"
+	locked="yes">
+
+	<pstats
+		weightkg="1220"
+		enginebhp="281-285"
+		maxspeed="200"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1220.0"
+		dimensions="2.75, 4.5, 1.7"
+		wheelmodel="scarab_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		angdrag="10.0, 20.0, 0.0"
+		lift="1"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 8.0" />
+
+	<drivesystem>
+		<engine powerscale="209542">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="3000" power="0.5" />
+			<powerpoint rpm="4000" power="0.7" />
+			<powerpoint rpm="5000" power="0.9" />
+			<powerpoint rpm="7000" power="1.0" />
+			<powerpoint rpm="8000" power="0.0" />
+		</engine>
+	<!--main gear 4.37 1: 3.15 2: 1.94 3: 1.39 4: 1.06 5: 0.87 6: 0.73 back 18
+-->
+		<gearbox>
+			<gear absolute="0.0351" />
+			<gear relative="1.624" />
+			<gear relative="1.396" />
+			<gear relative="1.311" />
+			<gear relative="1.218" />
+			<gear relative="1.192" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, -0.2, 0.05"
+		render_pos="0.0, -0.2, 0.1"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="scarab.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.6" brake1="1000.0" pos="0.917, 2.0, -0.1" radius="0.41" force="65000.0" dampening="18000.0" friction="0.022"/>
+		<wheel drive="0.0" steer="0.6" brake1="1000.0" pos="-0.917, 2.0, -0.1" radius="0.41" force="65000.0" dampening="18000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.917, -0.98, -0.15" radius="0.44" force="60000.0" dampening="17000.0" brake2="2000.0" friction="0.028"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.917, -0.98, -0.15" radius="0.44" force="60000.0" dampening="17000.0" brake2="2000.0" friction="0.028"/>
+
+		<clip type="body" pos="1.38, 2.7, 1.0" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.38, 2.7, 1.0" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="1.4, -1.8, 1.7" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.4, -1.8, 1.7" force="100000.0" dampening="25000.0" />
+
+	</part>
+
+</vehicle>
