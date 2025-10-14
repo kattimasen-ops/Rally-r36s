@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Caterham"
+	class="Off-Road"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1520"
+		enginebhp="255"
+		maxspeed="250"
+		wheeldrive="RWD"
+		handling="bad" />
+
+	<genparams
+		mass="1520.0"
+		dimensions="2.75, 4.5, 1.7"
+		wheelmodel="mad_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		angdrag="5.0, 0.0, 10.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 8.0" />
+
+	<drivesystem>
+		<engine powerscale="199850">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="3000" power="0.5" />
+			<powerpoint rpm="4000" power="0.7" />
+			<powerpoint rpm="5000" power="0.9" />
+			<powerpoint rpm="7000" power="1.0" />
+			<powerpoint rpm="8000" power="0.0" />
+		</engine>
+	<!--main gear 2.48 1: 3.65 2: 1.97 3: 1.37 4: 1.0 5: 0.82 back 3.66
+-->
+		<gearbox>
+			<gear absolute="0.052" />
+			<gear relative="1.853" />
+			<gear relative="1.438" />
+			<gear relative="1.37" />
+			<gear relative="1.22" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.4, 0.67"
+		render_pos="0.0, -0.2, 0.5"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="mad.obj"
+		scale="1.0">
+
+		<wheel drive="0.0" steer="0.6" brake1="1000.0" pos="0.9, 1.56, -0.46" radius="0.3" force="40000.0" dampening="15000.0" friction="0.022"/>
+		<wheel drive="0.0" steer="0.6" brake1="1000.0" pos="-0.9, 1.56, -0.46" radius="0.3" force="40000.0" dampening="15000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.94, -1.01, -0.45" radius="0.36" force="80000.0" dampening="14000.0" brake2="2000.0" friction="0.028"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.94, -1.01, -0.45" radius="0.36" force="80000.0" dampening="14000.0" brake2="2000.0" friction="0.028"/>
+
+		<clip type="body" pos="1.38, 2.7, 1.0" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.38, 2.7, 1.0" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="1.4, -1.8, 1.7" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-1.4, -1.8, 1.7" force="100000.0" dampening="25000.0" />
+
+	</part>
+
+</vehicle>

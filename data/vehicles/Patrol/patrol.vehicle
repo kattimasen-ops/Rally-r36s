@@ -3,7 +3,7 @@
 	name="Patrol GR"
 	class="Off-Road"
 	type="car"
-	locked="yes">
+	locked="no">
 
 	<pstats
 		weightkg="2080"
@@ -55,10 +55,10 @@
 		model="patrol.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.7" brake1="1000.0" pos="0.98, 1.75, -0.1" radius="0.41" force="70000.0" dampening="19000.0" friction="0.018"/>
-		<wheel drive="0.4" steer="0.7" brake1="1000.0" pos="-0.98, 1.75, -0.1" radius="0.41" force="70000.0" dampening="19000.0" friction="0.018"/>
-		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="0.99, -1.52, -0.1" radius="0.41" force="75000.0" dampening="18000.0" brake2="2000.0" friction="0.022"/>
-		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-0.99, -1.52, -0.1" radius="0.41" force="75000.0" dampening="18000.0" brake2="2000.0" friction="0.022"/>
+		<wheel drive="0.4" steer="0.7" brake1="1000.0" pos="0.98, 1.75, -0.1" radius="0.41" force="70000.0" dampening="16000.0" friction="0.018"/>
+		<wheel drive="0.4" steer="0.7" brake1="1000.0" pos="-0.98, 1.75, -0.1" radius="0.41" force="70000.0" dampening="16000.0" friction="0.018"/>
+		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="0.99, -1.52, -0.1" radius="0.41" force="75000.0" dampening="15000.0" brake2="2000.0" friction="0.022"/>
+		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-0.99, -1.52, -0.1" radius="0.41" force="75000.0" dampening="15000.0" brake2="2000.0" friction="0.022"/>
 
 		<clip type="body" pos="1.25, 1.98, 1.0" force="100000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.25, 1.98, 1.0" force="100000.0" dampening="25000.0" />

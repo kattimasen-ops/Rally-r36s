@@ -1,22 +1,22 @@
 # Blender 4.0.2 MTL File: 'None'
 # www.blender.org
 
-newmtl material_13.006
+newmtl material_13.002
 Ns 250.000000
-Ka 1.000000 1.000000 1.000000
+Ka 0.300000 0.300000 0.300000
 Ks 0.000000 0.000000 0.000000
 Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 1
-map_Kd scarab.png
+map_Kd mad.png
 
-newmtl material_8.007
+newmtl material_8.002
 Ns 250.000000
-Ka 1.000000 1.000000 1.000000
+Ka 0.300000 0.300000 0.300000
 Ks 0.000000 0.000000 0.000000
 Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 1
-map_Kd scarab.png
+map_Kd mad.png

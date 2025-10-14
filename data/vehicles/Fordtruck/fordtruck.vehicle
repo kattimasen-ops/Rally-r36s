@@ -49,15 +49,15 @@
 	<part
 		name="body"
 		pos="0.0, 0.15, -0.2"
-		render_pos="0.0, 0.1, 0.1"
+		render_pos="0.0, 0.0, 0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="FordTruck.obj"
 		scale="1.0">
 
-		<wheel drive="0.4" steer="0.47" brake1="1000.0" pos="0.96, 1.73, -0.1" radius="0.41" force="70000.0" dampening="19000.0" friction="0.02"/>
-		<wheel drive="0.4" steer="0.47" brake1="1000.0" pos="-0.96, 1.73, -0.1" radius="0.41" force="70000.0" dampening="19000.0" friction="0.02"/>
-		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="1.0, -1.5, -0.2" radius="0.41" force="65000.0" dampening="18000.0" brake2="2000.0" friction="0.02"/>
-		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-1.0, -1.5, -0.2" radius="0.41" force="65000.0" dampening="18000.0" brake2="2000.0" friction="0.02"/>
+		<wheel drive="0.4" steer="0.47" brake1="1000.0" pos="0.96, 1.75, -0.11" radius="0.41" force="85000.0" dampening="19000.0" friction="0.02"/>
+		<wheel drive="0.4" steer="0.47" brake1="1000.0" pos="-0.96, 1.75, -0.11" radius="0.41" force="85000.0" dampening="19000.0" friction="0.02"/>
+		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="1.0, -1.48, -0.18" radius="0.41" force="60000.0" dampening="18000.0" brake2="2000.0" friction="0.02"/>
+		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-1.0, -1.48, -0.18" radius="0.41" force="60000.0" dampening="18000.0" brake2="2000.0" friction="0.02"/>
 
 		<clip type="body" pos="0.98, 2.57, 1.0" force="100000.0" dampening="25000.0" />
 		<clip type="body" pos="-0.98, 2.57, 1.0" force="100000.0" dampening="25000.0" />

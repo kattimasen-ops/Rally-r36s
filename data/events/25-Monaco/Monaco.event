@@ -4,6 +4,7 @@
 	<unlocks file="/events/26-Suzuka/Suzuka.event" />
 	<unlocks file="/vehicles/Veyron/veyron.vehicle" />
 	<unlocks file="/vehicles/McRae/mcrae.vehicle" />
+	<unlocks file="/vehicles/Mad/mad.vehicle" />
 
 	<level file="monaco/Practice.level" />
 	<level file="monaco/SprintQal.level" />

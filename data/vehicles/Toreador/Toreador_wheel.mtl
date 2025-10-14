@@ -1,7 +1,7 @@
 # Blender 4.0.2 MTL File: 'None'
 # www.blender.org
 
-newmtl material_2
+newmtl material_2.001
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
 Ks 1.000000 1.000000 1.000000
@@ -11,7 +11,7 @@ d 1.000000
 illum 2
 map_Kd Toreador.png
 
-newmtl material_3
+newmtl material_3.001
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
 Ks 1.000000 1.000000 1.000000
