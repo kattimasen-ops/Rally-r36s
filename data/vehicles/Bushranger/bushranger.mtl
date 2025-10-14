@@ -32,6 +32,7 @@ Ni 1.450000
 d 1.000000
 illum 3
 map_Kd bushranger.png
+map_Ke bushranger_emission.png
 
 newmtl material_263.003
 Ns 640.000000
