@@ -3,7 +3,7 @@
 	name="Caterham"
 	class="Off-Road"
 	type="car"
-	locked="no">
+	locked="yes">
 
 	<pstats
 		weightkg="1520"

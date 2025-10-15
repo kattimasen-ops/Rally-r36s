@@ -1,0 +1,42 @@
+# Blender 4.0.2 MTL File: 'None'
+# www.blender.org
+
+newmtl material_25.002
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd razor.png
+map_Ke razor_emission.png
+
+newmtl material_26.002
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd razor.png
+map_Ke razor_emission.png
+
+newmtl material_27.002
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 0.200000
+illum 6
+map_Kd razor.png
+map_Ke razor_emission.png
+
+newmtl material_28.002
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd razor.png
+map_Ke razor_emission.png

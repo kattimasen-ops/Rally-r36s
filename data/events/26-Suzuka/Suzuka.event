@@ -4,6 +4,7 @@
 	<unlocks file="/events/27-rs-cup/rscup.event" />
 	<unlocks file="/vehicles/Porsche918/porsche918.vehicle" />
 	<unlocks file="/vehicles/AudiRS4/audirs4.vehicle" />
+	<unlocks file="/vehicles/Razor/razor.vehicle" />
 
 	<level file="suzuka/Practice.level" />
 	<level file="suzuka/SprintQal.level" />
