@@ -3,7 +3,7 @@
 	name="Caterham"
 	class="Off-Road"
 	type="car"
-	locked="yes">
+	locked="no">
 
 	<pstats
 		weightkg="1520"
@@ -20,7 +20,7 @@
 
 	<ctrlparams
 		drag="0.0, 0.0, 0.0"
-		angdrag="5.0, 0.0, 10.0"
+		angdrag="10.0, 0.0, 10.0"
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
@@ -49,16 +49,16 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.4, 0.67"
-		render_pos="0.0, -0.2, 0.5"
+		pos="0.0, 0.4, 0.3"
+		render_pos="0.0, -0.2, 0.0"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="mad.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.6" brake1="1000.0" pos="0.9, 1.56, -0.46" radius="0.3" force="40000.0" dampening="15000.0" friction="0.022"/>
-		<wheel drive="0.0" steer="0.6" brake1="1000.0" pos="-0.9, 1.56, -0.46" radius="0.3" force="40000.0" dampening="15000.0" friction="0.022"/>
-		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.94, -1.01, -0.45" radius="0.36" force="80000.0" dampening="14000.0" brake2="2000.0" friction="0.028"/>
-		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.94, -1.01, -0.45" radius="0.36" force="80000.0" dampening="14000.0" brake2="2000.0" friction="0.028"/>
+		<wheel drive="0.0" steer="0.6" brake1="1000.0" pos="0.9, 1.55, -0.11" radius="0.3" force="45000.0" dampening="15000.0" friction="0.022"/>
+		<wheel drive="0.0" steer="0.6" brake1="1000.0" pos="-0.9, 1.55, -0.11" radius="0.3" force="45000.0" dampening="15000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.94, -1.06, -0.1" radius="0.36" force="80000.0" dampening="14000.0" brake2="2000.0" friction="0.028"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.94, -1.06, -0.1" radius="0.36" force="80000.0" dampening="14000.0" brake2="2000.0" friction="0.028"/>
 
 		<clip type="body" pos="1.38, 2.7, 1.0" force="100000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.38, 2.7, 1.0" force="100000.0" dampening="25000.0" />

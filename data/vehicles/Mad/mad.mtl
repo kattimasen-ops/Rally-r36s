@@ -1,22 +1,62 @@
 # Blender 4.0.2 MTL File: 'None'
 # www.blender.org
 
-newmtl material_13.002
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
+newmtl material_202.003
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
 d 1.000000
-illum 1
+illum 3
 map_Kd mad.png
+map_Ke mad_emission.png
 
-newmtl material_8.002
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Ks 0.000000 0.000000 0.000000
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
+newmtl material_227.003
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
 d 1.000000
-illum 1
+illum 3
 map_Kd mad.png
+map_Ke mad_emission.png
+
+newmtl material_228.003
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd mad.png
+map_Ke mad_emission.png
+
+newmtl material_40.004
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 0.200000
+illum 6
+map_Kd mad.png
+map_Ke mad_emission.png
+
+newmtl material_42.003
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd mad.png
+map_Ke mad_emission.png
+
+newmtl material_43.005
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd mad.png
+map_Ke mad_emission.png
