@@ -1,12 +1,10 @@
-# Blender MTL File: 'None'
-# Material Count: 3
+# Blender 4.0.2 MTL File: 'None'
+# www.blender.org
 
 newmtl Inside.014
-Ns 225.000000
+Ns 224.999985
 Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.800000 0.800000
 Ks 0.000000 0.000000 0.000000
-Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
@@ -14,11 +12,9 @@ map_Kd trucktexture.png
 map_Ke trucktexture_emission.png
 
 newmtl glass.002
-Ns 575.999996
+Ns 640.000000
 Ka 0.500000 0.500000 0.500000
-Kd 0.800000 0.800000 0.800000
 Ks 0.000000 0.000000 0.000000
-Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.100000
 illum 1
@@ -26,11 +22,9 @@ map_Kd trucktexture.png
 map_Ke trucktexture_emission.png
 
 newmtl truck.001
-Ns 562.401458
+Ns 562.401367
 Ka 1.000000 1.000000 1.000000
-Kd 0.640000 0.640000 0.640000
 Ks 0.731884 0.731884 0.731884
-Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 3
