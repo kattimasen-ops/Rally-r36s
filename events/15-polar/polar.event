@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<event name="15. Polar Marathon" author="Onsemeliot" locked="yes">
+
+	<unlocks file="/events/16-smoothglobe/smoothglobe.event" />
+	<unlocks file="/vehicles/delta/delta.vehicle" />
+	<unlocks file="/vehicles/UAZ/uaz.vehicle" />
+	<unlocks file="/vehicles/truck/Truck.vehicle" />
+
+	<level file="snowdrift/snowdrift.level" />
+	<level file="frozen/frozen.level" />
+	<level file="grim/grim.level" />
+	<level file="iced/iced.level" />
+	<level file="keeper/keeper.level" />
+	<level file="rough/rough.level" />
+	<level file="slip/slip.level" />
+
+</event>

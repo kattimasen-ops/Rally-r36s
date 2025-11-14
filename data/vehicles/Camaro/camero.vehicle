@@ -24,7 +24,7 @@
 		lift="0"
 		fineffect="100"
 		speedrate="1.0"
-		turnspeedrate="0.0, 0.0, 16.0" />
+		turnspeedrate="0.0, 0.0, 8.0" />
 
 	<drivesystem>
 		<engine powerscale="302009">
@@ -63,10 +63,10 @@
 		model="camero.obj"
 		scale="1.0">
 
-		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="0.809, 1.69, -0.22" radius="0.364" force="65000.0" dampening="8500.0" />
-		<wheel drive="0.0" steer="0.7" brake1="600.0" pos="-0.809, 1.69, -0.22" radius="0.364" force="65000.0" dampening="8500.0" />
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="0.809, -1.202, -0.22" radius="0.364" force="50000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
-		<wheel drive="1.0" steer="0.0" brake1="300.0" pos="-0.809, -1.202, -0.22" radius="0.364" force="50000.0" dampening="9300.0" brake2="1000.0" friction="0.030"/>
+		<wheel drive="0.0" steer="0.7" brake1="900.0" pos="0.809, 1.69, -0.22" radius="0.364" force="65000.0" dampening="15000.0" friction="0.022"/>
+		<wheel drive="0.0" steer="0.7" brake1="900.0" pos="-0.809, 1.69, -0.22" radius="0.364" force="65000.0" dampening="15000.0" friction="0.022"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="0.809, -1.202, -0.22" radius="0.364" force="50000.0" dampening="13000.0" brake2="2000.0" friction="0.028"/>
+		<wheel drive="1.0" steer="0.0" brake1="600.0" pos="-0.809, -1.202, -0.22" radius="0.364" force="50000.0" dampening="13000.0" brake2="2000.0" friction="0.028"/>
 
 		<clip type="body" pos="1.0, 1.77, 0.6" force="300000.0" dampening="25000.0" />
 		<clip type="body" pos="-1.0, 1.77, 0.6" force="300000.0" dampening="25000.0" />

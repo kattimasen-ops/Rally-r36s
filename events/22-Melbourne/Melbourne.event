@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<event name="22. Melbourne Ring" author="Eugene MC" locked="yes">
+
+	<unlocks file="/events/23-Bahrain/Bahrain.event" />
+	<unlocks file="/vehicles/ferrari/ferrari.vehicle" />
+	<unlocks file="/vehicles/Hummer2/hummer2.vehicle" />
+	<unlocks file="/vehicles/Fordtruck/fordtruck.vehicle" />
+
+	<level file="australia/Practice.level" />
+	<level file="australia/SprintQal.level" />
+	<level file="australia/Sprint.level" />
+	<level file="australia/Qualification.level" />
+	<level file="australia/Race.level" />
+
+</event>

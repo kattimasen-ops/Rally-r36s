@@ -22,9 +22,11 @@
     >
 
     <blurfilter>
-        <row data="0.08 0.1 0.08" />
-        <row data="0.1 0.01 0.1" />
-        <row data="0.08 0.1 0.08" />
+        <row data="0.019 0.022 0.028 0.022 0.019" />
+        <row data="0.022 0.032 0.039 0.032 0.022" />
+        <row data="0.028 0.039 0.052 0.039 0.028" />
+        <row data="0.022 0.032 0.039 0.032 0.022" />
+        <row data="0.019 0.022 0.028 0.022 0.019" />
     </blurfilter>
 
     <foliageband
@@ -268,10 +270,10 @@
     />
 
   <water
-    height="4"
+    height="3"
     watertexture="/textures/water/default.png"
     alpha="0.65"
-    fixedalpha="yes"
+    fixedalpha="no"
     />
 
   <race coordscale="2, 2"

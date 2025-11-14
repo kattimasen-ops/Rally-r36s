@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<level
+	name="Pistol"
+	comment="Be the bullet!"
+	author="Andrei Bondor"
+	description="flat and fast circuit race"
+	screenshot="ss.png"
+	minimap="mm.png"
+	>
+	<terrain
+		heightmap="h.png"
+		colormap="c.png"
+		foliagemap="f.png"
+		hudmap="c.png"
+		terrainmap="t.png"
+		roadmap="r.png"
+		tilesize="32"
+		horizontalscale="8"
+		verticalscale="0.1"
+		>
+		<foliageband
+			middle="1.00"
+			range="0.00"
+			density="0.00003"
+			sprite="/textures/veg/spruce.png"
+			spritecount="2"
+			scale="3"
+			/>
+	</terrain>
+
+	<weather
+		cloudtexture="/textures/sky/cloudy.png"
+		cloudscrollrate="0.05"
+		fogcolor="0.8, 0.8, 1.0"
+		fogdensity="0.001"
+		fogdensitysky="0.04"
+		/>
+
+	<vehicleoption type="/vehicles/seat/seat.vehicle" />
+	<vehicleoption type="/vehicles/focus/focus.vehicle" />
+	<vehicleoption type="/vehicles/evo/evo.vehicle" />
+
+	<race coordscale="8, -8" targettime="600" laps="3">
+		<startposition pos="196, 135" oridegrees="270" />
+		<checkpoint coords="396, 137" />
+		<checkpoint coords="411, 172" />
+		<checkpoint coords="372, 207" />
+		<checkpoint coords="389, 273" />
+		<checkpoint coords="441, 349" />
+		<checkpoint coords="365, 398" />
+		<checkpoint coords="332, 324" />
+		<checkpoint coords="291, 268" />
+		<checkpoint coords="230, 262" />
+		<checkpoint coords="206, 217" />
+		<checkpoint coords="71, 194" />
+		<checkpoint coords="70, 136" />
+		<checkpoint coords="196, 135" />
+	</race>
+</level>

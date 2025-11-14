@@ -1,0 +1,62 @@
+# Blender 4.3.2 MTL File: 'None'
+# www.blender.org
+
+newmtl material_18.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd beatle.png
+map_Ke beatle_emission.png
+
+newmtl material_31.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd beatle.png
+map_Ke beatle_emission.png
+
+newmtl material_32.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd beatle.png
+map_Ke beatle_emission.png
+
+newmtl material_332.002
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd beatle.png
+
+newmtl material_333.002
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd beatle.png
+map_Ke beatle_emission.png
+
+newmtl material_9.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 0.500000
+illum 9
+map_Kd beatle.png
+map_Ke beatle_emission.png

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<event name="14. Pacific Explore" author="Onsemeliot" locked="yes">
+
+	<unlocks file="/events/15-polar/polar.event" />
+	<unlocks file="/vehicles/Cooper/cooper.vehicle" />
+	<unlocks file="/vehicles/Pickup/pickup.vehicle" />
+	<unlocks file="/vehicles/Smart/Smart.vehicle" />
+
+	<level file="holiday/holiday.level" />
+	<level file="narrowvalley/narrowvalley.level" />
+	<level file="tropic/tropic.level" />
+	<level file="xing/xing.level" />
+	<level file="wetbushland/wetbushland.level" />
+	<level file="quintessence/quintessence.level" />
+
+</event>

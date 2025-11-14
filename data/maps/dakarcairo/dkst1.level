@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<level
+	name="DAKAR-CAIRO_ST_1"
+	comment="...WELL!"
+	author="Xand"
+	description="Road in hills"
+	screenshot=""
+	minimap="c.png">
+
+	<terrain
+		heightmap="h.png"
+		terrainmap="t.png"
+		colormap="c.png"
+		foliagemap="f.png"
+		hudmap="c.png"
+		tilesize="128"
+		horizontalscale="5"
+		verticalscale="2"
+		>
+
+		<blurfilter>
+			<row data="0.01000 0.01000 0.01001 0.01000 0.01000" />
+			<row data="0.01000 0.01000 0.01002 0.01000 0.01000" />
+			<row data="0.01001 0.01002 0.01003 0.01002 0.01001" />
+			<row data="0.01000 0.01000 0.01002 0.01000 0.01000" />
+			<row data="0.01000 0.01000 0.01001 0.01000 0.01000" />
+		</blurfilter>
+
+		<!--<blurfilter>
+			<row data="0.00000 0.00000 0.00001 0.00000 0.00000" />
+			<row data="0.00000 0.00000 0.01002 0.00000 0.00000" />
+			<row data="0.01001 0.01002 0.01003 0.01002 0.01001" />
+			<row data="0.00000 0.00000 0.01002 0.00000 0.00000" />
+			<row data="0.00000 0.00000 0.00001 0.00000 0.00000" />
+		</blurfilter>-->
+
+		<!--<blurfilter>
+			<row data="0.000 0.001 0.000" />
+			<row data="0.001 0.002 0.001" />
+			<row data="0.000 0.001 0.000" />
+		</blurfilter>-->
+
+
+//VEGETATION
+
+		<foliageband
+			middle="0.4"
+			range="0.004"
+			density="0.01"
+			sprite="/textures/veg/grass2.png"
+			spritecount="1"
+			scale="0.6"
+			/>
+<!--
+//ЗНАКЫ!
+		<roadsign sprite="/textures/roadsigns/10up.png" scale="10">
+			//
+			<location coords="425, 410" oridegrees="0" />
+			<location coords="425, 822" oridegrees="0" />
+		</roadsign>  -->
+
+	</terrain>
+
+
+	<weather
+		cloudtexture="/textures/sky/dark-blue.png"
+		cloudscrollrate="0.003"
+		fogcolor="0.5, 0.5, 0.5"
+		fogdensity="0.0005"
+		fogdensitysky="0.9"
+		/>
+
+	<water
+		height="1"
+		watertexture="/textures/water/default.png"
+		alpha="0.5"
+		fixedalpha="no"
+		/>
+
+
+
+	<race coordscale="5, -5" targettime="1800">
+
+		<startposition pos="48,2011" oridegrees="-23" />
+
+		<checkpoint coords="113, 1755"/>
+		<checkpoint coords="152, 1733"/>
+		<checkpoint coords="170, 1688"/>
+		<checkpoint coords="280, 1660"/>
+		<checkpoint coords="507, 44"/>
+		<checkpoint coords="515, -73"/>
+		<checkpoint coords="1060, -1929"/>
+		<checkpoint coords="1242, -2108"/>
+		<checkpoint coords="1538, -4092"/>
+		<checkpoint coords="1596, -4232"/>
+		<checkpoint coords="1596, -4232"/>
+		<checkpoint coords="1888, -6119"/>
+		<checkpoint coords="2019, -5854"/>
+		<!--<checkpoint coords="834, 38" notes="over tarmac" />
+		<checkpoint coords="834, 417" notes="over tarmac over finish" />
+
+		<checkpoint coords="834, 5120"/>-->
+
+	</race>
+</level>

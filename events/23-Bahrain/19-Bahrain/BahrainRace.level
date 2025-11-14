@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<level
+  name="Bahrain GP, race"
+  comment="Race!!"
+  author="Janusz Opila"
+  description="Race, fight for win!!"
+  screenshot="ss1.jpg"
+  minimap="HUD.png">
+>
+
+  <terrain
+    heightmap="H.png"
+    colormap="CM.png"
+    foliagemap="F.png"
+    roadmap="RM.png"
+    hudmap="HUD.png"
+    terrainmap="T.png"
+    tilesize="32"
+    horizontalscale="3.0"
+    verticalscale="0.35"
+    >
+
+    <blurfilter>
+        <row data="0.1 0.1 0.1" />
+        <row data="0.1 0.0 0.1" />
+        <row data="0.1 0.1 0.1" />
+    </blurfilter>
+
+  <foliageband
+      middle="0.9"
+      range="0.1"
+      density="0.0006"
+      sprite="/textures/veg/bush-low.png"
+      spritecount="1"
+      scale="1"
+  />
+  <foliageband
+      middle="0.9"
+      range="0.1"
+      density="0.00002"
+      sprite="/textures/veg/palm-tree.png"
+      spritecount="2"
+      scale="9"
+  />
+
+  <foliageband
+      middle="0.9"
+      range="0.1"
+      density="0.00003"
+      sprite="/textures/veg/palm-tree.png"
+      spritecount="2"
+      scale="7"
+  />
+
+
+    <roadsign sprite="/textures/structures/Start.png" scale="14">
+        <location coords="215, 145" oridegrees=" 90" />
+    </roadsign>
+
+    <roadsign sprite="/textures/structures/2Right.png" scale="2">
+          <location coords=" 64, 146" oridegrees=" 90" />
+          <location coords="100, 400" oridegrees=" 28" />
+          <location coords="208, 325" oridegrees="-88" />
+          <location coords="270, 230" oridegrees="248" />
+          <location coords="270, 230" oridegrees="248" />
+          <location coords="268, 324" oridegrees=" 80" />
+          <location coords="318, 381" oridegrees=" -4" />
+          <location coords="371, 331" oridegrees="-62" />
+          <location coords="440, 173" oridegrees="223" />
+          <location coords="330, 149" oridegrees=" 90" />
+          <location coords=" 68, 213" oridegrees=" 62" />
+    </roadsign>
+
+    <roadsign sprite="/textures/structures/2Left.png" scale="2">
+          <location coords=" 97, 175" oridegrees=" -69" />
+          <location coords="184, 181" oridegrees="  37" />
+          <location coords="123, 205" oridegrees=" 180" />
+          <location coords="366, 211" oridegrees=" 259" />
+          <location coords="330, 277" oridegrees="  -6" />
+          <location coords="135, 243" oridegrees=" 54" />
+          <location coords="153, 154" oridegrees=" 38" />
+          <location coords="153, 154" oridegrees=" 38" />
+          <location coords="207, 255" oridegrees="155" />
+    </roadsign>
+
+    <roadsign sprite="WrongWay.png" scale="6">
+          <location coords="431, 193" oridegrees=" -90" />
+    </roadsign>
+
+    <roadsign sprite="Manama2.png" scale="855">
+          <location coords="2, 256" oridegrees="90" />
+    </roadsign>
+
+    <roadsign sprite="NightLights2.png" scale="770">
+          <location coords="509, 256" oridegrees="-90" />
+    </roadsign>
+
+    <roadsign sprite="NightLights1.png" scale="770">
+          <location coords="256, 509" oridegrees="0" />
+    </roadsign>
+
+    <roadsign sprite="Moon2.png" scale="770">
+          <location coords="256, 2" oridegrees="180" />
+    </roadsign>
+
+    <roadsign sprite="/textures/structures/Lights.png" scale="8">
+          <location coords=" 27, 144" oridegrees="  90" />
+          <location coords="108, 158" oridegrees="   0" />
+          <location coords=" 73, 177" oridegrees="  20" />
+          <location coords=" 75, 184" oridegrees=" 111" />
+          <location coords=" 63, 219" oridegrees="  95" />
+          <location coords=" 71, 258" oridegrees="  80" />
+          <location coords=" 81, 325" oridegrees="  80" />
+          <location coords=" 89, 396" oridegrees="  80" />
+          <location coords=" 93, 435" oridegrees="  80" />
+          <location coords="189, 277" oridegrees="  80" />
+          <location coords=" 92, 215" oridegrees="  80" />
+          <location coords="250, 318" oridegrees="  80" />
+          <location coords="353, 228" oridegrees="  80" />
+          <location coords="338, 216" oridegrees="   0" />
+          <location coords="349, 156" oridegrees="   0" />
+          <location coords="317, 165" oridegrees="   0" />
+          <location coords="384, 134" oridegrees=" 180" />
+          <location coords="310, 133" oridegrees=" 180" />
+          <location coords="157, 133" oridegrees=" 180" />
+          <location coords=" 63, 133" oridegrees=" 171" />
+          <location coords="105, 189" oridegrees=" -75" />
+          <location coords="320, 401" oridegrees="   0" />
+          <location coords="361, 368" oridegrees=" 122" />
+          <location coords="364, 300" oridegrees=" 122" />
+          <location coords="396, 249" oridegrees=" 122" />
+          <location coords="442, 164" oridegrees="  78" />
+          <location coords="400, 286" oridegrees=" -60" />
+          <location coords="432, 230" oridegrees=" -60" />
+          <location coords="459, 187" oridegrees=" -60" />
+          <location coords="487, 118" oridegrees=" 221" />
+          <location coords="123, 368" oridegrees=" 140" />
+          <location coords="165, 332" oridegrees=" 140" />
+          <location coords="160, 366" oridegrees=" -44" />
+          <location coords="224, 336" oridegrees=" -44" />
+          <location coords="247, 291" oridegrees=" -64" />
+          <location coords="274, 248" oridegrees=" -49" />
+          <location coords="302, 296" oridegrees=" -49" />
+          <location coords="367, 271" oridegrees=" -38" />
+          <location coords="268, 338" oridegrees=" -59" />
+          <location coords="320, 258" oridegrees=" 160" />
+
+
+    </roadsign>
+
+
+  </terrain>
+
+  <weather
+    cloudtexture="/textures/sky/stars.jpg"
+    cloudscrollrate="0.0"
+    fogcolor="0.95, 0.5, 0.95"
+    fogdensity="0.00001"
+    fogdensitysky="0.10"
+    />
+
+  <water
+    height="13.3"
+    watertexture="/textures/water/black-water.png"
+    alpha="0.65"
+    fixedalpha="no"
+    />
+
+  <race coordscale="3.0, 3.0" targettime="625.0" laps="5">
+
+    <startposition pos="227, 147, 2.0" oridegrees="90" />
+
+    <checkpoint coords=" 74, 149" />
+    <checkpoint coords=" 89, 174" />
+    <checkpoint coords="121, 390" />
+    <checkpoint coords="201, 326" />
+    <checkpoint coords="249, 230" />
+    <checkpoint coords="142, 214" />
+    <checkpoint coords="362, 218" />
+    <checkpoint coords="310, 275" />
+    <checkpoint coords="288, 324" />
+    <checkpoint coords="333, 366" />
+    <checkpoint coords="450, 153" />
+    <checkpoint coords="343, 146" />
+    <checkpoint coords="215, 144" />
+
+  </race>
+
+</level>

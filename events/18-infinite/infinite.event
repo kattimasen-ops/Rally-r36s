@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<event name="18. Infinite Dare" author="Onsemeliot" locked="yes">
+
+	<unlocks file="/events/19-islands/islands.event" />
+	<unlocks file="/vehicles/lancia/lancia_stratos.vehicle" />
+	<unlocks file="/vehicles/Camaro/camero.vehicle" />
+	<unlocks file="/vehicles/Scooter/Scooter.vehicle" />
+
+
+	<level file="infinite/infinite.level" />
+	<level file="infinite/infinite-rain.level" />
+	<level file="infinite/infinite-offroad.level" />
+	<level file="infinite/infinite-rewind.level" />
+
+</event>

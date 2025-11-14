@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<event
+	name="20. Western Challenge"
+	author="Matthias Keysermann"
+	locked="yes"
+	>
+	<unlocks file="/events/21-wrc-cup/wrc-cup.event" />
+	<unlocks file="/vehicles/Buggy/buggy.vehicle" />
+	<unlocks file="/vehicles/guncar/guncar.vehicle" />
+	<unlocks file="/vehicles/ORB_jeep/orb.vehicle" />
+
+	<level file="smoothcanyon/smoothcanyon.level" />
+
+	<level file="greatplains/greatplains.level" />
+
+	<level file="rockyprairie/rockyprairie.level" />
+
+	<level file="whitesands/whitesands.level" />
+
+</event>

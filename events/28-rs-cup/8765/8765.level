@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<level
+	name="8765"
+	comment="Mathematicians don't drive well"
+	author="Marcio Bremm"
+	description="demanding tight, rough roadside"
+	screenshot="ss.png"
+	minimap="mm.png">
+
+	<terrain
+		heightmap="h.png"
+		terrainmap="t.png"
+		roadmap="r.png"
+		colormap="c.png"
+		foliagemap="f.png"
+		hudmap="c.png"
+		tilesize="16"
+		horizontalscale="4.0"
+		verticalscale="0.10"
+		>
+
+		<foliageband
+			middle="0.7"
+			range="0.4"
+			density="0.0003"
+			sprite="/textures/veg/grass-sprite.png"
+			spritecount="1"
+			scale="0.25"
+			/>
+
+	</terrain>
+
+	<weather
+		cloudtexture="/textures/sky/overcast.jpg"
+		rain="5500.0"
+		/>
+
+	<vehicleoption type="/vehicles/seat/seat.vehicle" />
+
+	<vehicleoption type="/vehicles/focus/focus.vehicle" />
+
+	<vehicleoption type="/vehicles/evo/evo.vehicle" />
+
+	<race coordscale="4.0, -4.0"
+		targettime="275.0" codrivercpmode="free">
+
+		<startposition pos="87, 361, 2.0" oridegrees="90"/>
+
+		<checkpoint coords="157, 357" />
+		<checkpoint coords="178, 313" />
+		<checkpoint coords="237, 305" />
+		<checkpoint coords="220, 231" />
+		<checkpoint coords="284, 240" />
+		<checkpoint coords="395, 175" />
+		<checkpoint coords="338, 096" />
+		<checkpoint coords="383, 054" />
+		<checkpoint coords="338, 096" />
+		<checkpoint coords="289, 147" />
+		<checkpoint coords="345, 141" />
+		<checkpoint coords="395, 175" />
+		<checkpoint coords="284, 240" />
+		<checkpoint coords="194, 260" />
+		<checkpoint coords="178, 313" />
+		<checkpoint coords="087, 361" />
+
+	</race>
+
+</level>

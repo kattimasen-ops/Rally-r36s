@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<level
+	name="Pulp : cars can fly."
+	comment="Pulp your hands up in the air..."
+	author="Pulp"
+	description="experimental pipe road, big jumps"
+	screenshot="ss.png"
+	minimap="mm.png">
+
+	<terrain
+		heightmap="h.png"
+		terrainmap="t.png"
+		roadmap="r.png"
+		colormap="c.jpg"
+		foliagemap="f.png"
+		hudmap="c.jpg"
+		tilesize="32"
+		horizontalscale="2"
+		verticalscale="0.08"
+		>
+
+		<foliageband
+			middle="0.7"
+			range="0.4"
+			density="0.0001"
+			sprite="/textures/veg/grass-sprite.png"
+			spritecount="0.25"
+			/>
+
+		<foliageband
+			middle="1.0"
+			range="0.5"
+			density="0.0001"
+			sprite="/textures/veg/palmy.png"
+			spritecount="1.5"
+			/>
+	</terrain>
+
+	<vehicleoption type="/vehicles/seat/seat.vehicle" />
+	<vehicleoption type="/vehicles/focus/focus.vehicle" />
+	<vehicleoption type="/vehicles/evo/evo.vehicle" />
+
+	<race coordscale="2, -2" targettime="120.0">
+
+		<startposition pos="170, 220" oridegrees="180" />
+
+		<checkpoint coords="206, 403" />
+		<checkpoint coords="245, 292" />
+		<checkpoint coords="300, 410" />
+		<checkpoint coords="332, 236" />
+		<checkpoint coords="70, 204" />
+		<checkpoint coords="288, 162" />
+		<checkpoint coords="410, 107" />
+		<checkpoint coords="212, 92" />
+		<checkpoint coords="170, 220" />
+	</race>
+</level>
