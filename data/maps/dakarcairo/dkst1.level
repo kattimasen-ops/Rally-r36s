@@ -4,7 +4,7 @@
 	comment="...WELL!"
 	author="Xand"
 	description="Road in hills"
-	screenshot=""
+	screenshot="ss.png"
 	minimap="c.png">
 
 	<terrain
@@ -71,7 +71,7 @@
 		/>
 
 	<water
-		height="1"
+		height="3"
 		watertexture="/textures/water/default.png"
 		alpha="0.5"
 		fixedalpha="no"
@@ -79,21 +79,31 @@
 
 
 
-	<race coordscale="5, -5" targettime="1800">
+	<race coordscale="5, -5" targettime="3600">
 
 		<startposition pos="48,2011" oridegrees="-23" />
 
 		<checkpoint coords="113, 1755"/>
-		<checkpoint coords="152, 1733"/>
-		<checkpoint coords="170, 1688"/>
 		<checkpoint coords="280, 1660"/>
+		<checkpoint coords="260, 1430"/>
+		<checkpoint coords="190, 1385"/>
+		<checkpoint coords="493, 213"/>
 		<checkpoint coords="507, 44"/>
 		<checkpoint coords="515, -73"/>
+		<checkpoint coords="735, -236"/>
+		<checkpoint coords="490, -573"/>
+		<checkpoint coords="850, -1049"/>
+		<checkpoint coords="716, -1731"/>
 		<checkpoint coords="1060, -1929"/>
-		<checkpoint coords="1242, -2108"/>
-		<checkpoint coords="1538, -4092"/>
-		<checkpoint coords="1596, -4232"/>
-		<checkpoint coords="1596, -4232"/>
+		<checkpoint coords="1252, -2166"/>
+		<checkpoint coords="1380, -3556"/>
+		<checkpoint coords="1260, -3586"/>
+		<checkpoint coords="1450, -4400"/>
+		<checkpoint coords="1750, -5564"/>
+		<checkpoint coords="1685, -5417"/>
+		<checkpoint coords="1635, -5504"/>
+		<checkpoint coords="1590, -5421"/>
+		<checkpoint coords="1870, -5939"/>
 		<checkpoint coords="1888, -6119"/>
 		<checkpoint coords="2019, -5854"/>
 		<!--<checkpoint coords="834, 38" notes="over tarmac" />

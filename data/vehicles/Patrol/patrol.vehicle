@@ -49,7 +49,7 @@
 
 	<part
 		name="body"
-		pos="0.0, 0.2, -0.2"
+		pos="0.0, 0.2, -0.15"
 		render_pos="0.0, 0.1, -0.1"
 		orientation="1.0, 0.0, 0.0, 0.0"
 		model="patrol.obj"

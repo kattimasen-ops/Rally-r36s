@@ -1,0 +1,62 @@
+# Blender 4.0.2 MTL File: 'None'
+# www.blender.org
+
+newmtl material_118.004
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 0.500000
+illum 6
+map_Kd browning.png
+map_Ke browning_emission.png
+
+newmtl material_119.004
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd browning.png
+map_Ke browning_emission.png
+
+newmtl material_122.004
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd browning.png
+map_Ke browning_emission.png
+
+newmtl material_123.004
+Ns 640.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd browning.png
+map_Ke browning_emission.png
+
+newmtl material_51.004
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd browning.png
+map_Ke browning_emission.png
+
+newmtl material_78.004
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.900000 0.900000 0.900000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd browning.png
+map_Ke browning_emission.png
