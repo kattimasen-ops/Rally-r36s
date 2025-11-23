@@ -27,6 +27,7 @@
 			spritecount="2"
 			scale="0.5"
 			/>
+
 	<roadsign sprite="/textures/structures/Start.png" scale="25">
 		<location coords="288, -422" oridegrees="63" />
 	</roadsign>
@@ -101,6 +102,7 @@
 
 		<location coords="368.3625, -442.9075" oridegrees="63" />
   </roadsign>
+
 	</terrain>
 
 	<weather
@@ -117,7 +119,7 @@
 
 	<race coordscale="4, -4" targettime="125">
 
-		<startposition pos="290, 423" oridegrees="64" />
+		<startposition pos="290, 423" oridegrees="63" />
 		<checkpoint coords="071, 327" />
 		<checkpoint coords="055, 194" />
 		<checkpoint coords="125, 032" />
