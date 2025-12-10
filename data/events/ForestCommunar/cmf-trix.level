@@ -37,7 +37,7 @@
 			range="0.005"
 			density="0.03"
 			sprite="/textures/veg/rogoz.png"
-			spritecount="1"
+			spritecount="2"
 			scale="2"
 			/>
 		<foliageband
@@ -45,7 +45,7 @@
 			range="0.005"
 			density="0.02"
 			sprite="/textures/veg/grass14.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -55,7 +55,7 @@
 			range="0.005"
 			density="0.02"
 			sprite="/textures/veg/grass14.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -65,7 +65,7 @@
 			range="0.005"
 			density="0.003"
 			sprite="/textures/veg/bush-wide.png"
-			spritecount="1"
+			spritecount="2"
 			scale="2"
 			/>
 
@@ -76,7 +76,7 @@
 			range="0.005"
 			density="0.01"
 			sprite="/textures/veg/grass7.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 		<foliageband
@@ -84,7 +84,7 @@
 			range="0.005"
 			density="0.01"
 			sprite="/textures/veg/grass6.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -94,7 +94,7 @@
 			range="0.005"
 			density="0.00001"
 			sprite="/textures/veg/pear-giant.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -102,7 +102,7 @@
 			range="0.005"
 			density="0.00001"
 			sprite="/textures/veg/moxed-tree.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -110,7 +110,7 @@
 			range="0.005"
 			density="0.000007"
 			sprite="/textures/veg/wide-tree4.png"
-			spritecount="1"
+			spritecount="2"
 			scale="12"
 			/>
 		<foliageband
@@ -118,7 +118,7 @@
 			range="0.005"
 			density="0.000007"
 			sprite="/textures/veg/akaz-big.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -126,7 +126,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -134,7 +134,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree2.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -142,7 +142,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree4.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -150,7 +150,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/green-tree2.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 
@@ -162,7 +162,7 @@
 			range="0.005"
 			density="0.0002"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="7"
 			/>
 
@@ -174,7 +174,7 @@
 			range="0.005"
 			density="0.0002"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="6"
 			/>
 		<foliageband
@@ -182,7 +182,7 @@
 			range="0.005"
 			density="0.0004"
 			sprite="/textures/veg/apple-tree-tall.png"
-			spritecount="1"
+			spritecount="2"
 			scale="3"
 			/>
 
@@ -192,7 +192,7 @@
 			range="0.005"
 			density="0.000002"
 			sprite="/textures/veg/topol.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -200,7 +200,7 @@
 			range="0.005"
 			density="0.0000003"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="10"
 			/>
 		<foliageband
@@ -208,7 +208,7 @@
 			range="0.005"
 			density="0.000003"
 			sprite="/textures/veg/bush-wide.png"
-			spritecount="1"
+			spritecount="2"
 			scale="3"
 			/>
 
@@ -794,7 +794,7 @@
 		<checkpoint coords="404, 393" />
 		<checkpoint coords="689, 402" />
 
-		<codrivercp coords="965, 949" notes="overdirt overjump easy right" />
+		<codrivercp coords="965, 949" notes="over dirt over jump easy right" />
 		<codrivercp coords="938, 936" notes="easy left carefull" />
 		<codrivercp coords="905, 946" notes="aaa" />
 		<codrivercp coords="888, 912" notes="kurwa2" />
@@ -824,7 +824,7 @@
 		<codrivercp coords="587, 607" notes="extright" />
 		<codrivercp coords="550, 621" notes="medium left long" />
 		<codrivercp coords="498, 583" notes="easy right" />
-		<codrivercp coords="490, 555" notes="overjump" />
+		<codrivercp coords="490, 555" notes="over jump" />
 		<codrivercp coords="474, 539" notes="flat left descent" />
 		<codrivercp coords="440, 513" notes="whatyoudoing" />
 		<codrivercp coords="456, 513" notes="square right" />
@@ -840,12 +840,12 @@
 		<codrivercp coords="260, 430" notes="whereyougo" />
 		<codrivercp coords="230, 427" notes="goyourself" />
 		<codrivercp coords="265, 413" notes="medium left carefull" />
-		<codrivercp coords="249, 399" notes="overjump short medium left" />
+		<codrivercp coords="249, 399" notes="over jump short medium left" />
 		<codrivercp coords="242, 360" notes="extleft" />
 		<codrivercp coords="252, 344" notes="kurwa" />
 		<codrivercp coords="263, 362" notes="flat left long" />
-		<codrivercp coords="321, 343" notes="overdrop" />
-		<codrivercp coords="377, 350" notes="overjump attention" />
+		<codrivercp coords="321, 343" notes="over drop" />
+		<codrivercp coords="377, 350" notes="over jump attention" />
 		<codrivercp coords="403, 357" notes="hard left" />
 		<codrivercp coords="439, 380" notes="youmad2" />
 		<codrivercp coords="439, 360" notes="whatyoudoing" />
@@ -856,9 +856,9 @@
 		<codrivercp coords="475, 365" notes="kurwa2" />
 		<codrivercp coords="507, 377" notes="tight easy left descent" />
 		<codrivercp coords="531, 406" notes="medium right" />
-		<codrivercp coords="555, 413" notes="overjump" />
+		<codrivercp coords="555, 413" notes="over jump" />
 		<codrivercp coords="586, 408" notes="flat left" />
-		<codrivercp coords="654, 402" notes="overfinish" />
+		<codrivercp coords="654, 402" notes="over finish" />
 		<codrivercp coords="689, 402" notes="applause" />
 	</race>
 </level>

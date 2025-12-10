@@ -37,7 +37,7 @@
 			range="0.005"
 			density="0.03"
 			sprite="/textures/veg/rogoz.png"
-			spritecount="1"
+			spritecount="2"
 			scale="2"
 			/>
 		<foliageband
@@ -45,7 +45,7 @@
 			range="0.005"
 			density="0.02"
 			sprite="/textures/veg/grass14.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -55,7 +55,7 @@
 			range="0.005"
 			density="0.02"
 			sprite="/textures/veg/grass14.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -65,7 +65,7 @@
 			range="0.005"
 			density="0.003"
 			sprite="/textures/veg/bush-wide.png"
-			spritecount="1"
+			spritecount="2"
 			scale="2"
 			/>
 
@@ -76,7 +76,7 @@
 			range="0.005"
 			density="0.01"
 			sprite="/textures/veg/grass7.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 		<foliageband
@@ -84,7 +84,7 @@
 			range="0.005"
 			density="0.01"
 			sprite="/textures/veg/grass6.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -94,7 +94,7 @@
 			range="0.005"
 			density="0.00001"
 			sprite="/textures/veg/pear-giant.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -102,7 +102,7 @@
 			range="0.005"
 			density="0.00001"
 			sprite="/textures/veg/moxed-tree.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -110,7 +110,7 @@
 			range="0.005"
 			density="0.000007"
 			sprite="/textures/veg/wide-tree4.png"
-			spritecount="1"
+			spritecount="2"
 			scale="12"
 			/>
 		<foliageband
@@ -118,7 +118,7 @@
 			range="0.005"
 			density="0.000007"
 			sprite="/textures/veg/akaz-big.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -126,7 +126,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -134,7 +134,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree2.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -142,7 +142,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree4.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -150,7 +150,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/green-tree2.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 
@@ -162,7 +162,7 @@
 			range="0.005"
 			density="0.0002"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="7"
 			/>
 
@@ -174,7 +174,7 @@
 			range="0.005"
 			density="0.0002"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="6"
 			/>
 		<foliageband
@@ -182,7 +182,7 @@
 			range="0.005"
 			density="0.0004"
 			sprite="/textures/veg/apple-tree-tall.png"
-			spritecount="1"
+			spritecount="2"
 			scale="3"
 			/>
 
@@ -192,7 +192,7 @@
 			range="0.005"
 			density="0.000002"
 			sprite="/textures/veg/topol.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -200,7 +200,7 @@
 			range="0.005"
 			density="0.0000003"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="10"
 			/>
 		<foliageband
@@ -208,7 +208,7 @@
 			range="0.005"
 			density="0.000003"
 			sprite="/textures/veg/bush-wide.png"
-			spritecount="1"
+			spritecount="2"
 			scale="3"
 			/>
 
@@ -822,7 +822,7 @@
 		<codrivercp coords="757, 521" notes="here carefull" />
 		<codrivercp coords="762, 472" notes="kurwa" />
 		<codrivercp coords="743, 465" notes="whatyoudoing" />
-		<codrivercp coords="755, 500" notes="flat left overfinish" />
+		<codrivercp coords="755, 500" notes="flat left over finish" />
 		<codrivercp coords="752, 441" notes="applause" />
 	</race>
 </level>

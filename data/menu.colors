@@ -19,17 +19,17 @@
 	with the components being floating point numbers ranging from 0 to 1.
 -->
 <menucolors
-	normal="0.6, 0.8, 0, 1"
-	click="0.6, 0.8, 0, 1"
+	normal="1, 1, 1, 1"
+	click="1, 1, 1, 1"
 	hover="1, 0.4, 0, 1"
 	listnormal="0.7, 0.7, 0.7, 1"
-	listclick="0.6, 0.8, 0, 1"
+	listclick="1, 1, 1, 1"
 	listhover="1, 0.4, 0, 1"
 	weak="0.7, 0.7, 0.7, 1"
-	strong="0.6, 0.8, 0, 1"
+	strong="1, 1, 1, 1"
 	marked="1, 0.2, 0.2, 1"
 	header="0.8, 0.8, 0.4, 1"
-	bnormal="0.6, 0.8, 0, 0.2"
-	bclick="0.5, 1, 0, 1"
+	bnormal="1, 1, 1, 0.2"
+	bclick="1, 1, 1, 1"
 	bhover="1, 0.4, 0, 1"
 	/>

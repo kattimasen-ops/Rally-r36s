@@ -25,7 +25,7 @@
 			density="0.0001"
 			sprite="/textures/veg/bush-dry.png"
 			spritecount="2"
-			scalemax="2.0"
+			scale="0.25"
 			/>
 
 		<foliageband
@@ -34,8 +34,7 @@
 			density="0.00003"
 			sprite="/textures/veg/dusty-bush.png"
 			spritecount="2"
-			scale="3.0"
-			scalemax="-2.0"
+			scale="0.5"
 			/>
 
 		<blurfilter>
@@ -50,15 +49,54 @@
 			<row data="0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001" />
 		</blurfilter>
 
-		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="1">
-			<location coords="222, 211" oridegrees="35" />
-			<location coords="299, 344" oridegrees="-54" />
-			<location coords="2270, 2259" oridegrees="35" />
-			<location coords="2347, 2392" oridegrees="-54" />
-			<location coords="-1826, -1837" oridegrees="35" />
-			<location coords="-1749, -1704" oridegrees="-54" />
-			<location coords="2270, -1837" oridegrees="35" />
-			<location coords="2347, -1704" oridegrees="-54" />
+		<roadsign sprite="/textures/roadsigns/arrowright.png" scale="2">
+			<location coords="2601, -984" oridegrees="180" />
+			<location coords="2414, -991" oridegrees="100" />
+			<location coords="1033, -940" oridegrees="-75" />
+			<location coords="1435, -693" oridegrees="-90" />
+			<location coords="1690, -1005" oridegrees="-90" />
+			<location coords="1563, -1255" oridegrees="126" />
+			<location coords="1406, -1172" oridegrees="225" />
+			<location coords="1009, -1095" oridegrees="40" />
+			<location coords="1380, -518" oridegrees="145" />
+			<location coords="1237, -256" oridegrees="30" />
+			<location coords="1230, -213" oridegrees="0" />
+			<location coords="1316, -180" oridegrees="120" />
+			<location coords="1333, 324" oridegrees="215" />
+			<location coords="1162, 310" oridegrees="90" />
+			<location coords="625, 1008" oridegrees="220" />
+			<location coords="550, 1065" oridegrees="250" />
+			<location coords="333, 1060" oridegrees="90" />
+			<location coords="232, 1200" oridegrees="0" />
+			<location coords="274, 1363" oridegrees="180" />
+			<location coords="51, 1766" oridegrees="10" />
+			<location coords="217, 1783" oridegrees="90" />
+			<location coords="246, 2285" oridegrees="30" />
+			<location coords="320, 2366" oridegrees="-60" />
+			<location coords="575, 2184" oridegrees="80" />
+			<location coords="632, 2196" oridegrees="-70" />
+			<location coords="780, 1793" oridegrees="200" />
+			<location coords="764, 1603" oridegrees="0" />
+			<location coords="1065, 1605" oridegrees="-90" />
+		</roadsign>
+		<roadsign sprite="/textures/roadsigns/arrowsLR.png" scale="3">
+			<location coords="2728, -1374" oridegrees="-69" />
+			<location coords="2246, -874" oridegrees="-90" />
+			<location coords="1476, -677" oridegrees="-45" />
+		</roadsign>
+		<roadsign sprite="/textures/roadsigns/indicator.png" scale="2">
+			<location coords="1166, -1255" oridegrees="0" />
+			<location coords="1166, -1255" oridegrees="90" />
+			<location coords="1091, -1464" oridegrees="0" />
+			<location coords="1091, -1464" oridegrees="90" />
+			<location coords="1091, 584" oridegrees="0" />
+			<location coords="1091, 584" oridegrees="90" />
+		</roadsign>
+		<roadsign sprite="/textures/roadsigns/bended.png" scale="2">
+			<location coords="1366, 268" oridegrees="0" />
+			<location coords="680, 853" oridegrees="5" />
+			<location coords="689, 1898" oridegrees="10" />
+
 		</roadsign>
 	</terrain>
 
@@ -74,47 +112,47 @@
 	<vehicleoption type="/vehicles/focus/focus.vehicle" />
 	<vehicleoption type="/vehicles/evo/evo.vehicle" />
 
-	<race coordscale="0.7, 0.7" targettime="250">
-		<startposition pos="2346, -1632" oridegrees="0" />
-		<checkpoint coords="2348, -1594" notes="easy right into flat left into medium right" />
-		<checkpoint coords="2546, -1420" notes="medium left into medium left over tarmac" />
-		<checkpoint coords="2730, -1294" />
-		<checkpoint coords="2720, -1240" notes="medium left" />
-		<checkpoint coords="2480, -1000" notes="medium right into hard left over sand" />
-		<checkpoint coords="2198, -898" />
-		<checkpoint coords="2174, -940" notes="medium right long" />
-		<checkpoint coords="1942, -740" notes="hard left into flat left into easy left" />
-		<checkpoint coords="1710, -480" notes="flat right into flat left" />
-		<checkpoint coords="1530, -614" notes="square left over tarmac into flat left" />
-		<checkpoint coords="1486, -720" />
-		<checkpoint coords="1610, -956" notes="hard right into flat right" />
-		<checkpoint coords="1710, -1122" notes="hard right into medium left" />
-		<checkpoint coords="1320, -1212" notes="flat right into medium right" />
-		<checkpoint coords="1106, -1210" />
-		<checkpoint coords="1080, -1192" notes="medium right long" />
-		<checkpoint coords="1060, -920" notes="flat left" />
-		<checkpoint coords="1310, -608" notes="flat right into hard left" />
-		<checkpoint coords="1320, -584" />
-		<checkpoint coords="1370, -428" notes="hard right long into medium left" />
-		<checkpoint coords="1368, 72" notes="hard left into hard right" />
-		<checkpoint coords="1120, 360" notes="medium left" />
-		<checkpoint coords="1012, 586" />
-		<checkpoint coords="940, 574" notes="medium right" />
-		<checkpoint coords="682, 754" />
-		<checkpoint coords="672, 808" notes="medium left" />
-		<checkpoint coords="432, 1048" notes="medium right long" />
-		<checkpoint coords="216, 1210" notes="medium left into flat left" />
-		<checkpoint coords="220, 1234" />
-		<checkpoint coords="196, 1522" notes="flat right into hard right long" />
-		<checkpoint coords="110, 1820" notes="medium left" />
-		<checkpoint coords="294, 1890" notes="easy left into hard right" />
-		<checkpoint coords="238, 2318" notes="hard right" />
-		<checkpoint coords="334, 2380" />
-		<checkpoint coords="404, 2318" notes="flat left into medium left into square right" />
-		<checkpoint coords="678, 2120" notes="easy left into medium right" />
-		<checkpoint coords="804, 1738" notes="hard left" />
-		<checkpoint coords="848, 1572" notes="medium right" />
-		<checkpoint coords="1168, 1552" notes="flat left over finish" />
-		<checkpoint coords="1380, 1379" />
+	<race coordscale="0.7, -0.7" targettime="250">
+		<startposition pos="2346, 1632" oridegrees="0" />
+		<checkpoint coords="2348, 1594" notes="easy right into flat left into medium right" />
+		<checkpoint coords="2546, 1420" notes="medium left into medium left over tarmac" />
+		<checkpoint coords="2730, 1294" />
+		<checkpoint coords="2720, 1240" notes="medium left" />
+		<checkpoint coords="2480, 1000" notes="medium right into hard left over sand" />
+		<checkpoint coords="2198, 898" />
+		<checkpoint coords="2174, 940" notes="medium right long" />
+		<checkpoint coords="1942, 740" notes="hard left into flat left into easy left" />
+		<checkpoint coords="1710, 480" notes="flat right into flat left" />
+		<checkpoint coords="1530, 614" notes="square left over tarmac into flat left" />
+		<checkpoint coords="1486, 720" />
+		<checkpoint coords="1610, 956" notes="hard right into flat right" />
+		<checkpoint coords="1710, 1122" notes="hard right into medium left" />
+		<checkpoint coords="1320, 1212" notes="flat right into medium right" />
+		<checkpoint coords="1106, 1210" />
+		<checkpoint coords="1080, 1192" notes="medium right long" />
+		<checkpoint coords="1060, 920" notes="flat left" />
+		<checkpoint coords="1310, 608" notes="flat right into hard left" />
+		<checkpoint coords="1320, 584" />
+		<checkpoint coords="1370, 428" notes="hard right long into medium left" />
+		<checkpoint coords="1368, -72" notes="hard left into hard right" />
+		<checkpoint coords="1120, -360" notes="medium left" />
+		<checkpoint coords="1012, -586" />
+		<checkpoint coords="940, -574" notes="medium right" />
+		<checkpoint coords="682, -754" />
+		<checkpoint coords="672, -808" notes="medium left" />
+		<checkpoint coords="432, -1048" notes="medium right long" />
+		<checkpoint coords="216, -1210" notes="medium left into flat left" />
+		<checkpoint coords="220, -1234" />
+		<checkpoint coords="196, -1522" notes="flat right into hard right long" />
+		<checkpoint coords="110, -1820" notes="medium left" />
+		<checkpoint coords="294, -1890" notes="easy left into hard right" />
+		<checkpoint coords="238, -2318" notes="hard right" />
+		<checkpoint coords="334, -2380" />
+		<checkpoint coords="404, -2318" notes="flat left into medium left into square right" />
+		<checkpoint coords="678, -2120" notes="easy left into medium right" />
+		<checkpoint coords="804, -1738" notes="hard left" />
+		<checkpoint coords="848, -1572" notes="medium right" />
+		<checkpoint coords="1168, -1552" notes="flat left over finish" />
+		<checkpoint coords="1380, -1379" />
 	</race>
 </level>

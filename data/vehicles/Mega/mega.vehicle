@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<vehicle
+	name="Mega Dsrt"
+	class="Off-Road"
+	type="car"
+	locked="yes">
+
+	<pstats
+		weightkg="1750"
+		enginebhp="265"
+		maxspeed="210"
+		wheeldrive="4WD"
+		handling="good" />
+
+	<genparams
+		mass="1750.0"
+		dimensions="1.915, 4.19, 1.875"
+		wheelmodel="mega_wheel.obj"
+		wheelscale="1.0" />
+
+	<ctrlparams
+		drag="0.0, 0.0, 0.0"
+		angdrag="10.0, 80.0, 0.0"
+		lift="0"
+		fineffect="100"
+		speedrate="1.0"
+		turnspeedrate="0.0, 0.0, 8.0" />
+
+	<drivesystem>
+		<engine powerscale="197876">
+			<powerpoint rpm="1000" power="0.3" />
+			<powerpoint rpm="3000" power="0.5" />
+			<powerpoint rpm="4000" power="0.7" />
+			<powerpoint rpm="5000" power="0.9" />
+			<powerpoint rpm="7000" power="1.0" />
+			<powerpoint rpm="8000" power="0.0" />
+		</engine>
+	<!--main gear ? 1: 3.952 2: 2.238 3: 1.398 4: 1.0 5: 0.819 back 3.553
+-->
+		<gearbox>
+			<gear absolute="0.0353" />
+			<gear relative="1.766" />
+			<gear relative="1.601" />
+			<gear relative="1.398" />
+			<gear relative="1.221" />
+			<gear relative="1.0" />
+		</gearbox>
+	</drivesystem>
+
+	<part
+		name="body"
+		pos="0.0, 0.1, -0.05"
+		render_pos="0.0, -0.1, -0.15"
+		orientation="1.0, 0.0, 0.0, 0.0"
+		model="mega.obj"
+		scale="1.0">
+
+		<wheel drive="0.4" steer="0.6" brake1="1000.0" pos="0.77, 1.66, -0.05" radius="0.41" force="40000.0" dampening="17000.0" friction="0.02"/>
+		<wheel drive="0.4" steer="0.6" brake1="1000.0" pos="-0.77, 1.66, -0.05" radius="0.41" force="40000.0" dampening="17000.0" friction="0.02"/>
+		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="0.83, -1.3, -0.07" radius="0.41" force="45000.0" dampening="16000.0" brake2="2000.0" friction="0.02"/>
+		<wheel drive="0.6" steer="0.0" brake1="600.0" pos="-0.83, -1.3, -0.07" radius="0.41" force="45000.0" dampening="16000.0" brake2="2000.0" friction="0.02"/>
+
+		<clip type="body" pos="0.96, 2.3, 1.0" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.96, 2.3, 1.0" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="0.96, -1.8, 1.875" force="100000.0" dampening="25000.0" />
+		<clip type="body" pos="-0.96, -1.8, 1.875" force="100000.0" dampening="25000.0" />
+
+	</part>
+
+</vehicle>

@@ -155,7 +155,7 @@
 
 	//R
 	<rigidity sprite="textures/veg/red-tree.png" value="0.05"/>
-	<rigidity sprite="textures/veg/rogoz.png" value="0.02"/>
+	<rigidity sprite="textures/veg/rogoz.png" value="0.01"/>
 
 
 	//S

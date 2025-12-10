@@ -62,7 +62,7 @@
 			scale="4"
 			/>
 
-		<roadsign sprite="indicator.png" scale="2">
+		<roadsign sprite="/textures/roadsigns/indicator.png" scale="2">
 			<location coords="1831, 1663" oridegrees="0" />
 			<location coords="1831, 1663" oridegrees="90" />
 		</roadsign>

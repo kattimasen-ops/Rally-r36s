@@ -37,7 +37,7 @@
 			range="0.005"
 			density="0.03"
 			sprite="/textures/veg/rogoz.png"
-			spritecount="1"
+			spritecount="2"
 			scale="2"
 			/>
 		<foliageband
@@ -45,7 +45,7 @@
 			range="0.005"
 			density="0.02"
 			sprite="/textures/veg/grass14.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -55,7 +55,7 @@
 			range="0.005"
 			density="0.02"
 			sprite="/textures/veg/grass14.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -65,7 +65,7 @@
 			range="0.005"
 			density="0.003"
 			sprite="/textures/veg/bush-wide.png"
-			spritecount="1"
+			spritecount="2"
 			scale="2"
 			/>
 
@@ -76,7 +76,7 @@
 			range="0.005"
 			density="0.01"
 			sprite="/textures/veg/grass7.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 		<foliageband
@@ -84,7 +84,7 @@
 			range="0.005"
 			density="0.01"
 			sprite="/textures/veg/grass6.png"
-			spritecount="1"
+			spritecount="2"
 			scale="0.6"
 			/>
 
@@ -94,7 +94,7 @@
 			range="0.005"
 			density="0.00001"
 			sprite="/textures/veg/pear-giant.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -102,7 +102,7 @@
 			range="0.005"
 			density="0.00001"
 			sprite="/textures/veg/moxed-tree.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -110,7 +110,7 @@
 			range="0.005"
 			density="0.000007"
 			sprite="/textures/veg/wide-tree4.png"
-			spritecount="1"
+			spritecount="2"
 			scale="12"
 			/>
 		<foliageband
@@ -118,7 +118,7 @@
 			range="0.005"
 			density="0.000007"
 			sprite="/textures/veg/akaz-big.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -126,7 +126,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -134,7 +134,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree2.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -142,7 +142,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/crooked-tree4.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -150,7 +150,7 @@
 			range="0.005"
 			density="0.000005"
 			sprite="/textures/veg/green-tree2.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 
@@ -162,7 +162,7 @@
 			range="0.005"
 			density="0.0002"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="7"
 			/>
 
@@ -174,7 +174,7 @@
 			range="0.005"
 			density="0.0002"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="6"
 			/>
 		<foliageband
@@ -182,7 +182,7 @@
 			range="0.005"
 			density="0.0004"
 			sprite="/textures/veg/apple-tree-tall.png"
-			spritecount="1"
+			spritecount="2"
 			scale="3"
 			/>
 
@@ -192,7 +192,7 @@
 			range="0.005"
 			density="0.000002"
 			sprite="/textures/veg/topol.png"
-			spritecount="1"
+			spritecount="2"
 			scale="15"
 			/>
 		<foliageband
@@ -200,7 +200,7 @@
 			range="0.005"
 			density="0.0000003"
 			sprite="/textures/veg/akaz-med.png"
-			spritecount="1"
+			spritecount="2"
 			scale="10"
 			/>
 		<foliageband
@@ -208,7 +208,7 @@
 			range="0.005"
 			density="0.000003"
 			sprite="/textures/veg/bush-wide.png"
-			spritecount="1"
+			spritecount="2"
 			scale="3"
 			/>
 
@@ -804,7 +804,7 @@
 		<codrivercp coords="966, 803" notes="easy left" />
 		<codrivercp coords="985, 842" notes="aaa" />
 		<codrivercp coords="982, 863" notes="youmad2" />
-		<codrivercp coords="965, 870" notes="hairpin left overdirt between trees cut" />
+		<codrivercp coords="965, 870" notes="hairpin left over dirt between trees cut" />
 		<codrivercp coords="967, 961" notes="extleft" />
 		<codrivercp coords="950, 960" notes="whatyoudoing" />
 		<codrivercp coords="930, 946" notes="aaa" />
@@ -824,19 +824,19 @@
 		<codrivercp coords="730, 910" notes="medium left" />
 		<codrivercp coords="650, 901" notes="flat right long" />
 		<codrivercp coords="604, 885" notes="min190 here carefull max40" />
-		<codrivercp coords="562, 889" notes="overwater over ditch"/>
+		<codrivercp coords="562, 889" notes="over water over ditch"/>
 		<codrivercp coords="488, 908" notes="kurwa" />
 		<codrivercp coords="500, 929" notes="aaa" />
 		<codrivercp coords="460, 929" notes="easy left" />
 		<codrivercp coords="431, 928" notes="short medium left" />
-		<codrivercp coords="414, 907" notes="overjump"/>
+		<codrivercp coords="414, 907" notes="over jump"/>
 		<codrivercp coords="415, 846" notes="medium left long" />
-		<codrivercp coords="491, 811" notes="rec100 overjump overdrop carefull"/>
+		<codrivercp coords="491, 811" notes="rec100 over jump over drop carefull"/>
 		<codrivercp coords="524, 842" notes="whatyoudoing" />
 		<codrivercp coords="561, 855" notes="hard right"/>
 		<codrivercp coords="603, 866" notes="extright" />
 		<codrivercp coords="600, 837" notes="over ditch max70" />
-		<codrivercp coords="601, 796" notes="overjump min120 heatup"/>
+		<codrivercp coords="601, 796" notes="over jump min120 heatup"/>
 		<codrivercp coords="601, 773" notes="short medium right" />
 		<codrivercp coords="593, 758" notes="flat right long carefull" />
 		<codrivercp coords="505, 754" notes="max70 uturn left rise"/>
@@ -844,14 +844,14 @@
 		<codrivercp coords="460, 756" notes="aaa" />
 		<codrivercp coords="465, 738" notes="kurwa" />
 		<codrivercp coords="517, 732" notes="easy right rec80" />
-		<codrivercp coords="539, 719" notes="overjump tight medium left" />
+		<codrivercp coords="539, 719" notes="over jump tight medium left" />
 		<codrivercp coords="576, 706" notes="square right" />
 		<codrivercp coords="598, 703" notes="flat right long" />
 		<codrivercp coords="606, 650" notes="square right" />
 		<codrivercp coords="587, 607" notes="extright" />
 		<codrivercp coords="550, 621" notes="medium left long" />
 		<codrivercp coords="498, 583" notes="easy right" />
-		<codrivercp coords="490, 555" notes="overjump" />
+		<codrivercp coords="490, 555" notes="over jump" />
 		<codrivercp coords="474, 539" notes="flat left descent" />
 		<codrivercp coords="440, 513" notes="whatyoudoing" />
 		<codrivercp coords="456, 513" notes="square right" />
@@ -870,7 +870,7 @@
 		<codrivercp coords="206, 280" notes="aaa" />
 		<codrivercp coords="193, 270" notes="medium right long" />
 		<codrivercp coords="213, 255" notes="extright" />
-		<codrivercp coords="189, 239" notes="overjump square left" />
+		<codrivercp coords="189, 239" notes="over jump square left" />
 		<codrivercp coords="178, 226" notes="whatyoudoing" />
 		<codrivercp coords="152, 230" notes="youmad" />
 		<codrivercp coords="147, 200" notes="medium left" />
@@ -884,7 +884,7 @@
 		<codrivercp coords="127, 95" notes="aaa" />
 		<codrivercp coords="127, 75" notes="kurwa" />
 		<codrivercp coords="127, 55" notes="kurwa2" />
-		<codrivercp coords="145, 85" notes="rec110 overjump overgravel medium left" />
+		<codrivercp coords="145, 85" notes="rec110 over jump over gravel medium left" />
 		<codrivercp coords="152, 19" notes="youmad" />
 		<codrivercp coords="170, -10" notes="kurwa" />
 		<codrivercp coords="180, -30" notes="aaa" />
@@ -893,7 +893,7 @@
 		<codrivercp coords="200, 30" notes="here carefull" />
 		<codrivercp coords="230, 35" notes="descent easy left" />
 		<codrivercp coords="265, 61" notes="whereyougo" />
-		<codrivercp coords="290, 50" notes="overjump" />
+		<codrivercp coords="290, 50" notes="over jump" />
 		<codrivercp coords="360, 90" notes="aaa" />
 		<codrivercp coords="350, 120" notes="youmad" />
 		<codrivercp coords="330, 67" notes="whatyoudoing" />
@@ -906,8 +906,8 @@
 		<codrivercp coords="503, 196" notes="whatyoudoing" />
 		<codrivercp coords="522, 172" notes="whereyougo trackwasthere" />
 		<codrivercp coords="487, 205" notes="easy right" />
-		<codrivercp coords="574, 222" notes="easy left cut overgrass" />
-		<codrivercp coords="657, 230" notes="overjump" />
+		<codrivercp coords="574, 222" notes="easy left cut over grass" />
+		<codrivercp coords="657, 230" notes="over jump" />
 		<codrivercp coords="654, 204" notes="whereyougo" />
 		<codrivercp coords="737, 209" notes="goyourself" />
 		<codrivercp coords="694, 249" notes="extleft" />
@@ -915,14 +915,14 @@
 		<codrivercp coords="767, 440" notes="whatyoudoing" />
 		<codrivercp coords="787, 431" notes="youmad aaa" />
 		<codrivercp coords="770, 420" notes="tight descent" />
-		<codrivercp coords="784, 453" notes="overjump" />
+		<codrivercp coords="784, 453" notes="over jump" />
 		<codrivercp coords="782, 474" notes="youmad" />
 		<codrivercp coords="795, 522" notes="kurwa" />
 		<codrivercp coords="802, 469" notes="kurwa" />
 		<codrivercp coords="837, 480" notes="aaa kurwa2" />
 		<codrivercp coords="837, 500" notes="aaa kurwa2" />
 		<codrivercp coords="826, 562" notes="easy left long" />
-		<codrivercp coords="790, 769" notes="overfinish carefull" />
+		<codrivercp coords="790, 769" notes="over finish carefull" />
 		<codrivercp coords="755, 819" notes="applause" />
 		<codrivercp coords="743, 839" notes="aaa" />
 		<codrivercp coords="730, 860" notes="applause2" />
