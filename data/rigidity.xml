@@ -4,6 +4,7 @@
 	<rigidity sprite="textures/roadsigns/10down.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/10up.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/arrowright.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/arrowsLR.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rally-right.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rally-left.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rally-right1.png" value="0.5"/>
@@ -14,6 +15,7 @@
 	<rigidity sprite="textures/roadsigns/crossroads.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/deer.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/junccurve.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/indicator.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/narrowsboth.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/narrowsright.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rocks.png" value="0.5"/>
