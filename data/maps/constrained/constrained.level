@@ -64,6 +64,7 @@
 			<location coords="1316, -180" oridegrees="120" />
 			<location coords="1333, 324" oridegrees="215" />
 			<location coords="1162, 310" oridegrees="90" />
+			<location coords="830, 579" oridegrees="90" />
 			<location coords="625, 1008" oridegrees="220" />
 			<location coords="550, 1065" oridegrees="250" />
 			<location coords="333, 1060" oridegrees="90" />
@@ -78,11 +79,20 @@
 			<location coords="780, 1793" oridegrees="200" />
 			<location coords="764, 1603" oridegrees="0" />
 			<location coords="1065, 1605" oridegrees="-90" />
+			<location coords="1440, 1355" oridegrees="280" />
 		</roadsign>
 		<roadsign sprite="/textures/roadsigns/arrowsLR.png" scale="3">
 			<location coords="2728, -1374" oridegrees="-69" />
 			<location coords="2246, -874" oridegrees="-90" />
 			<location coords="1476, -677" oridegrees="-45" />
+			<location coords="680, -674" oridegrees="-69" />
+			<location coords="680, 674" oridegrees="-69" />
+			<location coords="198, -874" oridegrees="-90" />
+			<location coords="198, 1174" oridegrees="-90" />
+			<location coords="300, -348" oridegrees="20" />
+			<location coords="300, 348" oridegrees="20" />
+			<location coords="300, 2396" oridegrees="20" />
+			<location coords="1476, 1371" oridegrees="-45" />
 		</roadsign>
 		<roadsign sprite="/textures/roadsigns/indicator.png" scale="2">
 			<location coords="1166, -1255" oridegrees="0" />
@@ -96,7 +106,6 @@
 			<location coords="1366, 268" oridegrees="0" />
 			<location coords="680, 853" oridegrees="5" />
 			<location coords="689, 1898" oridegrees="10" />
-
 		</roadsign>
 	</terrain>
 
