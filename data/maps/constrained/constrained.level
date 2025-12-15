@@ -81,7 +81,7 @@
 			<location coords="1065, 1605" oridegrees="-90" />
 			<location coords="1440, 1355" oridegrees="280" />
 		</roadsign>
-		<roadsign sprite="/textures/roadsigns/arrowsLR.png" scale="3">
+		<roadsign sprite="/textures/roadsigns/detourLR.png" scale="3">
 			<location coords="2728, -1374" oridegrees="-69" />
 			<location coords="2246, -874" oridegrees="-90" />
 			<location coords="1476, -677" oridegrees="-45" />

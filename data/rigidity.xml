@@ -5,6 +5,7 @@
 	<rigidity sprite="textures/roadsigns/10up.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/arrowright.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/arrowsLR.png" value="0.5"/>
+	<rigidity sprite="textures/roadsigns/detourLR.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rally-right.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rally-left.png" value="0.5"/>
 	<rigidity sprite="textures/roadsigns/rally-right1.png" value="0.5"/>
@@ -101,6 +102,8 @@
 	<rigidity sprite="textures/veg/fir.png" value="0.05"/>
 	<rigidity sprite="textures/veg/first-branch.png" value="0.001"/>
 	<rigidity sprite="textures/veg/flow-branches.png" value="0.002"/>
+	<rigidity sprite="textures/veg/forest-wall.png" value="0.001"/>
+	<rigidity sprite="textures/veg/Forest2.png" value="0.002"/>
 
 
 	//G
@@ -198,7 +201,10 @@
 
 
 	//OTHER OBJECTS
+	<rigidity sprite="textures/structures/boxfront.png" value="0.1"/>
+	<rigidity sprite="textures/structures/boxwall.png" value="0.1"/>
 	<rigidity sprite="textures/structures/castle.png" value="0.1"/>
+	<rigidity sprite="textures/structures/gctpole2.png" value="0.1"/>
 	<rigidity sprite="textures/structures/small.castle.png" value="0.1"/>
 	<rigidity sprite="textures/structures/power.png" value="0.1"/>
 	<rigidity sprite="textures/structures/flaktower.png" value="0.1"/>

@@ -37,7 +37,7 @@
 			range="0.005"
 			density="0.03"
 			sprite="/textures/veg/rogoz.png"
-			spritecount="2"
+			spritecount="1"
 			scale="2"
 			/>
 		<foliageband
