@@ -13,6 +13,7 @@
 	<level file="leaves/leaves.level" />
 	<level file="littleisland/littleisland.level" />
 	<level file="softbelt/softbelt.level" />
+	<level file="tropic/tropic.level" />
 	<level file="volcanic/volcanic.level" />
 	<level file="tobago/tobago.level" />
 

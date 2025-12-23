@@ -9,12 +9,19 @@
 	<unlocks file="/vehicles/guncar/guncar.vehicle" />
 	<unlocks file="/vehicles/ORB_jeep/orb.vehicle" />
 
+	<level file="arizonachase/arizonachase.level" />
+
+	<level file="coffee/coffee.level" />
+
+	<level file="desertrush/desertrush.level" />
+
+	<level file="eversnake/eversnake.level" />
+
 	<level file="smoothcanyon/smoothcanyon.level" />
 
 	<level file="greatplains/greatplains.level" />
 
-	<level file="rockyprairie/rockyprairie.level" />
-
 	<level file="whitesands/whitesands.level" />
 
+	<level file="rockyprairie/rockyprairie.level" />
 </event>
