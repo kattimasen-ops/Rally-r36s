@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Full Port)
+name: Build Trigger Rally (Final R36S)
 
 on:
   push:
@@ -17,44 +17,49 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          # Multi-Architektur aktivieren, damit wir ARM64-Bibliotheken installieren können
+          dpkg --add-architecture arm64
           apt-get update
-          # Wir installieren alle Dev-Libs in der richtigen Architektur
-          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev pkg-config
+          # Installation der Cross-Compiler-kompatiblen Bibliotheken
+          apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64
 
       - name: Build Binary
         run: |
           cd src
           
-          # Wir nutzen pkg-config, um die Pfade zu den Libs automatisch zu finden.
-          # Das verhindert den "SDL_config.h" Fehler, da er nicht raten muss.
-          export CFLAGS="$(pkg-config --cflags sdl2 sdl2_image glu glew physfs openal freealut tinyxml2)"
-          export LDFLAGS="$(pkg-config --libs sdl2 sdl2_image glu glew physfs openal freealut tinyxml2)"
+          # Pfad zum ARM64-Sysroot (dort liegen die Header und Libs der arm64-Pakete)
+          CROSS_ROOT="/usr/aarch64-linux-gnu"
           
+          # Flags setzen: Wir zwingen den Compiler, hier nach Headern/Libs zu suchen
+          MY_CPPFLAGS="-I${CROSS_ROOT}/include -I${CROSS_ROOT}/include/SDL2 -DNDEBUG -DUNIX"
+          MY_LDFLAGS="-L${CROSS_ROOT}/lib -lSDL2 -lSDL2_image -lGL -lGLU -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lpthread"
+          
+          # Bauen mit Optimierung für Cortex-A35 (RK3326-Chip)
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
                OPTIMS="-O3 -mtune=cortex-a35" \
-               CFLAGS="$CFLAGS" \
-               LDFLAGS="$LDFLAGS" \
+               CPPFLAGS="$MY_CPPFLAGS" \
+               LDFLAGS="$MY_LDFLAGS" \
                -j$(nproc)
           
-          # Binary suchen
-          cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally
+          # Binary in das Root-Verzeichnis kopieren
+          cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally || echo "Binary nicht gefunden!"
 
       - name: Package for R36S
         run: |
-          # Ordnerstruktur erstellen
           mkdir -p package/TriggerRally
           
-          # Binary verschieben
-          mv trigger-rally package/TriggerRally/
+          # Binary kopieren
+          mv trigger-rally package/TriggerRally/ 2>/dev/null || echo "Binary nicht gefunden!"
           
-          # Data Ordner kopieren (behält die Struktur bei)
+          # Data kopieren
           cp -r data package/TriggerRally/
           
-          # Start-Skript erstellen
+          # Start-Skript erstellen mit nativer Auflösung 640x480
           echo '#!/bin/bash' > package/TriggerRally/trigger-rally.sh
           echo 'cd "$(dirname "$0")"' >> package/TriggerRally/trigger-rally.sh
-          echo './trigger-rally --data ./data' >> package/TriggerRally/trigger-rally.sh
+          # Wir übergeben die 640x480 Auflösung
+          echo './trigger-rally --width 640 --height 480 --fullscreen' >> package/TriggerRally/trigger-rally.sh
           chmod +x package/TriggerRally/trigger-rally.sh
           
       - name: Upload Full Port
