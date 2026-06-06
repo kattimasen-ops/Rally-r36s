@@ -18,7 +18,7 @@ jobs:
       - name: Install Dependencies
         run: |
           apt-get update
-          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libfreealut-dev libtinyxml2-dev libglu1-mesa-dev
+          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev
 
       - name: Build
         run: |
