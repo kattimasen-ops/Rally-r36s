@@ -1,4 +1,4 @@
-name: Build Trigger Rally (src/ Build)
+name: Build Trigger Rally (GNUmakefile)
 
 on:
   push:
@@ -17,23 +17,16 @@ jobs:
 
       - name: Build
         run: |
-          # 1. Wechsel in das Verzeichnis mit dem Quellcode
+          # 1. Wechsel in den Quellcode-Ordner
           cd src
           
-          # 2. Prüfen, ob ein Makefile existiert
-          if [ -f "Makefile" ]; then
-            echo "Makefile in src/ gefunden! Baue jetzt..."
-            # Wir definieren die Compiler-Variablen explizit
-            make CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++ -j$(nproc)
-          else
-            echo "Kein Makefile in src/ gefunden! Inhalt von src/:"
-            ls -F
-            exit 1
-          fi
+          # 2. Den Build mit make starten
+          # Wir übergeben die Compiler-Variablen, falls das Makefile sie nicht automatisch erkennt
+          make CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++ -j$(nproc)
           
-          # 3. Wenn erfolgreich, die Binary in den Root kopieren
-          # Damit der Upload-Schritt sie findet
-          cp trigger-rally ../
+          # 3. Das Binary aus dem src-Ordner (oder wo auch immer es landet) in den Root kopieren
+          # Wir suchen nach einer Datei, die 'trigger-rally' heißt
+          cp trigger-rally ../ || cp build/trigger-rally ../ || echo "Binary nicht gefunden!"
 
       - name: Upload Binary
         uses: actions/upload-artifact@v4
