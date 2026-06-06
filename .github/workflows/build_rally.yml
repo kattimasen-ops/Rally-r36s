@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Cross-Compile)
+name: Build Trigger Rally (Makefile)
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    # Wir nutzen ein Image, das bereits alle Cross-Compiler und ARM64-Libs enthält
     runs-on: ubuntu-latest
     container:
       image: dockcross/linux-arm64:latest
@@ -18,22 +17,17 @@ jobs:
 
       - name: Build
         run: |
-          # Die Umgebungsvariablen für Cross-Kompilierung sind hier bereits gesetzt
-          mkdir build
-          cd build
+          # Bei einem Makefile-Projekt reicht oft ein einfaches 'make'
+          # Wir müssen sicherstellen, dass die Compiler-Variablen gesetzt sind
+          export CC=aarch64-linux-gnu-gcc
+          export CXX=aarch64-linux-gnu-g++
           
-          # CMake konfigurieren
-          # Wir nutzen die Compiler, die im Container bereits vorkonfiguriert sind
-          cmake -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc \
-                -DCMAKE_CXX_COMPILER=aarch64-linux-gnu-g++ \
-                -DCMAKE_BUILD_TYPE=Release \
-                ..
-                
-          # Kompilieren
+          # Oft gibt es hier ein 'make all' oder einfach 'make'
           make -j$(nproc)
 
       - name: Upload Binary
         uses: actions/upload-artifact@v4
         with:
           name: trigger-rally-arm64
-          path: build/trigger-rally
+          # Hier musst du evtl. anpassen, wo die Binary landet, falls sie nicht im Root liegt
+          path: trigger-rally
