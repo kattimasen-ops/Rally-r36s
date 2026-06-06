@@ -1,4 +1,4 @@
-name: Build Trigger Rally (GNUmakefile)
+name: Build Trigger Rally (Final Fix)
 
 on:
   push:
@@ -17,15 +17,16 @@ jobs:
 
       - name: Build
         run: |
-          # 1. Wechsel in den Quellcode-Ordner
           cd src
           
-          # 2. Den Build mit make starten
-          # Wir übergeben die Compiler-Variablen, falls das Makefile sie nicht automatisch erkennt
-          make CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++ -j$(nproc)
+          # Wir definieren die korrekten Compiler-Namen für diesen Container
+          # Und wir überschreiben OPTIMS, um -march=native zu eliminieren
+          make CC=aarch64-unknown-linux-gnu-gcc \
+               CXX=aarch64-unknown-linux-gnu-g++ \
+               OPTIMS="-O3 -mtune=cortex-a35" \
+               -j$(nproc)
           
-          # 3. Das Binary aus dem src-Ordner (oder wo auch immer es landet) in den Root kopieren
-          # Wir suchen nach einer Datei, die 'trigger-rally' heißt
+          # Binary suchen und kopieren
           cp trigger-rally ../ || cp build/trigger-rally ../ || echo "Binary nicht gefunden!"
 
       - name: Upload Binary
