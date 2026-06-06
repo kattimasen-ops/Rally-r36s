@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Universal Fix)
+name: Build Trigger Rally (Full Port)
 
 on:
   push:
@@ -18,31 +18,47 @@ jobs:
       - name: Install Dependencies
         run: |
           apt-get update
-          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev
+          # Wir installieren alle Dev-Libs in der richtigen Architektur
+          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev pkg-config
 
-      - name: Prepare Headers
-        run: |
-          # Wir kopieren die benötigten Header direkt in den include-Ordner des Projekts.
-          # Das umgeht alle Probleme mit den Suchpfaden des Cross-Compilers.
-          # Wir suchen den SDL2 Ordner an den typischen Debian-Orten.
-          cp -r /usr/include/SDL2 src/include/ || cp -r /usr/include/aarch64-linux-gnu/SDL2 src/include/ || echo "SDL2 Ordner nicht gefunden"
-
-      - name: Build
+      - name: Build Binary
         run: |
           cd src
           
-          # Wir bauen das Projekt. 
-          # OPTIMS ist angepasst für die R36S (Cortex-A35).
+          # Wir nutzen pkg-config, um die Pfade zu den Libs automatisch zu finden.
+          # Das verhindert den "SDL_config.h" Fehler, da er nicht raten muss.
+          export CFLAGS="$(pkg-config --cflags sdl2 sdl2_image glu glew physfs openal freealut tinyxml2)"
+          export LDFLAGS="$(pkg-config --libs sdl2 sdl2_image glu glew physfs openal freealut tinyxml2)"
+          
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
                OPTIMS="-O3 -mtune=cortex-a35" \
+               CFLAGS="$CFLAGS" \
+               LDFLAGS="$LDFLAGS" \
                -j$(nproc)
           
-          # Binary suchen und in den Root schieben, damit es als Artefakt hochgeladen werden kann
-          cp trigger-rally ../ || cp build/trigger-rally ../ || echo "Binary nicht gefunden!"
+          # Binary suchen
+          cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally
 
-      - name: Upload Binary
+      - name: Package for R36S
+        run: |
+          # Ordnerstruktur erstellen
+          mkdir -p package/TriggerRally
+          
+          # Binary verschieben
+          mv trigger-rally package/TriggerRally/
+          
+          # Data Ordner kopieren (behält die Struktur bei)
+          cp -r data package/TriggerRally/
+          
+          # Start-Skript erstellen
+          echo '#!/bin/bash' > package/TriggerRally/trigger-rally.sh
+          echo 'cd "$(dirname "$0")"' >> package/TriggerRally/trigger-rally.sh
+          echo './trigger-rally --data ./data' >> package/TriggerRally/trigger-rally.sh
+          chmod +x package/TriggerRally/trigger-rally.sh
+          
+      - name: Upload Full Port
         uses: actions/upload-artifact@v4
         with:
-          name: trigger-rally-arm64
-          path: trigger-rally
+          name: TriggerRally-R36S-Ready
+          path: package/TriggerRally
