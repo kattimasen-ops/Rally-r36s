@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Symlink Fix)
+ name: Build Trigger Rally (Last Try)
 
 on:
   push:
@@ -19,51 +19,38 @@ jobs:
         run: |
           dpkg --add-architecture arm64
           apt-get update
-          apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64 pkg-config
-
-      - name: Configure and Link
-        run: |
-          # 1. Wir legen die Umgebungsvariablen für die ARM64-Libs fest
-          export PKG_CONFIG_PATH=/usr/aarch64-linux-gnu/lib/pkgconfig
-          export PKG_CONFIG_SYSROOT_DIR=/usr/aarch64-linux-gnu
-          
-          # 2. Wir erstellen den Symlink, der das "SDL2/SDL.h" Problem behebt
-          # Wenn der Code SDL2/SDL.h sucht, findet er jetzt den richtigen Pfad
-          SDL_DIR=$(find /usr/aarch64-linux-gnu/include -name SDL.h | head -n 1 | xargs dirname)
-          echo "SDL gefunden unter: $SDL_DIR"
-          
-          # Symlink: Wir verknüpfen den Ordner mit sich selbst, damit SDL2/SDL.h korrekt aufgelöst wird
-          ln -s $SDL_DIR $SDL_DIR/../SDL2 || echo "Symlink existiert bereits"
+          apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64
 
       - name: Build Binary
         run: |
           cd src
           
-          # 3. Wir nutzen pkg-config, um die Flags sauber abzufragen
-          export PKG_CONFIG_PATH=/usr/aarch64-linux-gnu/lib/pkgconfig
-          export PKG_CONFIG_SYSROOT_DIR=/usr/aarch64-linux-gnu
+          # HIER IST DER FIX:
+          # 1. Wir fügen '../include' hinzu, um deine lokalen .h-Dateien zu finden.
+          # 2. Wir fügen '/usr/aarch64-linux-gnu/include' hinzu (NICHT mit /SDL2 am Ende!).
+          # So findet er:
+          #   - ../include/app.h (Korrekt)
+          #   - /usr/aarch64-linux-gnu/include/SDL2/SDL.h (Korrekt, weil er SDL2/SDL.h anhängt)
           
-          # Flags holen
-          CFLAGS=$(aarch64-linux-gnu-pkg-config --cflags sdl2 SDL2_image)
-          LIBS=$(aarch64-linux-gnu-pkg-config --libs sdl2 SDL2_image)
+          export CPPFLAGS="-I../include -I/usr/aarch64-linux-gnu/include -DNDEBUG -DUNIX"
+          export LDFLAGS="-L/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGL -lGLU -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lpthread"
           
-          echo "Flags: $CFLAGS"
-          
-          # Build mit den korrekten Pfaden und dem localen include
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
                OPTIMS="-O3 -mtune=cortex-a35" \
-               CPPFLAGS="-I. -Iinclude $CFLAGS -DNDEBUG -DUNIX" \
-               LDFLAGS="$LIBS -lGL -lGLU -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lpthread" \
+               CPPFLAGS="$CPPFLAGS" \
+               LDFLAGS="$LDFLAGS" \
                -j$(nproc)
           
-          cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally
+          # Binary sichern
+          cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally || echo "Binary nicht gefunden!"
 
       - name: Package for R36S
         run: |
           mkdir -p package/TriggerRally
           mv trigger-rally package/TriggerRally/ 2>/dev/null || echo "Binary nicht gefunden!"
           cp -r data package/TriggerRally/
+          
           echo '#!/bin/bash' > package/TriggerRally/trigger-rally.sh
           echo 'cd "$(dirname "$0")"' >> package/TriggerRally/trigger-rally.sh
           echo './trigger-rally --width 640 --height 480 --fullscreen' >> package/TriggerRally/trigger-rally.sh
