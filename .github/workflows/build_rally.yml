@@ -1,14 +1,54 @@
-name: Debug Repository Structure
+name: Build Trigger Rally (Smart-Build)
 
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  debug:
+  build:
     runs-on: ubuntu-latest
+    container:
+      image: dockcross/linux-arm64:latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: List files
-        run: ls -R
+      - name: Build
+        run: |
+          # 1. Prüfen ob Autotools (configure) vorhanden ist
+          if [ -f "configure" ]; then
+            echo "Autotools gefunden!"
+            ./configure --host=aarch64-linux-gnu
+            make -j$(nproc)
+            
+          # 2. Wenn nicht, prüfen ob CMake in src/ liegt
+          elif [ -f "src/CMakeLists.txt" ]; then
+            echo "CMake in src/ gefunden!"
+            mkdir build && cd build
+            cmake -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc \
+                  -DCMAKE_CXX_COMPILER=aarch64-linux-gnu-g++ \
+                  ..
+            make -j$(nproc)
+            
+          # 3. Fallback: Einfaches Makefile
+          elif [ -f "Makefile" ]; then
+            echo "Makefile im Root gefunden!"
+            make -j$(nproc)
+            
+          else
+            echo "Keine Build-Datei gefunden! Dateien im Root:"
+            ls -F
+            exit 1
+          fi
+
+      - name: Upload Binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: trigger-rally-arm64
+          # Wir suchen nach der binary. Wenn CMake genutzt wurde, liegt sie in build/
+          # Sonst suchen wir sie im aktuellen Ordner.
+          path: |
+            trigger-rally
+            build/trigger-rally
