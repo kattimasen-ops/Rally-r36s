@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Verify & Build)
+name: Build Trigger Rally (Final Fix)
 
 on:
   push:
@@ -21,43 +21,19 @@ jobs:
           apt-get update
           apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64
 
-      - name: Verify Repository & Setup Paths
-        id: setup
-        run: |
-          # 1. Wir suchen die kritischen Header-Dateien
-          # Wir suchen im gesamten Repo, um sicherzugehen
-          APP_H=$(find . -name app.h | head -n 1)
-          CONFIG_H=$(find . -name config.h | head -n 1)
-          
-          # 2. Validierung
-          if [ -z "$APP_H" ] || [ -z "$CONFIG_H" ]; then
-            echo "Fehler: Kritische Header-Dateien (app.h oder config.h) nicht gefunden!"
-            exit 1
-          fi
-          
-          # 3. Pfade dynamisch ermitteln
-          # Wir brauchen den Pfad, der den 'include' Ordner enthält (root)
-          # Da wir uns in src befinden werden, ist ../include der Pfad
-          INCLUDE_PATH="$(pwd)/include"
-          
-          echo "Dateien gefunden:"
-          echo "App.h: $APP_H"
-          echo "Config.h: $CONFIG_H"
-          echo "Setze Include-Pfad auf: $INCLUDE_PATH"
-          
-          # Variablen für den Build-Schritt exportieren
-          echo "INC_PATH=$INCLUDE_PATH" >> $GITHUB_ENV
-
       - name: Build Binary
         run: |
           cd src
           
-          # Wir nutzen den verifizierten Include-Pfad
-          # Wir fügen die System-Pfade für SDL2 explizit hinzu, falls nötig
-          export CPPFLAGS="-I$INC_PATH -I/usr/aarch64-linux-gnu/include/SDL2 -DNDEBUG -DUNIX"
+          # HIER IST DER FIX:
+          # Wir nutzen relative Pfade.
+          # -I. sucht im aktuellen Ordner (src/)
+          # -Iinclude sucht in src/include/
+          export CPPFLAGS="-I. -Iinclude -I/usr/aarch64-linux-gnu/include/SDL2 -DNDEBUG -DUNIX"
           export LDFLAGS="-L/usr/aarch64-linux-gnu/lib -lSDL2 -lSDL2_image -lGL -lGLU -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lpthread"
           
-          echo "Starte Make mit CPPFLAGS: $CPPFLAGS"
+          echo "Build-Parameter:"
+          echo "CPPFLAGS: $CPPFLAGS"
           
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
