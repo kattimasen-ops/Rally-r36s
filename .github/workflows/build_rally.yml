@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Final Fix)
+name: Build Trigger Rally (Universal Fix)
 
 on:
   push:
@@ -20,17 +20,25 @@ jobs:
           apt-get update
           apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev
 
+      - name: Prepare Headers
+        run: |
+          # Wir kopieren die benötigten Header direkt in den include-Ordner des Projekts.
+          # Das umgeht alle Probleme mit den Suchpfaden des Cross-Compilers.
+          # Wir suchen den SDL2 Ordner an den typischen Debian-Orten.
+          cp -r /usr/include/SDL2 src/include/ || cp -r /usr/include/aarch64-linux-gnu/SDL2 src/include/ || echo "SDL2 Ordner nicht gefunden"
+
       - name: Build
         run: |
           cd src
           
-          # Wir definieren Compiler und Flags, und umgehen -march=native
+          # Wir bauen das Projekt. 
+          # OPTIMS ist angepasst für die R36S (Cortex-A35).
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
                OPTIMS="-O3 -mtune=cortex-a35" \
                -j$(nproc)
           
-          # Binary in den Root kopieren
+          # Binary suchen und in den Root schieben, damit es als Artefakt hochgeladen werden kann
           cp trigger-rally ../ || cp build/trigger-rally ../ || echo "Binary nicht gefunden!"
 
       - name: Upload Binary
