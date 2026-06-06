@@ -15,18 +15,22 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Install Dependencies
+        run: |
+          apt-get update
+          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libfreealut-dev libtinyxml2-dev libglu1-mesa-dev
+
       - name: Build
         run: |
           cd src
           
-          # Wir definieren die korrekten Compiler-Namen für diesen Container
-          # Und wir überschreiben OPTIMS, um -march=native zu eliminieren
+          # Wir definieren Compiler und Flags, und umgehen -march=native
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
                OPTIMS="-O3 -mtune=cortex-a35" \
                -j$(nproc)
           
-          # Binary suchen und kopieren
+          # Binary in den Root kopieren
           cp trigger-rally ../ || cp build/trigger-rally ../ || echo "Binary nicht gefunden!"
 
       - name: Upload Binary
