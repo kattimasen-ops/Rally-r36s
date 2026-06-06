@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Final R36S)
+name: Build Trigger Rally (Corrected CPPFLAGS)
 
 on:
   push:
@@ -17,24 +17,23 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          # Multi-Architektur aktivieren, damit wir ARM64-Bibliotheken installieren können
           dpkg --add-architecture arm64
           apt-get update
-          # Installation der Cross-Compiler-kompatiblen Bibliotheken
           apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64
 
       - name: Build Binary
         run: |
           cd src
           
-          # Pfad zum ARM64-Sysroot (dort liegen die Header und Libs der arm64-Pakete)
           CROSS_ROOT="/usr/aarch64-linux-gnu"
           
-          # Flags setzen: Wir zwingen den Compiler, hier nach Headern/Libs zu suchen
-          MY_CPPFLAGS="-I${CROSS_ROOT}/include -I${CROSS_ROOT}/include/SDL2 -DNDEBUG -DUNIX"
+          # NEU: Wir fügen ./include explizit hinzu, damit die eigenen Header gefunden werden!
+          # Wir behalten die System-Pfade bei.
+          MY_CPPFLAGS="-I./include -I${CROSS_ROOT}/include -I${CROSS_ROOT}/include/SDL2 -DNDEBUG -DUNIX"
+          
           MY_LDFLAGS="-L${CROSS_ROOT}/lib -lSDL2 -lSDL2_image -lGL -lGLU -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lpthread"
           
-          # Bauen mit Optimierung für Cortex-A35 (RK3326-Chip)
+          # Build mit den korrekten Pfaden
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
                OPTIMS="-O3 -mtune=cortex-a35" \
@@ -42,23 +41,16 @@ jobs:
                LDFLAGS="$MY_LDFLAGS" \
                -j$(nproc)
           
-          # Binary in das Root-Verzeichnis kopieren
           cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally || echo "Binary nicht gefunden!"
 
       - name: Package for R36S
         run: |
           mkdir -p package/TriggerRally
-          
-          # Binary kopieren
           mv trigger-rally package/TriggerRally/ 2>/dev/null || echo "Binary nicht gefunden!"
-          
-          # Data kopieren
           cp -r data package/TriggerRally/
           
-          # Start-Skript erstellen mit nativer Auflösung 640x480
           echo '#!/bin/bash' > package/TriggerRally/trigger-rally.sh
           echo 'cd "$(dirname "$0")"' >> package/TriggerRally/trigger-rally.sh
-          # Wir übergeben die 640x480 Auflösung
           echo './trigger-rally --width 640 --height 480 --fullscreen' >> package/TriggerRally/trigger-rally.sh
           chmod +x package/TriggerRally/trigger-rally.sh
           
