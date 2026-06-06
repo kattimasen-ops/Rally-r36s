@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Dynamic Paths)
+name: Build Trigger Rally (Foolproof)
 
 on:
   push:
@@ -19,28 +19,41 @@ jobs:
         run: |
           dpkg --add-architecture arm64
           apt-get update
-          apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64 pkg-config
+          apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64
+
+      - name: Inject Headers
+        run: |
+          # Finde den Ordner, in dem SDL.h liegt
+          SDL_PATH=$(find /usr/aarch64-linux-gnu -name SDL.h | head -n 1 | xargs dirname)
+          echo "SDL gefunden unter: $SDL_PATH"
+          
+          # Erstelle den Ordner, den der Code erwartet: src/include/SDL2
+          mkdir -p src/include/SDL2
+          
+          # Kopiere ALLE SDL2 Header direkt in den include-Pfad des Projekts.
+          # Das löst das "SDL2/SDL.h" Problem für immer.
+          cp -L $SDL_PATH/*.h src/include/SDL2/
+          
+          # Wiederhole das für andere Libs, falls nötig (Beispiel für SDL_image)
+          IMG_PATH=$(find /usr/aarch64-linux-gnu -name SDL_image.h | head -n 1 | xargs dirname)
+          cp -L $IMG_PATH/*.h src/include/SDL2/
 
       - name: Build Binary
         run: |
           cd src
           
-          # Konfiguriere pkg-config für den Cross-Compiler
-          export PKG_CONFIG_PATH=/usr/aarch64-linux-gnu/lib/pkgconfig
-          export PKG_CONFIG_SYSROOT_DIR=/usr/aarch64-linux-gnu
-          export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
+          # Wir brauchen NUR das lokale ./include, da wir die Dateien gerade dorthin kopiert haben
+          # Das macht das Build-System extrem stabil.
+          MY_CPPFLAGS="-I./include -DNDEBUG -DUNIX"
           
-          # Hole die exakten Pfade für die ARM64-Libs
-          # Wir nutzen --cflags-only-I, um nur die Pfade zu bekommen
-          ARM_CFLAGS=$(aarch64-linux-gnu-pkg-config --cflags-only-I sdl2 SDL2_image glu glew physfs openal freealut tinyxml2)
-          ARM_LIBS=$(aarch64-linux-gnu-pkg-config --libs sdl2 SDL2_image glu glew physfs openal freealut tinyxml2)
+          # Die LDFLAGS müssen wir behalten, damit die Libs gelinkt werden
+          MY_LDFLAGS="-L/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGL -lGLU -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lpthread"
           
-          # Bauen
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
                OPTIMS="-O3 -mtune=cortex-a35" \
-               CPPFLAGS="-I./include $ARM_CFLAGS -DNDEBUG -DUNIX" \
-               LDFLAGS="$ARM_LIBS" \
+               CPPFLAGS="$MY_CPPFLAGS" \
+               LDFLAGS="$MY_LDFLAGS" \
                -j$(nproc)
           
           cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally || echo "Binary nicht gefunden!"
@@ -53,6 +66,7 @@ jobs:
           
           echo '#!/bin/bash' > package/TriggerRally/trigger-rally.sh
           echo 'cd "$(dirname "$0")"' >> package/TriggerRally/trigger-rally.sh
+          # Auflösung für R36S (640x480)
           echo './trigger-rally --width 640 --height 480 --fullscreen' >> package/TriggerRally/trigger-rally.sh
           chmod +x package/TriggerRally/trigger-rally.sh
           
