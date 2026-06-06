@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Corrected CPPFLAGS)
+name: Build Trigger Rally (Dynamic Paths)
 
 on:
   push:
@@ -19,26 +19,28 @@ jobs:
         run: |
           dpkg --add-architecture arm64
           apt-get update
-          apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64
+          apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64 pkg-config
 
       - name: Build Binary
         run: |
           cd src
           
-          CROSS_ROOT="/usr/aarch64-linux-gnu"
+          # Konfiguriere pkg-config für den Cross-Compiler
+          export PKG_CONFIG_PATH=/usr/aarch64-linux-gnu/lib/pkgconfig
+          export PKG_CONFIG_SYSROOT_DIR=/usr/aarch64-linux-gnu
+          export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
           
-          # NEU: Wir fügen ./include explizit hinzu, damit die eigenen Header gefunden werden!
-          # Wir behalten die System-Pfade bei.
-          MY_CPPFLAGS="-I./include -I${CROSS_ROOT}/include -I${CROSS_ROOT}/include/SDL2 -DNDEBUG -DUNIX"
+          # Hole die exakten Pfade für die ARM64-Libs
+          # Wir nutzen --cflags-only-I, um nur die Pfade zu bekommen
+          ARM_CFLAGS=$(aarch64-linux-gnu-pkg-config --cflags-only-I sdl2 SDL2_image glu glew physfs openal freealut tinyxml2)
+          ARM_LIBS=$(aarch64-linux-gnu-pkg-config --libs sdl2 SDL2_image glu glew physfs openal freealut tinyxml2)
           
-          MY_LDFLAGS="-L${CROSS_ROOT}/lib -lSDL2 -lSDL2_image -lGL -lGLU -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lpthread"
-          
-          # Build mit den korrekten Pfaden
+          # Bauen
           make CC=aarch64-unknown-linux-gnu-gcc \
                CXX=aarch64-unknown-linux-gnu-g++ \
                OPTIMS="-O3 -mtune=cortex-a35" \
-               CPPFLAGS="$MY_CPPFLAGS" \
-               LDFLAGS="$MY_LDFLAGS" \
+               CPPFLAGS="-I./include $ARM_CFLAGS -DNDEBUG -DUNIX" \
+               LDFLAGS="$ARM_LIBS" \
                -j$(nproc)
           
           cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally || echo "Binary nicht gefunden!"
