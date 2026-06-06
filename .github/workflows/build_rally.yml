@@ -1,0 +1,56 @@
+name: Build Trigger Rally (Robust ARM64)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Multi-Arch
+        run: |
+          # 1. ARM64 Architektur für apt hinzufügen
+          sudo dpkg --add-architecture arm64
+          sudo apt-get update
+          
+          # 2. Cross-Compiler und die RICHTIGEN (ARM64) Libs installieren
+          # Das ist der entscheidende Schritt: :arm64 am Ende sagt apt, 
+          # dass wir die ARM-Versionen brauchen.
+          sudo apt-get install -y \
+            g++-aarch64-linux-gnu \
+            gcc-aarch64-linux-gnu \
+            cmake \
+            libsdl2-dev:arm64 \
+            libsdl2-image-dev:arm64 \
+            libsdl2-mixer-dev:arm64
+
+      - name: Build Trigger Rally
+        run: |
+          mkdir build
+          cd build
+          # Wir setzen CMake explizit auf den Cross-Compiler
+          # Wir geben PKG_CONFIG_PATH an, damit er die ARM64-Libs findet
+          export PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig
+          
+          cmake -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc \
+                -DCMAKE_CXX_COMPILER=aarch64-linux-gnu-g++ \
+                -DCMAKE_SYSTEM_NAME=Linux \
+                -DCMAKE_SYSTEM_PROCESSOR=aarch64 \
+                -DCMAKE_FIND_ROOT_PATH=/usr/aarch64-linux-gnu \
+                -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER \
+                -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY=ONLY \
+                -DCMAKE_FIND_ROOT_PATH_MODE_INCLUDE=ONLY \
+                ..
+                
+          make -j$(nproc)
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trigger-rally-arm64
+          path: build/trigger-rally
