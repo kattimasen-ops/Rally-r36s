@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Sysroot Mode)
+name: Build Trigger Rally (Minimalistic)
 
 on:
   push:
@@ -27,30 +27,32 @@ jobs:
             libopenal-dev:arm64 \
             libalut-dev:arm64 \
             libtinyxml2-dev:arm64 \
-            libglu1-mesa-dev:arm64
+            libglu1-mesa-dev:arm64 \
+            pkg-config
 
       - name: Build and Package
         run: |
           cd src
           
-          # SYSROOT ist in dockcross standardmäßig /usr/aarch64-linux-gnu
-          # Wir zwingen den Compiler, nur diesen Sysroot zu nutzen
-          export SYSROOT=/usr/aarch64-linux-gnu
+          # WICHTIG: Wir setzen die Umgebungsvariablen für pkg-config,
+          # damit es die ARM64-Bibliotheken findet, ohne den Compiler zu "verwirren".
+          export PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig
+          export PKG_CONFIG_SYSROOT_DIR=/
+          export PKG_CONFIG_ALLOW_CROSS=1
           
-          # Flags, die das System "einsperren"
-          # -isysroot verhindert den Zugriff auf /usr/include
-          # --sysroot sorgt dafür, dass auch der Linker nur in ARM64-Pfaden sucht
-          export CXXFLAGS="--sysroot=${SYSROOT} -isysroot ${SYSROOT} -I./include"
-          export LDFLAGS="--sysroot=${SYSROOT} -L${SYSROOT}/usr/lib/aarch64-linux-gnu"
-          
-          echo "Bauen mit Sysroot: $SYSROOT"
+          # Wir lassen pkg-config die Arbeit machen. 
+          # Wenn das fehlschlägt, müssen wir nicht raten, sondern pkg-config fixen.
+          SDL_CFLAGS=$(pkg-config --cflags sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          SDL_LIBS=$(pkg-config --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
+
+          echo "Flags: $SDL_CFLAGS"
 
           make clean
+          # Wir übergeben hier keine --sysroot Flags mehr!
+          # Die Toolchain weiß von alleine, wo sie ist.
           make -j$(nproc) \
-            CC=aarch64-unknown-linux-gnu-gcc \
-            CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="${CXXFLAGS}" \
-            LDFLAGS="${LDFLAGS}" \
+            CPPFLAGS="$SDL_CFLAGS -DNDEBUG -DUNIX" \
+            LDFLAGS="$SDL_LIBS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
           # Binary kopieren
@@ -69,5 +71,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Working
+          name: TriggerRally-Final
           path: package/TriggerRally
