@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Final Include Fix)
+name: Build Trigger Rally (Linker Dependency Fix)
 
 on:
   push:
@@ -33,22 +33,28 @@ jobs:
         run: |
           cd src
           
-          # NEU: Wir zeigen auf /usr/include, damit #include <SDL2/SDL.h> gefunden wird.
-          # Wir fügen auch die Architektur-Pfade hinzu, damit System-Header (features.h) gefunden werden.
-          export MY_CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
+          # 1. DER FIX: PKG_CONFIG_LIBDIR überschreibt alle anderen Pfade.
+          # Wir zwingen pkg-config, nur im ARM64-Verzeichnis zu suchen.
+          export PKG_CONFIG_LIBDIR=/usr/lib/aarch64-linux-gnu/pkgconfig
+          export PKG_CONFIG_SYSROOT_DIR=/
+          export PKG_CONFIG_ALLOW_CROSS=1
           
-          export LDFLAGS="-L/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl"
-
-          echo "Starte Build mit korrigierten Includes..."
+          # 2. Wir generieren die Flags automatisch.
+          # --static ist hier der Trick, um alle transitiven Abhängigkeiten (wie -lX11, -lwayland, -lpulse)
+          # mit in die Variable aufzunehmen.
+          export DEPS_FLAGS=$(pkg-config --cflags --libs --static sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          
+          echo "Verwendete Flags: $DEPS_FLAGS"
 
           make clean
           
-          # Wir nutzen die Variablen hier direkt.
+          # 3. Wir übergeben die Flags. 
+          # Hinweis: Wir lassen CPPFLAGS und LDFLAGS hier durch die generierten Variablen füllen.
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="$MY_CPPFLAGS" \
-            LDFLAGS="$LDFLAGS" \
+            CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\" $DEPS_FLAGS" \
+            LDFLAGS="$DEPS_FLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
           # Binary kopieren
@@ -67,5 +73,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final-Build
+          name: TriggerRally-R36S-Final-Binary
           path: package/TriggerRally
