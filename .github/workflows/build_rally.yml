@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Robust)
+name: Build Trigger Rally (Dynamic)
 
 on:
   push:
@@ -18,53 +18,59 @@ jobs:
       - name: Install Dependencies
         run: |
           apt-get update
-          # Wir installieren pkg-config, um Header-Pfade automatisch zu finden
           apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev pkg-config
 
-      - name: Diagnose & Build
+      - name: Build and Package
         run: |
+          # 1. Dynamische Pfad-Suche für SDL2
+          # Wir suchen die Datei SDL.h und leiten den Include-Pfad ab
+          SDL_H_PATH=$(find /usr -name SDL.h | head -n 1)
+          if [ -z "$SDL_H_PATH" ]; then
+            echo "Fehler: SDL.h konnte nicht gefunden werden!"
+            exit 1
+          fi
+          # Wir extrahieren das übergeordnete Verzeichnis von /SDL2/SDL.h
+          SDL_INCLUDE_DIR=$(dirname $(dirname "$SDL_H_PATH"))
+          echo "Gefundenes SDL Include Verzeichnis: $SDL_INCLUDE_DIR"
+
+          # 2. Umgebungsvariablen setzen
+          export CPPFLAGS="-I./include -I$SDL_INCLUDE_DIR -DNDEBUG -DUNIX"
+          # Wir nutzen pkg-config, um die korrekten Linker-Flags zu erhalten
+          export LDFLAGS=$(pkg-config --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
+
+          # 3. Build
           cd src
-          
-          # 1. SAUBERER START
           make clean
-          
-          # 2. PFAD-DIAGNOSE
-          # Wir suchen, wo SDL.h wirklich liegt. Wenn das leer ist, finden wir den Fehler sofort.
-          echo "Suche nach SDL.h..."
-          find /usr/aarch64-linux-gnu -name SDL.h
-          
-          # 3. VARIABLEN EXPORTIEREN (nicht nur an Make übergeben)
-          # Wir nutzen pkg-config, um die absolut korrekten Include-Pfade zu generieren.
-          export SDL_CFLAGS=$(aarch64-linux-gnu-pkg-config --cflags sdl2)
-          export SDL_LIBS=$(aarch64-linux-gnu-pkg-config --libs sdl2)
-          
-          echo "Gefundene SDL_CFLAGS: $SDL_CFLAGS"
-          
-          # 4. DAS MAKE-COMMAND
-          # Wir überschreiben die Variablen direkt beim Aufruf. 
-          # Wir nutzen 'override', um sicherzustellen, dass das Makefile nicht dazwischenfunkt.
-          # Wir fügen -I/usr/aarch64-linux-gnu/include/SDL2 explizit hinzu als Fallback.
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="-I./include $SDL_CFLAGS -I/usr/aarch64-linux-gnu/include/SDL2 -DNDEBUG -DUNIX" \
-            LDFLAGS="$SDL_LIBS -L/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu" \
+            CPPFLAGS="$CPPFLAGS" \
+            LDFLAGS="$LDFLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
-      - name: Package for R36S
+          # 4. Binary prüfen und verschieben
+          BINARY=$(find . -maxdepth 2 -name "trigger-rally" | head -n 1)
+          if [ -z "$BINARY" ]; then
+            echo "Binary wurde nicht erstellt!"
+            exit 1
+          fi
+
+          mkdir -p ../package/TriggerRally
+          cp "$BINARY" ../package/TriggerRally/
+          cp -r ../data ../package/TriggerRally/
+
+      - name: Create Launch Script
         run: |
-          mkdir -p package/TriggerRally
-          cp src/trigger-rally package/TriggerRally/ 2>/dev/null || cp src/build/trigger-rally package/TriggerRally/
-          cp -r data package/TriggerRally/
-          
-          # Start-Skript
-          echo '#!/bin/bash' > package/TriggerRally/trigger-rally.sh
-          echo 'cd "$(dirname "$0")"' >> package/TriggerRally/trigger-rally.sh
-          echo './trigger-rally --width 640 --height 480 --fullscreen' >> package/TriggerRally/trigger-rally.sh
-          chmod +x package/TriggerRally/trigger-rally.sh
-          
+          cd package/TriggerRally
+          echo '#!/bin/bash' > trigger-rally.sh
+          echo 'cd "$(dirname "$0")"' >> trigger-rally.sh
+          # Ggf. lib-pfade setzen, falls das OS die libs nicht findet
+          echo 'export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH' >> trigger-rally.sh
+          echo './trigger-rally --width 640 --height 480 --fullscreen' >> trigger-rally.sh
+          chmod +x trigger-rally.sh
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Robust
+          name: TriggerRally-R36S-Final
           path: package/TriggerRally
