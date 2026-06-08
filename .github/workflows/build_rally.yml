@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Success!)
+name: Build Trigger Rally (R36S ARM64 Final)
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install ARM64 Dependencies
+      - name: Install ARM64 Dependencies & Tools
         run: |
           dpkg --add-architecture arm64
           apt-get update
@@ -39,21 +39,27 @@ jobs:
             libpulse-dev:arm64 \
             libasound2-dev:arm64 \
             libffi-dev:arm64 \
-            libgbm-dev:arm64
+            libgbm-dev:arm64 \
+            zip
 
       - name: Build and Package
         run: |
           cd src
           
+          # Ordner für den Linker definieren
           export ARM_LIB_PATH=/usr/lib/aarch64-linux-gnu
           export PULSE_LIB_PATH=/usr/lib/aarch64-linux-gnu/pulseaudio
           
+          # Harte Linker-Vorgaben, um alle Abhängigkeiten zu erzwingen
           export LDFLAGS="-L$ARM_LIB_PATH -Wl,-rpath-link,$ARM_LIB_PATH:$PULSE_LIB_PATH -Wl,--no-as-needed -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl -lX11 -lxcb -lffi -lpulse -lasound -lgbm -ldrm"
           
+          # Include-Pfade für die Header
           export CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
 
+          echo "Starte sauberen Cross-Compile Build..."
           make clean
           
+          # Kompilierungsvorgang
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
@@ -61,7 +67,7 @@ jobs:
             LDFLAGS="$LDFLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
-          # HIER IST DER FIX: Wir kopieren das Binary aus ../bin/
+          # Binary aus dem bin-Ordner ins Package kopieren
           mkdir -p ../package/TriggerRally
           cp ../bin/trigger-rally ../package/TriggerRally/
           cp -r ../data ../package/TriggerRally/
@@ -74,8 +80,14 @@ jobs:
           echo './trigger-rally --width 640 --height 480 --fullscreen' >> trigger-rally.sh
           chmod +x trigger-rally.sh
 
+      - name: Zip Artifact (Bypass Filename Errors)
+        run: |
+          cd package
+          echo "Erstelle ZIP-Archiv, um GitHub Upload-Fehler zu umgehen..."
+          zip -r TriggerRally-R36S-Ready.zip TriggerRally/
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Ready
-          path: package/TriggerRally
+          name: TriggerRally-R36S-Ready-ZIP
+          path: package/TriggerRally-R36S-Ready.zip
