@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Include-Fix)
+name: Build Trigger Rally (Final Compilation Fix)
 
 on:
   push:
@@ -33,20 +33,16 @@ jobs:
         run: |
           cd src
           
-          # WICHTIG: Wir übergeben die Pfade so, dass sie für `#include <SDL2/SDL.h>` stimmen.
-          # -I/usr/include/aarch64-linux-gnu deckt die System-Header ab.
-          # -I/usr/include deckt die SDL2-Header ab, sodass SDL2/SDL.h gefunden wird.
-          export CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX"
+          # HINZUFÜGUNG: -DPACKAGE_VERSION sorgt dafür, dass die Version bekannt ist.
+          # Wir setzen hier eine Standard-Version fest.
+          export CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\" -DPACKAGE_NAME=\\\"trigger-rally\\\""
           
-          # Wir verlinken gegen die ARM64-Bibliotheken
           export LDFLAGS="-L/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread"
 
-          echo "Starte Build mit bereinigten Includes..."
+          echo "Starte Build mit Version-Flags..."
 
           make clean
           
-          # Compiler wird hier nicht mehr mit --sysroot gezwungen, 
-          # sondern darf seine Standardpfade nutzen.
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
@@ -70,5 +66,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Fixed-Includes
+          name: TriggerRally-R36S-Final-Binary
           path: package/TriggerRally
