@@ -1,4 +1,4 @@
-name: Build Trigger Rally (No-Pkg-Config Mode)
+name: Build Trigger Rally (Final Include Fix)
 
 on:
   push:
@@ -33,25 +33,21 @@ jobs:
         run: |
           cd src
           
-          # Wir setzen die Pfade manuell.
-          # -I/usr/include/SDL2 ist für die Header.
-          # -L/usr/lib/aarch64-linux-gnu ist der Pfad zu den ARM64-Bibliotheken.
+          # NEU: Wir zeigen auf /usr/include, damit #include <SDL2/SDL.h> gefunden wird.
+          # Wir fügen auch die Architektur-Pfade hinzu, damit System-Header (features.h) gefunden werden.
+          export MY_CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
           
-          export CXXFLAGS="-I./include -I/usr/include/SDL2 -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
-          
-          # WICHTIG: Die Reihenfolge der -l Bibliotheken ist entscheidend für den Linker.
-          # Wir listen SDL2 und SDL2_image explizit.
           export LDFLAGS="-L/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl"
 
-          echo "Starte Build ohne pkg-config..."
+          echo "Starte Build mit korrigierten Includes..."
 
           make clean
           
-          # Wir rufen make auf und überschreiben die Flags, ohne pkg-config zu fragen.
+          # Wir nutzen die Variablen hier direkt.
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="$CXXFLAGS" \
+            CPPFLAGS="$MY_CPPFLAGS" \
             LDFLAGS="$LDFLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
@@ -71,5 +67,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final-Hardcoded
+          name: TriggerRally-R36S-Final-Build
           path: package/TriggerRally
