@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Linker Fix)
+name: Build Trigger Rally (Diagnostic & Build)
 
 on:
   push:
@@ -30,29 +30,37 @@ jobs:
             libglu1-mesa-dev:arm64 \
             pkg-config
 
-      - name: Build and Package
+      - name: Locate Libraries and Build
         run: |
           cd src
           
-          # 1. FIX: PKG_CONFIG_LIBDIR zwingt pkg-config nur im ARM64-Ordner zu suchen.
-          # Das verhindert, dass es Host-Bibliotheken (x86_64) findet.
-          export PKG_CONFIG_LIBDIR=/usr/lib/aarch64-linux-gnu/pkgconfig
+          # 1. DIAGNOSE: Finde, wo die .pc Dateien wirklich liegen
+          echo "Suche nach sdl2.pc..."
+          PC_PATH=$(find /usr/lib -name "sdl2.pc" | head -n 1 | xargs dirname)
+          
+          if [ -z "$PC_PATH" ]; then
+            echo "FEHLER: sdl2.pc wurde nicht gefunden! Installierte Pakete prüfen..."
+            ls -R /usr/lib/aarch64-linux-gnu/pkgconfig || echo "Kein pkgconfig Ordner gefunden."
+            exit 1
+          fi
+          
+          echo "Gefundener Pfad: $PC_PATH"
+          export PKG_CONFIG_PATH=$PC_PATH
           export PKG_CONFIG_SYSROOT_DIR=/
           export PKG_CONFIG_ALLOW_CROSS=1
           
-          # 2. Wir lassen pkg-config die komplette Liste aller Libs inkl. Abhängigkeiten generieren
-          # Die "--libs" Option liefert uns jetzt die Liste wie: -lSDL2 -lpulse -lX11 -lasound ...
-          SDL_FLAGS=$(pkg-config --cflags --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          # 2. Bauen mit den gefundenen Informationen
+          # Wir nutzen --static für SDL2, damit der Linker die Abhängigkeiten 
+          # direkt mit einbaut und die 'undefined reference' Fehler verschwinden.
+          SDL_FLAGS=$(pkg-config --cflags --libs --static sdl2 sdl2_image glew physfs openal alut tinyxml2)
           
-          echo "Erkannte Flags: $SDL_FLAGS"
+          echo "Flags: $SDL_FLAGS"
 
-          # 3. Build mit den automatisch ermittelten Flags
           make clean
-          
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\" $SDL_FLAGS" \
+            CPPFLAGS="-I./include -I/usr/include -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\" $SDL_FLAGS" \
             LDFLAGS="$SDL_FLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
@@ -72,5 +80,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Working-Binary
+          name: TriggerRally-R36S-Final-Attempt
           path: package/TriggerRally
