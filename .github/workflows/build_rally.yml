@@ -1,4 +1,4 @@
- name: Build Trigger Rally (Last Try)
+name: Build Trigger Rally (Corrected)
 
 on:
   push:
@@ -17,38 +17,38 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          dpkg --add-architecture arm64
+          # Kein dpkg --add-architecture nötig, wir sind schon im ARM64-Container!
           apt-get update
-          apt-get install -y libsdl2-dev:arm64 libsdl2-image-dev:arm64 libglew-dev:arm64 libphysfs-dev:arm64 libopenal-dev:arm64 libalut-dev:arm64 libtinyxml2-dev:arm64 libglu1-mesa-dev:arm64
+          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev
 
       - name: Build Binary
         run: |
           cd src
           
-          # HIER IST DER FIX:
-          # 1. Wir fügen '../include' hinzu, um deine lokalen .h-Dateien zu finden.
-          # 2. Wir fügen '/usr/aarch64-linux-gnu/include' hinzu (NICHT mit /SDL2 am Ende!).
-          # So findet er:
-          #   - ../include/app.h (Korrekt)
-          #   - /usr/aarch64-linux-gnu/include/SDL2/SDL.h (Korrekt, weil er SDL2/SDL.h anhängt)
+          # Wir nutzen NICHT CC=... oder manuelle Pfade. 
+          # Dockcross hat die Variablen CC, CXX etc. bereits korrekt gesetzt.
           
-          export CPPFLAGS="-I../include -I/usr/aarch64-linux-gnu/include -DNDEBUG -DUNIX"
-          export LDFLAGS="-L/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGL -lGLU -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lpthread"
+          # Falls das Makefile 'pkg-config' nutzt, stellen wir sicher, dass es ARM64 sieht:
+          export PKG_CONFIG_ALLOW_CROSS=1
           
-          make CC=aarch64-unknown-linux-gnu-gcc \
-               CXX=aarch64-unknown-linux-gnu-g++ \
-               OPTIMS="-O3 -mtune=cortex-a35" \
-               CPPFLAGS="$CPPFLAGS" \
-               LDFLAGS="$LDFLAGS" \
-               -j$(nproc)
+          # Einfacher Build-Aufruf
+          make -j$(nproc) OPTIMS="-O3 -mtune=cortex-a35"
           
-          # Binary sichern
-          cp trigger-rally ../trigger-rally || cp build/trigger-rally ../trigger-rally || echo "Binary nicht gefunden!"
-
+          # Debugging: Schau, wo das Binary liegt, falls es nicht im Root-Verzeichnis ist
+          find . -name "trigger-rally"
+          
       - name: Package for R36S
         run: |
           mkdir -p package/TriggerRally
-          mv trigger-rally package/TriggerRally/ 2>/dev/null || echo "Binary nicht gefunden!"
+          
+          # Binary finden und verschieben (wir suchen rekursiv im src Ordner)
+          # 'find' gibt den Pfad zurück, wir kopieren das Ergebnis
+          BINARY=$(find src -name "trigger-rally" | head -n 1)
+          if [ -z "$BINARY" ]; then
+            echo "Binary nicht gefunden!" && exit 1
+          fi
+          cp "$BINARY" package/TriggerRally/
+          
           cp -r data package/TriggerRally/
           
           echo '#!/bin/bash' > package/TriggerRally/trigger-rally.sh
