@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Fix)
+name: Build Trigger Rally (Final Fix)
 
 on:
   push:
@@ -18,30 +18,31 @@ jobs:
       - name: Install Dependencies
         run: |
           apt-get update
-          # Wir installieren für die Zielarchitektur
           apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev pkg-config
 
       - name: Build and Package
         run: |
           cd src
           
-          # 1. SAUBERE UMWELT:
-          # Wir löschen alle alten Pfade und zwingen pkg-config dazu, 
-          # NUR in den ARM64-Pfaden zu suchen.
-          export PKG_CONFIG_PATH=""
-          export PKG_CONFIG_LIBDIR="/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu/pkgconfig:/usr/lib/aarch64-linux-gnu/pkgconfig"
-          export PKG_CONFIG="aarch64-linux-gnu-pkg-config"
+          # 1. SETUP FÜR CROSS-COMPILING PKG-CONFIG
+          # Wir weisen pkg-config an, nur die ARM64-Dateien zu finden
+          export PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig:/usr/share/pkgconfig
+          export PKG_CONFIG_SYSROOT_DIR=/
+          export PKG_CONFIG_ALLOW_CROSS=1
+          
+          # Test: Prüfen, ob pkg-config die SDL2 Datei findet
+          echo "Prüfe SDL2 Pfade..."
+          pkg-config --cflags sdl2 || echo "Warnung: pkg-config findet sdl2 nicht!"
 
-          # 2. HOL DIR DIE FLAGS:
-          # pkg-config liefert uns jetzt exakt die richtigen Pfade zu den ARM64-Headern.
-          # Wir benutzen KEIN -I/usr/include mehr!
-          SDL_CFLAGS=$(aarch64-linux-gnu-pkg-config --cflags sdl2 sdl2_image glew physfs openal alut tinyxml2)
-          SDL_LIBS=$(aarch64-linux-gnu-pkg-config --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          # 2. FLAGS GENERIEREN
+          # Wir nutzen jetzt das normale pkg-config, das durch unsere Exports oben nun "ARM64-fähig" ist.
+          SDL_CFLAGS=$(pkg-config --cflags sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          SDL_LIBS=$(pkg-config --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          
+          echo "Verwendete CFLAGS: $SDL_CFLAGS"
 
-          echo "DEBUG FLAGS: $SDL_CFLAGS"
-
-          # 3. BUILD:
-          # Wir benutzen nur noch das, was uns pkg-config gibt + ./include
+          # 3. BUILD
+          # Wir nutzen explizit KEIN -I/usr/include, um die Host-Header-Vergiftung zu vermeiden.
           make clean
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
@@ -50,7 +51,7 @@ jobs:
             LDFLAGS="$SDL_LIBS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
-          # 4. PACKAGE:
+          # 4. PACKAGE
           mkdir -p ../package/TriggerRally
           cp trigger-rally ../package/TriggerRally/ 2>/dev/null || cp build/trigger-rally ../package/TriggerRally/
           cp -r ../data ../package/TriggerRally/
@@ -66,5 +67,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final
+          name: TriggerRally-R36S-Fixed
           path: package/TriggerRally
