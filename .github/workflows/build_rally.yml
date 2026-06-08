@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Final Fix)
+name: Build Trigger Rally (The "No-Guessing" Way)
 
 on:
   push:
@@ -15,43 +15,42 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
+      - name: Install ARM64 Dependencies
         run: |
+          # 1. Multi-Arch für ARM64 aktivieren
+          dpkg --add-architecture arm64
           apt-get update
-          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev pkg-config
+          # 2. Wir installieren explizit die ARM64 Versionen der Libs
+          apt-get install -y \
+            libsdl2-dev:arm64 \
+            libsdl2-image-dev:arm64 \
+            libglew-dev:arm64 \
+            libphysfs-dev:arm64 \
+            libopenal-dev:arm64 \
+            libalut-dev:arm64 \
+            libtinyxml2-dev:arm64 \
+            libglu1-mesa-dev:arm64
 
       - name: Build and Package
         run: |
           cd src
           
-          # 1. SETUP FÜR CROSS-COMPILING PKG-CONFIG
-          # Wir weisen pkg-config an, nur die ARM64-Dateien zu finden
-          export PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig:/usr/share/pkgconfig
-          export PKG_CONFIG_SYSROOT_DIR=/
-          export PKG_CONFIG_ALLOW_CROSS=1
-          
-          # Test: Prüfen, ob pkg-config die SDL2 Datei findet
-          echo "Prüfe SDL2 Pfade..."
-          pkg-config --cflags sdl2 || echo "Warnung: pkg-config findet sdl2 nicht!"
+          # SYSROOT ist in dockcross automatisch gesetzt (z.B. /usr/aarch64-linux-gnu)
+          # Wir bauen unsere Pfade exakt zusammen
+          export MY_INCLUDE="-I./include -I${SYSROOT}/usr/include -I${SYSROOT}/usr/include/SDL2"
+          export MY_LIB="-L${SYSROOT}/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread"
 
-          # 2. FLAGS GENERIEREN
-          # Wir nutzen jetzt das normale pkg-config, das durch unsere Exports oben nun "ARM64-fähig" ist.
-          SDL_CFLAGS=$(pkg-config --cflags sdl2 sdl2_image glew physfs openal alut tinyxml2)
-          SDL_LIBS=$(pkg-config --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
-          
-          echo "Verwendete CFLAGS: $SDL_CFLAGS"
+          echo "Bauen mit Include-Pfaden: $MY_INCLUDE"
 
-          # 3. BUILD
-          # Wir nutzen explizit KEIN -I/usr/include, um die Host-Header-Vergiftung zu vermeiden.
           make clean
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="-I./include $SDL_CFLAGS -DNDEBUG -DUNIX" \
-            LDFLAGS="$SDL_LIBS" \
+            CPPFLAGS="$MY_INCLUDE -DNDEBUG -DUNIX" \
+            LDFLAGS="$MY_LIB" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
-          # 4. PACKAGE
+          # Binary kopieren
           mkdir -p ../package/TriggerRally
           cp trigger-rally ../package/TriggerRally/ 2>/dev/null || cp build/trigger-rally ../package/TriggerRally/
           cp -r ../data ../package/TriggerRally/
@@ -60,12 +59,12 @@ jobs:
         run: |
           cd package/TriggerRally
           echo '#!/bin/bash' > trigger-rally.sh
-          echo 'cd "$(dirname "$0")"' >> trigger-rally.sh
+          echo 'export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH' >> trigger-rally.sh
           echo './trigger-rally --width 640 --height 480 --fullscreen' >> trigger-rally.sh
           chmod +x trigger-rally.sh
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Fixed
+          name: TriggerRally-R36S-Final-Fixed
           path: package/TriggerRally
