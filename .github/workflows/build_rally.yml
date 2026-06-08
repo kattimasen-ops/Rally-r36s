@@ -1,4 +1,4 @@
-name: Build Trigger Rally (R36S)
+name: Build Trigger Rally (Robust)
 
 on:
   push:
@@ -9,7 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      # Dockcross liefert alles, was wir für ARM64 brauchen
       image: dockcross/linux-arm64:latest
 
     steps:
@@ -19,56 +18,53 @@ jobs:
       - name: Install Dependencies
         run: |
           apt-get update
-          apt-get install -y \
-            libsdl2-dev \
-            libsdl2-image-dev \
-            libglew-dev \
-            libphysfs-dev \
-            libopenal-dev \
-            libalut-dev \
-            libtinyxml2-dev \
-            libglu1-mesa-dev \
-            pkg-config
+          # Wir installieren pkg-config, um Header-Pfade automatisch zu finden
+          apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev pkg-config
 
-      - name: Build Binary
+      - name: Diagnose & Build
         run: |
           cd src
           
-          # WICHTIG: Wir setzen den korrekten Pfad für pkg-config, 
-          # damit er die ARM64-Bibliotheken findet, nicht die x86-Bibliotheken.
-          export PKG_CONFIG_PATH=/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu/pkgconfig
+          # 1. SAUBERER START
+          make clean
           
-          # Wir definieren die Flags, um die Header-Probleme zu lösen.
-          # -I/usr/aarch64-linux-gnu/include sorgt dafür, dass <SDL2/SDL.h> gefunden wird.
-          # Wir nutzen 'override', damit das Makefile unsere Werte nicht verwirft.
+          # 2. PFAD-DIAGNOSE
+          # Wir suchen, wo SDL.h wirklich liegt. Wenn das leer ist, finden wir den Fehler sofort.
+          echo "Suche nach SDL.h..."
+          find /usr/aarch64-linux-gnu -name SDL.h
           
+          # 3. VARIABLEN EXPORTIEREN (nicht nur an Make übergeben)
+          # Wir nutzen pkg-config, um die absolut korrekten Include-Pfade zu generieren.
+          export SDL_CFLAGS=$(aarch64-linux-gnu-pkg-config --cflags sdl2)
+          export SDL_LIBS=$(aarch64-linux-gnu-pkg-config --libs sdl2)
+          
+          echo "Gefundene SDL_CFLAGS: $SDL_CFLAGS"
+          
+          # 4. DAS MAKE-COMMAND
+          # Wir überschreiben die Variablen direkt beim Aufruf. 
+          # Wir nutzen 'override', um sicherzustellen, dass das Makefile nicht dazwischenfunkt.
+          # Wir fügen -I/usr/aarch64-linux-gnu/include/SDL2 explizit hinzu als Fallback.
           make -j$(nproc) \
-            CPPFLAGS="-I./include -I/usr/aarch64-linux-gnu/include -DNDEBUG -DUNIX" \
-            LDFLAGS="-L/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu" \
+            CC=aarch64-unknown-linux-gnu-gcc \
+            CXX=aarch64-unknown-linux-gnu-g++ \
+            CPPFLAGS="-I./include $SDL_CFLAGS -I/usr/aarch64-linux-gnu/include/SDL2 -DNDEBUG -DUNIX" \
+            LDFLAGS="$SDL_LIBS -L/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu" \
             OPTIMS="-O3 -mtune=cortex-a35"
-            
-          # Prüfen, ob das Binary existiert
-          ls -l trigger-rally
 
       - name: Package for R36S
         run: |
           mkdir -p package/TriggerRally
-          
-          # Binary kopieren
-          cp src/trigger-rally package/TriggerRally/
-          
-          # Daten kopieren
+          cp src/trigger-rally package/TriggerRally/ 2>/dev/null || cp src/build/trigger-rally package/TriggerRally/
           cp -r data package/TriggerRally/
           
-          # Start-Skript erstellen
+          # Start-Skript
           echo '#!/bin/bash' > package/TriggerRally/trigger-rally.sh
           echo 'cd "$(dirname "$0")"' >> package/TriggerRally/trigger-rally.sh
-          # Hier ggf. Parameter anpassen, falls das Spiel Auflösungsprobleme hat
           echo './trigger-rally --width 640 --height 480 --fullscreen' >> package/TriggerRally/trigger-rally.sh
           chmod +x package/TriggerRally/trigger-rally.sh
           
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S
+          name: TriggerRally-R36S-Robust
           path: package/TriggerRally
