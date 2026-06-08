@@ -1,4 +1,5 @@
-name: Build Trigger Rally (Final Linker Fix)
+
+name: Build Trigger Rally (Final Dependency Fix)
 
 on:
   push:
@@ -19,6 +20,7 @@ jobs:
         run: |
           dpkg --add-architecture arm64
           apt-get update
+          # Wir installieren jetzt ALLES, was in den Fehlermeldungen auftauchte
           apt-get install -y \
             libsdl2-dev:arm64 \
             libsdl2-image-dev:arm64 \
@@ -34,27 +36,42 @@ jobs:
             libsamplerate0-dev:arm64 \
             libwayland-dev:arm64 \
             libdrm-dev:arm64 \
-            libx11-dev:arm64
+            libx11-dev:arm64 \
+            libxcb1-dev:arm64 \
+            libpulse-dev:arm64 \
+            libasound2-dev:arm64 \
+            libffi-dev:arm64 \
+            libgbm-dev:arm64
 
       - name: Build and Package
         run: |
           cd src
           
-          # NEU: --no-as-needed zwingt den Linker, die Bibliotheken wirklich einzubinden.
-          # Wir listen alle Bibliotheken auf, die in den Fehlern auftauchten.
-          export MY_LDFLAGS="-Wl,--no-as-needed -L/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl -lX11 -lpng -ltiff -lsamplerate -ldrm -lwayland-client"
-          export MY_CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
+          # Konfiguriere pkg-config für die Cross-Compilation
+          export PKG_CONFIG_LIBDIR=/usr/lib/aarch64-linux-gnu/pkgconfig:/usr/share/pkgconfig
+          export PKG_CONFIG_SYSROOT_DIR=/
+          export PKG_CONFIG_ALLOW_CROSS=1
+          
+          # Wir generieren die Flags DYNAMISCH. Das ist sauberer als manuelle Listen.
+          # --static stellt sicher, dass alle Unter-Abhängigkeiten (wie -lffi, -lxcb) geladen werden.
+          export DEPS_FLAGS=$(pkg-config --cflags --libs --static sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          
+          echo "Generierte Flags: $DEPS_FLAGS"
 
-          echo "Starte Build mit erzwungenen Linker-Flags..."
+          # Fallback: Falls pkg-config was vergisst, fügen wir diese kritischen Libs manuell hinzu
+          export LDFLAGS="$DEPS_FLAGS -Wl,--no-as-needed -lX11 -lXcb -lffi -lpulse -lasound -lgbm -ldrm -lGL"
+          export CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
+
+          echo "Starte Build..."
 
           make clean
           
-          # CC/CXX setzen und die Flags direkt übergeben
+          # Build mit den generierten Flags
           make -j1 \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="$MY_CPPFLAGS" \
-            LDFLAGS="$MY_LDFLAGS" \
+            CPPFLAGS="$CPPFLAGS" \
+            LDFLAGS="$LDFLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
           # Binary kopieren
@@ -73,5 +90,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Working-Binary
+          name: TriggerRally-R36S-Final-Binary
           path: package/TriggerRally
