@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Final OpenGL Fix)
+name: Build Trigger Rally (Final Linker Fix)
 
 on:
   push:
@@ -28,23 +28,28 @@ jobs:
             libalut-dev:arm64 \
             libtinyxml2-dev:arm64 \
             libglu1-mesa-dev:arm64 \
-            libgl1-mesa-dev:arm64
+            libgl1-mesa-dev:arm64 \
+            libpng-dev:arm64 \
+            libtiff-dev:arm64 \
+            libsamplerate0-dev:arm64 \
+            libwayland-dev:arm64 \
+            libdrm-dev:arm64 \
+            libx11-dev:arm64
 
       - name: Build and Package
         run: |
           cd src
           
-          # Wir definieren die Flags sauber
-          # -lGL und -lGLU sind hier zwingend nötig für glScalef und glColor4f
+          # NEU: --no-as-needed zwingt den Linker, die Bibliotheken wirklich einzubinden.
+          # Wir listen alle Bibliotheken auf, die in den Fehlern auftauchten.
+          export MY_LDFLAGS="-Wl,--no-as-needed -L/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl -lX11 -lpng -ltiff -lsamplerate -ldrm -lwayland-client"
           export MY_CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
-          export MY_LDFLAGS="-L/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl"
 
-          echo "Starte letzten Build-Versuch..."
+          echo "Starte Build mit erzwungenen Linker-Flags..."
 
           make clean
           
-          # WICHTIG: Die Variablen werden hier explizit gesetzt.
-          # Wir nutzen -j1 um sicherzugehen, dass keine Parallel-Build-Race-Conditions auftreten.
+          # CC/CXX setzen und die Flags direkt übergeben
           make -j1 \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
@@ -68,5 +73,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final-Binary
+          name: TriggerRally-R36S-Working-Binary
           path: package/TriggerRally
