@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Dynamic)
+name: Build Trigger Rally (Fix)
 
 on:
   push:
@@ -18,45 +18,41 @@ jobs:
       - name: Install Dependencies
         run: |
           apt-get update
+          # Wir installieren für die Zielarchitektur
           apt-get install -y libsdl2-dev libsdl2-image-dev libglew-dev libphysfs-dev libopenal-dev libalut-dev libtinyxml2-dev libglu1-mesa-dev pkg-config
 
       - name: Build and Package
         run: |
-          # 1. Dynamische Pfad-Suche für SDL2
-          # Wir suchen die Datei SDL.h und leiten den Include-Pfad ab
-          SDL_H_PATH=$(find /usr -name SDL.h | head -n 1)
-          if [ -z "$SDL_H_PATH" ]; then
-            echo "Fehler: SDL.h konnte nicht gefunden werden!"
-            exit 1
-          fi
-          # Wir extrahieren das übergeordnete Verzeichnis von /SDL2/SDL.h
-          SDL_INCLUDE_DIR=$(dirname $(dirname "$SDL_H_PATH"))
-          echo "Gefundenes SDL Include Verzeichnis: $SDL_INCLUDE_DIR"
-
-          # 2. Umgebungsvariablen setzen
-          export CPPFLAGS="-I./include -I$SDL_INCLUDE_DIR -DNDEBUG -DUNIX"
-          # Wir nutzen pkg-config, um die korrekten Linker-Flags zu erhalten
-          export LDFLAGS=$(pkg-config --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
-
-          # 3. Build
           cd src
+          
+          # 1. SAUBERE UMWELT:
+          # Wir löschen alle alten Pfade und zwingen pkg-config dazu, 
+          # NUR in den ARM64-Pfaden zu suchen.
+          export PKG_CONFIG_PATH=""
+          export PKG_CONFIG_LIBDIR="/usr/aarch64-linux-gnu/lib/aarch64-linux-gnu/pkgconfig:/usr/lib/aarch64-linux-gnu/pkgconfig"
+          export PKG_CONFIG="aarch64-linux-gnu-pkg-config"
+
+          # 2. HOL DIR DIE FLAGS:
+          # pkg-config liefert uns jetzt exakt die richtigen Pfade zu den ARM64-Headern.
+          # Wir benutzen KEIN -I/usr/include mehr!
+          SDL_CFLAGS=$(aarch64-linux-gnu-pkg-config --cflags sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          SDL_LIBS=$(aarch64-linux-gnu-pkg-config --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
+
+          echo "DEBUG FLAGS: $SDL_CFLAGS"
+
+          # 3. BUILD:
+          # Wir benutzen nur noch das, was uns pkg-config gibt + ./include
           make clean
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="$CPPFLAGS" \
-            LDFLAGS="$LDFLAGS" \
+            CPPFLAGS="-I./include $SDL_CFLAGS -DNDEBUG -DUNIX" \
+            LDFLAGS="$SDL_LIBS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
-          # 4. Binary prüfen und verschieben
-          BINARY=$(find . -maxdepth 2 -name "trigger-rally" | head -n 1)
-          if [ -z "$BINARY" ]; then
-            echo "Binary wurde nicht erstellt!"
-            exit 1
-          fi
-
+          # 4. PACKAGE:
           mkdir -p ../package/TriggerRally
-          cp "$BINARY" ../package/TriggerRally/
+          cp trigger-rally ../package/TriggerRally/ 2>/dev/null || cp build/trigger-rally ../package/TriggerRally/
           cp -r ../data ../package/TriggerRally/
 
       - name: Create Launch Script
@@ -64,8 +60,6 @@ jobs:
           cd package/TriggerRally
           echo '#!/bin/bash' > trigger-rally.sh
           echo 'cd "$(dirname "$0")"' >> trigger-rally.sh
-          # Ggf. lib-pfade setzen, falls das OS die libs nicht findet
-          echo 'export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH' >> trigger-rally.sh
           echo './trigger-rally --width 640 --height 480 --fullscreen' >> trigger-rally.sh
           chmod +x trigger-rally.sh
 
