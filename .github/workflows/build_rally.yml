@@ -1,5 +1,4 @@
-
-name: Build Trigger Rally (Final Dependency Fix)
+name: Build Trigger Rally (Final Linker Correction)
 
 on:
   push:
@@ -20,7 +19,6 @@ jobs:
         run: |
           dpkg --add-architecture arm64
           apt-get update
-          # Wir installieren jetzt ALLES, was in den Fehlermeldungen auftauchte
           apt-get install -y \
             libsdl2-dev:arm64 \
             libsdl2-image-dev:arm64 \
@@ -47,27 +45,18 @@ jobs:
         run: |
           cd src
           
-          # Konfiguriere pkg-config für die Cross-Compilation
-          export PKG_CONFIG_LIBDIR=/usr/lib/aarch64-linux-gnu/pkgconfig:/usr/share/pkgconfig
-          export PKG_CONFIG_SYSROOT_DIR=/
-          export PKG_CONFIG_ALLOW_CROSS=1
-          
-          # Wir generieren die Flags DYNAMISCH. Das ist sauberer als manuelle Listen.
-          # --static stellt sicher, dass alle Unter-Abhängigkeiten (wie -lffi, -lxcb) geladen werden.
-          export DEPS_FLAGS=$(pkg-config --cflags --libs --static sdl2 sdl2_image glew physfs openal alut tinyxml2)
-          
-          echo "Generierte Flags: $DEPS_FLAGS"
-
-          # Fallback: Falls pkg-config was vergisst, fügen wir diese kritischen Libs manuell hinzu
-          export LDFLAGS="$DEPS_FLAGS -Wl,--no-as-needed -lX11 -lXcb -lffi -lpulse -lasound -lgbm -ldrm -lGL"
+          # NEU: rpath-link hilft dem Linker, Unter-Abhängigkeiten aufzulösen.
+          # Wir korrigieren -lXcb zu -lxcb.
+          export ARM_LIB_PATH=/usr/lib/aarch64-linux-gnu
+          export LDFLAGS="-L$ARM_LIB_PATH -Wl,-rpath-link,$ARM_LIB_PATH -Wl,--no-as-needed -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl -lX11 -lxcb -lffi -lpulse -lasound -lgbm -ldrm"
           export CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
 
-          echo "Starte Build..."
+          echo "Starte Build mit korrigierten Library-Namen..."
 
           make clean
           
-          # Build mit den generierten Flags
-          make -j1 \
+          # Compiler-Aufruf
+          make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
             CPPFLAGS="$CPPFLAGS" \
@@ -90,5 +79,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final-Binary
+          name: TriggerRally-R36S-Fixed-Linker
           path: package/TriggerRally
