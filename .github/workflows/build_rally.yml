@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Final Linker Correction)
+name: Build Trigger Rally (PulseAudio Fix)
 
 on:
   push:
@@ -45,17 +45,19 @@ jobs:
         run: |
           cd src
           
-          # NEU: rpath-link hilft dem Linker, Unter-Abhängigkeiten aufzulösen.
-          # Wir korrigieren -lXcb zu -lxcb.
+          # Wir fügen den versteckten PulseAudio-Ordner zum Suchpfad für Abhängigkeiten hinzu!
           export ARM_LIB_PATH=/usr/lib/aarch64-linux-gnu
-          export LDFLAGS="-L$ARM_LIB_PATH -Wl,-rpath-link,$ARM_LIB_PATH -Wl,--no-as-needed -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl -lX11 -lxcb -lffi -lpulse -lasound -lgbm -ldrm"
+          export PULSE_LIB_PATH=/usr/lib/aarch64-linux-gnu/pulseaudio
+          
+          # Der rpath-link enthält jetzt beide Ordner, getrennt durch einen Doppelpunkt.
+          export LDFLAGS="-L$ARM_LIB_PATH -Wl,-rpath-link,$ARM_LIB_PATH:$PULSE_LIB_PATH -Wl,--no-as-needed -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl -lX11 -lxcb -lffi -lpulse -lasound -lgbm -ldrm"
+          
           export CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
 
-          echo "Starte Build mit korrigierten Library-Namen..."
+          echo "Starte Build mit PulseAudio-Unterordner..."
 
           make clean
           
-          # Compiler-Aufruf
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
@@ -79,5 +81,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Fixed-Linker
+          name: TriggerRally-R36S-Final
           path: package/TriggerRally
