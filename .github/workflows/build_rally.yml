@@ -1,4 +1,4 @@
-name: Build Trigger Rally (PulseAudio Fix)
+name: Build Trigger Rally (Success!)
 
 on:
   push:
@@ -45,16 +45,12 @@ jobs:
         run: |
           cd src
           
-          # Wir fügen den versteckten PulseAudio-Ordner zum Suchpfad für Abhängigkeiten hinzu!
           export ARM_LIB_PATH=/usr/lib/aarch64-linux-gnu
           export PULSE_LIB_PATH=/usr/lib/aarch64-linux-gnu/pulseaudio
           
-          # Der rpath-link enthält jetzt beide Ordner, getrennt durch einen Doppelpunkt.
           export LDFLAGS="-L$ARM_LIB_PATH -Wl,-rpath-link,$ARM_LIB_PATH:$PULSE_LIB_PATH -Wl,--no-as-needed -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl -lX11 -lxcb -lffi -lpulse -lasound -lgbm -ldrm"
           
           export CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
-
-          echo "Starte Build mit PulseAudio-Unterordner..."
 
           make clean
           
@@ -65,9 +61,9 @@ jobs:
             LDFLAGS="$LDFLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
-          # Binary kopieren
+          # HIER IST DER FIX: Wir kopieren das Binary aus ../bin/
           mkdir -p ../package/TriggerRally
-          cp trigger-rally ../package/TriggerRally/ 2>/dev/null || cp build/trigger-rally ../package/TriggerRally/
+          cp ../bin/trigger-rally ../package/TriggerRally/
           cp -r ../data ../package/TriggerRally/
 
       - name: Create Launch Script
@@ -81,5 +77,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final
+          name: TriggerRally-R36S-Ready
           path: package/TriggerRally
