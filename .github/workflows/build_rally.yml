@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Final Compilation Fix)
+name: Build Trigger Rally (Linker Fix)
 
 on:
   push:
@@ -27,27 +27,33 @@ jobs:
             libopenal-dev:arm64 \
             libalut-dev:arm64 \
             libtinyxml2-dev:arm64 \
-            libglu1-mesa-dev:arm64
+            libglu1-mesa-dev:arm64 \
+            pkg-config
 
       - name: Build and Package
         run: |
           cd src
           
-          # HINZUFÜGUNG: -DPACKAGE_VERSION sorgt dafür, dass die Version bekannt ist.
-          # Wir setzen hier eine Standard-Version fest.
-          export CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\" -DPACKAGE_NAME=\\\"trigger-rally\\\""
+          # 1. FIX: PKG_CONFIG_LIBDIR zwingt pkg-config nur im ARM64-Ordner zu suchen.
+          # Das verhindert, dass es Host-Bibliotheken (x86_64) findet.
+          export PKG_CONFIG_LIBDIR=/usr/lib/aarch64-linux-gnu/pkgconfig
+          export PKG_CONFIG_SYSROOT_DIR=/
+          export PKG_CONFIG_ALLOW_CROSS=1
           
-          export LDFLAGS="-L/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread"
+          # 2. Wir lassen pkg-config die komplette Liste aller Libs inkl. Abhängigkeiten generieren
+          # Die "--libs" Option liefert uns jetzt die Liste wie: -lSDL2 -lpulse -lX11 -lasound ...
+          SDL_FLAGS=$(pkg-config --cflags --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          
+          echo "Erkannte Flags: $SDL_FLAGS"
 
-          echo "Starte Build mit Version-Flags..."
-
+          # 3. Build mit den automatisch ermittelten Flags
           make clean
           
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="$CPPFLAGS" \
-            LDFLAGS="$LDFLAGS" \
+            CPPFLAGS="-I./include -I/usr/include -I/usr/include/aarch64-linux-gnu -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\" $SDL_FLAGS" \
+            LDFLAGS="$SDL_FLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
           # Binary kopieren
@@ -66,5 +72,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final-Binary
+          name: TriggerRally-R36S-Working-Binary
           path: package/TriggerRally
