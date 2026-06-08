@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Diagnostic & Build)
+name: Build Trigger Rally (No-Pkg-Config Mode)
 
 on:
   push:
@@ -27,41 +27,32 @@ jobs:
             libopenal-dev:arm64 \
             libalut-dev:arm64 \
             libtinyxml2-dev:arm64 \
-            libglu1-mesa-dev:arm64 \
-            pkg-config
+            libglu1-mesa-dev:arm64
 
-      - name: Locate Libraries and Build
+      - name: Build and Package
         run: |
           cd src
           
-          # 1. DIAGNOSE: Finde, wo die .pc Dateien wirklich liegen
-          echo "Suche nach sdl2.pc..."
-          PC_PATH=$(find /usr/lib -name "sdl2.pc" | head -n 1 | xargs dirname)
+          # Wir setzen die Pfade manuell.
+          # -I/usr/include/SDL2 ist für die Header.
+          # -L/usr/lib/aarch64-linux-gnu ist der Pfad zu den ARM64-Bibliotheken.
           
-          if [ -z "$PC_PATH" ]; then
-            echo "FEHLER: sdl2.pc wurde nicht gefunden! Installierte Pakete prüfen..."
-            ls -R /usr/lib/aarch64-linux-gnu/pkgconfig || echo "Kein pkgconfig Ordner gefunden."
-            exit 1
-          fi
+          export CXXFLAGS="-I./include -I/usr/include/SDL2 -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\""
           
-          echo "Gefundener Pfad: $PC_PATH"
-          export PKG_CONFIG_PATH=$PC_PATH
-          export PKG_CONFIG_SYSROOT_DIR=/
-          export PKG_CONFIG_ALLOW_CROSS=1
-          
-          # 2. Bauen mit den gefundenen Informationen
-          # Wir nutzen --static für SDL2, damit der Linker die Abhängigkeiten 
-          # direkt mit einbaut und die 'undefined reference' Fehler verschwinden.
-          SDL_FLAGS=$(pkg-config --cflags --libs --static sdl2 sdl2_image glew physfs openal alut tinyxml2)
-          
-          echo "Flags: $SDL_FLAGS"
+          # WICHTIG: Die Reihenfolge der -l Bibliotheken ist entscheidend für den Linker.
+          # Wir listen SDL2 und SDL2_image explizit.
+          export LDFLAGS="-L/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread -lm -ldl"
+
+          echo "Starte Build ohne pkg-config..."
 
           make clean
+          
+          # Wir rufen make auf und überschreiben die Flags, ohne pkg-config zu fragen.
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="-I./include -I/usr/include -DNDEBUG -DUNIX -DPACKAGE_VERSION=\\\"0.6.6\\\" $SDL_FLAGS" \
-            LDFLAGS="$SDL_FLAGS" \
+            CPPFLAGS="$CXXFLAGS" \
+            LDFLAGS="$LDFLAGS" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
           # Binary kopieren
@@ -80,5 +71,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final-Attempt
+          name: TriggerRally-R36S-Final-Hardcoded
           path: package/TriggerRally
