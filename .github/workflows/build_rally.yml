@@ -1,4 +1,4 @@
-name: Build Trigger Rally (Minimalistic)
+name: Build Trigger Rally (Manual Flags)
 
 on:
   push:
@@ -27,32 +27,36 @@ jobs:
             libopenal-dev:arm64 \
             libalut-dev:arm64 \
             libtinyxml2-dev:arm64 \
-            libglu1-mesa-dev:arm64 \
-            pkg-config
+            libglu1-mesa-dev:arm64
 
       - name: Build and Package
         run: |
           cd src
           
-          # WICHTIG: Wir setzen die Umgebungsvariablen für pkg-config,
-          # damit es die ARM64-Bibliotheken findet, ohne den Compiler zu "verwirren".
-          export PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig
-          export PKG_CONFIG_SYSROOT_DIR=/
-          export PKG_CONFIG_ALLOW_CROSS=1
+          # Wir verzichten komplett auf pkg-config. 
+          # Wir definieren die Pfade fest, basierend auf dem Standard-Layout 
+          # der Debian/Ubuntu-Multiarch-Installation.
           
-          # Wir lassen pkg-config die Arbeit machen. 
-          # Wenn das fehlschlägt, müssen wir nicht raten, sondern pkg-config fixen.
-          SDL_CFLAGS=$(pkg-config --cflags sdl2 sdl2_image glew physfs openal alut tinyxml2)
-          SDL_LIBS=$(pkg-config --libs sdl2 sdl2_image glew physfs openal alut tinyxml2)
+          # SDL2 Header liegen standardmäßig hier:
+          export SDL_INCLUDE="-I/usr/include/SDL2"
+          
+          # Die Bibliotheken liegen in diesem Pfad:
+          export LIBS_PATH="-L/usr/lib/aarch64-linux-gnu"
+          
+          # Die notwendigen Bibliotheken:
+          export LIBS_LINK="-lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread"
 
-          echo "Flags: $SDL_CFLAGS"
+          echo "Starte Build ohne pkg-config..."
 
           make clean
-          # Wir übergeben hier keine --sysroot Flags mehr!
-          # Die Toolchain weiß von alleine, wo sie ist.
+          
+          # Wir übergeben die Flags explizit. Wir lassen die SYSROOT-Flags WEG,
+          # damit der Compiler seine eigenen System-Header (features.h) findet.
           make -j$(nproc) \
-            CPPFLAGS="$SDL_CFLAGS -DNDEBUG -DUNIX" \
-            LDFLAGS="$SDL_LIBS" \
+            CC=aarch64-unknown-linux-gnu-gcc \
+            CXX=aarch64-unknown-linux-gnu-g++ \
+            CPPFLAGS="-I./include $SDL_INCLUDE -DNDEBUG -DUNIX" \
+            LDFLAGS="$LIBS_PATH $LIBS_LINK" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
           # Binary kopieren
@@ -71,5 +75,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-Final
+          name: TriggerRally-R36S-Final-Manual
           path: package/TriggerRally
