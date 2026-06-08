@@ -1,4 +1,4 @@
-name: Build Trigger Rally (The "No-Guessing" Way)
+name: Build Trigger Rally (Sysroot Mode)
 
 on:
   push:
@@ -17,10 +17,8 @@ jobs:
 
       - name: Install ARM64 Dependencies
         run: |
-          # 1. Multi-Arch für ARM64 aktivieren
           dpkg --add-architecture arm64
           apt-get update
-          # 2. Wir installieren explizit die ARM64 Versionen der Libs
           apt-get install -y \
             libsdl2-dev:arm64 \
             libsdl2-image-dev:arm64 \
@@ -35,19 +33,24 @@ jobs:
         run: |
           cd src
           
-          # SYSROOT ist in dockcross automatisch gesetzt (z.B. /usr/aarch64-linux-gnu)
-          # Wir bauen unsere Pfade exakt zusammen
-          export MY_INCLUDE="-I./include -I${SYSROOT}/usr/include -I${SYSROOT}/usr/include/SDL2"
-          export MY_LIB="-L${SYSROOT}/usr/lib/aarch64-linux-gnu -lSDL2 -lSDL2_image -lGLEW -lphysfs -lopenal -lalut -ltinyxml2 -lGL -lGLU -lpthread"
-
-          echo "Bauen mit Include-Pfaden: $MY_INCLUDE"
+          # SYSROOT ist in dockcross standardmäßig /usr/aarch64-linux-gnu
+          # Wir zwingen den Compiler, nur diesen Sysroot zu nutzen
+          export SYSROOT=/usr/aarch64-linux-gnu
+          
+          # Flags, die das System "einsperren"
+          # -isysroot verhindert den Zugriff auf /usr/include
+          # --sysroot sorgt dafür, dass auch der Linker nur in ARM64-Pfaden sucht
+          export CXXFLAGS="--sysroot=${SYSROOT} -isysroot ${SYSROOT} -I./include"
+          export LDFLAGS="--sysroot=${SYSROOT} -L${SYSROOT}/usr/lib/aarch64-linux-gnu"
+          
+          echo "Bauen mit Sysroot: $SYSROOT"
 
           make clean
           make -j$(nproc) \
             CC=aarch64-unknown-linux-gnu-gcc \
             CXX=aarch64-unknown-linux-gnu-g++ \
-            CPPFLAGS="$MY_INCLUDE -DNDEBUG -DUNIX" \
-            LDFLAGS="$MY_LIB" \
+            CPPFLAGS="${CXXFLAGS}" \
+            LDFLAGS="${LDFLAGS}" \
             OPTIMS="-O3 -mtune=cortex-a35"
 
           # Binary kopieren
@@ -66,5 +69,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TriggerRally-R36S-Final-Fixed
+          name: TriggerRally-R36S-Working
           path: package/TriggerRally
